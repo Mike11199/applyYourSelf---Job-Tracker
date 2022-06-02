@@ -7,4 +7,4 @@ Full stack MERN Project.
 
 -Added an isMember function to toggle FormRow components on the login/register screen. Utilized conditional rendering with inline ternarny operators to display different form fields if the user is already registered and can log in, or needs to register.
 
--Set up a global context using createContext and a useContext hook.  
+-Set up a global context using createContext and a useContext hook pass a value deep into the component tree.  This allows the alert function to be controlled globally.
