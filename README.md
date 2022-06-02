@@ -17,4 +17,5 @@ Full stack MERN Project.
 -Used a reducer (a function that take the current state and an action as arguments, and return a new state result) and dispatch functions to enable alerts to show and clear after a brief period of time (user not inputting all values into the form, etc.)
 
 
-<img src="[https://user-images.githubusercontent.com/91037796/171723508-c90523fd-f41f-4338-a6f5-f372adc5fc66.png](https://user-images.githubusercontent.com/91037796/171750426-caf75213-e030-4f20-ba27-d10d717ec873.png)" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/91037796/171750486-4053e32c-028b-4690-9281-7f4e01e18475.png" width=50% height=50%>
+
