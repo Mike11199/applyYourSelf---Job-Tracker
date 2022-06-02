@@ -5,4 +5,4 @@ Full stack MERN Project.
 
 -Used React Router to allow for the website to be a multi-page application.  Set up routes for if user is looged in, to register, landing page, and a catch all error page for URLs not defined.
 
--Added a FormRow component for the login form to be used on the Register componenet, allow props to be passed into it.
+-Added FormRow components to create a login/register screen and utilized conditional rendering with inline ternarny operators to display different form fields if the user is already registered and can log in, or needs to register.
