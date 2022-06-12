@@ -1,0 +1,29 @@
+{
+  "name": "applyyourself---job-tracker",
+  "version": "1.0.0",
+  "description": "Full stack MERN Project.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mike11199/applyYourSelf---Job-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mike11199/applyYourSelf---Job-Tracker/issues"
+  },
+  "homepage": "https://github.com/Mike11199/applyYourSelf---Job-Tracker#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.6"
+  }
+}
