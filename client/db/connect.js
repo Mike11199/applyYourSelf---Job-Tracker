@@ -1,1 +1,0 @@
-const connectionString = 'mongodb+srv://john:<password>@mernjobtracker.u5yla.mongodb.net/?retryWrites=true&w=majority'
