@@ -30,3 +30,9 @@ Full stack MERN Project.
 
 <img src="https://user-images.githubusercontent.com/91037796/178848537-40aae12d-bdfa-48e5-9989-2e555298968b.png" width=50% height=50%>
 
+-MongoDB dummy values:
+
+<img src="https://user-images.githubusercontent.com/91037796/178851418-406245e6-dbe9-49aa-8cb0-4470243310ad.png" width=50% height=50%>
+
+
+
