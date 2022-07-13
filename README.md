@@ -21,6 +21,5 @@ Full stack MERN Project.
 
 -Used Postman to test express routes:
 
-<img src="![image](https://user-images.githubusercontent.com/91037796/178844721-c1d38bfc-1641-437d-a4a5-24e729fd48f2.png)" width=100% height=100%>
-
+<img src="https://user-images.githubusercontent.com/91037796/178844759-710ad824-90a0-4e10-ace7-f6f4a7b8b832.png" width=500% height=50%>
 
