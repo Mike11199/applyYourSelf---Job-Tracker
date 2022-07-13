@@ -3,17 +3,34 @@ const app = express()
 import dotenv from 'dotenv'
 dotenv.config()
 
+// db and authenticate user
 import connectDB from './db/connect.js'
+
+
+
+// routers
+import authRouter from './routes/authRoutes.js'
+import jobsRouter from './routes/jobsRoutes.js'
+
+
+
 
 // middleware 
 import notfoundMiddleware from './middleware/not-found.js'
 import errorHandlerMiddleware from './middleware/error-handler.js'
 
+// allows JSON data to be available to us
+app.use(express.json())
 
 app.get('/', (req,res) => {
     // throw new Error ('error')
     res.send('Welcome!')
 })
+
+
+
+app.use('/api/v1/auth', authRouter)
+app.use('/api/v1/jobs', jobsRouter)
 
 app.use(notfoundMiddleware)
 app.use(errorHandlerMiddleware)
@@ -32,7 +49,7 @@ const port = process.env.PORT || 5000
 
 
 //set up asynchronous function to connect to mongoose
-//this allows the server to only spin up if it is succesful
+//this allows the server to only spin up if it is successful
 const start = async() => {
     try {
         await connectDB(process.env.MONGO_URL) 
