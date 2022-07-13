@@ -19,9 +19,12 @@ Full stack MERN Project.
 
 <img src="https://user-images.githubusercontent.com/91037796/171750486-4053e32c-028b-4690-9281-7f4e01e18475.png" width=50% height=50%>
 
--Used Postman to test express routes:
+-Used Postman to test express routes for user authentication:
 
-<img src="https://user-images.githubusercontent.com/91037796/178844759-710ad824-90a0-4e10-ace7-f6f4a7b8b832.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/91037796/178851283-ce8a3bf0-369d-4a4a-bcf8-a67d72c42ba8.png" width=50% height=50%>
+
+
+
 
 -Created a user model to with Mongoose schema for use with MongoDB.  Used a validator package from npm to validate the email.
 
