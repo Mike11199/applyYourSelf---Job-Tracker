@@ -26,7 +26,7 @@ Full stack MERN Project.
 
 
 
--Created a user model to with Mongoose schema for use with MongoDB.  Used a validator package from npm to validate the email.
+-Created a user model to with Mongoose schema for use with MongoDB.  Used a validator package from npm to validate the email.  Ensured the email is unique with the "unique: true" property in the userSchema, and used the error handler to display a message if the email field is not unique (already in the MongoDB database).
 
 <img src="https://user-images.githubusercontent.com/91037796/178848537-40aae12d-bdfa-48e5-9989-2e555298968b.png" width=50% height=50%>
 
