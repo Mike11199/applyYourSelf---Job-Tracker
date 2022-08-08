@@ -37,3 +37,9 @@ Full stack MERN Project.
 
 
 -Implemented JSON Web Token (JWT) using npm package jsonwebtoken for user authentication and to prevent unauthorized users from accessing pages.
+
+
+-Used npm install package concurrently to be able to run the front end and back end of the application at the same time.  
+
+<img src="https://user-images.githubusercontent.com/91037796/183328759-5d8a11d8-3389-4ab9-a158-9a0a3d729d1e.png" width=50% height=50%>
+
