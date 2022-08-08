@@ -33,6 +33,7 @@ Full stack MERN Project.
 -Implemented password hashing in MongoDB with npm package bcryptjs to protect user data in the event the databse information was ever compromised by a malicious party. Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
 
 <img src="https://user-images.githubusercontent.com/91037796/178851418-406245e6-dbe9-49aa-8cb0-4470243310ad.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/91037796/183319400-f7021d38-2803-4d15-8717-6fb85a86077e.png" width=50% height=50%>
 
 
 
