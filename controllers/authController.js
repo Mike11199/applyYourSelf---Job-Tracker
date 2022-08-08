@@ -12,11 +12,31 @@ const register = async (req, res) => {
         if (!name || !email || !password) {
             throw new BadRequestError('please provide all values') 
         }
-        
+
+
+// This section returns a BadRequestError if a user already exists (looking up by email). 
+// If the user does not already exist, it returns a response of the JSON for the user and JWT token.
+const userAlreadyExists = await User.findOne({email});
+if(userAlreadyExists){
+    throw new BadRequestError('Email already in use')
+}
         const user = await User.create({ name, email, password })
-        res.status(StatusCodes.CREATED).json({ user })
+        const token = user.createJWT()
+        res
+            .status(StatusCodes.OK)
+            .json({
+                 user: { 
+                    email: user.email, 
+                    lastName: user.lastName, 
+                    location: user.location,
+                    name: user.name,
+                },
+                token,
+                location: user.location,
+            })
 
 }
+
 
 
 const login = (req, res) => {
@@ -29,7 +49,7 @@ const login = (req, res) => {
 const updateUser = (req, res) => {
 
     res.send('updateUser')
-
+    User.findOneAndUpdate
 }
 
 export { register, login, updateUser }
