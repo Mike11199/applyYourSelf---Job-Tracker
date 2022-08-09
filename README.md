@@ -21,7 +21,7 @@ Full stack MERN Project.
 
 -Used Postman to test APIs and express routes for user authentication and connecting to the MongoDB database:
 
-<img src="https://user-images.githubusercontent.com/91037796/183325705-55763bc2-b43c-4a8e-979b-8e4235bf6c1e.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/91037796/183325705-55763bc2-b43c-4a8e-979b-8e4235bf6c1e.png" width=70% height=70%>
 
 
 
@@ -39,7 +39,9 @@ Full stack MERN Project.
 -Implemented JSON Web Token (JWT) using npm package jsonwebtoken for user authentication and to prevent unauthorized users from accessing pages.
 
 
--Used npm install package concurrently to be able to run the front end and back end of the application at the same time.  
+-Used npm install package CONCURRENTLY to be able to run the front end and back end of the application at the same time with the "npm start" terminal command.  Made use of npm node.js package "CORS" to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
 
 <img src="https://user-images.githubusercontent.com/91037796/183328759-5d8a11d8-3389-4ab9-a158-9a0a3d729d1e.png" width=50% height=50%>
 
+
+-Installed axios on the client side to 
