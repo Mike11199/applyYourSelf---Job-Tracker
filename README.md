@@ -44,6 +44,7 @@ Full stack MERN Project following a Udemy tutorial.  After completing this proje
 
 -Implemented JSON Web Token (JWT) using npm package jsonwebtoken for user authentication and to prevent unauthorized users from accessing pages.
 
+</br>
 <h2>Connecting the Front and Back End</h2>
 
 -Used npm to install the package CONCURRENTLY so that the front and back end of the application can be ran at the same time with the "npm start" terminal command.  Made use of npm node.js package "CORS" to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
