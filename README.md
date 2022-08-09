@@ -18,6 +18,8 @@ Full stack MERN Project.
 
 
 <img src="https://user-images.githubusercontent.com/91037796/171750486-4053e32c-028b-4690-9281-7f4e01e18475.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/91037796/183761215-bddbbed4-a33d-42d6-8441-f5c92cb35c0e.png" width=50% height=50%>
+
 
 -Used Postman to test APIs and express routes for user authentication and connecting to the MongoDB database:
 
@@ -32,8 +34,8 @@ Full stack MERN Project.
 -Implemented password hashing in MongoDB with npm package bcryptjs to protect user data in the event the databse information was ever compromised by a malicious party. Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
 
 
-<img src="https://user-images.githubusercontent.com/91037796/183325614-c074d5f1-ce97-422f-a2ba-c98fb3eaa92b.png" width=50% height=50%>
-<img src="https://user-images.githubusercontent.com/91037796/183319400-f7021d38-2803-4d15-8717-6fb85a86077e.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/91037796/183325614-c074d5f1-ce97-422f-a2ba-c98fb3eaa92b.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/91037796/183319400-f7021d38-2803-4d15-8717-6fb85a86077e.png" width=30% height=30%>
 
 
 -Implemented JSON Web Token (JWT) using npm package jsonwebtoken for user authentication and to prevent unauthorized users from accessing pages.
