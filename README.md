@@ -43,3 +43,5 @@ Full stack MERN Project.
 
 <img src="https://user-images.githubusercontent.com/91037796/183328759-5d8a11d8-3389-4ab9-a158-9a0a3d729d1e.png" width=50% height=50%>
 
+
+-Installed axios on the client side to 
