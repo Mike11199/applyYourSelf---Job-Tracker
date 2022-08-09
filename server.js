@@ -1,3 +1,4 @@
+import cors from 'cors'
 import express from 'express'
 const app = express()
 import dotenv from 'dotenv'
@@ -20,12 +21,20 @@ import jobsRouter from './routes/jobsRoutes.js'
 import notfoundMiddleware from './middleware/not-found.js'
 import errorHandlerMiddleware from './middleware/error-handler.js'
 
+//allows front and back end to communicate with cross origin resource sharing between diff domains
+app.use(cors())
+
 // allows JSON data to be available to us
 app.use(express.json())
 
 app.get('/', (req,res) => {
     // throw new Error ('error')
-    res.send('Welcome!')
+    res.json({msg: 'Welcome!'})
+})
+
+app.get('/api/v1', (req,res) => {
+    // throw new Error ('error')
+    res.json({msg: 'API'})
 })
 
 

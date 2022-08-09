@@ -1,6 +1,7 @@
 import React, { useReducer, useContext } from 'react'
 
 import reducer from './reducer'
+import axios from 'axios'
 
 import { 
   DISPLAY_ALERT, 
@@ -18,14 +19,15 @@ export const initialState = {
   user:null,
   token:null,
   userLocation: '',
+  jobLocation: '',
 }
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
-const [state, dispatch] = useReducer(reducer, initialState)
+const [state, dispatch] = useReducer(reducer, initialState)   //https://reactjs.org/docs/hooks-reference.html  alternative to useState
 
 const displayAlert = () => {
-    dispatch({type:DISPLAY_ALERT})
+    dispatch({type:DISPLAY_ALERT})    //arrow function that invokes func with object literal as parameters 
     clearAlert()
 }
 
@@ -38,7 +40,22 @@ const clearAlert = () => {
   }
 
 const registerUser = async (currentUser) => {
-  console.log(currentUser)
+  dispatch({ type: REGISTER_USER_BEGIN })
+  try {
+    const response = await axios.post('/api/v1/auth/register', currentUser)
+    console.log(response)
+    const {user,token,location} = response.data   //big object returned from axios
+    dispatch({
+      type: REGISTER_USER_SUCCESS,
+      payload: {user, token, location},
+    })
+
+    //local storage later goes here
+  } catch (error) {
+    console.log(error.response)
+    dispatch({type:REGISTER_USER_ERROR, payload: {msg: error.response.data.msg },})
+  }
+  clearAlert()
 }  
 
   
