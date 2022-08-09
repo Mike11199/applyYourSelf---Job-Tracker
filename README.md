@@ -44,10 +44,33 @@ Full stack MERN Project following a Udemy tutorial.  After completing this proje
 
 -Implemented JSON Web Token (JWT) using npm package jsonwebtoken for user authentication and to prevent unauthorized users from accessing pages.
 
+<h2>Connecting the Front and Back End</h2>
 
 -Used npm install package CONCURRENTLY to be able to run the front end and back end of the application at the same time with the "npm start" terminal command.  Made use of npm node.js package "CORS" to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
 
 <img src="https://user-images.githubusercontent.com/91037796/183328759-5d8a11d8-3389-4ab9-a158-9a0a3d729d1e.png" width=50% height=50%>
 
+</br>
+<h2>Implementing User Registration (Front/Back End and MongoDB)</h2>
 
--Installed axios on the client side to 
+<h3>Front End</h3>
+-Installed axios on the client side to so that when the register user button is clicked on the front-end, axios will submit a post request using the authentication routes on the back-end to the MongoDB database.  If the user already exists (looking up by email in the database using the fineOne function), an error will be returned.    
+</br>
+ Register Page - Register.js 
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/183775574-2038d97e-de5d-4671-b414-03c94062e9a5.png" width=50% height=50%>
+</br>
+appContext - appContext.js 
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/183775134-5d5df73e-d50d-4ef0-a9db-fc038ec4e18a.png" width=50% height=50%>
+</br>
+
+<h3>Back End</h3>
+
+Authentication Page - authController.js
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/183775472-97bf5927-ece8-4902-bff0-4acf16cd61bf.png" width=50% height=50%>
+
+
+
+
