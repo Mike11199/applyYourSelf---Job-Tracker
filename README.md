@@ -1,5 +1,5 @@
 # applyYourSelf-Job-Tracker
-Full stack MERN Project.
+Full stack MERN Project.  I am following a Udemy tutorial to create this.  After completing this project and gaining a high-level view of the code, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can make use of the error-handling, middleware, and user authentication later on.
 
 -Used NPM to add normalized CSS and styled-components to provide cross browser consistency, prevent name collisions, and allow stylizing of entire react components using wrappers.
 
