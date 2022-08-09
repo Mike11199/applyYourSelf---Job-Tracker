@@ -21,7 +21,7 @@ Full stack MERN Project.
 
 -Used Postman to test APIs and express routes for user authentication and connecting to the MongoDB database:
 
-<img src="https://user-images.githubusercontent.com/91037796/183325705-55763bc2-b43c-4a8e-979b-8e4235bf6c1e.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/91037796/183325705-55763bc2-b43c-4a8e-979b-8e4235bf6c1e.png" width=70% height=70%>
 
 
 
