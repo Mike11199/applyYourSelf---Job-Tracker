@@ -46,7 +46,7 @@ Full stack MERN Project following a Udemy tutorial.  After completing this proje
 
 <h2>Connecting the Front and Back End</h2>
 
--Used npm install package CONCURRENTLY to be able to run the front end and back end of the application at the same time with the "npm start" terminal command.  Made use of npm node.js package "CORS" to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
+-Used npm to install the package CONCURRENTLY so that the front and back end of the application can be ran at the same time with the "npm start" terminal command.  Made use of npm node.js package "CORS" to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
 
 <img src="https://user-images.githubusercontent.com/91037796/183328759-5d8a11d8-3389-4ab9-a158-9a0a3d729d1e.png" width=50% height=50%>
 
