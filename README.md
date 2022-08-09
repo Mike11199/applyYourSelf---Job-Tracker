@@ -56,6 +56,7 @@ Full stack MERN Project following a Udemy tutorial.  After completing this proje
 <h3>Front End</h3>
 -Installed axios on the client side to so that when the register user button is clicked on the front-end, axios will submit a post request using the authentication routes on the back-end to the MongoDB database.  If the user already exists (looking up by email in the database using the fineOne function), an error will be returned.    
 </br>
+</br>
  Register Page - Register.js 
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/183775574-2038d97e-de5d-4671-b414-03c94062e9a5.png" width=50% height=50%>
