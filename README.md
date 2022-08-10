@@ -132,7 +132,7 @@ useEffect(()=>{
 }, [user, navigate] ) //dependency array.  invoked every time the user or navigate values change
 ```
 
--8/9/22 We also have to persist the user in local storage as the user will be logged out if they do not exist.  To do this, added functions to add and remove the user from local storage to appContext.js.  This is the file where context, or global react variables are stored.  Also save the token to local storage.  
+-8/9/22 We also have to persist the user in local storage as the user will be logged out if they do not exist.  To do this, added functions to add and remove the user from local storage to appContext.js.  This is the file where context, or global react variables are stored.  Also saved the token itself to local storage.  
 </br>
 ```js
 appContext.js
