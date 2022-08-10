@@ -94,6 +94,7 @@ Authentication Page - authController.js
  
  ```js
 Register.js
+
  const Register = () => {
     const navigate = useNavigate()
     const [values, setValues] = useState(initialState)    
