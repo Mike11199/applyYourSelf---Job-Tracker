@@ -24,12 +24,16 @@ Full stack MERN Project following a Udemy tutorial.  After completing this proje
 <img src="https://user-images.githubusercontent.com/91037796/171750486-4053e32c-028b-4690-9281-7f4e01e18475.png" width=40% height=40%>
 <img src="https://user-images.githubusercontent.com/91037796/183761215-bddbbed4-a33d-42d6-8441-f5c92cb35c0e.png" width=40% height=40%>
 
+</br>
+<h2>Routing and API Testing</h2>
 
 -Used Postman to test APIs and express routes for user authentication and connecting to the MongoDB database:
-
+</br>
 <img src="https://user-images.githubusercontent.com/91037796/183325705-55763bc2-b43c-4a8e-979b-8e4235bf6c1e.png" width=100% height=100%>
 
 
+</br>
+<h2>MongoDB Implementation</h2>
 
 -Created a user model with Mongoose schema for use with MongoDB.  Used a validator package from npm to validate the email.  Ensured the email is unique with the "unique: true" property in the userSchema, and used the error handler to display a message if the email field is not unique (already in the MongoDB database).
 
