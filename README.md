@@ -4,7 +4,7 @@
 ******IN PROGRESS******
 </br>
 </br>
-Full stack MERN Project I created following a Udemy tutorial.  After completing this project and gaining a high-level view of the code, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.
+Full stack MERN Project I created following a Udemy tutorial.  After completing this project and gaining a high-level view of the design, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.
 
 </br>
 
