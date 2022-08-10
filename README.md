@@ -55,6 +55,12 @@ Full stack MERN Project I created following a Udemy tutorial.  After completing 
 
 -Implemented JSON Web Token (JWT) using npm package jsonwebtoken for user authentication and to prevent unauthorized users from accessing pages.
 
+```js
+userSchema.methods.createJWT = function () {
+    return jwt.sign({userId:this._id}, process.env.JWT_SECRET, {expiresIn:process.env.JWT_LIFETIME})
+}
+```
+
 </br>
 <h2>Connecting the Front and Back End</h2>
 
