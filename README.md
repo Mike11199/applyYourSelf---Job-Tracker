@@ -132,6 +132,51 @@ useEffect(()=>{
 }, [user, navigate] ) //dependency array.  invoked every time the user or navigate values change
 ```
 
--8/9/22 We also have to persist the user in local storage as the user will be logged out if they do not exist.  To do this, functions to add and remove the user from local storage will be added to the appContext.js.  This is the file where context, or global react variables are stored.
+-8/9/22 We also have to persist the user in local storage as the user will be logged out if they do not exist.  To do this, added functions to add and remove the user from local storage to appContext.js.  This is the file where context, or global react variables are stored.  Also save the token to local storage.  
 </br>
+```js
+appContext.js
+
+//retrieve variables or null from local storage
+const token = localStorage.getItem('token')
+const user = localStorage.getItem('user')
+const userLocation = localStorage.getItem('location')
+
+
+//add token and user info to local storage so user not kicked out
+//curly braces inside the parameters of this arrow function is an example of object destructuring
+const addUserToLocalStorage = ({user, token, location}) => {
+  localStorage.setItem('user', JSON.stringify(user))
+  localStorage.setItem('token', token)
+  localStorage.setItem('location', location)
+}
+
+
+const removeUserFromLocalStorage = () => {
+  localStorage.removeItem('user')
+  localStorage.removeItem('token')
+  localStorage.removeItem('location')
+}
+
+
+const registerUser = async (currentUser) => {
+  dispatch({ type: REGISTER_USER_BEGIN })
+  try {
+    const response = await axios.post('/api/v1/auth/register', currentUser)
+    console.log(response)
+    const {user,token,location} = response.data   //big object returned from axios
+    dispatch({
+      type: REGISTER_USER_SUCCESS,
+      payload: {user, token, location},
+    })
+
+    addUserToLocalStorage({user,token,location})
+  } catch (error) {
+    console.log(error.response)
+    dispatch({type:REGISTER_USER_ERROR, payload: {msg: error.response.data.msg },})
+  }
+  clearAlert()
+}  
+
+```
 
