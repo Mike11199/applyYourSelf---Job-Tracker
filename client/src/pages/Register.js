@@ -1,8 +1,9 @@
-import {useState, useEffect} from 'react' 
+import { useState } from 'react'
+import { useEffect } from 'react'
 import {Logo, FormRow, Alert} from '../components'
 import Wrapper from '../assets/wrappers/RegisterPage'
 import { useAppContext } from '../context/appContext'
-
+import { useNavigate } from 'react-router-dom'
 
 // create the object here
 const initialState = {
@@ -14,9 +15,13 @@ const initialState = {
 
 
 const Register = () => {
-    const [values,setValues] = useState(initialState)
-    //global state and useNavigate
-    const {isLoading, showAlert, displayAlert, registerUser} = useAppContext()
+    const navigate = useNavigate()
+    const [values, setValues] = useState(initialState)    
+
+    //these values are grabbed from the app context
+    //Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+    //It in effect creates "global" variables for a tree of react components - Source:  https://reactjs.org/docs/context.html
+    const {user, isLoading, showAlert, displayAlert, registerUser} = useAppContext()  
  
 
 // ... is the spread operator
@@ -45,6 +50,15 @@ const onSubmit = (e) => {
     }
 
 }
+
+//if the user exists, if the user or navigate changes, wait 3 seconds, then navigate user to the dashboard page
+useEffect(()=>{
+    if (user) {
+        setTimeout(()=> {
+           navigate('/')
+        }, 3000)
+    }
+}, [user, navigate] ) //dependency array.  invoked every time the user or navigate values change
 
 
 return (

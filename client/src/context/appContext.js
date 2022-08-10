@@ -11,15 +11,19 @@ import {
   REGISTER_USER_ERROR,
 } from "./actions"
 
+const token = localStorage.getItem('token')
+const user = localStorage.getItem('user')
+const userLocation = localStorage.getItem('location')
+
 export const initialState = {
   isLoading: false,
   showAlert: false,
   alertText: '',
   alertType: '',
-  user:null,
+  user:user ? JSON.parse(user) : null,         //ternary operator:  fancy single-line if/else statement
   token:null,
-  userLocation: '',
-  jobLocation: '',
+  userLocation: userLocation || '',
+  jobLocation: userLocation || '',
 }
 const AppContext = React.createContext()
 
@@ -39,6 +43,24 @@ const clearAlert = () => {
     }, 3000)
   }
 
+
+//add token and user info to local storage so user not kicked out
+//curly braces inside the parameters of this arrow function is an example of object destructuring
+const addUserToLocalStorage = ({user, token, location}) => {
+  localStorage.setItem('user', JSON.stringify(user))
+  localStorage.setItem('token', token)
+  localStorage.setItem('location', location)
+}
+
+
+const removeUserFromLocalStorage = () => {
+  localStorage.removeItem('user')
+  localStorage.removeItem('token')
+  localStorage.removeItem('location')
+}
+
+
+
 const registerUser = async (currentUser) => {
   dispatch({ type: REGISTER_USER_BEGIN })
   try {
@@ -50,7 +72,7 @@ const registerUser = async (currentUser) => {
       payload: {user, token, location},
     })
 
-    //local storage later goes here
+    addUserToLocalStorage({user,token,location})
   } catch (error) {
     console.log(error.response)
     dispatch({type:REGISTER_USER_ERROR, payload: {msg: error.response.data.msg },})
