@@ -119,3 +119,6 @@ useEffect(()=>{
 }, [user, navigate] ) //dependency array.  invoked every time the user or navigate values change
 ```
 
+-8/9/22 We also have to persist the user in local storage as the user will be logged out if they do not exist.  To do this, functions to add and remove the user from local storage will be added to the appContext.js.  This is the file where context, or global react variables are stored.
+</br>
+
