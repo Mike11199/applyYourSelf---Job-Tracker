@@ -85,4 +85,23 @@ Authentication Page - authController.js
 
 
 
+</br>
+<h2>useNavigate and User Persistence in Local Storage</h2>
+
+-8/9/22 Implemented the useNavigate hook to navigate programmatically to the dashboard after the registration form is submitted.
+</br>
+
+ Register Page - Register.js 
+```js
+Register.js
+
+//if the user exists, every time the user or navigate variables change, wait 3 seconds, then navigate user to the dashboard page
+useEffect(()=>{
+    if (user) {
+        setTimeout(()=> {
+           navigate('/')
+        }, 3000)
+    }
+}, [user, navigate] ) //dependency array.  invoked every time the user or navigate values change
+```
 
