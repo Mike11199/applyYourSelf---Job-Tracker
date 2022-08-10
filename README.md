@@ -10,7 +10,9 @@ Full stack MERN Project I created following a Udemy tutorial.  After completing 
 
 <h2>Project Implementations</h2>
 
--Used NPM to add normalized CSS and styled-components to provide cross browser consistency, prevent name collisions, and allow stylizing of entire react components using wrappers.
+-Used NPM to install the normalize.css package.  This allows for normalized CSS to provide cross browser consistency, prevent name collisions, and allow stylizing of entire react components using wrappers.  Is a fancier way of * { } to add a global for CSS elements.  
+
+-Added styled components using wrappers in the wrappers folder.  This involves importing 'styled-components', and adding CSS directly to a .js file.  This is then imported into React components such as the landing page, so that the CSS is more modular.   
 
 -Used React Router to allow for the website to be a multi-page application.  Set up routes for if user is logged in, a registration page, a landing page, and a catch all error page for URLs not defined.
 
