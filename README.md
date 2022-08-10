@@ -91,7 +91,20 @@ Authentication Page - authController.js
 -8/9/22 Implemented the useNavigate hook to navigate programmatically to the dashboard after the registration form is submitted.
 </br>
 
- Register Page - Register.js 
+ 
+ ```js
+Register.js
+ const Register = () => {
+    const navigate = useNavigate()
+    const [values, setValues] = useState(initialState)    
+
+    //these values are grabbed from the app context
+    //Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+    //It in effect creates "global" variables for a tree of react components - Source:  https://reactjs.org/docs/context.html
+    const {user, isLoading, showAlert, displayAlert, registerUser} = useAppContext()  
+```
+ 
+ 
 ```js
 Register.js
 
