@@ -122,7 +122,8 @@ Register.js
 ```js
 Register.js
 
-//if the user exists, every time the user or navigate variables change, wait 3 seconds, then navigate user to the dashboard page
+//if the user exists, every time the user or navigate variables change, wait 3 seconds
+//then navigate user to the dashboard page
 useEffect(()=>{
     if (user) {
         setTimeout(()=> {
