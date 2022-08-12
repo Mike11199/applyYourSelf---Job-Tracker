@@ -12,33 +12,32 @@ Packages Installed:
 </br></br>
 <table>
     <tr>
-    <td align="center" height="10" width="20">
-        <br /><strong>NORMALIZE.CSS</strong>
+    <td align="center" height="5" width="60">
+        <br /><strong>Normalize.css</strong>
     </td>
-    <td align="center" height="10" width="20">
-        <br /><strong>BCRYPTJS</strong>
+    <td align="center" height="5" width="60">
+        <br /><strong>JSONWebToken</strong>
     </td>
-    <td align="center" height="10" width="20">
-        <br /><strong>JSONWEBTOKEN</strong>
+    <td align="center" height="5" width="60">
+        <br /><strong>BcryptJS</strong>
     </td>
-    <td align="center" height="10" width="20">
-        <br /><strong>BCRYPTJS</strong>
+    <td align="center" height="5" width="60">
+        <br /><strong>Axios</strong>
     </td>
-    <td align="center" height="10" width="20">
-        <br /><strong>AXIOS</strong>
+    <td align="center" height="5" width="60">
+        <br /><strong>Cors</strong>
     </td>
-    <td align="center" height="10" width="20">
-        <br /><strong>CORS</strong>
+    <td align="center" height="5" width="60">
+        <br /><strong>Concurrently</strong>
     </td>
-    <td align="center" height="10" width="20">
-        <br /><strong>CONCURRENTLY</strong>
+    <td align="center" height="5" width="60">
+        <br /><strong>Morgan</strong>
     </td>
-    <td align="center" height="10" width="20">
-        <br /><strong>MORGAN</strong>
+    <td align="center" height="5" width="200">
+        <br /><strong>ExpressJS Async Errors</strong>
     </td>
     </tr>
 </table>
-      
 
 
 
