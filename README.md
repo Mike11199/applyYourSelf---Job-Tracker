@@ -339,6 +339,7 @@ appContext.js
 
 </br>
 -8/12/22 Added line to the if/else statement for the onSubmit action, in the Register.js file, so that the loginUser function in the appContext.js file is invoked if the login form is submitted.  If the user isn't already a member, then the registerUser will be ran.
+</br>
 
 ```js
 Front End:
