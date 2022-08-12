@@ -241,7 +241,7 @@ export default UnAuthenticatedError
 ```
 
 </br>
--8/12/22 After adding the custom error, added an instance method to the user schema to compare password to the hashed password adn return if it matches.
+-8/12/22 After adding the custom error, added an instance method to the user schema to compare password to the hashed password and return 'True' if it matches.
 
 ```js
 Server Side:
@@ -256,6 +256,7 @@ userSchema.methods.comparePassword = async function(candidatePassword){
 
 </br>
 -8/12/22 Then set up the log in controller server side in the authController.js file.
+
 ```js
 Server Side:
 authController.js
