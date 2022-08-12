@@ -5,6 +5,7 @@ import Wrapper from '../assets/wrappers/RegisterPage'
 import { useAppContext } from '../context/appContext'
 import { useNavigate } from 'react-router-dom'
 
+
 // create the object here
 const initialState = {
     name:'',
@@ -21,7 +22,7 @@ const Register = () => {
     //these values are grabbed from the app context
     //Context provides a way to pass data through the component tree without having to pass props down manually at every level.
     //It in effect creates "global" variables for a tree of react components - Source:  https://reactjs.org/docs/context.html
-    const {user, isLoading, showAlert, displayAlert, registerUser} = useAppContext()  
+    const {user, isLoading, showAlert, displayAlert, registerUser, loginUser} = useAppContext()  
  
 
 // ... is the spread operator
@@ -43,7 +44,7 @@ const onSubmit = (e) => {
     }
     const currentUser = {name, email, password}
     if(isMember){
-        console.log('already a member')
+        loginUser(currentUser)
     }
     else{
         registerUser(currentUser)
