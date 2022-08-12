@@ -35,6 +35,7 @@ const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value})
 }
 
+
 const onSubmit = (e) => {
     e.preventDefault()
     const {name, email, password, isMember} = values
