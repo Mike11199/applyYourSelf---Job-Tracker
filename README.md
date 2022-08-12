@@ -211,7 +211,7 @@ const registerUser = async (currentUser) => {
 
 
 </br>
-<h2>Login User - Server and Front End</h2>
+<h2>Login User - Server (Back End)</h2>
 </br></br>
 
 -8/12/22 Installed the npm package MORGAN on the server side as an HTTP request logger middleware, to log HTTP requests, debug APIs used in the application, and help view routes/methods used in controllers.  This will make the program easier to use as multiple routes to send requests are added. After installing, terminal shows the 400 bad request error tested in Postman when attempting to register an email that is already in the MongoDB database.
@@ -256,4 +256,46 @@ userSchema.methods.comparePassword = async function(candidatePassword){
 
 </br>
 -8/12/22 Then set up the log in controller server side in the authController.js file.
+```js
+Server Side:
+authController.js
 
+const login = async (req, res) => {
+    
+    //set up variables email and password by obj destructuring req.body.email and req.body.password
+    const {email, password} = req.body
+    
+    //If email of password wasn't inputted on the form on the front-end, return error
+    if (!email || !password){
+        throw new BadRequestError('Please provide all values')
+    }
+    
+    //grab user from database, looking up by the email ID
+    //'.select('+password') is added because of 'select: false' in User.js for password to not get ps in response   
+    // because user is an instance method
+    const user = await User.findOne({ email }).select('+password') 
+    
+    //check if User exists in the database
+    if(!user){
+        throw new UnAuthenticatedError('Invalid Credentials')
+    } 
+    console.log(user)
+
+    //check if password is correct to hashed version in DB
+    const isPasswordCorrect = await user.comparePassword(password)  
+    if(!isPasswordCorrect) {
+        throw new UnAuthenticatedError('Invalid Credentials')
+    } 
+
+    //create JSON web token to keep user logged in even if page refreshes
+    const token = user.createJWT()
+    user.password = undefined   //to not show password in response
+    res.status(StatusCodes.OK).json({user,token, location: user.location})
+}
+}
+```
+
+
+</br>
+<h2>Login User - Front End</h2>
+</br></br>
