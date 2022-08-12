@@ -306,3 +306,45 @@ const login = async (req, res) => {
 <h2>Login User - Front End</h2>
 </br>
 </br>
+
+-8/12/22 Set up a login user async function and added form input to the appContext state to be accessed as a global.
+
+
+```js
+Front End:
+appContext.js
+  const loginUser = async (currentUser) => {
+    console.log(currentUser)
+  }
+
+
+  return (
+    <AppContext.Provider value={{...state, displayAlert, registerUser, loginUser}}>
+      {children}
+    </AppContext.Provider>
+  )
+}
+```
+
+-8/12/22 Added that the loginUser function in the appContext.js file is invoked if the login form is submitted.
+
+```js
+Front End:
+Register.js
+const onSubmit = (e) => {
+    e.preventDefault()
+    const {name, email, password, isMember} = values
+    if (!email || !password || (!isMember && !name)) {
+        displayAlert()
+        return
+    }
+    const currentUser = {name, email, password}
+    if(isMember){
+        loginUser(currentUser)
+    }
+    else{
+        registerUser(currentUser)
+    }
+
+}
+```
