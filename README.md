@@ -241,7 +241,7 @@ export default UnAuthenticatedError
 ```
 
 </br>
--8/12/22 After adding the custom error, 
+-8/12/22 After adding the custom error, added an instance method to the user schema to compare password to the hashed password adn return if it matches.
 
 ```js
 Server Side:
