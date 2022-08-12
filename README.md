@@ -215,11 +215,12 @@ const registerUser = async (currentUser) => {
 </br>
 -8/12/22 Installed the npm package MORGAN on the server side as an HTTP request logger middleware, to log HTTP requests, debug APIs used in the application, and help view routes/methods used in controllers.  This will make the program easier to use as multiple routes to send requests are added. After installing, terminal shows the 400 bad request error tested in Postman when attempting to register an email that is already in the MongoDB database.
 </br>
-
+</br>
 ![image](https://user-images.githubusercontent.com/91037796/184403310-505e642f-73e5-4157-a749-7e763601240e.png)
 
 </br>
 -8/12/22 Implemented user authentication by first setting up a new error to return 401 if unauthenticated.
+</br>
 </br>
 
 ```js
@@ -243,6 +244,7 @@ export default UnAuthenticatedError
 </br>
 -8/12/22 After adding the custom error, added an instance method to the user schema to compare password to the hashed password and return 'True' if it matches.
 </br>
+</br>
 
 ```js
 Server Side:
@@ -257,6 +259,7 @@ userSchema.methods.comparePassword = async function(candidatePassword){
 
 </br>
 -8/12/22 Then set up the LOG IN CONTROLLER server side in the authController.js file.  This checks that an email and password is entered.  Looks up the user by email in the MongoDB database, and confirms the password entered matches the hashed version of the password in the database.  If everything is correct, it returns a JSON response of the user object (not the password entered), token, and location.
+</br>
 </br>
 
 ```js
@@ -301,4 +304,5 @@ const login = async (req, res) => {
 
 </br>
 <h2>Login User - Front End</h2>
-</br></br>
+</br>
+</br>
