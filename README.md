@@ -253,3 +253,7 @@ userSchema.methods.comparePassword = async function(candidatePassword){
     return isMatch
 }
 ```
+
+</br>
+-8/12/22 Then set up the log in controller server side in the authController.js file.
+
