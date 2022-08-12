@@ -66,7 +66,7 @@ const registerUser = async (currentUser) => {
   try {
     const response = await axios.post('/api/v1/auth/register', currentUser)
     console.log(response)
-    const {user,token,location} = response.data   //big object returned from axios
+    const {user,token,location} = response.data   //destructure the big response object returned from axios
     dispatch({
       type: REGISTER_USER_SUCCESS,
       payload: {user, token, location},
