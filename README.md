@@ -223,6 +223,7 @@ const registerUser = async (currentUser) => {
 -8/12/22 Implemented user authentication by first setting up a new error to return 401 if unauthenticated.
 
 ```js
+Server Side:
 unauthenticated.js
 
 import { StatusCodes } from 'http-status-codes' 
@@ -241,3 +242,14 @@ export default UnAuthenticatedError
 
 </br>
 -8/12/22 After adding the custom error, 
+
+```js
+Server Side:
+User.js
+
+//instance method
+userSchema.methods.comparePassword = async function(candidatePassword){
+    const isMatch = await bcrypt.compare(candidatePassword, this.password)
+    return isMatch
+}
+```
