@@ -7,10 +7,46 @@
 Full stack MERN Project I created following a Udemy tutorial.  After completing this project and gaining a high-level view of the design, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.
 
 </br>
+</br>
+Packages Installed:
+</br></br>
+<table>
+    <tr>
+    <td align="center" height="10" width="20">
+        <br /><strong>NORMALIZE.CSS</strong>
+    </td>
+    <td align="center" height="10" width="20">
+        <br /><strong>BCRYPTJS</strong>
+    </td>
+    <td align="center" height="10" width="20">
+        <br /><strong>JSONWEBTOKEN</strong>
+    </td>
+    <td align="center" height="10" width="20">
+        <br /><strong>BCRYPTJS</strong>
+    </td>
+    <td align="center" height="10" width="20">
+        <br /><strong>AXIOS</strong>
+    </td>
+    <td align="center" height="10" width="20">
+        <br /><strong>CORS</strong>
+    </td>
+    <td align="center" height="10" width="20">
+        <br /><strong>CONCURRENTLY</strong>
+    </td>
+    <td align="center" height="10" width="20">
+        <br /><strong>MORGAN</strong>
+    </td>
+    </tr>
+</table>
+      
+
+
+
+</br>
 
 <h2>Project Implementations</h2>
 
--Used NPM to install the normalize.css package.  This allows for normalized CSS to provide cross browser consistency, prevent name collisions, and allow stylizing of entire react components using wrappers.  Is a fancier way of * { } to add a global for CSS elements.  
+-Used NPM to install the NORMALIZE.CSS package.  This allows for normalized CSS to provide cross browser consistency, prevent name collisions, and allow stylizing of entire react components using wrappers.  Is a fancier way of * { } to add a global for CSS elements.  
 
 -Added styled components using wrappers in the wrappers folder.  This involves importing 'styled-components', and adding CSS directly to a .js file.  This is then imported into React components such as the landing page, so that the CSS is more modular.   
 
@@ -46,14 +82,14 @@ Full stack MERN Project I created following a Udemy tutorial.  After completing 
 
 <img src="https://user-images.githubusercontent.com/91037796/178848537-40aae12d-bdfa-48e5-9989-2e555298968b.png" width=50% height=50%>
 
--Implemented password hashing in MongoDB with npm package bcryptjs to protect user data in the event the databse information was ever compromised by a malicious party. Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
+-Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party. Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
 
 
 <img src="https://user-images.githubusercontent.com/91037796/183325614-c074d5f1-ce97-422f-a2ba-c98fb3eaa92b.png" width=70% height=70%>
 <img src="https://user-images.githubusercontent.com/91037796/183319400-f7021d38-2803-4d15-8717-6fb85a86077e.png" width=50% height=50%>
 
 
--Implemented JSON Web Token (JWT) using npm package jsonwebtoken for user authentication and to prevent unauthorized users from accessing pages.
+-Implemented JSON Web Token (JWT) using npm package JSONWEBTOKEN for user authentication and to prevent unauthorized users from accessing pages.
 
 ```js
 userSchema.methods.createJWT = function () {
@@ -64,7 +100,7 @@ userSchema.methods.createJWT = function () {
 </br>
 <h2>Connecting the Front and Back End</h2>
 
--Used npm to install the package CONCURRENTLY so that the front and back end of the application can be ran at the same time with the "npm start" terminal command.  Made use of the npm node.js package "CORS" to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
+-Used npm to install the package CONCURRENTLY so that the front and back end of the application can be ran at the same time with the "npm start" terminal command.  Made use of the npm node.js package CORS to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
 
 
 <img src="https://user-images.githubusercontent.com/91037796/183781631-d8519c74-f66c-4adf-a9ff-69eaefaa4ca8.png" width=90% height=90%>
@@ -75,7 +111,7 @@ userSchema.methods.createJWT = function () {
 <h2>Implementing User Registration (Front/Back End and MongoDB)</h2>
 
 <h3>Front End</h3>
--Installed axios on the client side so that when the submit button is clicked on the front-end, axios will submit a post request using the authentication routes on the back-end to the MongoDB database.  If the user already exists (looking up by email in the database using the fineOne function), an error will be returned.    
+-Installed AXIOS on the client side so that when the submit button is clicked on the front-end, axios will submit a post request using the authentication routes on the back-end to the MongoDB database.  If the user already exists (looking up by email in the database using the fineOne function), an error will be returned.    
 </br>
 </br>
  Register Page - Register.js 
@@ -173,5 +209,5 @@ const registerUser = async (currentUser) => {
 }  
 ```
 
--8/12/22 Installed the npm package MORGAN as an HTTP request logger middleware, to log HTTP requests, debug APIs used in the application, and help view routes/methods used in controllers.  This will make the program easier to use as multiple routes to send requests are added.
+-8/12/22 Installed the npm package MORGAN on the server side as an HTTP request logger middleware, to log HTTP requests, debug APIs used in the application, and help view routes/methods used in controllers.  This will make the program easier to use as multiple routes to send requests are added.
 </br>
