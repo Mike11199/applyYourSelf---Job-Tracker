@@ -4,7 +4,8 @@
 ******IN PROGRESS******
 </br>
 </br>
-Full stack MERN Project I created following a Udemy tutorial.  After completing this project and gaining a high-level view of the design, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.
+Full stack MERN Project I created following a Udemy tutorial. Credit MERN Stack Course 2022 - MongoDB, Express, React and NodeJS
+by John Smilga.  After completing this project and gaining a high-level view of the code design, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.
 
 </br>
 </br>
@@ -219,4 +220,24 @@ const registerUser = async (currentUser) => {
 ![image](https://user-images.githubusercontent.com/91037796/184403310-505e642f-73e5-4157-a749-7e763601240e.png)
 
 </br>
--8/12/22 Implemented user authentication by
+-8/12/22 Implemented user authentication by first setting up a new error to return 401 if unauthenticated.
+
+```js
+unauthenticated.js
+
+import { StatusCodes } from 'http-status-codes' 
+import CustomAPIError from './custom-api.js'
+
+class UnAuthenticatedError extends CustomAPIError{
+    constructor(message) {
+        super(message)
+        this.statusCode = StatusCodes.UNAUTHORIZED  //401
+    }
+}
+
+export default UnAuthenticatedError
+
+```
+
+</br>
+-8/12/22 After adding the custom error, 
