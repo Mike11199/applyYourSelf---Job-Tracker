@@ -305,7 +305,7 @@ const login = async (req, res) => {
 </br>
 <h2>Login User - Front End</h2>
 </br>
-</br>
+
 
 -8/12/22 Set up a login user async function and added form input to the appContext state to be accessed as a global.
 
