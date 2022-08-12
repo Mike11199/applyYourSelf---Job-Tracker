@@ -256,7 +256,7 @@ userSchema.methods.comparePassword = async function(candidatePassword){
 ```
 
 </br>
--8/12/22 Then set up the log in controller server side in the authController.js file.
+-8/12/22 Then set up the LOG IN CONTROLLER server side in the authController.js file.  This checks that an email and password is entered.  Looks up the user by email in the MongoDB database, and confirms the password entered matches the hashed version of the password in the database.  If everything is correct, it returns a JSON response of the user object (not the password entered), token, and location.
 </br>
 
 ```js
