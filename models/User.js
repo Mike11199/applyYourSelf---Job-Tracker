@@ -48,12 +48,17 @@ userSchema.pre('save', async function(){
     //console.log(this)
 })
 
-
+//method to create a JSON Web Token that will expire for the user in one day, otherwise user will be logged out on page refresh. 
+//this token is saved in the user's local storage
 userSchema.methods.createJWT = function () {
     return jwt.sign({userId:this._id}, process.env.JWT_SECRET, {expiresIn:process.env.JWT_LIFETIME})
 }
 
-
+//instance method
+userSchema.methods.comparePassword = async function(candidatePassword){
+    const isMatch = await bcrypt.compare(candidatePassword, this.password)
+    return isMatch
+}
 
 export default mongoose.model('User', userSchema)
 
