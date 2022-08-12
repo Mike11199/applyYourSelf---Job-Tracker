@@ -173,5 +173,5 @@ const registerUser = async (currentUser) => {
 }  
 ```
 
--8/12/22 Installed the npm package MORGAN as an HTTP request logger middleware, to log HTTP requests and debug APIs used in the application.
+-8/12/22 Installed the npm package MORGAN as an HTTP request logger middleware, to log HTTP requests, debug APIs used in the application, and help view routes/methods used in controllers.  This will make the program easier to use as multiple routes to send requests are added.
 </br>
