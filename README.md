@@ -368,6 +368,7 @@ const onSubmit = (e) => {
 </br>
 -8/24/22 Set up a nested page structure by using a shared layout, made possible by the Outlet component in React BrowserRouter.
 </br>
+</br>
 -8/24/22 Added protected routes to the job dashboard so that a user needs to be registered to access them, or else they will be kicked back to the landing page.
 </br>
 </br>
