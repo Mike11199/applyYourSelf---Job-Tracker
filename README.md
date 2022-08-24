@@ -366,6 +366,6 @@ const onSubmit = (e) => {
 </br>
 <h2>Nested Page Structure</h2>
 </br>
--8/12/22 Started setting up a nested page structure
+-8/12/22 Set up a nested page structure by using a shared layout, made possible by the Outlet component in React BrowserRouter.
 </br>
 </br>
