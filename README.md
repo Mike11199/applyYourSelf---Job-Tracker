@@ -364,12 +364,14 @@ const onSubmit = (e) => {
 ```
 
 </br>
-<h2>Pagination</h2>
+<h2>Page Structure and Protected Routes</h2>
 </br>
+
 -8/24/22 Set up a nested page structure by using a shared layout, made possible by the Outlet component in React BrowserRouter.
 </br>
 </br>
--8/24/22 Added protected routes to the job dashboard so that a user needs to be registered to access them, or else they will be kicked back to the landing page.  This is accomplished by a function which accesses the user (through the AppContext global state).  The function then returns the user to the landing page if not a user using the navigate hook.
+
+-8/24/22 Added protected routes to the application so that a user needs to be registered to access certain pages, or else they will be kicked back to the landing page.  This is accomplished by a function which accesses the user (through the AppContext global state).  The function then returns the user to the landing page programatically if they are not a user, using the navigate hook.
 </br>
 </br>
 
