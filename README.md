@@ -371,7 +371,7 @@ const onSubmit = (e) => {
 </br>
 </br>
 
--8/24/22 Added protected routes to the application so that a user needs to be registered to access certain pages, or else they will be kicked back to the landing page.  This is accomplished by a function which accesses the user (through the AppContext global state).  The function then returns the user to the landing page programatically if they are not a user, using the navigate hook.
+-8/24/22 Added protected routes to the application so that a user needs to be registered to access certain pages, or else they will be kicked back to the landing page.  This is accomplished by a function which accesses the user object (through the AppContext global state).  The function then returns the user to the landing page programatically if they are not a user, using the navigate hook.
 </br>
 </br>
 
