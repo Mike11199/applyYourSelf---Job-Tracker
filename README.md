@@ -372,3 +372,23 @@ const onSubmit = (e) => {
 -8/24/22 Added protected routes to the job dashboard so that a user needs to be registered to access them, or else they will be kicked back to the landing page.  This is accomplished by a function which accesses the user (through the AppContext global state).  The function then returns the user to the landing page if not a user using the navigate hook.
 </br>
 </br>
+
+
+```js
+
+ProtectedRoute.js
+
+import { useAppContext } from "../context/appContext"
+import { Navigate } from "react-router-dom"
+
+const ProtectedRoute = ({children}) => {
+    const {user} = useAppContext()
+    if(!user) {
+        return <Navigate to="/landing" />
+    }
+    return children
+}
+
+export default ProtectedRoute
+
+```
