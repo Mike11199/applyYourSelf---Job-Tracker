@@ -12,6 +12,7 @@ import {
   LOGIN_USER_BEGIN,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_ERROR,
+  TOGGLE_SIDEBAR
 } from "./actions"
 
 const token = localStorage.getItem('token')
@@ -27,6 +28,7 @@ export const initialState = {
   token:null,
   userLocation: userLocation || '',
   jobLocation: userLocation || '',
+  showSidebar: false,
 }
 const AppContext = React.createContext()
 
@@ -105,9 +107,11 @@ const registerUser = async (currentUser) => {
     clearAlert()
   }
 
-
+  const toggleSidebar = () => {
+    dispatch({ type: TOGGLE_SIDEBAR})
+  }
   return (
-    <AppContext.Provider value={{...state, displayAlert, registerUser, loginUser}}>
+    <AppContext.Provider value={{...state, displayAlert, registerUser, loginUser, toggleSidebar}}>
       {children}
     </AppContext.Provider>
   )
