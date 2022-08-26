@@ -37,6 +37,9 @@ Packages Installed:
     <td align="center" height="5" width="200">
         <br /><strong>ExpressJS Async Errors</strong>
     </td>
+    <td align="center" height="5" width="200">
+        <br /><strong>React Icons</strong>
+    </td>
     </tr>
 </table>
 
