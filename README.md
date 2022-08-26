@@ -397,3 +397,26 @@ const ProtectedRoute = ({children}) => {
 export default ProtectedRoute
 
 ```
+
+-8/25/22 Set up more components for the page structure.  Added a toggleSidebar to application state with useAppContext().  
+
+
+```js
+
+Navbar.js
+
+  const [showLogout, setShowLogout] = useState(false)             //square brackets is computed property name
+  const {toggleSidebar} = useAppContext()                         // set to false by default  
+
+ <button 
+          type="button"  
+          className="btn" 
+          onClick={()=> setShowLogout(!showLogout)}                //set to opposite of current val         
+  >
+
+  onClick={()=> setShowLogout(!showLogout)}                     
+  
+  {/*  conditional class name to trigger different css for drop down box */}
+  <button type="button" className="dropdown-btn" onClick={()=> console.log('logout user')}>logout</button>
+
+```
