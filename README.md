@@ -398,25 +398,28 @@ export default ProtectedRoute
 
 ```
 
--8/25/22 Set up more components for the page structure.  Added a toggleSidebar to application state with useAppContext().  
+-8/25/22 Set up more components for the page structure.  Added a toggleSidebar to application state with useAppContext().  Added button to show/hide div for log out button using React's useState hook.
 
 
 ```js
 
 Navbar.js
 
-  const [showLogout, setShowLogout] = useState(false)             //square brackets is computed property name
-  const {toggleSidebar} = useAppContext()                         // set to false by default  
+ // set up 
+ const [showLogout, setShowLogout] = useState(false)             //square brackets is computed property name
 
+
+//first button which onclick changes the showLogout state
  <button 
           type="button"  
           className="btn" 
           onClick={()=> setShowLogout(!showLogout)}                //set to opposite of current val         
   >
 
-  onClick={()=> setShowLogout(!showLogout)}                     
-  
-  {/*  conditional class name to trigger different css for drop down box */}
-  <button type="button" className="dropdown-btn" onClick={()=> console.log('logout user')}>logout</button>
+    
+   //div which has a conditional class name, to only show the log out button if the state value is true (different class name = different CSS)
+  <div className={showLogout?"dropdown show-dropdown" : "dropdown"}> 
+          <button type="button" className="dropdown-btn" onClick={()=> console.log('logout user')}>logout</button>
+  </div>
 
 ```
