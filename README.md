@@ -397,9 +397,9 @@ const ProtectedRoute = ({children}) => {
 export default ProtectedRoute
 
 ```
-
+</br>
 -8/25/22 Set up more components for the page structure.  Added a toggleSidebar to application state with useAppContext().  Added button to show/hide div for log out button using React's useState hook.
-
+</br>
 
 ```js
 
@@ -423,5 +423,6 @@ Navbar.js
   </div>
 
 ```
-
+</br>
 <img src="https://user-images.githubusercontent.com/91037796/186835266-602e96b1-27d1-4051-9b98-4e76ce6abaf4.png" width=100% height=100%>
+</br>
