@@ -400,6 +400,7 @@ export default ProtectedRoute
 </br>
 -8/25/22 Set up more components for the page structure.  Added a toggleSidebar to application state with useAppContext().  Added button to show/hide div for log out button using React's useState hook.
 </br>
+</br>
 
 ```js
 
