@@ -37,6 +37,9 @@ Packages Installed:
     <td align="center" height="5" width="200">
         <br /><strong>ExpressJS Async Errors</strong>
     </td>
+    <td align="center" height="5" width="200">
+        <br /><strong>React Icons</strong>
+    </td>
     </tr>
 </table>
 
@@ -364,8 +367,33 @@ const onSubmit = (e) => {
 ```
 
 </br>
-<h2>Nested Page Structure</h2>
+<h2>Page Structure and Protected Routes</h2>
 </br>
--8/12/22 Started setting up a nested page structure
+
+-8/24/22 Set up a nested page structure by using a shared layout, made possible by the Outlet component in React BrowserRouter.
 </br>
 </br>
+
+-8/24/22 Added protected routes to the application so that a user needs to be registered to access certain pages, or else they will be kicked back to the landing page.  This is accomplished by a function which accesses the user object (through the AppContext global state).  The function then returns the user to the landing page programatically if they are not a user, using the navigate hook.
+</br>
+</br>
+
+
+```js
+
+ProtectedRoute.js
+
+import { useAppContext } from "../context/appContext"
+import { Navigate } from "react-router-dom"
+
+const ProtectedRoute = ({children}) => {
+    const {user} = useAppContext()
+    if(!user) {
+        return <Navigate to="/landing" />
+    }
+    return children
+}
+
+export default ProtectedRoute
+
+```
