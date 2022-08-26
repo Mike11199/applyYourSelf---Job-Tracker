@@ -427,3 +427,14 @@ Navbar.js
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/186835266-602e96b1-27d1-4051-9b98-4e76ce6abaf4.png" width=100% height=100%>
 </br>
+
+
+</br>
+</br>
+<h2>Log Out Functionality</h2>
+</br>
+
+</br>
+-8/26/22 placeholder
+</br>
+</br>
