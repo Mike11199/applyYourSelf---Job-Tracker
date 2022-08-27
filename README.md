@@ -471,7 +471,8 @@ const Navbar = () => {
   const {toggleSidebar, logoutUser, user} = useAppContext()       
 
 
-//optional chaining to show user.name if user exists on the logout button and invoke the logout function on button click in the appContext file.
+//optional chaining to show user.name if the user exists on the button to toggle the logout button div
+//button to logout invokes the logout function on button click which exists in the appContext.js file
 <FaUserCircle/>
         {user?.name}
         <FaCaretDown/>
