@@ -435,7 +435,7 @@ Navbar.js
 </br>
 
 </br>
--8/26/22 placeholder
+-8/26/22 Added a function in appContext to log out the user, by clearing the user's local storage and setting state values back to null.  Due to the fact that routes are protected, this will also automatically kick the user back to the landing page.
 </br>
 </br>
 
