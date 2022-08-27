@@ -438,3 +438,49 @@ Navbar.js
 -8/26/22 placeholder
 </br>
 </br>
+
+
+```js
+
+
+appContext.js
+
+  const logoutUser = () => {
+    dispatch({ type: LOGOUT_USER})
+    removeUserFromLocalStorage()
+  }
+
+
+Reducer.js
+
+    if(action.type === LOGOUT_USER){
+        return { 
+                    ...initialState,
+                    user: null,
+                    token: null,
+                    jobLocation: '',
+                    userLocation: '',
+                }
+    
+            }
+
+Navbar.js
+
+const Navbar = () => {
+  const [showLogout, setShowLogout] = useState(false)              //square brackets is computed property name
+  const {toggleSidebar, logoutUser, user} = useAppContext()       
+
+
+//optional chaining to show user.name if user exists on the logout button and invoke the logout function on button click in the appContext file.
+<FaUserCircle/>
+        {user?.name}
+        <FaCaretDown/>
+        </button>
+        <div className={showLogout?"dropdown show-dropdown" : "dropdown"}> 
+        {/* above uses conditional class name to trigger different css for drop down box */}
+          <button type="button" className="dropdown-btn" onClick={logoutUser}>logout</button>
+
+
+
+
+```
