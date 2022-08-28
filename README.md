@@ -435,6 +435,53 @@ Navbar.js
 </br>
 
 </br>
--8/26/22 placeholder
+-8/26/22 Added a function in appContext to log out the user, by clearing the user's local storage and setting state values back to null.  Due to the fact that routes are protected, this will also automatically kick the user back to the landing page.
 </br>
 </br>
+
+
+```js
+
+
+appContext.js
+
+  const logoutUser = () => {
+    dispatch({ type: LOGOUT_USER})
+    removeUserFromLocalStorage()
+  }
+
+
+Reducer.js
+
+    if(action.type === LOGOUT_USER){
+        return { 
+                    ...initialState,
+                    user: null,
+                    token: null,
+                    jobLocation: '',
+                    userLocation: '',
+                }
+    
+            }
+
+Navbar.js
+
+const Navbar = () => {
+  const [showLogout, setShowLogout] = useState(false)              //square brackets is computed property name
+  const {toggleSidebar, logoutUser, user} = useAppContext()       
+
+
+//optional chaining to show user.name if the user exists on the button to toggle the logout button div
+//button to logout invokes the logout function on button click which exists in the appContext.js file
+<FaUserCircle/>
+        {user?.name}
+        <FaCaretDown/>
+        </button>
+        <div className={showLogout?"dropdown show-dropdown" : "dropdown"}> 
+        {/* above uses conditional class name to trigger different css for drop down box */}
+          <button type="button" className="dropdown-btn" onClick={logoutUser}>logout</button>
+
+
+
+
+```
