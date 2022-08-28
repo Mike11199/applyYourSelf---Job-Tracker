@@ -6,7 +6,7 @@ import { useState } from "react"
 
 const Navbar = () => {
   const [showLogout, setShowLogout] = useState(false)              //square brackets is computed property name
-  const {toggleSidebar} = useAppContext()                         // set to false by default  
+  const {toggleSidebar, logoutUser, user} = useAppContext()                         
   return (
     <Wrapper>
       <div className="nav-center">
@@ -33,12 +33,12 @@ const Navbar = () => {
           // above line invokes function when button is clicked to show the drop down for user log out
         >
         <FaUserCircle/>
-        michael
+        {user?.name}
         <FaCaretDown/>
         </button>
         <div className={showLogout?"dropdown show-dropdown" : "dropdown"}> 
         {/* above uses conditional class name to trigger different css for drop down box */}
-          <button type="button" className="dropdown-btn" onClick={()=> console.log('logout user')}>logout</button>
+          <button type="button" className="dropdown-btn" onClick={logoutUser}>logout</button>
         </div>
       </div>
     </Wrapper>
