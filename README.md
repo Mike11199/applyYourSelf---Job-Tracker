@@ -510,3 +510,6 @@ router.route('/register').post(register)
 router.route('/login').post(login)
 router.route('/updateUser').patch(authenticateUser, updateUser)
 ```
+
+
+<img src="https://user-images.githubusercontent.com/91037796/187109684-0b132955-3586-4dc8-b6d6-528f70ddcc06.png" width=100% height=100%>
