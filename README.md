@@ -499,8 +499,7 @@ const Navbar = () => {
 
 -8/28/22 First added the "authenticateUser" to the /updateUser route.  /register and /login are still public routes.  Also added to all routes for creating, updating, and deleting jobs.  Added bearer token testing in Postman to test routes with authentication bearer token.
 
-</br>
-</br>
+
 -8/28/22 Created auth.js middleware to also compare the user's JWT to the secret environment variable, throwing an UnAuthenticationError 401 if the token is not correct or has expired.
 </br>
 </br>
