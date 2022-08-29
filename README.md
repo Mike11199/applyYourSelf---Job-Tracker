@@ -489,7 +489,7 @@ const Navbar = () => {
 
 </br>
 </br>
-<h2>Auth - Server Setup</h2>
+<h2>Auth - Server Setup and Middleware</h2>
 </br>
 
 </br>
@@ -498,8 +498,13 @@ const Navbar = () => {
 </br>
 
 -8/28/22 First added the "authenticateUser" to the /updateUser route.  /register and /login are still public routes.  Also added to all routes for creating, updating, and deleting jobs.  Added bearer token testing in Postman to test routes with authentication bearer token.
+
 </br>
 </br>
+-8/28/22 Created auth.js middleware to also compare the user's JWT to the secret environment variable, throwing an UnAuthenticationError 401 if the token is not correct or has expired.
+</br>
+</br>
+
 
 ```js
 import authenticateUser from '../middleware/auth.js'
@@ -512,15 +517,27 @@ router.route('/updateUser').patch(authenticateUser, updateUser)
 
 
 //Middleware for authentication
+import jwt from "jsonwebtoken"
 import { UnAuthenticatedError } from "../errors/index.js"
 
+UnAuthenticatedError
 const auth = async (req, res, next) => {
 
-    const authHeader = req.headers.authorization
-if(!authHeader){
+const authHeader = req.headers.authorization
+if(!authHeader || !authHeader.startsWith('Bearer')) {
     throw new UnAuthenticatedError("Authentication Invalid")
 }
+const token = authHeader.split(' ')[1]
+try {
+    const payload = jwt.verify(token, process.env.JWT_SECRET)
+    //console.log(payload)
+    // attach the user request object
+    //req.user = payload
+    req.user = { userId: payload.userId }
     next()
+    } catch (error) {
+    throw new UnAuthenticatedError("Authentication Invalid")
+    }   
 }
 
 export default auth
@@ -529,3 +546,4 @@ export default auth
 
 
 <img src="https://user-images.githubusercontent.com/91037796/187109684-0b132955-3586-4dc8-b6d6-528f70ddcc06.png" width=100% height=100%>
+
