@@ -493,6 +493,20 @@ const Navbar = () => {
 </br>
 
 </br>
--8/28/22 Restrict access to certain resources so that a user can view only their own data by adding a mdidleware that checks for the existence of a JSON web token created for the user.
+-8/28/22 Restrict access to certain resources so that a user can view only their own data by adding an authentication mdidleware that checks for the existence of a JSON web token created for the user.
 </br>
 </br>
+
+-8/28/22 First added the "authenticateUser" to the /updateUser route.  /register and /login are still public routes.  Also added to all routes for creating, updating, and deleting jobs.
+</br>
+</br>
+
+```js
+import authenticateUser from '../middleware/auth.js'
+
+app.use('/api/v1/jobs', authenticateUser, jobsRouter)
+
+router.route('/register').post(register)
+router.route('/login').post(login)
+router.route('/updateUser').patch(authenticateUser, updateUser)
+```
