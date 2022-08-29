@@ -509,6 +509,22 @@ app.use('/api/v1/jobs', authenticateUser, jobsRouter)
 router.route('/register').post(register)
 router.route('/login').post(login)
 router.route('/updateUser').patch(authenticateUser, updateUser)
+
+
+//Middleware for authentication
+import { UnAuthenticatedError } from "../errors/index.js"
+
+const auth = async (req, res, next) => {
+
+    const authHeader = req.headers.authorization
+if(!authHeader){
+    throw new UnAuthenticatedError("Authentication Invalid")
+}
+    next()
+}
+
+export default auth
+
 ```
 
 
