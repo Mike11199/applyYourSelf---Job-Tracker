@@ -493,6 +493,6 @@ const Navbar = () => {
 </br>
 
 </br>
--8/28/22 Restrict access to certain resources so that a user can view only their own data.
+-8/28/22 Restrict access to certain resources so that a user can view only their own data by adding a mdidleware that checks for the existence of a JSON web token created for the user.
 </br>
 </br>
