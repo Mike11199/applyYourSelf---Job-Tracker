@@ -485,3 +485,14 @@ const Navbar = () => {
 
 
 ```
+
+
+</br>
+</br>
+<h2>Auth - Server Setup</h2>
+</br>
+
+</br>
+-8/28/22 Restrict access to certain resources so that a user can view only their own data.
+</br>
+</br>
