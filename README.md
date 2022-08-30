@@ -644,11 +644,10 @@ export default auth
 
 ```
     
-
-
+</br>
 <img src="https://user-images.githubusercontent.com/91037796/187361218-2ac36934-c5fb-49bc-81e6-bc372a83d088.png" width=100% height=100%>
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/187361478-b0277169-5b37-48df-a328-a799bc008f28.png" width=100% height=100%>
     
-    
-    
-    
-    
+
+
