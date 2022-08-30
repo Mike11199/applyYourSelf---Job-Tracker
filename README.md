@@ -615,6 +615,7 @@ export default auth
 
 
 ```js
+
    if(action.type === UPDATE_USER_BEGIN){    
         return { ...state, isLoading: true}         //... unpacks the value of the current state
     }
@@ -640,4 +641,14 @@ export default auth
                     alertText: action.payload.msg,
                 }
     }
-    ```
+
+```
+    
+
+
+<img src="https://user-images.githubusercontent.com/91037796/187361218-2ac36934-c5fb-49bc-81e6-bc372a83d088.png" width=100% height=100%>
+    
+    
+    
+    
+    
