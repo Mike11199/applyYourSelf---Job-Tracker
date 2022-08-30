@@ -582,7 +582,7 @@ export default auth
 </br>
 -8/29/22 On the back end, the updateUser function in the authController.js file retrieves the user from the MongoDB database by userID, and updates values as needed.  This request also goes through the authentication middleware to ensure the jwt token is valid before this request to the server and database can be processed.
 </br>
-
+</br>
 
 ```js
   const updateUser = async (req, res) => {   
@@ -609,9 +609,9 @@ export default auth
 ```
 
 </br>
--8/29/22 Lastly, the reducer updates state as needed based on the result
+-8/29/22 Lastly, the reducer updates state as needed based on the result of the HTTP request.
 </br>
-
+</br>
 
 
 ```js
