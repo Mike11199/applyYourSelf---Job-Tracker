@@ -489,7 +489,7 @@ const Navbar = () => {
 
 </br>
 </br>
-<h2>Auth - Server Setup and Middleware</h2>
+<h2>Authentication - Server Setup and Middleware</h2>
 </br>
 
 </br>
@@ -497,7 +497,7 @@ const Navbar = () => {
 </br>
 </br>
 
--8/28/22 First added the "authenticateUser" to the /updateUser route.  /register and /login are still public routes.  Also added to all routes for creating, updating, and deleting jobs.  Added bearer token testing in Postman to test routes with authentication bearer token.
+-8/28/22 First added the "authenticateUser" to the /updateUser route.  /register and /login are still public routes.  Also added authentication to all routes for creating, updating, and deleting jobs.  Added bearer token testing in Postman to test routes with authentication bearer token.
 
 
 -8/28/22 Created auth.js middleware to also compare the user's JWT to the secret environment variable, throwing an UnAuthenticationError 401 if the token is not correct or has expired.
@@ -546,3 +546,98 @@ export default auth
 
 <img src="https://user-images.githubusercontent.com/91037796/187109684-0b132955-3586-4dc8-b6d6-528f70ddcc06.png" width=100% height=100%>
 
+
+
+</br>
+</br>
+<h2>Update User Functionality</h2>
+</br>
+
+</br>
+-8/29/22 Added update user function in appContext.js on the FRONT END.  This is called by the save changes button on the dashboard profile page, and makes use of the auth route "router.route('/updateUser').patch(authenticateUser, updateUser)" to send an HTTP PATCH request to the Node.JS back end.   
+</br>
+</br>
+
+
+```js
+  const updateUser = async (currentUser) => {
+    dispatch({ type:UPDATE_USER_BEGIN })
+    try {
+      const { data } = await authFetch.patch('/auth/updateUser', currentUser)
+      const { user, location, token } = data
+      dispatch({ type:UPDATE_USER_SUCCESS, payload:{user, location, token} })
+      addUserToLocalStorage({user, location, token})
+
+    } catch (error) {
+      if(error.response.status !==401 ){
+        dispatch({ type:UPDATE_USER_ERROR, payload:{msg: error.response.data.msg} })
+      }
+      
+    }
+    clearAlert()
+  }
+
+```
+
+</br>
+-8/29/22 On the back end, the updateUser function in the authController.js file retrieves the user from the MongoDB database by userID, and updates values as needed.  This request also goes through the authentication middleware to ensure the jwt token is valid before this request to the server and database can be processed.
+</br>
+
+
+```js
+  const updateUser = async (req, res) => {   
+    const {email, name, lastName, location} = req.body
+
+    if (!email || !name || !lastName || !location) {
+        throw new BadRequestError('Please provide all values')
+    }
+    const user = await User.findOne({_id:req.user.userId})
+
+    user.email = email
+    user.name = name
+    user.lastName = lastName
+    user.location = location
+
+    await user.save()
+
+    const token = user.createJWT()
+
+    res.status(StatusCodes.OK).json({user,token, location: user.location})
+    
+}
+
+```
+
+</br>
+-8/29/22 Lastly, the reducer updates state as needed based on the result
+</br>
+
+
+
+```js
+   if(action.type === UPDATE_USER_BEGIN){    
+        return { ...state, isLoading: true}         //... unpacks the value of the current state
+    }
+    if(action.type === UPDATE_USER_SUCCESS){
+        return { 
+                    ...state,
+                    isLoading: false,
+                    token:action.payload.token,
+                    user:action.payload.user,
+                    userLocation:action.payload.location,
+                    jobLocation:action.payload.location,
+                    showAlert: true,
+                    alertType:'success',
+                    alertText: 'User Profile Updated!',
+                }
+    }
+    if(action.type === UPDATE_USER_ERROR){
+        return { 
+                    ...state,
+                    isLoading: false,
+                    showAlert:true,
+                    alertType:'danger',
+                    alertText: action.payload.msg,
+                }
+    }
+    ```
