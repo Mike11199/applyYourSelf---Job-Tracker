@@ -693,11 +693,13 @@ const createJob = async (req, res) => {
 
 
 </br>
--8/30/22 Added job model using Mongoose for MongoDB so that jobs can be stored inthe database.  Jobs have a unique ID for the job and the user who created it.
+-8/30/22 Added job model using Mongoose for MongoDB so that created jobs can be stored in the database.  Jobs have a unique ID for the job itself and the user who created it (needed for the user to retrieve and edit/delete jobs later on).
 </br>
 </br>
 
 ```js
+Job.js
+
 import mongoose from "mongoose"
 
 const JobSchema = new mongoose.Schema({
@@ -753,6 +755,7 @@ export default mongoose.model('Job', JobSchema)
 
 
 ```js
+AppContext.js
 
 const createJob = async () => {
 
@@ -781,6 +784,7 @@ const createJob = async () => {
 
 
 ```js
+AddJob.js
 
   const handleSubmit = (e) => {
     e.preventDefault()
