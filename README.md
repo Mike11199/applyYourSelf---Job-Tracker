@@ -28,6 +28,8 @@ Packages Installed:
     <td align="center" height="5" width="60">
         <br /><strong>Cors</strong>
     </td>
+    </tr>
+    <tr>
     <td align="center" height="5" width="60">
         <br /><strong>Concurrently</strong>
     </td>
@@ -39,6 +41,9 @@ Packages Installed:
     </td>
     <td align="center" height="5" width="200">
         <br /><strong>React Icons</strong>
+    </td>
+    <td align="center" height="5" width="200">
+    <br /><strong>Moment.js</strong>
     </td>
     </tr>
 </table>
