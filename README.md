@@ -928,24 +928,11 @@ const JobsContainer = () => {
 <img src="https://user-images.githubusercontent.com/91037796/187789270-564bd0ce-e093-4791-8770-eba99ff29114.png" width=30% height=30%>
 <img src="https://user-images.githubusercontent.com/91037796/187789808-1545bc54-15a0-40d8-a662-af2983598be2.png" width=100% height=100%>
 
-```js
-.js
-
-
-
-```
-
-
 </br>
--8/31/22 
+-8/31/22 Finished Job and JobsContainer components.  Used npm package MOMENT to convert unix time to a date.  Added icons for each job card.  Imported wrappers for CSS created by the tutorial.
 </br>
 </br>
+<img src="https://user-images.githubusercontent.com/91037796/187802566-6b4ec507-2493-477a-84b6-a08a4e83686b.png" width=100% height=100%>
 
 
-```js
-.js
-
-
-
-```
 
