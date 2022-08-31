@@ -925,7 +925,7 @@ const JobsContainer = () => {
 
 
 
-<img src="https://user-images.githubusercontent.com/91037796/187789270-564bd0ce-e093-4791-8770-eba99ff29114.png" width=100% height=100%>
+<img src="https://user-images.githubusercontent.com/91037796/187789270-564bd0ce-e093-4791-8770-eba99ff29114.png" width=30% height=30%>
 <img src="https://user-images.githubusercontent.com/91037796/187789808-1545bc54-15a0-40d8-a662-af2983598be2.png" width=100% height=100%>
 
 ```js
