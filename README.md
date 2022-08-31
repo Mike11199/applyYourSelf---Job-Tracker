@@ -816,15 +816,15 @@ AddJob.js
 
 
 
-<img src="" width=100% height=100%>
-
 
 
 </br>
--8/30/22 Added controller in server (back-end) to get ALL JOBS for a user, looking up by user ID in the jobs table in MongoDB. 
+-8/30/22 Added get all jobs controller in server (back-end) to get ALL JOBS for a user, looking up by user ID in the jobs table in MongoDB. Tested in Postman with bearer token.
 </br>
 </br>
 
+
+<img src="https://user-images.githubusercontent.com/91037796/187752721-daee1298-ea13-4ceb-90c8-92f72834627d.png" width=100% height=100%>
 
 ```js
 jobsController.js
