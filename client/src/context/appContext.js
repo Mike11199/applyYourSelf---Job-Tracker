@@ -250,6 +250,19 @@ const getJobs = async () => {
   clearAlert()
 }
 
+
+//grab the id of the job and edit all the values in the state
+const setEditJob = (id) => {
+  console.log(`set edit job: ${id}`)
+}
+
+const deleteJob = (id) => {
+  console.log(`delete job: ${id}`)
+}
+
+
+
+
   return (
     <AppContext.Provider value={{
       ...state,
@@ -263,6 +276,8 @@ const getJobs = async () => {
       clearValues,
       createJob,
       getJobs,
+      setEditJob,
+      deleteJob,
     }}>
       {children}
     </AppContext.Provider>
