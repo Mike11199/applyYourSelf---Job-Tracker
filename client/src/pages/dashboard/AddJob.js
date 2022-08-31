@@ -28,7 +28,11 @@ const AddJob = () => {
       displayAlert()
       return
     }
-    console.log('create job')
+    if(isEditing) {
+      // eventually editJob()
+      return
+    }
+    createJob()
   }
   const handleJobInput = (e) => {
     const name = e.target.name
