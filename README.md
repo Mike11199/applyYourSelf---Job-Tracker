@@ -819,7 +819,7 @@ AddJob.js
 
 
 </br>
--8/30/22 Added get all jobs controller in server (back-end) to get ALL JOBS for a user, looking up by user ID in the jobs table in MongoDB. Tested in Postman with bearer token.
+-8/31/22 Added get all jobs controller in server (back-end) to get ALL JOBS for a user, looking up by user ID in the jobs table in MongoDB. Tested in Postman with bearer token.
 </br>
 </br>
 
