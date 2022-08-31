@@ -657,6 +657,13 @@ export default auth
 <h2>Create Job Functionality</h2>
 </br>
 
+
+
+
+<img src="https://user-images.githubusercontent.com/91037796/187728149-b17a3de9-8628-4465-ae76-d493cfbe64ca.png" width=100% height=100%>
+
+
+
 </br>
 -8/30/22 Added controller in server (back-end) to get the requested data from the job model in the MongoDB database. 
 </br>
@@ -741,6 +748,11 @@ const JobSchema = new mongoose.Schema({
 
 export default mongoose.model('Job', JobSchema)
 ```
+
+
+<img src="https://user-images.githubusercontent.com/91037796/187728304-5207c9ea-527c-4c11-a191-8275c615b466.png" width=100% height=100%>
+
+
 
 
 </br>
