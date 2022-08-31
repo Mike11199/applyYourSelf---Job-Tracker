@@ -651,3 +651,147 @@ export default auth
     
 
 
+
+</br>
+</br>
+<h2>Create Job Functionality</h2>
+</br>
+
+</br>
+-8/30/22 Added controller in server (back-end) to get the requested data from the job model in the MongoDB database. 
+</br>
+</br>
+
+
+```js
+// async 
+const createJob = async (req, res) => {
+    const {position, company } = req.body
+    
+    if (!position || ! company) {
+        throw new BadRequestError('Please provide all values')
+    }
+    req.body.createdBy = req.user.userId
+    const job = await Job.create(req.body)
+    res.status(StatusCodes.CREATED).json({ job })
+}
+
+const getAllJobs = async (req, res) => {
+    res.send('get all jobs')
+}
+
+const updateJob = async (req, res) => {
+    res.send('update job')
+}
+
+const deleteJob = async (req, res) => {
+    res.send('delete job')
+}
+
+const showStats = async (req, res) => {
+    res.send('show stats')
+}
+```
+
+
+</br>
+-8/30/22 Added job model using Mongoose for MongoDB so that jobs can be stored inthe database.  Jobs have a unique ID for the job and the user who created it.
+</br>
+</br>
+
+```js
+import mongoose from "mongoose"
+
+const JobSchema = new mongoose.Schema({
+    company: {
+        type: String, 
+        required: [true, 'Please provide company'],
+        maxlength: 50,
+    },
+    position: {
+        type: String, 
+        required: [true, 'Please provide position'],
+        maxlength: 100,
+    },
+    status: {
+        type: String, 
+        enum: ['interview', 'declined','pending'],
+        default: 'pending',
+    },
+    jobType: {
+        type: String, 
+        enum: ['full-time', 'part-time','remote', 'internship'],
+        default: 'full-time',
+    },
+    jobLocation: {
+        type: String, 
+        default: 'my city',
+        required: true,
+    },
+    createdBy:{
+        type: mongoose.Types.ObjectId,
+        ref:'User',
+        required:[true,'Please provide user']
+    },
+},
+
+{ timestamps: true }
+
+)
+
+export default mongoose.model('Job', JobSchema)
+```
+
+
+</br>
+-8/31/22 In the front-end, in AppContext.js, created an async function to createjob and post an axios request to the server with the correct authentication (bearer token). Request uses state values that will be updated by the add job form.
+</br>
+</br>
+
+
+```js
+
+const createJob = async () => {
+
+  dispatch({ type: CREATE_JOB_BEGIN })
+  try {
+    const { position, company, jobLocation, jobType, status } = state
+    await authFetch.post('/jobs', {position, company, jobLocation, jobType, status })
+    dispatch({ type: CREATE_JOB_SUCCESS })
+    dispatch({ type: CLEAR_VALUES })
+
+  } catch (error) {    
+    if(error.response.status === 401) return
+    dispatch({ type: CREATE_JOB_ERROR, payload:{msg: error.response.data.msg }, })
+  }
+  clearAlert()
+}
+
+
+```
+
+
+</br>
+-8/31/22 On the front-end added button to invoke the createJob function in appContext.  Also added form fields and drop downs for job info, and actions to pass to the reducer to update state values on create job begin, success, or error.
+</br>
+</br>
+
+
+```js
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    if (!position || !company || !jobLocation) {
+      displayAlert()
+      return
+    }
+    if(isEditing) {
+      // eventually editJob()
+      return
+    }
+    createJob()
+  }
+
+
+```
