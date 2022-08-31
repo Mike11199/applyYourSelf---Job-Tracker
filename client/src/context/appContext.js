@@ -63,7 +63,7 @@ authFetch.interceptors.response.use(
     return response
   },
   (error) => {
-    console.log(error.response)
+    //console.log(error.response)
     if (error.response.status === 401) {
       logoutUser()
     }
@@ -154,18 +154,26 @@ const registerUser = async (currentUser) => {
   }
 
   const updateUser = async (currentUser) => {
+    
     dispatch({ type:UPDATE_USER_BEGIN })
+    
     try {
       const { data } = await authFetch.patch('/auth/updateUser', currentUser)
       const { user, location, token } = data
-      dispatch({ type:UPDATE_USER_SUCCESS, payload:{user, location, token} })
+
+      dispatch({ 
+        type:UPDATE_USER_SUCCESS, 
+        payload:{user, location, token} })
+
       addUserToLocalStorage({user, location, token})
 
     } catch (error) {
       if(error.response.status !==401 ){
-        dispatch({ type:UPDATE_USER_ERROR, payload:{msg: error.response.data.msg} })
+        
+        dispatch({ 
+          type:UPDATE_USER_ERROR, 
+          payload:{msg: error.response.data.msg} })
       }
-      
     }
     clearAlert()
   }
