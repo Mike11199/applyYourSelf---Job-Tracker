@@ -1,4 +1,4 @@
-import React, { useReducer, useContext } from 'react'
+import React, { useReducer, useContext, useEffect } from 'react'
 
 import reducer from './reducer'
 import axios from 'axios'
@@ -22,7 +22,10 @@ import {
   CREATE_JOB_BEGIN,
   CREATE_JOB_SUCCESS,
   CREATE_JOB_ERROR,
+  GET_JOBS_BEGIN,
+  GET_JOBS_SUCCESS,
 } from "./actions"
+import { get } from 'mongoose'
 
 const token = localStorage.getItem('token')
 const user = localStorage.getItem('user')
@@ -47,6 +50,11 @@ export const initialState = {
   jobType: 'full-time',
   statusOptions:['interview', 'declined','pending'],
   status:'pending',
+
+  jobs: [],
+  totalJobs: 0,
+  numOfPages: 1,
+  page: 1,
 
 }
 const AppContext = React.createContext()
@@ -218,9 +226,34 @@ const createJob = async () => {
   clearAlert()
 }
 
+const getJobs = async () => {
+  
+  let url = `/jobs`
+
+  dispatch({ type: GET_JOBS_BEGIN })
+  
+  try {
+    const { data } = await authFetch(url)
+    const { jobs, totalJobs, numOfPages } = data
+    dispatch({ 
+      type: GET_JOBS_SUCCESS, 
+      payload: {
+        jobs,
+        totalJobs,
+        numOfPages
+      },
+    }) 
+  } catch (error) {
+    console.log(error.response)
+    // logoutUser()
+  }
+  clearAlert()
+}
 
 
-
+useEffect(() => {
+  getJobs()
+  }, [])  //no dependency array just use on initial render
 
 
   return (
@@ -234,7 +267,8 @@ const createJob = async () => {
       updateUser,
       handleChange, 
       clearValues,
-      createJob
+      createJob,
+      getJobs
     }}>
       {children}
     </AppContext.Provider>
