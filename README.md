@@ -671,6 +671,11 @@ export default auth
 
 
 ```js
+jobsController.js
+
+import Job from '../models/Job.js'   //this is the mongoose model for mongoDB
+
+
 // async 
 const createJob = async (req, res) => {
     const {position, company } = req.body
