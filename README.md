@@ -28,6 +28,8 @@ Packages Installed:
     <td align="center" height="5" width="60">
         <br /><strong>Cors</strong>
     </td>
+    </tr>
+    <tr>
     <td align="center" height="5" width="60">
         <br /><strong>Concurrently</strong>
     </td>
@@ -39,6 +41,9 @@ Packages Installed:
     </td>
     <td align="center" height="5" width="200">
         <br /><strong>React Icons</strong>
+    </td>
+    <td align="center" height="5" width="200">
+    <br /><strong>Moment.js</strong>
     </td>
     </tr>
 </table>
@@ -832,32 +837,96 @@ jobsController.js
 import Job from '../models/Job.js'   //this is the mongoose model for mongoDB
 
 
-
+const getAllJobs = async (req, res) => {
+    const jobs = await Job.find({ createdBy: req.user.userId })
+    res
+        .status(StatusCodes.OK)
+        .json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
+}
 
 ```
 
 
 </br>
--8/30/22 
+-8/30/22 Added front end function axios request with interceptor (bearer token) to the /jobs API to retrieve jobs in an array, which will be used to render jobs on the jobs page.
 </br>
 </br>
 
 ```js
-.js
+AppContext.js
+
+const getJobs = async () => {
+  
+  let url = `/jobs`
+
+  dispatch({ type: GET_JOBS_BEGIN })
+  
+  try {
+    const { data } = await authFetch(url)
+    const { jobs, totalJobs, numOfPages } = data
+    dispatch({ 
+      type: GET_JOBS_SUCCESS, 
+      payload: {
+        jobs,
+        totalJobs,
+        numOfPages
+      },
+    }) 
+  } catch (error) {
+    console.log(error.response)
+    // logoutUser()
+  }
+  clearAlert()
+}
 
 ```
 
 
-<img src="" width=100% height=100%>
-
-
-
-
 </br>
--8/31/22 
+-8/31/22 Add jobs and jobcontainer components to the front end page, wrapper for styled components, to display jobs.
 </br>
 </br>
 
+
+```js
+JobsContainer.js
+
+const JobsContainer = () => {
+  const { getJobs, jobs, isLoading, page, totalJobs } = useAppContext()
+  useEffect(() => {
+    getJobs()
+  }, [])
+
+  if (isLoading) {
+    return <Loading center />
+  }
+  if (jobs.length === 0) {
+    return (
+      <Wrapper>
+        <h2>No jobs to display...</h2>
+      </Wrapper>
+    )
+  }
+  return (
+    <Wrapper>
+      <h5>
+        {totalJobs} job{jobs.length > 1 && 's'} found
+      </h5>
+      <div className='jobs'>
+        {jobs.map((job) => {
+          return <Job key={job._id} {...job} />
+        })}
+      </div>
+    </Wrapper>
+  )
+}
+
+```
+
+
+
+<img src="https://user-images.githubusercontent.com/91037796/187789270-564bd0ce-e093-4791-8770-eba99ff29114.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/91037796/187789808-1545bc54-15a0-40d8-a662-af2983598be2.png" width=100% height=100%>
 
 ```js
 .js
