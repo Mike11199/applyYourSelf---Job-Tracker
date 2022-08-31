@@ -802,3 +802,81 @@ AddJob.js
 
 
 ```
+
+
+
+
+
+
+</br>
+</br>
+<h2>Get All Jobs Functionality</h2>
+</br>
+
+
+
+
+<img src="" width=100% height=100%>
+
+
+
+</br>
+-8/30/22 Added controller in server (back-end) to get ALL JOBS for a user, looking up by user ID in the jobs table in MongoDB. 
+</br>
+</br>
+
+
+```js
+jobsController.js
+
+import Job from '../models/Job.js'   //this is the mongoose model for mongoDB
+
+
+
+
+```
+
+
+</br>
+-8/30/22 
+</br>
+</br>
+
+```js
+.js
+
+```
+
+
+<img src="" width=100% height=100%>
+
+
+
+
+</br>
+-8/31/22 
+</br>
+</br>
+
+
+```js
+.js
+
+
+
+```
+
+
+</br>
+-8/31/22 
+</br>
+</br>
+
+
+```js
+.js
+
+
+
+```
+
