@@ -34,6 +34,7 @@ const AddJob = () => {
     }
     createJob()
   }
+  
   const handleJobInput = (e) => {
     const name = e.target.name
     const value = e.target.value

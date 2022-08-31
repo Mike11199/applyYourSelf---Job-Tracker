@@ -250,12 +250,6 @@ const getJobs = async () => {
   clearAlert()
 }
 
-
-useEffect(() => {
-  getJobs()
-  }, [])  //no dependency array just use on initial render
-
-
   return (
     <AppContext.Provider value={{
       ...state,
@@ -268,7 +262,7 @@ useEffect(() => {
       handleChange, 
       clearValues,
       createJob,
-      getJobs
+      getJobs,
     }}>
       {children}
     </AppContext.Provider>
