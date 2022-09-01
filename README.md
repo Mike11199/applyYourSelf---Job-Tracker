@@ -1017,7 +1017,7 @@ reducer.js
 </br>
 
 
-<img src="https://user-images.githubusercontent.com/91037796/187831569-6bc4b873-9937-4253-a1a0-7e5dcb6f31aa.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/91037796/187831569-6bc4b873-9937-4253-a1a0-7e5dcb6f31aa.png" width=70% height=70%>
 
 
 ```js
