@@ -1101,6 +1101,7 @@ export default checkPermissions
 </br>
 -8/31/22 Added function to deleteJob on the server, jobs Controller.
 </br>
+</br>
 
 ```js
 jobsController.js
@@ -1127,10 +1128,11 @@ const deleteJob = async (req, res) => {
 </br>
 -8/31/22 Tested API in Postman.  Received 200 success code with deleting a user's job, and 401 if unauthorized as expected.
 </br>
+</br>
 
 <img src="https://user-images.githubusercontent.com/91037796/187838014-09587109-a011-4ca2-9866-21c16b00f758.png" width=60% height=60%>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/187838037-d1909253-a54c-4a44-828e-e07e2b8e0d43.png" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/91037796/187838037-d1909253-a54c-4a44-828e-e07e2b8e0d43.png" width=30% height=30%>
 
 
 
