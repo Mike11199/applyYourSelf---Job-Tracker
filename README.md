@@ -1008,16 +1008,39 @@ reducer.js
 
 
 </br>
--8/31/22 
+-8/31/22 Set up jobs controller "updateJob" async function.  Uses "findOne" Mongoose function to find a job by ID, and then the "findOneAndUpdate" Mongoose function to update the job, looking up by ID, with the req.body new values passed into it.  This allows us to edit existing jobs in the MongoDB database from the server.
 </br>
 </br>
 
 <img src="" width=30% height=30%>
 
 
-
 ```js
-.js
+jobsController.js
+
+const updateJob = async (req, res) => {
+    const {id: jobId } = req.params
+    const {company, position } = req.body
+
+    if (!position || ! company) {
+        throw new BadRequestError('Please provide all values')
+    }
+
+    const job = await Job.findOne({ _id: jobId })
+
+    if (!job){
+        throw new NotFoundError(`No job with id : ${jobId}`)
+    }
+
+
+    // check permissions later
+
+    const updatedJob = await Job.findOneAndUpdate({_id: jobId}, req.body,{
+        new: true,
+        runValidators: true,  
+    })
+    res.status(StatusCodes.OK).json({updatedJob})  //201; send JSON for postman
+}
 
 
 ```
