@@ -932,10 +932,7 @@ const JobsContainer = () => {
 -8/31/22 Finished Job and JobsContainer components.  Used npm package MOMENT to convert unix time to a date.  Added icons for each job card.  Imported wrappers for CSS created by the tutorial.
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/187802566-6b4ec507-2493-477a-84b6-a08a4e83686b.png" width=100% height=100%>
-
-
-
+<img src="https://user-images.githubusercontent.com/91037796/187825939-fbcfe139-00d5-46e5-90df-b7ee2c53a1a6.png" width=100% height=100%>
 
 
 </br>
