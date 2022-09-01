@@ -1132,7 +1132,7 @@ const deleteJob = async (req, res) => {
 
 <img src="https://user-images.githubusercontent.com/91037796/187838014-09587109-a011-4ca2-9866-21c16b00f758.png" width=60% height=60%>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/187838037-d1909253-a54c-4a44-828e-e07e2b8e0d43.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/91037796/187838037-d1909253-a54c-4a44-828e-e07e2b8e0d43.png" width=40% height=40%>
 
 
 
