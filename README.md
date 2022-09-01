@@ -1071,7 +1071,7 @@ checkPermissions.js
 import { UnAuthenticatedError } from "../errors/index.js"
 
 const checkPermissions = (requestUser, resourceUserId) => {
-    if(requestUser.userID === resourceUserId.toString()) return
+    if(requestUser.userId === resourceUserId.toString()) return
     
     throw new UnAuthenticatedError('Not authorized to access this route')
 }
@@ -1098,17 +1098,39 @@ export default checkPermissions
 </br>
 
 
-```js
-.js
+</br>
+-8/31/22 Added function to deleteJob on the server, jobs Controller.
+</br>
 
-placeholder
+```js
+jobsController.js
+
+const deleteJob = async (req, res) => {
+    
+    const {id: jobId } = req.params
+    
+    const job = await Job.findOne({ _id: jobId })
+
+    if (!job){
+        throw new NotFoundError(`No job with id : ${jobId}`)
+    }
+
+    checkPermissions(req.user, job.createdBy)  //invoke function so that user can only edit their own jobs
+
+    await job.remove()
+    res.status(StatusCodes.OK).json({msg: 'Success!  Job removed.'})  //201; send JSON for postman
+
+}
 
 ```
 
-<img src="" width=60% height=60%>
-
 </br>
--8/31/22 placeholder
+-8/31/22 Tested API in Postman.  Received 200 success code with deleting a user's job, and 401 if unauthorized as expected.
 </br>
 
-<img src="" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/91037796/187838014-09587109-a011-4ca2-9866-21c16b00f758.png" width=60% height=60%>
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/187838037-d1909253-a54c-4a44-828e-e07e2b8e0d43.png" width=60% height=60%>
+
+
+
