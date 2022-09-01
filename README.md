@@ -1089,3 +1089,26 @@ export default checkPermissions
 <img src="https://user-images.githubusercontent.com/91037796/187835984-4732db2b-23b2-4396-8684-8291b0331ac7.png" width=60% height=60%>
 
 
+
+
+
+</br>
+</br>
+<h2>Delete Job Functionality - Server</h2>
+</br>
+
+
+```js
+.js
+
+placeholder
+
+```
+
+<img src="" width=60% height=60%>
+
+</br>
+-8/31/22 placeholder
+</br>
+
+<img src="" width=60% height=60%>
