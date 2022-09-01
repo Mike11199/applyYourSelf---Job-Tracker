@@ -1136,3 +1136,29 @@ const deleteJob = async (req, res) => {
 
 
 
+
+</br>
+</br>
+<h2>Delete Job Functionality - Front End</h2>
+</br>
+
+
+```js
+.js
+
+placeholder
+
+}
+
+```
+
+</br>
+-9/1/22 placeholder
+</br>
+</br>
+
+<img src="" width=60% height=60%>
+</br>
+<img src="" width=40% height=40%>
+
+
