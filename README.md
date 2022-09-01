@@ -942,7 +942,7 @@ const JobsContainer = () => {
 
 
 </br>
--8/30/22 A. 
+-8/30/22 Set up the edit job function.  When clicking an "Edit" button on one of the job cards, it invokes the setEditJob function, passing the job id from the state into it.  
 </br>
 </br>
 
@@ -951,12 +951,52 @@ const JobsContainer = () => {
 
 
 
+```js
+Job.js
 
+<Link
+              to='/add-job'
+              className='btn edit-btn'
+              onClick={() => setEditJob(_id)}
+            >
+              Edit
+            </Link>
+
+```
+
+```js
+appContext.js
+
+const setEditJob = (id) => {
+  dispatch({ type: SET_EDIT_JOB, payload:{ id }, })
+}
+
+```
+
+</br>
+-8/30/22 The setEditJob function then dispatches an action which the reducer uses to set isEditing to "true".  Due to this, the Add Job screen is navigated to and set to an "edit job" form.  Instead of passing values into the function, we just grab all the job info that is already in the state for that job id we are editing.  This is because when we got all jobs for a user, we already have each job in the state as a job array.
+</br>
+</br>
 
 
 ```js
-.js
+reducer.js
 
+ if(action.type === SET_EDIT_JOB){    
+        
+        const job = state.jobs.find((job) => job._id === action.payload.id)  //finds job based on id
+        const { _id, position, company, jobLocation, jobType, status} = job  //object destructuring job array item
+        return { 
+            ...state,
+            isEditing: true,
+            editJobId: _id,
+            position,
+            company,
+            jobLocation,
+            jobType,
+            status,
+         }         
+    }
 
 
 ```
