@@ -1126,7 +1126,7 @@ const deleteJob = async (req, res) => {
 ```
 
 </br>
--8/31/22 Tested API in Postman.  Received 200 success code with deleting a user's job, and 401 if unauthorized as expected.
+-8/31/22 Tested API in Postman.  Received 200 success code when deleting a user's job, and 401 if unauthorized as expected.
 </br>
 </br>
 
