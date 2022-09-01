@@ -1081,6 +1081,11 @@ export default checkPermissions
 ```
 
 <img src="https://user-images.githubusercontent.com/91037796/187835956-58278571-c3e3-4902-b994-9db406a3baa8.png" width=60% height=60%>
+
+</br>
+-8/31/22 Throws 401 unauthorized error as user does not have permission to access this API (URL contains Job ID).
+</br>
+
 <img src="https://user-images.githubusercontent.com/91037796/187835984-4732db2b-23b2-4396-8684-8291b0331ac7.png" width=60% height=60%>
 
 
