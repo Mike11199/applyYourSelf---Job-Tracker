@@ -932,7 +932,71 @@ const JobsContainer = () => {
 -8/31/22 Finished Job and JobsContainer components.  Used npm package MOMENT to convert unix time to a date.  Added icons for each job card.  Imported wrappers for CSS created by the tutorial.
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/187802566-6b4ec507-2493-477a-84b6-a08a4e83686b.png" width=100% height=100%>
+<img src="https://user-images.githubusercontent.com/91037796/187825939-fbcfe139-00d5-46e5-90df-b7ee2c53a1a6.png" width=100% height=100%>
 
 
+</br>
+</br>
+<h2>Edit Job Functionality</h2>
+</br>
+
+
+</br>
+-8/30/22 Set up the "edit job" functionality.  When clicking an "Edit" button on one of the job cards, it invokes the "setEditJob" function in appContext.js, passing the job id from the state into it.  
+</br>
+</br>
+
+<img src="https://user-images.githubusercontent.com/91037796/187826867-a7774025-112c-4287-a9f5-9303b40ea319.png" width=30% height=30%>
+
+
+
+```js
+Job.js
+
+<Link
+    to='/add-job'
+    className='btn edit-btn'
+    onClick={() => setEditJob(_id)}
+>
+Edit
+</Link>
+
+```
+
+```js
+appContext.js
+
+const setEditJob = (id) => {
+  dispatch({ type: SET_EDIT_JOB, payload:{ id }, })
+}
+
+```
+
+</br>
+-8/30/22 The "setEditJob" function then dispatches an action which the reducer uses to set the state variable "isEditing" to "true".  The user is programatically navigated to the Add Job which is set to an "edit job" form, using conditional rendering on the form based on the "isEditing" variable.  Instead of passing values into the function here, we just grab all the job info that is already in the state for the job id we are editing.  This is because when we retrieved all jobs for a user, we already have each job in the state in our "jobs array".
+</br>
+</br>
+
+
+```js
+reducer.js
+
+ if(action.type === SET_EDIT_JOB){    
+        
+        const job = state.jobs.find((job) => job._id === action.payload.id)  //finds job based on id
+        const { _id, position, company, jobLocation, jobType, status} = job  //object destructuring job array item
+        return { 
+            ...state,
+            isEditing: true,
+            editJobId: _id,
+            position,
+            company,
+            jobLocation,
+            jobType,
+            status,
+         }         
+    }
+
+
+```
 
