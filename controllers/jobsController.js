@@ -1,6 +1,7 @@
 import Job from '../models/Job.js'
 import { StatusCodes } from 'http-status-codes'
 import { BadRequestError, UnAuthenticatedError, NotFoundError } from '../errors/index.js'
+import checkPermissions from '../utils/checkPermissions.js'
 
 
 // async because we are communicating with the server
@@ -37,7 +38,7 @@ const updateJob = async (req, res) => {
     }
 
 
-    // check permissions later
+    checkPermissions(req.user, job.createdBy)  //invoke function so that user can only edit their own jobs
 
     const updatedJob = await Job.findOneAndUpdate({_id: jobId}, req.body,{
         new: true,
