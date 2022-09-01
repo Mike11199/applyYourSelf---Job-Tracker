@@ -1057,6 +1057,12 @@ const updateJob = async (req, res) => {
 </br>
 </br>
 
+</br>
+<h3>Check Permissions (User can only edit their jobs)</h3>
+</br>
+
+
+
 ```js
 checkPermissions.js
 
