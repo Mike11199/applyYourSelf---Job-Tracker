@@ -1052,15 +1052,40 @@ const updateJob = async (req, res) => {
 }
 
 ```
+
+</br>
+</br>
+<h3>Check Permissions (User can only edit their jobs)</h3>
+</br>
+
 </br>
 -8/31/22 Added functionality to check permissions so that users can only edit their OWN jobs, and NOT the jobs of other users in the updateJob function in the jobs controller.
 </br>
 </br>
 
+
+
 ```js
-.js
+checkPermissions.js
 
+import { UnAuthenticatedError } from "../errors/index.js"
 
+const checkPermissions = (requestUser, resourceUserId) => {
+    if(requestUser.userID === resourceUserId.toString()) return
+    
+    throw new UnAuthenticatedError('Not authorized to access this route')
+}
+
+export default checkPermissions
 
 ```
+
+<img src="https://user-images.githubusercontent.com/91037796/187835956-58278571-c3e3-4902-b994-9db406a3baa8.png" width=60% height=60%>
+
+</br>
+-8/31/22 Postman test (screenshot above) throws a 401 unauthorized error on the server, as the user does not have permission to access this API (URL contains Job ID), showing that the checkPermissions function worked as intended.
+</br>
+
+<img src="https://user-images.githubusercontent.com/91037796/187835984-4732db2b-23b2-4396-8684-8291b0331ac7.png" width=60% height=60%>
+
 
