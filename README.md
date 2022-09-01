@@ -1058,9 +1058,21 @@ const updateJob = async (req, res) => {
 </br>
 
 ```js
-.js
+checkPermissions.js
 
+import { UnAuthenticatedError } from "../errors/index.js"
 
+const checkPermissions = (requestUser, resourceUserId) => {
+    if(requestUser.userID === resourceUserId.toString()) return
+    
+    throw new UnAuthenticatedError('Not authorized to access this route')
+}
+
+export default checkPermissions
 
 ```
+
+<img src="https://user-images.githubusercontent.com/91037796/187835956-58278571-c3e3-4902-b994-9db406a3baa8.png" width=100% height=100%>
+<img src="https://user-images.githubusercontent.com/91037796/187835984-4732db2b-23b2-4396-8684-8291b0331ac7.png" width=60% height=60%>
+
 
