@@ -24,6 +24,7 @@ import {
   CREATE_JOB_ERROR,
   GET_JOBS_BEGIN,
   GET_JOBS_SUCCESS,
+  SET_EDIT_JOB,
 } from "./actions"
 import { get } from 'mongoose'
 
@@ -253,7 +254,11 @@ const getJobs = async () => {
 
 //grab the id of the job and edit all the values in the state
 const setEditJob = (id) => {
-  console.log(`set edit job: ${id}`)
+  dispatch({ type: SET_EDIT_JOB, payload:{ id }, })
+}
+
+const editJob = () => {
+  console.log('edit job')
 }
 
 const deleteJob = (id) => {
@@ -278,6 +283,7 @@ const deleteJob = (id) => {
       getJobs,
       setEditJob,
       deleteJob,
+      editJob,
     }}>
       {children}
     </AppContext.Provider>
