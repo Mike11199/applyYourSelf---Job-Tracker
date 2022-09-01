@@ -1,6 +1,6 @@
 import Job from '../models/Job.js'
 import { StatusCodes } from 'http-status-codes'
-import { BadRequestError, UnAuthenticatedError } from '../errors/index.js'
+import { BadRequestError, UnAuthenticatedError, NotFoundError } from '../errors/index.js'
 
 
 // async because we are communicating with the server
@@ -23,8 +23,30 @@ const getAllJobs = async (req, res) => {
 }
 
 const updateJob = async (req, res) => {
-    res.send('update job')
+    const {id: jobId } = req.params
+    const {company, position } = req.body
+
+    if (!position || ! company) {
+        throw new BadRequestError('Please provide all values')
+    }
+
+    const job = await Job.findOne({ _id: jobId })
+
+    if (!job){
+        throw new NotFoundError(`No job with id : ${jobId}`)
+    }
+
+
+    // check permissions later
+
+    const updatedJob = await Job.findOneAndUpdate({_id: jobId}, req.body,{
+        new: true,
+        runValidators: true,    //runValidators allows validators to run on properties we provide  such as company or position
+                                //i.e. - runValidators won't allow value not in drop-down for position to be passed, but ok if property not included
+    })
+    res.status(StatusCodes.OK).json({updatedJob})  //201; send JSON for postman
 }
+
 
 const deleteJob = async (req, res) => {
     res.send('delete job')
