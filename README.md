@@ -1015,7 +1015,7 @@ reducer.js
 </br>
 -8/31/22 Tested in Postman by using the "Job ID" in the URL for the API.
 </br>
-
+</br>
 
 <img src="https://user-images.githubusercontent.com/91037796/187831569-6bc4b873-9937-4253-a1a0-7e5dcb6f31aa.png" width=70% height=70%>
 
