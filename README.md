@@ -936,3 +936,31 @@ const JobsContainer = () => {
 
 
 
+
+
+</br>
+</br>
+<h2>Edit Job Functionality</h2>
+</br>
+
+
+</br>
+-8/30/22 A. 
+</br>
+</br>
+
+
+<img src="" width=100% height=100%>
+
+
+
+
+
+
+```js
+.js
+
+
+
+```
+
