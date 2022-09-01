@@ -1045,7 +1045,8 @@ const updateJob = async (req, res) => {
 
     const updatedJob = await Job.findOneAndUpdate({_id: jobId}, req.body,{
         new: true,
-        runValidators: true,  
+        runValidators: true,    //runValidators allows validators to run on properties we provide  such as company or position
+                                //i.e. - runValidators won't allow value not in drop-down for position to be passed, but ok if property not included
     })
     res.status(StatusCodes.OK).json({updatedJob})  //201; send JSON for postman
 }
