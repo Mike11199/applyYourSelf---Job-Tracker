@@ -937,12 +937,12 @@ const JobsContainer = () => {
 
 </br>
 </br>
-<h2>Edit Job Functionality</h2>
+<h2>Edit Job Functionality - Front End State</h2>
 </br>
 
 
 </br>
--8/30/22 Set up the "edit job" functionality.  When clicking an "Edit" button on one of the job cards, it invokes the "setEditJob" function in appContext.js, passing the job id from the state into it.  
+-8/31/22 Set up the "edit job" functionality.  When clicking an "Edit" button on one of the job cards, it invokes the "setEditJob" function in appContext.js, passing the job id from the state into it.  
 </br>
 </br>
 
@@ -973,7 +973,7 @@ const setEditJob = (id) => {
 ```
 
 </br>
--8/30/22 The "setEditJob" function then dispatches an action which the reducer uses to set the state variable "isEditing" to "true".  The user is programatically navigated to the Add Job which is set to an "edit job" form, using conditional rendering on the form based on the "isEditing" variable.  Instead of passing values into the function here, we just grab all the job info that is already in the state for the job id we are editing.  This is because when we retrieved all jobs for a user, we already have each job in the state in our "jobs array".
+-8/31/22 The "setEditJob" function then dispatches an action which the reducer uses to set the state variable "isEditing" to "true".  The user is programatically navigated to the Add Job which is set to an "edit job" form, using conditional rendering on the form based on the "isEditing" variable.  Instead of passing values into the function here, we just grab all the job info that is already in the state for the job id we are editing.  This is because when we retrieved all jobs for a user, we already have each job in the state in our "jobs array".
 </br>
 </br>
 
@@ -996,6 +996,78 @@ reducer.js
             status,
          }         
     }
+
+
+```
+
+
+</br>
+</br>
+<h2>Edit Job Functionality - Server</h2>
+</br>
+
+
+</br>
+-8/31/22 Set up jobs controller "updateJob" async function.  Uses "findOne" Mongoose function to find a job by ID, and then the "findOneAndUpdate" Mongoose function to update the job, looking up by ID, with the req.body new values passed into it.  This allows us to edit existing jobs in the MongoDB database from the server.
+</br>
+</br>
+
+</br>
+-8/31/22 Tested in Postman by using the "Job ID" in the URL for the API.
+</br>
+</br>
+
+<img src="https://user-images.githubusercontent.com/91037796/187831569-6bc4b873-9937-4253-a1a0-7e5dcb6f31aa.png" width=70% height=70%>
+<img src="https://user-images.githubusercontent.com/91037796/187831771-b82eaacb-d1c0-4e41-8155-95085fd313fa.png" width=35% height=35%>
+
+
+
+
+```js
+jobsController.js
+
+const updateJob = async (req, res) => {
+    const {id: jobId } = req.params
+    const {company, position } = req.body
+
+    if (!position || ! company) {
+        throw new BadRequestError('Please provide all values')
+    }
+
+    const job = await Job.findOne({ _id: jobId })
+
+    if (!job){
+        throw new NotFoundError(`No job with id : ${jobId}`)
+    }
+
+
+    // check permissions later
+
+    const updatedJob = await Job.findOneAndUpdate({_id: jobId}, req.body,{
+        new: true,
+        runValidators: true,    //runValidators allows validators to run on properties we provide  such as company or position
+                                //i.e. - runValidators won't allow value not in drop-down for position to be passed, but ok if property not included
+    })
+    res.status(StatusCodes.OK).json({updatedJob})  //201; send JSON for postman
+}
+
+
+```
+
+```js
+.js
+
+
+```
+
+</br>
+-8/31/22 
+</br>
+
+
+```js
+.js
+
 
 
 ```
