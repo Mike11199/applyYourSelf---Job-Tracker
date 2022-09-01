@@ -1052,13 +1052,15 @@ const updateJob = async (req, res) => {
 }
 
 ```
+
 </br>
--8/31/22 Added functionality to check permissions so that users can only edit their OWN jobs, and NOT the jobs of other users in the updateJob function in the jobs controller.
 </br>
+<h3>Check Permissions (User can only edit their jobs)</h3>
 </br>
 
 </br>
-<h3>Check Permissions (User can only edit their jobs)</h3>
+-8/31/22 Added functionality to check permissions so that users can only edit their OWN jobs, and NOT the jobs of other users in the updateJob function in the jobs controller.
+</br>
 </br>
 
 
