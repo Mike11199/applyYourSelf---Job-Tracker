@@ -1472,4 +1472,17 @@ start()
 <img src="https://user-images.githubusercontent.com/91037796/188217359-823623d4-071a-4843-a1ba-344725d942be.png" width=45% height=45%>
 </br>
 
+
+
+</br>
+</br>
+<h2>MongoDB - Aggregation Pipeline</h2>
+</br>
+
+
 - Created an aggregation pipleine for MongoDB using the '/stats' API ROUTE.
+
+
+
+<img src="https://user-images.githubusercontent.com/91037796/188230621-8f7a4222-1978-43f8-865d-ac70f08d387a.png" width=45% height=45%>
+
