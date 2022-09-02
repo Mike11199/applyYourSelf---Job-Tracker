@@ -1424,10 +1424,14 @@ const editJob = async () => {
 <h2>Mock Data - Mockaroo</h2>
 </br>
 
-
-</br>
 - Used MOCKAROO to generate a JSON file with 75 rows of mock data for jobs, to test the STATS page.  This generates fake company names, job titles, custom lists (for enumerated values), and timestamps between a range created.  Passed in a "createdBy" ID for a specific user for testing purposes.
+</br>
 </br>
 </br>
 
 <img src="https://user-images.githubusercontent.com/91037796/188203878-462385c7-a0ed-46dc-af02-42e30927b27d.png" width=60% height=60%>
+
+</br>
+</br>
+
+- Used M
