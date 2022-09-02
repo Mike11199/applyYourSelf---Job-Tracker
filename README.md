@@ -294,16 +294,59 @@ app.get('/api/v1', (req,res) => {
 -Installed AXIOS on the client side so that when the submit button is clicked on the front-end, axios will submit a post request using the authentication routes on the back-end to the MongoDB database.  If the user already exists (looking up by email in the database using the fineOne function), an error will be returned.    
 </br>
 </br>
- Register Page - Register.js 
-</br>
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/183775574-2038d97e-de5d-4671-b414-03c94062e9a5.png" width=50% height=50%>
-</br>
-appContext - appContext.js 
-</br>
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/183775134-5d5df73e-d50d-4ef0-a9db-fc038ec4e18a.png" width=50% height=50%>
-</br>
+
+
+```js
+Front End:
+Register.js
+
+const onSubmit = (e) => {
+    e.preventDefault()
+    const {name, email, password, isMember} = values
+    if (!email || !password || (!isMember && !name)) {
+        displayAlert()
+        return
+    }
+    const currentUser = {name, email, password}
+    if(isMember){
+        loginUser(currentUser)
+    }
+    else{
+        registerUser(currentUser)
+    }
+
+}
+```
+
+<br/>
+
+
+```js
+ appContext.js
+
+const registerUser = async (currentUser) => {
+  dispatch({ type: REGISTER_USER_BEGIN })
+  try {
+    const response = await axios.post('/api/v1/auth/register', currentUser)
+    console.log(response)
+    const {user,token,location} = response.data   //destructure the big response object returned from axios
+    dispatch({
+      type: REGISTER_USER_SUCCESS,
+      payload: {user, token, location},
+    })
+
+    addUserToLocalStorage({user,token,location})
+  } catch (error) {
+    console.log(error.response)
+    dispatch({type:REGISTER_USER_ERROR, payload: {msg: error.response.data.msg },})
+  }
+  clearAlert()
+}  
+```
+
+<br/>
+<br/>
+
 
 <h3>Back End</h3>
 
@@ -396,12 +439,7 @@ const registerUser = async (currentUser) => {
 -Installed the npm package MORGAN on the server side as an HTTP request logger middleware, to log HTTP requests, debug APIs used in the application, and help view routes/methods used in controllers.  This will make the program easier to use as multiple routes to send requests are added. After installing, terminal shows the 400 bad request error tested in Postman when attempting to register an email that is already in the MongoDB database.
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/184403310-505e642f-73e5-4157-a749-7e763601240e.png" width=100% height=100%>
 
-</br>
--Implemented user authentication by first setting up a new error to return 401 if unauthenticated.
-</br>
-</br>
 
 ```js
 Server Side:
