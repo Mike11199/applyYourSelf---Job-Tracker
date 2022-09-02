@@ -69,11 +69,54 @@ Packages Installed:
 <img src="https://user-images.githubusercontent.com/91037796/171723508-c90523fd-f41f-4338-a6f5-f372adc5fc66.png" width=55% height=55%>
 
 
--Used a reducer (a hook or function that takes the current state and an action as arguments, and return a new state result) and dispatch functions to enable alerts to show and clear after a brief period of time (user not inputting all values into the form, etc.).  We can update the state by returning the spread operator (...) on the state (...state), and in a comma separted list the other state values we want to add/change.
+-Used a REDUCER hook (type of function that takes the current state and an action as arguments, and return a new state result) and dispatch functions to enable ALERTS to show and clear after a brief period of time (user not inputting all values into the form, etc.).  
 
 
-<img src="https://user-images.githubusercontent.com/91037796/171750486-4053e32c-028b-4690-9281-7f4e01e18475.png" width=40% height=40%>
-<img src="https://user-images.githubusercontent.com/91037796/183761215-bddbbed4-a33d-42d6-8441-f5c92cb35c0e.png" width=40% height=40%>
+
+
+```js
+appContext.js
+
+const AppProvider = ({ children }) => {
+const [state, dispatch] = useReducer(reducer, initialState)   //https://reactjs.org/docs/hooks-reference.html  alternative to useState
+
+const displayAlert = () => {
+    dispatch({type:DISPLAY_ALERT})    //arrow function that invokes func with object literal as parameters 
+    clearAlert()
+}
+
+
+```
+
+-The actions dispatched by the reducer will also update the state by returning the spread operator (...) on the state (...state), and in a comma separted list the other state values we want to add/change.  For example, the DISPLAY_ALERT action in the reducer will edit the showAlert state value to true in appContext, which will enable conditional rendering of alert divs.
+
+
+```js
+reducer.js
+
+const reducer = (state, action) => {    //hook that takes current state as first argument, and action object as second, returning a new state afterwards
+    if(action.type === DISPLAY_ALERT){
+        return {
+            ...state,              //the ... is the spread operator used to return the existing state array and also add/change onto it the values below
+            showAlert:true,
+            alertType:'danger',
+    alertText:'Please provide all values!'
+                }
+    }
+    
+    if(action.type === CLEAR_ALERT){
+        return {
+            ...state,       
+            showAlert:false,
+            alertType:'',
+            alertText:'',
+        }
+    }
+
+
+```
+
+
 
 </br>
 <h2>Routing and API Testing</h2>
