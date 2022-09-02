@@ -62,24 +62,76 @@ Packages Installed:
 
 -Added an isMember function to toggle FormRow components on the login/register screen. Utilized conditional rendering with inline ternarny operators (as oppossed to if/else statements) to display different form fields if the user is already registered and can log in, or needs to register.
 
--Set up a global context using createContext and a useContext hook to pass values deep into the component tree.  This allows the alert function to be used globally as oppossed to passed to each prop.
+-Set up a global context using createContext and a useContext hook to pass values deep into the component tree.  This allows the alert function to be used globally as oppossed to passed to each prop manually.
+
+</br>
+</br>
+
+<img src="https://user-images.githubusercontent.com/91037796/188056785-a493fc6f-323c-40fd-a9eb-a9fb2eb2991c.png" width=40% height=40%>
+</br>
 
 
 
-<img src="https://user-images.githubusercontent.com/91037796/171723508-c90523fd-f41f-4338-a6f5-f372adc5fc66.png" width=55% height=55%>
+
+-Used a REDUCER hook (type of function that takes the current state and an action as arguments, and return a new state result) and dispatch functions to enable ALERTS to show and clear after a brief period of time (user not inputting all values into the form, etc.).  
+</br>
 
 
--Used a reducer (a hook or function that takes the current state and an action as arguments, and return a new state result) and dispatch functions to enable alerts to show and clear after a brief period of time (user not inputting all values into the form, etc.).  We can update the state by returning the spread operator (...) on the state (...state), and in a comma separted list the other state values we want to add/change.
+
+```js
+appContext.js
+
+const AppProvider = ({ children }) => {
+const [state, dispatch] = useReducer(reducer, initialState)   //https://reactjs.org/docs/hooks-reference.html  alternative to useState
+
+const displayAlert = () => {
+    dispatch({type:DISPLAY_ALERT})    //arrow function that invokes func with object literal as parameters 
+    clearAlert()
+}
 
 
-<img src="https://user-images.githubusercontent.com/91037796/171750486-4053e32c-028b-4690-9281-7f4e01e18475.png" width=40% height=40%>
-<img src="https://user-images.githubusercontent.com/91037796/183761215-bddbbed4-a33d-42d6-8441-f5c92cb35c0e.png" width=40% height=40%>
+```
 
+</br>
+-The actions dispatched by the reducer will also update the state by returning the spread operator (...) on the state (...state), and in a comma separted list the other state values we want to add/change.  For example, the DISPLAY_ALERT action in the reducer will edit the showAlert state value to true in appContext, which will enable conditional rendering of alert divs.
+
+</br>
+</br>
+
+```js
+reducer.js
+
+const reducer = (state, action) => {    //hook that takes current state as first argument, and action object as second, returning a new state afterwards
+    if(action.type === DISPLAY_ALERT){
+        return {
+            ...state,              //the ... is the spread operator used to return the existing state array and also add/change onto it the values below
+            showAlert:true,
+            alertType:'danger',
+    alertText:'Please provide all values!'
+                }
+    }
+    
+    if(action.type === CLEAR_ALERT){
+        return {
+            ...state,       
+            showAlert:false,
+            alertType:'',
+            alertText:'',
+        }
+    }
+
+
+```
+
+
+</br>
 </br>
 <h2>Routing and API Testing</h2>
 
--Used Postman to test APIs and express routes for user authentication and connecting to the MongoDB database:
+-Used Postman to test APIs and express routes for user authentication and connecting to the MongoDB database.
 </br>
+</br>
+
 <img src="https://user-images.githubusercontent.com/91037796/183325705-55763bc2-b43c-4a8e-979b-8e4235bf6c1e.png" width=100% height=100%>
 
 
@@ -87,14 +139,67 @@ Packages Installed:
 <h2>MongoDB Implementation</h2>
 
 -Created a user model with Mongoose schema for use with MongoDB.  Used a validator package from npm to validate the email.  Ensured the email is unique with the "unique: true" property in the userSchema, and used the error handler to display a message if the email field is not unique (already in the MongoDB database).
+</br>
+</br>
 
-<img src="https://user-images.githubusercontent.com/91037796/178848537-40aae12d-bdfa-48e5-9989-2e555298968b.png" width=50% height=50%>
+
+```js
+User.js
+
+import mongoose from 'mongoose'
+import validator from 'validator'
+
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String, 
+        required: [true, 'Please provide name'],
+        minlength: 3,
+        maxlength: 20,
+        trim: true,
+    },
+    email: {
+        type: String, 
+        required: [true, 'Please provide email'],
+        validate:{
+            validator: validator.isEmail,
+            message: 'Please provide a valid email',
+        },
+        unique: true,
+    },
+    password: {
+        type: String, 
+        required: [true, 'Please provide password'],
+        minlength: 6,
+        select: false,
+    },
+    lastName: {
+        type: String,  
+        maxlength: 20,
+        trim: true,
+        default:'lastName',
+    },
+    location: {
+        type: String,  
+        maxlength: 20,
+        trim: true,
+        default:'my city',
+    },
+
+})
+
+
+export default mongoose.model('User', userSchema)
+
+```
 
 -Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party. Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
+</br>
 
 
 <img src="https://user-images.githubusercontent.com/91037796/183325614-c074d5f1-ce97-422f-a2ba-c98fb3eaa92b.png" width=70% height=70%>
+</br>
 <img src="https://user-images.githubusercontent.com/91037796/183319400-f7021d38-2803-4d15-8717-6fb85a86077e.png" width=50% height=50%>
+</br>
 
 
 -Implemented JSON Web Token (JWT) using npm package JSONWEBTOKEN for user authentication and to prevent unauthorized users from accessing pages.
@@ -105,6 +210,7 @@ userSchema.methods.createJWT = function () {
 }
 ```
 
+</br>
 </br>
 <h2>Connecting the Front and Back End</h2>
 
@@ -1143,22 +1249,91 @@ const deleteJob = async (req, res) => {
 </br>
 
 
+</br>
+- Added deleteJob async function to send an AXIOS HTTP DELETE request to the server through the '/api/v1' route, using the 'authFetch' axios variable with the baseURL and axios response/request interceptors with the bearer token.  The function then calls the getJobs() in the try statement to update the jobs displayed on the client side grid container, which will refresh the page if the function did not return an error.
+</br>
+</br>
+
+
 ```js
-.js
+appContext.js
 
-placeholder
-
+const deleteJob = async (jobId) => {
+  dispatch({type: DELETE_JOB_BEGIN})
+  try {
+    await authFetch.delete(`/jobs/${jobId}`)
+    getJobs()
+  } catch (error) {
+    console.log(error.response)
+    logoutUser()
+  }
 }
 
 ```
 
+
+<img src="https://user-images.githubusercontent.com/91037796/188054769-bf3e576f-7e9d-494e-86f6-2b80da6c603a.png" width=60% height=60%>
+
+
 </br>
-- placeholder
+</br>
+<h2>Edit Job Functionality - Front End</h2>
+</br>
+
+
+</br>
+- Added editJob async function using the AXIOS HTTP PATCH request.  Looks up the job by its unique ID in the MongoDB Database to edit it.
 </br>
 </br>
 
-<img src="" width=60% height=60%>
+
+```js
+appContext.js
+
+const editJob = async () => {
+  dispatch({ type: EDIT_JOB_BEGIN })
+  try {
+    const { position, company, jobLocation, jobType, status } = state
+
+    await authFetch.patch(`/jobs/${state.editJobId}`, {
+      company,
+      position,
+      jobLocation,
+      jobType,
+      status,
+    })
+    dispatch({ type: EDIT_JOB_SUCCESS })
+    dispatch({ type: CLEAR_VALUES })
+
+  } catch (error) {
+    if (error.response.status === 401) return
+    
+    dispatch({
+      type: EDIT_JOB_ERROR,
+      payload: { msg: error.response.data.msg },
+    })
+  }
+  clearAlert()
+}
+
+
+```
+
+
+
+<img src="https://user-images.githubusercontent.com/91037796/188054733-3941fabe-ffff-4f1f-a328-28572b91bbae.png" width=60% height=60%>
+
+
+
+
+
 </br>
-<img src="" width=40% height=40%>
+</br>
+<h2>Mock Data - Mockaroo</h2>
+</br>
 
 
+</br>
+- Placeholder
+</br>
+</br>
