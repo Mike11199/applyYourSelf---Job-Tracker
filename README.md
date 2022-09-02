@@ -1486,7 +1486,7 @@ start()
 </br>
 
 
-- Created an aggregation pipleine for MongoDB using the '/stats' API ROUTE.
+- Created an aggregation pipeline for MongoDB using the '/stats' API ROUTE with the showStats function.
 
 ```js
 jobsController.js
@@ -1506,7 +1506,7 @@ const showStats = async (req, res) => {
 </br>
 
 
-- Iterated over the stats object with the reduce function
+- Modified showStats function to iterate over the stats object with the reduce function
 
 ```js
 jobsController.js
