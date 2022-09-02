@@ -1620,6 +1620,7 @@ export default Stats
 ```js
 jobsController.js
 
+    //PIPELINE 2:  Retrieve jobs and group by month and year
     let monthlyApplications = await Job.aggregate([
         {$match: {createdBy:mongoose.Types.ObjectId( req.user.userId )} },
         {$group: {
@@ -1631,6 +1632,7 @@ jobsController.js
     { $sort: { '_id.year': -1, '_id.month': -1 }},  //-1 to sort by latest jobs and months first
 
     ])
+    
 ```
 
 
