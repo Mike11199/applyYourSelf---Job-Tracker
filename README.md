@@ -1488,7 +1488,40 @@ start()
 
 - Created an aggregation pipleine for MongoDB using the '/stats' API ROUTE.
 
+```js
+jobsController.js
+
+//aggregation pipeline for STATS page
+const showStats = async (req, res) => {
+    let stats = await Job.aggregate([ 
+        {$match: {createdBy:mongoose.Types.ObjectId( req.user.userId )} },
+        {$group: {_id:'$status', count:{$sum:1} } }  //https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/
+    ])
+
+```
 
 
+</br>
 <img src="https://user-images.githubusercontent.com/91037796/188230621-8f7a4222-1978-43f8-865d-ac70f08d387a.png" width=45% height=45%>
+</br>
+
+
+- Iterated over the stats object with the reduce function
+
+```js
+jobsController.js
+
+    //iterate over array and pull out id and count.  return accumulator and count
+    stats = stats.reduce((acc, curr) =>{
+        const { _id: title,count } = curr
+        acc[title] = count
+        return acc
+    }, {} )
+
+```
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188234373-229a1785-fdd1-4db7-9e9a-f3931825caa9.png" width=45% height=45%>
+</br>
+
 
