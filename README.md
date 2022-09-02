@@ -1165,13 +1165,54 @@ const deleteJob = async (jobId) => {
 
 ```
 
+
+
+<img src="" width=60% height=60%>
+
+<h2>Edit Job Functionality - Front End</h2>
 </br>
-- placeholder
+
+
+</br>
+- Added editJob async function using the AXIOS HTTP PATCH request.  Looks up the job by its unique ID in the MongoDB Database to edit it.
 </br>
 </br>
 
+
+```js
+appContext.js
+
+const editJob = async () => {
+  dispatch({ type: EDIT_JOB_BEGIN })
+  try {
+    const { position, company, jobLocation, jobType, status } = state
+
+    await authFetch.patch(`/jobs/${state.editJobId}`, {
+      company,
+      position,
+      jobLocation,
+      jobType,
+      status,
+    })
+    dispatch({ type: EDIT_JOB_SUCCESS })
+    dispatch({ type: CLEAR_VALUES })
+
+  } catch (error) {
+    if (error.response.status === 401) return
+    
+    dispatch({
+      type: EDIT_JOB_ERROR,
+      payload: { msg: error.response.data.msg },
+    })
+  }
+  clearAlert()
+}
+
+
+```
+
+
+
 <img src="" width=60% height=60%>
-</br>
-<img src="" width=40% height=40%>
 
 
