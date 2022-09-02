@@ -1613,7 +1613,7 @@ export default Stats
 
 
 </br>
-- Added another aggregation pipeline to categorize jobs by year and month from the MongoDB database.  To later display in the monthly applications bar chart.
+- Added another aggregation pipeline to categorize jobs by year and month from the MongoDB database.  This will later be displayed in the monthly applications bar chart on the front-end.
 </br>
 </br>
 
