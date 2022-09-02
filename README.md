@@ -1540,7 +1540,7 @@ const showStats = async (req, res) => {
 </br>
 
 </br>
-- Similar process as before.  First set up Axios request to server to retrieve data from the back end with the authFetch bearer token.  Runs action in the reducer to update state with values (not shown).
+- Similar process as before.  First set up an Axios request to server to retrieve data from the back end with the authFetch bearer token.  Runs action in the reducer to update state with values (not shown).
 </br>
 </br>
 
@@ -1570,7 +1570,7 @@ const showStats = async () => {
 
 
 </br>
-- Added to the stats page  variables to show stats updated by the useEffect hook.  Added the "StatsContainer" component which maps over an array of the statsItem and returns "StatsItem" components, showing the cards for each job application type.  End result is a page showing the stats as cards.  Uses styled components and CSS already set up from the Udemy tutorial; will likely update later.
+- Added to the STATS page the useEffect hook to grab variables regarding job stats from the state.  Added the "StatsContainer" component which maps over an array of the "statsItems" and returns "StatsItem" components, to display cards for each job application type.  End result is a page showing the stats as cards.  Uses styled components and CSS already set up from the Udemy tutorial; will likely update later.
 </br>
 </br>
 
