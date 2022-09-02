@@ -425,7 +425,7 @@ const registerUser = async (currentUser) => {
 }  
 ```
 
-
+</br>
 </br>
 <h2>Login User - Server (Back End)</h2>
 </br>
