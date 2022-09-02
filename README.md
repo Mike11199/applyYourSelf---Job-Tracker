@@ -642,7 +642,7 @@ Navbar.js
 <h2>Log Out Functionality</h2>
 </br>
 
-</br>
+
 -Added a function in appContext to log out the user, by clearing the user's local storage and setting state values back to null.  Due to the fact that routes are protected, this will also automatically kick the user back to the landing page.
 </br>
 </br>
@@ -1019,15 +1019,12 @@ AddJob.js
 </br>
 </br>
 <h2>Get All Jobs Functionality</h2>
-</br>
-
-
-
 
 
 
 </br>
 -Added get all jobs controller in server (back-end) to get ALL JOBS for a user, looking up by user ID in the jobs table in MongoDB. Tested in Postman with bearer token.
+</br>
 </br>
 </br>
 
@@ -1375,7 +1372,6 @@ const deleteJob = async (jobId) => {
 </br>
 </br>
 <h2>Edit Job Functionality - Front End</h2>
-</br>
 
 
 </br>
