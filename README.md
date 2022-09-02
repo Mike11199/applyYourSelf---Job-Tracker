@@ -77,7 +77,7 @@ Packages Installed:
 </br>
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/188056785-a493fc6f-323c-40fd-a9eb-a9fb2eb2991c.png" width=40% height=40%>
+<img src="https://user-images.githubusercontent.com/91037796/188056785-a493fc6f-323c-40fd-a9eb-a9fb2eb2991c.png" width=50% height=50%>
 </br>
 
 
@@ -206,11 +206,10 @@ export default mongoose.model('User', userSchema)
 <h2>MongoDB Implementation - Password Hashing</h2>
 </br>
 
-
 -Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party.  This uses the blowfish cipher and salting to avoid saving the actual password in the datbase.
 
 </br>
-</br>
+
 
 ```js
 User.js
@@ -238,8 +237,9 @@ userSchema.pre('save', async function(){
 <h2>JSON Web Token (JWT)</h2>
 </br>
 
-</br>
+
 -Implemented JSON Web Token (JWT) using npm package JSONWEBTOKEN for user authentication and to prevent unauthorized users from accessing pages.
+</br></br>
 
 ```js
 userSchema.methods.createJWT = function () {
@@ -247,41 +247,106 @@ userSchema.methods.createJWT = function () {
 }
 ```
 
+
 </br>
 </br>
 <h2>Connecting the Front and Back End</h2>
 
--Used npm to install the package CONCURRENTLY so that the front and back end of the application can be ran at the same time with the "npm start" terminal command.  Made use of the npm node.js package CORS to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
+-Used npm to install the package CONCURRENTLY so that the front and back end of the application can be ran at the same time with the "npm start" terminal command.  
 
 
-<img src="https://user-images.githubusercontent.com/91037796/183781631-d8519c74-f66c-4adf-a9ff-69eaefaa4ca8.png" width=90% height=90%>
+ ```js
+  "scripts": {
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client \""
+  },
+ ```
+
+
+-Made use of the npm node.js package CORS to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
+
+ ```js
+ Server.js
+ 
+//allows front and back end to communicate with cross origin resource sharing between diff domains
+app.use(cors())
+
+// parses incoming JSON requests and puts the parsed data in req.
+app.use(express.json()) 
+
+app.get('/', (req,res) => {    
+    res.json({msg: 'Welcome!'})
+})
+
+app.get('/api/v1', (req,res) => {    
+    res.json({msg: 'API'})
+})
+ ```
+
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/183328759-5d8a11d8-3389-4ab9-a158-9a0a3d729d1e.png" width=60% height=60%>
+
 
 </br>
-<h2>Implementing User Registration (Front/Back End and MongoDB)</h2>
+<h2>Implementing User Registration - Front End</h2>
 
 <h3>Front End</h3>
 -Installed AXIOS on the client side so that when the submit button is clicked on the front-end, axios will submit a post request using the authentication routes on the back-end to the MongoDB database.  If the user already exists (looking up by email in the database using the fineOne function), an error will be returned.    
 </br>
 </br>
- Register Page - Register.js 
-</br>
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/183775574-2038d97e-de5d-4671-b414-03c94062e9a5.png" width=50% height=50%>
-</br>
-appContext - appContext.js 
-</br>
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/183775134-5d5df73e-d50d-4ef0-a9db-fc038ec4e18a.png" width=50% height=50%>
-</br>
 
-<h3>Back End</h3>
 
-Authentication Page - authController.js
-</br>
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/183775472-97bf5927-ece8-4902-bff0-4acf16cd61bf.png" width=50% height=50%>
+```js
+Front End:
+Register.js
+
+const onSubmit = (e) => {
+    e.preventDefault()
+    const {name, email, password, isMember} = values
+    if (!email || !password || (!isMember && !name)) {
+        displayAlert()
+        return
+    }
+    const currentUser = {name, email, password}
+    if(isMember){
+        loginUser(currentUser)
+    }
+    else{
+        registerUser(currentUser)
+    }
+
+}
+```
+
+<br/>
+
+
+```js
+ appContext.js
+
+const registerUser = async (currentUser) => {
+  dispatch({ type: REGISTER_USER_BEGIN })
+  try {
+    const response = await axios.post('/api/v1/auth/register', currentUser)
+    console.log(response)
+    const {user,token,location} = response.data   //destructure the big response object returned from axios
+    dispatch({
+      type: REGISTER_USER_SUCCESS,
+      payload: {user, token, location},
+    })
+
+    addUserToLocalStorage({user,token,location})
+  } catch (error) {
+    console.log(error.response)
+    dispatch({type:REGISTER_USER_ERROR, payload: {msg: error.response.data.msg },})
+  }
+  clearAlert()
+}  
+```
+
+<br/>
+<br/>
+
 
 
 
@@ -360,19 +425,14 @@ const registerUser = async (currentUser) => {
 }  
 ```
 
-
+</br>
 </br>
 <h2>Login User - Server (Back End)</h2>
 </br>
 -Installed the npm package MORGAN on the server side as an HTTP request logger middleware, to log HTTP requests, debug APIs used in the application, and help view routes/methods used in controllers.  This will make the program easier to use as multiple routes to send requests are added. After installing, terminal shows the 400 bad request error tested in Postman when attempting to register an email that is already in the MongoDB database.
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/184403310-505e642f-73e5-4157-a749-7e763601240e.png" width=100% height=100%>
 
-</br>
--Implemented user authentication by first setting up a new error to return 401 if unauthenticated.
-</br>
-</br>
 
 ```js
 Server Side:
@@ -582,7 +642,7 @@ Navbar.js
 <h2>Log Out Functionality</h2>
 </br>
 
-</br>
+
 -Added a function in appContext to log out the user, by clearing the user's local storage and setting state values back to null.  Due to the fact that routes are protected, this will also automatically kick the user back to the landing page.
 </br>
 </br>
@@ -643,7 +703,7 @@ const Navbar = () => {
 
 -Restricted access to certain resources so that a user can view only their own data by adding an authentication mdidleware, that checks for the existence of a JSON web token created for the user.
 </br>
-</br>
+
 
 -First added the "authenticateUser" to the /updateUser route.  /register and /login are still public routes.  Also added authentication to all routes for creating, updating, and deleting jobs.  Added bearer token testing in Postman to test routes with authentication bearer token.
 
@@ -699,13 +759,12 @@ export default auth
 </br>
 </br>
 <h2>Update User Functionality</h2>
-</br>
 
 </br>
 -Added a function called <strong>updateUser</strong> in appContext.js on the FRONT END.  This is called by the save changes button on the dashboard profile page, and makes use of the auth route "router.route('/updateUser').patch(authenticateUser, updateUser)" to send an HTTP PATCH request to the Node.JS back end.   
 </br>
 </br>
-
+</br>
 
 ```js
   const updateUser = async (currentUser) => {
@@ -959,15 +1018,12 @@ AddJob.js
 </br>
 </br>
 <h2>Get All Jobs Functionality</h2>
-</br>
-
-
-
 
 
 
 </br>
 -Added get all jobs controller in server (back-end) to get ALL JOBS for a user, looking up by user ID in the jobs table in MongoDB. Tested in Postman with bearer token.
+</br>
 </br>
 </br>
 
@@ -1315,7 +1371,6 @@ const deleteJob = async (jobId) => {
 </br>
 </br>
 <h2>Edit Job Functionality - Front End</h2>
-</br>
 
 
 </br>
@@ -1369,8 +1424,17 @@ const editJob = async () => {
 <h2>Mock Data - Mockaroo</h2>
 </br>
 
+- Used MOCKAROO to generate a JSON file with 75 rows of mock data for jobs, to test the STATS page.  This generates fake company names, job titles, custom lists (for enumerated values), and timestamps between a range created.  Passed in a "createdBy" ID for a specific user for testing purposes.
+</br>
+</br>
+
+
+<img src="https://user-images.githubusercontent.com/91037796/188204564-af830e0b-d2db-4fad-9ca9-2f0e87de304f.png" width=80% height=80%>
+
 
 </br>
-- Placeholder
+
+<img src="https://user-images.githubusercontent.com/91037796/188204488-99964b18-6829-4222-aef8-b2d68152868d.png" width=30% height=30%>
 </br>
-</br>
+
+- Used M
