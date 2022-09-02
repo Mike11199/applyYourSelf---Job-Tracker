@@ -1429,12 +1429,42 @@ const editJob = async () => {
 </br>
 
 
-<img src="https://user-images.githubusercontent.com/91037796/188204564-af830e0b-d2db-4fad-9ca9-2f0e87de304f.png" width=80% height=80%>
+<img src="https://user-images.githubusercontent.com/91037796/188204564-af830e0b-d2db-4fad-9ca9-2f0e87de304f.png" width=100% height=100%>
 
 
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/188204488-99964b18-6829-4222-aef8-b2d68152868d.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/91037796/188204488-99964b18-6829-4222-aef8-b2d68152868d.png" width=60% height=60%>
 </br>
 
-- Used M
+- Created a file in the server (back-end) POPULATE.JS to be ran manually with the command 'node populate'.  This will parse the mock-data.json file also on the back-end and load its data into MongoDB with 80 fake jobs, for testing the STATS page.
+
+
+```js
+populate.js
+
+import { readFile } from 'fs/promises'
+import dotenv from 'dotenv'                 //loads variables from .env file not uploaded to GitHub (need for MONGO_URL)
+import connectDB from './db/connect.js'     //MongoDB connection
+import Job from './models/Job.js'
+
+dotenv.config()
+
+const start = async () => {
+    try {
+        await connectDB(process.env.MONGO_URL)
+        await Job.deleteMany()  //remove all existing docs
+        const jsonProducts = JSON.parse(await readFile(new URL('./mock-data.json)', import.meta.url)))
+        await Job.create(jsonProducts)  //pass array into Job schema
+        console.log('Success!')
+        process.exit(0)
+
+    } catch (error) {
+        console.log(error)
+        process.exit(0)
+    }
+}
+
+start()
+```
+
