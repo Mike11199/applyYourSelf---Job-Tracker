@@ -1482,7 +1482,7 @@ start()
 
 </br>
 </br>
-<h2>MongoDB - Aggregation Pipeline</h2>
+<h2>STATS Page - MongoDB Aggregation Pipeline (Back End)</h2>
 </br>
 
 
@@ -1532,4 +1532,13 @@ const showStats = async (req, res) => {
 <img src="https://user-images.githubusercontent.com/91037796/188234373-229a1785-fdd1-4db7-9e9a-f3931825caa9.png" width=45% height=45%>
 </br>
 
+
+
+</br>
+</br>
+<h2>STATS Page - Front End</h2>
+</br>
+
+
+- Created
 
