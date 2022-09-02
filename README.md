@@ -1166,8 +1166,7 @@ const deleteJob = async (jobId) => {
 ```
 
 
-
-<img src="" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/91037796/188054769-bf3e576f-7e9d-494e-86f6-2b80da6c603a.png" width=60% height=60%>
 
 
 </br>
@@ -1216,6 +1215,6 @@ const editJob = async () => {
 
 
 
-<img src="" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/91037796/188054733-3941fabe-ffff-4f1f-a328-28572b91bbae.png" width=60% height=60%>
 
 
