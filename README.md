@@ -67,7 +67,7 @@ Packages Installed:
 </br>
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/188056785-a493fc6f-323c-40fd-a9eb-a9fb2eb2991c.png" width=70% height=70%>
+<img src="https://user-images.githubusercontent.com/91037796/188056785-a493fc6f-323c-40fd-a9eb-a9fb2eb2991c.png" width=40% height=40%>
 
 
 
