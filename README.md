@@ -142,7 +142,55 @@ const reducer = (state, action) => {    //hook that takes current state as first
 </br>
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/178848537-40aae12d-bdfa-48e5-9989-2e555298968b.png" width=50% height=50%>
+
+```js
+User.js
+
+import mongoose from 'mongoose'
+import validator from 'validator'
+
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String, 
+        required: [true, 'Please provide name'],
+        minlength: 3,
+        maxlength: 20,
+        trim: true,
+    },
+    email: {
+        type: String, 
+        required: [true, 'Please provide email'],
+        validate:{
+            validator: validator.isEmail,
+            message: 'Please provide a valid email',
+        },
+        unique: true,
+    },
+    password: {
+        type: String, 
+        required: [true, 'Please provide password'],
+        minlength: 6,
+        select: false,
+    },
+    lastName: {
+        type: String,  
+        maxlength: 20,
+        trim: true,
+        default:'lastName',
+    },
+    location: {
+        type: String,  
+        maxlength: 20,
+        trim: true,
+        default:'my city',
+    },
+
+})
+
+
+export default mongoose.model('User', userSchema)
+
+```
 
 -Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party. Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
 </br>
