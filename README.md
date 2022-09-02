@@ -1629,4 +1629,4 @@ export default Stats
 
 
 
-<img src="https://user-images.githubusercontent.com/91037796/188244465-b90f96b1-f878-4f21-b3b6-a7e15e8f0410.png" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/91037796/188244465-b90f96b1-f878-4f21-b3b6-a7e15e8f0410.png" width=40% height=40%>
