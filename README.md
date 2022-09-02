@@ -23,7 +23,7 @@ Packages Installed:
         <br /><strong>JSONWebToken</strong>
     </td>
     <td align="center" height="5" width="60">
-        <img src="" height=50 width=50 />
+        <img src="https://user-images.githubusercontent.com/91037796/188064934-dc52a30f-ca65-4b4c-a8ed-b332eef00331.png" height=50 width=50 />
         <br /><strong>BcryptJS</strong>
     </td>
     <td align="center" height="5" width="60">
@@ -45,7 +45,7 @@ Packages Installed:
         <br /><strong>Morgan</strong>
     </td>
     <td align="center" height="5" width="200">
-        <img src="" height=50 width=50 />
+        <img src="https://user-images.githubusercontent.com/91037796/188065314-6edc712c-e1da-4465-8b7e-b52d4161b2d8.png" height=50 width=50 />
         <br /><strong>ExpressJS Async Errors</strong>
     </td>
     <td align="center" height="5" width="200">
@@ -58,8 +58,6 @@ Packages Installed:
     </td>
     </tr>
 </table>
-
-
 
 
 </br>
@@ -81,7 +79,6 @@ Packages Installed:
 
 <img src="https://user-images.githubusercontent.com/91037796/188056785-a493fc6f-323c-40fd-a9eb-a9fb2eb2991c.png" width=40% height=40%>
 </br>
-
 
 
 
