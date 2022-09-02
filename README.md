@@ -1498,6 +1498,25 @@ const showStats = async (req, res) => {
         {$group: {_id:'$status', count:{$sum:1} } }  //https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/
     ])
 
+    //iterate over array and pull out id and count.  return accumulator and count
+    stats = stats.reduce((acc, curr) =>{
+        const { _id: title,count } = curr
+        acc[title] = count
+        return acc
+    }, {} )
+
+
+    const defaultStats = {
+        pending: stats.pending || 0,
+        interview: stats.interview || 0,
+        declined: stats.declined || 0
+    }
+
+    let monthlyApplications = []
+
+
+    res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications })
+}
 ```
 
 
@@ -1506,19 +1525,8 @@ const showStats = async (req, res) => {
 </br>
 
 
-- Modified showStats function to iterate over the stats object with the reduce function
+- Later modified showStats function to iterate over the stats object with the reduce function, redclaring the "stats" variable.
 
-```js
-jobsController.js
-
-    //iterate over array and pull out id and count.  return accumulator and count
-    stats = stats.reduce((acc, curr) =>{
-        const { _id: title,count } = curr
-        acc[title] = count
-        return acc
-    }, {} )
-
-```
 
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/188234373-229a1785-fdd1-4db7-9e9a-f3931825caa9.png" width=45% height=45%>
