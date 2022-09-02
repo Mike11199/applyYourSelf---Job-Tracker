@@ -33,13 +33,11 @@ if(process.env.NODE_ENV !== 'production'){
  // parses incoming JSON requests and puts the parsed data in req.
 app.use(express.json()) 
 
-app.get('/', (req,res) => {
-    // throw new Error ('error')
+app.get('/', (req,res) => {    
     res.json({msg: 'Welcome!'})
 })
 
-app.get('/api/v1', (req,res) => {
-    // throw new Error ('error')
+app.get('/api/v1', (req,res) => {    
     res.json({msg: 'API'})
 })
 

@@ -5,7 +5,7 @@ import { StatsContainer, Loading, ChartsContainer } from '../../components'
 const Stats = () => {
   const { showStats, isLoading, monthlyApplications } = useAppContext()
 
-  useEffect(() => { showStats() }, [])  //so on page refresh will call the function
+  useEffect(() => { showStats() }, [])  //empty dependency array - only refresh when component first rendered
 
   if (isLoading) {
     return <Loading center />           //show loading circle if loading
