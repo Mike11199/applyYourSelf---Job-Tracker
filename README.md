@@ -141,7 +141,7 @@ const reducer = (state, action) => {    //hook that takes current state as first
 -Created a user model with Mongoose schema for use with MongoDB.  Used a validator package from npm to validate the email.  Ensured the email is unique with the "unique: true" property in the userSchema, and used the error handler to display a message if the email field is not unique (already in the MongoDB database).
 </br>
 </br>
-
+</br>
 
 ```js
 User.js
@@ -192,14 +192,30 @@ export default mongoose.model('User', userSchema)
 
 ```
 
--Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party. Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
+-Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party.  This uses the blowfish cipher and salting to avoid saving the actual password in the datbase.
+
+```js
+
+// set up middleware for MongoDB for hashing the password
+userSchema.pre('save', async function(){
+
+    if(!this.isModified('password'))return
+    const salt = await bcrypt.genSalt(10)
+    this.password = await bcrypt.hash(this.password, salt)
+    //console.log(this)
+})
+
+
+```
+
+-Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
 </br>
 
 
 <img src="https://user-images.githubusercontent.com/91037796/183325614-c074d5f1-ce97-422f-a2ba-c98fb3eaa92b.png" width=70% height=70%>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/183319400-f7021d38-2803-4d15-8717-6fb85a86077e.png" width=50% height=50%>
-</br>
+
+
 
 
 -Implemented JSON Web Token (JWT) using npm package JSONWEBTOKEN for user authentication and to prevent unauthorized users from accessing pages.
