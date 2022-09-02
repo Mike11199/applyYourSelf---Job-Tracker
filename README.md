@@ -7,6 +7,7 @@
 Full stack MERN Project I created following a Udemy tutorial. Credit MERN Stack Course 2022 - MongoDB, Express, React and NodeJS
 by John Smilga.  After completing this project and gaining a high-level view of the code design, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.
 
+
 </br>
 </br>
 Packages Installed:
@@ -14,26 +15,32 @@ Packages Installed:
 <table>
     <tr>
     <td align="center" height="5" width="60">
+        <img src="https://necolas.github.io/normalize.css/logo.svg" height=50 width=50 />
         <br /><strong>Normalize.css</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188063026-48a21736-f109-42f3-b375-0161c4212efc.png" height=50 width=50 />
         <br /><strong>JSONWebToken</strong>
     </td>
     <td align="center" height="5" width="60">
         <br /><strong>BcryptJS</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188063351-6ec2f8c6-2cd9-4009-80d1-abc6f23c3e63.png" height=50 width=50 />
         <br /><strong>Axios</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188063863-25f47699-5f0f-4511-9576-ba4602b88edc.png" height=50 width=50 />
         <br /><strong>Cors</strong>
     </td>
     </tr>
     <tr>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188064324-9b1bb56e-8938-418f-ab8d-e78649cc233b.png" height=50 width=50 />
         <br /><strong>Concurrently</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188063595-bb6505c9-8078-46ee-a9e8-80b354475999.png" height=50 width=50 />
         <br /><strong>Morgan</strong>
     </td>
     <td align="center" height="5" width="200">
@@ -47,7 +54,6 @@ Packages Installed:
     </td>
     </tr>
 </table>
-
 
 
 </br>
