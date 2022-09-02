@@ -62,11 +62,15 @@ Packages Installed:
 
 -Added an isMember function to toggle FormRow components on the login/register screen. Utilized conditional rendering with inline ternarny operators (as oppossed to if/else statements) to display different form fields if the user is already registered and can log in, or needs to register.
 
--Set up a global context using createContext and a useContext hook to pass values deep into the component tree.  This allows the alert function to be used globally as oppossed to passed to each prop.
+-Set up a global context using createContext and a useContext hook to pass values deep into the component tree.  This allows the alert function to be used globally as oppossed to passed to each prop manually.
+
+</br>
+</br>
+
+<img src="https://user-images.githubusercontent.com/91037796/188056785-a493fc6f-323c-40fd-a9eb-a9fb2eb2991c.png" width=70% height=70%>
 
 
 
-<img src="https://user-images.githubusercontent.com/91037796/171723508-c90523fd-f41f-4338-a6f5-f372adc5fc66.png" width=55% height=55%>
 
 
 -Used a REDUCER hook (type of function that takes the current state and an action as arguments, and return a new state result) and dispatch functions to enable ALERTS to show and clear after a brief period of time (user not inputting all values into the form, etc.).  
