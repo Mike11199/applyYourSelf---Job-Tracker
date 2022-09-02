@@ -1434,7 +1434,7 @@ const editJob = async () => {
 
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/188204488-99964b18-6829-4222-aef8-b2d68152868d.png" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/91037796/188204488-99964b18-6829-4222-aef8-b2d68152868d.png" width=35% height=35%>
 </br>
 
 - Created a file in the server (back-end) POPULATE.JS to be ran manually with the command 'node populate'.  This will parse the mock-data.json file also on the back-end and load its data into MongoDB with 80 fake jobs, for testing the STATS page.
