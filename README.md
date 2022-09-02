@@ -288,7 +288,7 @@ app.get('/api/v1', (req,res) => {
 
 
 </br>
-<h2>Implementing User Registration (Front/Back End and MongoDB)</h2>
+<h2>Implementing User Registration - Front End</h2>
 
 <h3>Front End</h3>
 -Installed AXIOS on the client side so that when the submit button is clicked on the front-end, axios will submit a post request using the authentication routes on the back-end to the MongoDB database.  If the user already exists (looking up by email in the database using the fineOne function), an error will be returned.    
@@ -347,13 +347,6 @@ const registerUser = async (currentUser) => {
 <br/>
 <br/>
 
-
-<h3>Back End</h3>
-
-Authentication Page - authController.js
-</br>
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/183775472-97bf5927-ece8-4902-bff0-4acf16cd61bf.png" width=50% height=50%>
 
 
 
