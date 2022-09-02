@@ -20,14 +20,15 @@ import {
     GET_JOBS_BEGIN,
     GET_JOBS_SUCCESS,
     SET_EDIT_JOB,
+    DELETE_JOB_BEGIN,
 } from "./actions"
 
 import { initialState } from "./appContext"
 
-const reducer = (state, action) => {
+const reducer = (state, action) => {    //hook that takes current state as first argument, and action object as second, returning a new state afterwards
     if(action.type === DISPLAY_ALERT){
         return {
-            ...state, 
+            ...state,              //the ... is the spread operator used to return the existing state array and also add/change onto it the values below
             showAlert:true,
             alertType:'danger',
     alertText:'Please provide all values!'
@@ -36,7 +37,7 @@ const reducer = (state, action) => {
     
     if(action.type === CLEAR_ALERT){
         return {
-            ...state, 
+            ...state,       
             showAlert:false,
             alertType:'',
             alertText:'',
@@ -210,7 +211,13 @@ const reducer = (state, action) => {
             status,
          }         
     }
+    if(action.type === DELETE_JOB_BEGIN){
 
+        return {
+            ...state,
+            isLoading: true
+        }
+    }
 
 
     throw new Error (`no such action : ${action.type}`)
