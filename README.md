@@ -7,6 +7,7 @@
 Full stack MERN Project I created following a Udemy tutorial. Credit MERN Stack Course 2022 - MongoDB, Express, React and NodeJS
 by John Smilga.  After completing this project and gaining a high-level view of the code design, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.
 
+
 </br>
 </br>
 Packages Installed:
@@ -14,40 +15,49 @@ Packages Installed:
 <table>
     <tr>
     <td align="center" height="5" width="60">
+        <img src="https://necolas.github.io/normalize.css/logo.svg" height=50 width=50 />
         <br /><strong>Normalize.css</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188063026-48a21736-f109-42f3-b375-0161c4212efc.png" height=50 width=50 />
         <br /><strong>JSONWebToken</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188064934-dc52a30f-ca65-4b4c-a8ed-b332eef00331.png" height=50 width=50 />
         <br /><strong>BcryptJS</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188063351-6ec2f8c6-2cd9-4009-80d1-abc6f23c3e63.png" height=50 width=50 />
         <br /><strong>Axios</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188063863-25f47699-5f0f-4511-9576-ba4602b88edc.png" height=50 width=50 />
         <br /><strong>Cors</strong>
     </td>
     </tr>
     <tr>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188064324-9b1bb56e-8938-418f-ab8d-e78649cc233b.png" height=50 width=50 />
         <br /><strong>Concurrently</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="https://user-images.githubusercontent.com/91037796/188063595-bb6505c9-8078-46ee-a9e8-80b354475999.png" height=50 width=50 />
         <br /><strong>Morgan</strong>
     </td>
     <td align="center" height="5" width="200">
+        <img src="https://user-images.githubusercontent.com/91037796/188065314-6edc712c-e1da-4465-8b7e-b52d4161b2d8.png" height=50 width=50 />
         <br /><strong>ExpressJS Async Errors</strong>
     </td>
     <td align="center" height="5" width="200">
+        <img src="https://user-images.githubusercontent.com/91037796/188064573-ab878d34-af50-4f4b-b3d9-cac3da87e4f1.svg" height=50 width=50 />
         <br /><strong>React Icons</strong>
     </td>
     <td align="center" height="5" width="200">
+        <img src="https://user-images.githubusercontent.com/91037796/188064507-b024310e-0174-4af0-816c-ef1b7e6c5e7c.png" height=50 width=50 />
     <br /><strong>Moment.js</strong>
     </td>
     </tr>
 </table>
-
 
 
 </br>
@@ -69,7 +79,6 @@ Packages Installed:
 
 <img src="https://user-images.githubusercontent.com/91037796/188056785-a493fc6f-323c-40fd-a9eb-a9fb2eb2991c.png" width=40% height=40%>
 </br>
-
 
 
 
@@ -136,12 +145,13 @@ const reducer = (state, action) => {    //hook that takes current state as first
 
 
 </br>
-<h2>MongoDB Implementation</h2>
+<h2>MongoDB Implementation - User Model</h2>
+</br>
 
 -Created a user model with Mongoose schema for use with MongoDB.  Used a validator package from npm to validate the email.  Ensured the email is unique with the "unique: true" property in the userSchema, and used the error handler to display a message if the email field is not unique (already in the MongoDB database).
 </br>
 </br>
-
+</br>
 
 ```js
 User.js
@@ -191,17 +201,44 @@ const userSchema = new mongoose.Schema({
 export default mongoose.model('User', userSchema)
 
 ```
-
--Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party. Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
+</br>
+</br>
+<h2>MongoDB Implementation - Password Hashing</h2>
 </br>
 
 
+-Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party.  This uses the blowfish cipher and salting to avoid saving the actual password in the datbase.
+
+</br>
+</br>
+
+```js
+User.js
+
+// set up middleware for MongoDB for hashing the password
+userSchema.pre('save', async function(){
+
+    if(!this.isModified('password'))return
+    const salt = await bcrypt.genSalt(10)
+    this.password = await bcrypt.hash(this.password, salt)
+    //console.log(this)
+})
+```
+
+</br>
+-Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
+</br>
+
+</br>
 <img src="https://user-images.githubusercontent.com/91037796/183325614-c074d5f1-ce97-422f-a2ba-c98fb3eaa92b.png" width=70% height=70%>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/183319400-f7021d38-2803-4d15-8717-6fb85a86077e.png" width=50% height=50%>
+
+
+</br>
+<h2>JSON Web Token (JWT)</h2>
 </br>
 
-
+</br>
 -Implemented JSON Web Token (JWT) using npm package JSONWEBTOKEN for user authentication and to prevent unauthorized users from accessing pages.
 
 ```js
@@ -603,7 +640,7 @@ const Navbar = () => {
 <h2>Authentication - Server Setup and Middleware</h2>
 </br>
 
-</br>
+
 -Restricted access to certain resources so that a user can view only their own data by adding an authentication mdidleware, that checks for the existence of a JSON web token created for the user.
 </br>
 </br>
