@@ -1169,6 +1169,9 @@ const deleteJob = async (jobId) => {
 
 <img src="" width=60% height=60%>
 
+
+</br>
+</br>
 <h2>Edit Job Functionality - Front End</h2>
 </br>
 
