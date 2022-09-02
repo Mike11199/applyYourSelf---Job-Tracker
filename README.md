@@ -206,11 +206,10 @@ export default mongoose.model('User', userSchema)
 <h2>MongoDB Implementation - Password Hashing</h2>
 </br>
 
-
 -Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party.  This uses the blowfish cipher and salting to avoid saving the actual password in the datbase.
 
 </br>
-</br>
+
 
 ```js
 User.js
@@ -238,8 +237,9 @@ userSchema.pre('save', async function(){
 <h2>JSON Web Token (JWT)</h2>
 </br>
 
-</br>
+
 -Implemented JSON Web Token (JWT) using npm package JSONWEBTOKEN for user authentication and to prevent unauthorized users from accessing pages.
+</br></br>
 
 ```js
 userSchema.methods.createJWT = function () {
@@ -247,16 +247,45 @@ userSchema.methods.createJWT = function () {
 }
 ```
 
+
 </br>
 </br>
 <h2>Connecting the Front and Back End</h2>
 
--Used npm to install the package CONCURRENTLY so that the front and back end of the application can be ran at the same time with the "npm start" terminal command.  Made use of the npm node.js package CORS to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
+-Used npm to install the package CONCURRENTLY so that the front and back end of the application can be ran at the same time with the "npm start" terminal command.  
 
 
-<img src="https://user-images.githubusercontent.com/91037796/183781631-d8519c74-f66c-4adf-a9ff-69eaefaa4ca8.png" width=90% height=90%>
+ ```js
+  "scripts": {
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client \""
+  },
+ ```
+
+
+-Made use of the npm node.js package CORS to allow for a Connect/Express middleware that can be used to enable CORS (cross-origin resource sharing) between different domains, allowing for the server and front-end to communicate with each other.
+
+ ```js
+ Server.js
+ 
+//allows front and back end to communicate with cross origin resource sharing between diff domains
+app.use(cors())
+
+// parses incoming JSON requests and puts the parsed data in req.
+app.use(express.json()) 
+
+app.get('/', (req,res) => {    
+    res.json({msg: 'Welcome!'})
+})
+
+app.get('/api/v1', (req,res) => {    
+    res.json({msg: 'API'})
+})
+ ```
+
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/183328759-5d8a11d8-3389-4ab9-a158-9a0a3d729d1e.png" width=60% height=60%>
+
 
 </br>
 <h2>Implementing User Registration (Front/Back End and MongoDB)</h2>
@@ -643,7 +672,7 @@ const Navbar = () => {
 
 -Restricted access to certain resources so that a user can view only their own data by adding an authentication mdidleware, that checks for the existence of a JSON web token created for the user.
 </br>
-</br>
+
 
 -First added the "authenticateUser" to the /updateUser route.  /register and /login are still public routes.  Also added authentication to all routes for creating, updating, and deleting jobs.  Added bearer token testing in Postman to test routes with authentication bearer token.
 
