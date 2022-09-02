@@ -69,7 +69,7 @@ Packages Installed:
 <img src="https://user-images.githubusercontent.com/91037796/171723508-c90523fd-f41f-4338-a6f5-f372adc5fc66.png" width=55% height=55%>
 
 
--Used a reducer (a function that take the current state and an action as arguments, and return a new state result) and dispatch functions to enable alerts to show and clear after a brief period of time (user not inputting all values into the form, etc.)
+-Used a reducer (a hook or function that takes the current state and an action as arguments, and return a new state result) and dispatch functions to enable alerts to show and clear after a brief period of time (user not inputting all values into the form, etc.).  We can update the state by returning the spread operator (...) on the state (...state), and in a comma separted list the other state values we want to add/change.
 
 
 <img src="https://user-images.githubusercontent.com/91037796/171750486-4053e32c-028b-4690-9281-7f4e01e18475.png" width=40% height=40%>
@@ -145,7 +145,7 @@ Authentication Page - authController.js
 </br>
 <h2>useNavigate and User Persistence in Local Storage</h2>
 
--8/9/22 Implemented the useNavigate hook to navigate programmatically to the dashboard after the registration form is submitted.
+-Implemented the useNavigate hook to navigate programmatically to the dashboard after the registration form is submitted.
 </br>
 
  
@@ -177,7 +177,7 @@ useEffect(()=>{
 }, [user, navigate] ) //dependency array.  invoked every time the user or navigate values change
 ```
 
--8/9/22 We also have to persist the user in local storage as the user will be logged out if they do not exist.  To do this, added functions to add and remove the user from local storage to appContext.js.  This is the file where context, or global react variables are stored.  Also saved the token itself to local storage.  
+-We also have to persist the user in local storage as the user will be logged out if they do not exist.  To do this, added functions to add and remove the user from local storage to appContext.js.  This is the file where context, or global react variables are stored.  Also saved the token itself to local storage.  
 </br>
 ```js
 appContext.js
@@ -221,13 +221,13 @@ const registerUser = async (currentUser) => {
 </br>
 <h2>Login User - Server (Back End)</h2>
 </br>
--8/12/22 Installed the npm package MORGAN on the server side as an HTTP request logger middleware, to log HTTP requests, debug APIs used in the application, and help view routes/methods used in controllers.  This will make the program easier to use as multiple routes to send requests are added. After installing, terminal shows the 400 bad request error tested in Postman when attempting to register an email that is already in the MongoDB database.
+-Installed the npm package MORGAN on the server side as an HTTP request logger middleware, to log HTTP requests, debug APIs used in the application, and help view routes/methods used in controllers.  This will make the program easier to use as multiple routes to send requests are added. After installing, terminal shows the 400 bad request error tested in Postman when attempting to register an email that is already in the MongoDB database.
 </br>
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/184403310-505e642f-73e5-4157-a749-7e763601240e.png" width=100% height=100%>
 
 </br>
--8/12/22 Implemented user authentication by first setting up a new error to return 401 if unauthenticated.
+-Implemented user authentication by first setting up a new error to return 401 if unauthenticated.
 </br>
 </br>
 
@@ -250,7 +250,7 @@ export default UnAuthenticatedError
 ```
 
 </br>
--8/12/22 After adding the custom error, added an instance method to the user schema to compare password to the hashed password and return 'True' if it matches.
+-After adding the custom error, added an instance method to the user schema to compare password to the hashed password and return 'True' if it matches.
 </br>
 </br>
 
@@ -266,7 +266,7 @@ userSchema.methods.comparePassword = async function(candidatePassword){
 ```
 
 </br>
--8/12/22 Then set up the LOG IN CONTROLLER server side in the authController.js file.  This checks that an email and password is entered.  Looks up the user by email in the MongoDB database, and confirms the password entered matches the hashed version of the password in the database.  If everything is correct, it returns a JSON response of the user object (not the password entered), token, and location.
+-Then set up the LOG IN CONTROLLER server side in the authController.js file.  This checks that an email and password is entered.  Looks up the user by email in the MongoDB database, and confirms the password entered matches the hashed version of the password in the database.  If everything is correct, it returns a JSON response of the user object (not the password entered), token, and location.
 </br>
 </br>
 
@@ -315,7 +315,7 @@ const login = async (req, res) => {
 </br>
 
 
--8/12/22 Set up a login user async function and added form input to the appContext state to be accessed as a global.
+-Set up a login user async function and added form input to the appContext state to be accessed as a global.
 
 
 ```js
@@ -346,7 +346,7 @@ appContext.js
 ```
 
 </br>
--8/12/22 Added line to the if/else statement for the onSubmit action, in the Register.js file, so that the loginUser function in the appContext.js file is invoked if the login form is submitted.  If the user isn't already a member, then the registerUser will be ran.
+-Added line to the if/else statement for the onSubmit action, in the Register.js file, so that the loginUser function in the appContext.js file is invoked if the login form is submitted.  If the user isn't already a member, then the registerUser will be ran.
 </br>
 
 ```js
@@ -375,11 +375,11 @@ const onSubmit = (e) => {
 <h2>Page Structure and Protected Routes</h2>
 </br>
 
--8/24/22 Set up a nested page structure by using a shared layout, made possible by the Outlet component in React BrowserRouter.
+-Set up a nested page structure by using a shared layout, made possible by the Outlet component in React BrowserRouter.
 </br>
 </br>
 
--8/24/22 Added protected routes to the application so that a user needs to be registered to access certain pages, or else they will be kicked back to the landing page.  This is accomplished by a function which accesses the user object (through the AppContext global state).  The function then returns the user to the landing page programatically if they are not a user, using the navigate hook.
+-Added protected routes to the application so that a user needs to be registered to access certain pages, or else they will be kicked back to the landing page.  This is accomplished by a function which accesses the user object (through the AppContext global state).  The function then returns the user to the landing page programatically if they are not a user, using the navigate hook.
 </br>
 </br>
 
@@ -403,7 +403,7 @@ export default ProtectedRoute
 
 ```
 </br>
--8/25/22 Set up more components for the page structure.  Added a toggleSidebar to application state with useAppContext().  Added button to show/hide div for log out button using React's useState hook.
+-Set up more components for the page structure.  Added a toggleSidebar to application state with useAppContext().  Added button to show/hide div for log out button using React's useState hook.
 </br>
 </br>
 
@@ -440,7 +440,7 @@ Navbar.js
 </br>
 
 </br>
--8/26/22 Added a function in appContext to log out the user, by clearing the user's local storage and setting state values back to null.  Due to the fact that routes are protected, this will also automatically kick the user back to the landing page.
+-Added a function in appContext to log out the user, by clearing the user's local storage and setting state values back to null.  Due to the fact that routes are protected, this will also automatically kick the user back to the landing page.
 </br>
 </br>
 
@@ -498,14 +498,14 @@ const Navbar = () => {
 </br>
 
 </br>
--8/28/22 Restricted access to certain resources so that a user can view only their own data by adding an authentication mdidleware, that checks for the existence of a JSON web token created for the user.
+-Restricted access to certain resources so that a user can view only their own data by adding an authentication mdidleware, that checks for the existence of a JSON web token created for the user.
 </br>
 </br>
 
--8/28/22 First added the "authenticateUser" to the /updateUser route.  /register and /login are still public routes.  Also added authentication to all routes for creating, updating, and deleting jobs.  Added bearer token testing in Postman to test routes with authentication bearer token.
+-First added the "authenticateUser" to the /updateUser route.  /register and /login are still public routes.  Also added authentication to all routes for creating, updating, and deleting jobs.  Added bearer token testing in Postman to test routes with authentication bearer token.
 
 
--8/28/22 Created auth.js middleware to also compare the user's JWT to the secret environment variable, throwing an UnAuthenticationError 401 if the token is not correct or has expired.
+-Created auth.js middleware to also compare the user's JWT to the secret environment variable, throwing an UnAuthenticationError 401 if the token is not correct or has expired.
 </br>
 </br>
 
@@ -559,7 +559,7 @@ export default auth
 </br>
 
 </br>
--8/29/22 Added a function called <strong>updateUser</strong> in appContext.js on the FRONT END.  This is called by the save changes button on the dashboard profile page, and makes use of the auth route "router.route('/updateUser').patch(authenticateUser, updateUser)" to send an HTTP PATCH request to the Node.JS back end.   
+-Added a function called <strong>updateUser</strong> in appContext.js on the FRONT END.  This is called by the save changes button on the dashboard profile page, and makes use of the auth route "router.route('/updateUser').patch(authenticateUser, updateUser)" to send an HTTP PATCH request to the Node.JS back end.   
 </br>
 </br>
 
@@ -585,7 +585,7 @@ export default auth
 ```
 
 </br>
--8/29/22 On the back end, the updateUser function in the authController.js file retrieves the user from the MongoDB database by userID, and updates values as needed.  This request also goes through the authentication middleware to ensure the jwt token is valid before this request to the server and database can be processed.
+-On the back end, the updateUser function in the authController.js file retrieves the user from the MongoDB database by userID, and updates values as needed.  This request also goes through the authentication middleware to ensure the jwt token is valid before this request to the server and database can be processed.
 </br>
 </br>
 
@@ -614,7 +614,7 @@ export default auth
 ```
 
 </br>
--8/29/22 Lastly, the reducer updates state as needed based on the result of the HTTP request.
+-Lastly, the reducer updates state as needed based on the result of the HTTP request.
 </br>
 </br>
 
@@ -670,7 +670,7 @@ export default auth
 
 
 </br>
--8/30/22 Added controller in server (back-end) to get the requested data from the job model in the MongoDB database. 
+-Added controller in server (back-end) to get the requested data from the job model in the MongoDB database. 
 </br>
 </br>
 
@@ -698,7 +698,7 @@ const createJob = async (req, res) => {
 
 
 </br>
--8/30/22 Added job model using Mongoose for MongoDB so that created jobs can be stored in the database.  Jobs have a unique ID for the job itself and the user who created it (needed for the user to retrieve and edit/delete jobs later on).
+-Added job model using Mongoose for MongoDB so that created jobs can be stored in the database.  Jobs have a unique ID for the job itself and the user who created it (needed for the user to retrieve and edit/delete jobs later on).
 </br>
 </br>
 
@@ -754,7 +754,7 @@ export default mongoose.model('Job', JobSchema)
 
 
 </br>
--8/31/22 In the front-end, in AppContext.js, created an async function to createjob and post an axios request to the server with the correct authentication (bearer token). Request uses state values that will be updated by the add job form.
+-In the front-end, in AppContext.js, created an async function to createjob and post an axios request to the server with the correct authentication (bearer token). Request uses state values that will be updated by the add job form.
 </br>
 </br>
 
@@ -783,7 +783,7 @@ const createJob = async () => {
 
 
 </br>
--8/31/22 On the front-end added button to invoke the createJob function in appContext.  Also added form fields and drop downs for job info, and actions to pass to the reducer to update state values on create job begin, success, or error.
+-On the front-end added button to invoke the createJob function in appContext.  Also added form fields and drop downs for job info, and actions to pass to the reducer to update state values on create job begin, success, or error.
 </br>
 </br>
 
@@ -824,7 +824,7 @@ AddJob.js
 
 
 </br>
--8/31/22 Added get all jobs controller in server (back-end) to get ALL JOBS for a user, looking up by user ID in the jobs table in MongoDB. Tested in Postman with bearer token.
+-Added get all jobs controller in server (back-end) to get ALL JOBS for a user, looking up by user ID in the jobs table in MongoDB. Tested in Postman with bearer token.
 </br>
 </br>
 
@@ -848,7 +848,7 @@ const getAllJobs = async (req, res) => {
 
 
 </br>
--8/30/22 Added front end function axios request with interceptor (bearer token) to the /jobs API to retrieve jobs in an array, which will be used to render jobs on the jobs page.
+-Added front end function axios request with interceptor (bearer token) to the /jobs API to retrieve jobs in an array, which will be used to render jobs on the jobs page.
 </br>
 </br>
 
@@ -883,7 +883,7 @@ const getJobs = async () => {
 
 
 </br>
--8/31/22 Add jobs and jobcontainer components to the front end page, wrapper for styled components, to display jobs.
+-Added the "jobs" and "jobcontainer" components to the front end - "All Jobs" page, using a wrapper as a styled component, to eventually display all jobs for the user.
 </br>
 </br>
 
@@ -929,7 +929,7 @@ const JobsContainer = () => {
 <img src="https://user-images.githubusercontent.com/91037796/187789808-1545bc54-15a0-40d8-a662-af2983598be2.png" width=100% height=100%>
 
 </br>
--8/31/22 Finished Job and JobsContainer components.  Used npm package MOMENT to convert unix time to a date.  Added icons for each job card.  Imported wrappers for CSS created by the tutorial.
+-Finished Job and JobsContainer components.  Used npm package MOMENT to convert unix time to a date.  Added icons for each job card.  Imported wrappers for CSS created by the tutorial.
 </br>
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/187825939-fbcfe139-00d5-46e5-90df-b7ee2c53a1a6.png" width=100% height=100%>
@@ -942,7 +942,7 @@ const JobsContainer = () => {
 
 
 </br>
--8/31/22 Set up the "edit job" functionality.  When clicking an "Edit" button on one of the job cards, it invokes the "setEditJob" function in appContext.js, passing the job id from the state into it.  
+-Set up the "edit job" functionality.  When clicking an "Edit" button on one of the job cards, it invokes the "setEditJob" function in appContext.js, passing the job id from the state into it.  
 </br>
 </br>
 
@@ -973,7 +973,7 @@ const setEditJob = (id) => {
 ```
 
 </br>
--8/31/22 The "setEditJob" function then dispatches an action which the reducer uses to set the state variable "isEditing" to "true".  The user is programatically navigated to the Add Job which is set to an "edit job" form, using conditional rendering on the form based on the "isEditing" variable.  Instead of passing values into the function here, we just grab all the job info that is already in the state for the job id we are editing.  This is because when we retrieved all jobs for a user, we already have each job in the state in our "jobs array".
+-The "setEditJob" function then dispatches an action which the reducer uses to set the state variable "isEditing" to "true".  The user is programatically navigated to the Add Job which is set to an "edit job" form, using conditional rendering on the form based on the "isEditing" variable.  Instead of passing values into the function here, we just grab all the job info that is already in the state for the job id we are editing.  This is because when we retrieved all jobs for a user, we already have each job in the state in our "jobs array".
 </br>
 </br>
 
@@ -1008,12 +1008,12 @@ reducer.js
 
 
 </br>
--8/31/22 Set up jobs controller "updateJob" async function.  Uses "findOne" Mongoose function to find a job by ID, and then the "findOneAndUpdate" Mongoose function to update the job, looking up by ID, with the req.body new values passed into it.  This allows us to edit existing jobs in the MongoDB database from the server.
+-Set up jobs controller "updateJob" async function.  Uses "findOne" Mongoose function to find a job by ID, and then the "findOneAndUpdate" Mongoose function to update the job, looking up by ID, with the req.body new values passed into it.  This allows us to edit existing jobs in the MongoDB database from the server.
 </br>
 </br>
 
 </br>
--8/31/22 Tested in Postman by using the "Job ID" in the URL for the API.
+-Tested in Postman by using the "Job ID" in the URL for the API.
 </br>
 </br>
 
@@ -1059,7 +1059,7 @@ const updateJob = async (req, res) => {
 </br>
 
 </br>
--8/31/22 Added functionality to check permissions so that users can only edit their OWN jobs, and NOT the jobs of other users in the updateJob function in the jobs controller.
+-Added functionality to check permissions so that users can only edit their OWN jobs, and NOT the jobs of other users in the updateJob function in the jobs controller.
 </br>
 </br>
 
@@ -1083,7 +1083,7 @@ export default checkPermissions
 <img src="https://user-images.githubusercontent.com/91037796/187835956-58278571-c3e3-4902-b994-9db406a3baa8.png" width=60% height=60%>
 
 </br>
--8/31/22 Postman test (screenshot above) throws a 401 unauthorized error on the server, as the user does not have permission to access this API (URL contains Job ID), showing that the checkPermissions function worked as intended.
+-Postman test (screenshot above) throws a 401 unauthorized error on the server, as the user does not have permission to access this API (URL contains Job ID), showing that the checkPermissions function worked as intended.
 </br>
 
 <img src="https://user-images.githubusercontent.com/91037796/187835984-4732db2b-23b2-4396-8684-8291b0331ac7.png" width=60% height=60%>
@@ -1099,7 +1099,7 @@ export default checkPermissions
 
 
 </br>
--8/31/22 Added function to deleteJob on the server, jobs Controller.
+-Added function to deleteJob on the server, jobs Controller.
 </br>
 </br>
 
@@ -1126,7 +1126,7 @@ const deleteJob = async (req, res) => {
 ```
 
 </br>
--8/31/22 Tested API in Postman.  Received 200 success code when deleting a user's job, and 401 if unauthorized as expected.
+-Tested API in Postman.  Received 200 success code when deleting a user's job, and 401 if unauthorized as expected.
 </br>
 </br>
 
@@ -1153,7 +1153,7 @@ placeholder
 ```
 
 </br>
--9/1/22 placeholder
+- placeholder
 </br>
 </br>
 
