@@ -23,6 +23,7 @@ Packages Installed:
         <br /><strong>JSONWebToken</strong>
     </td>
     <td align="center" height="5" width="60">
+        <img src="" height=50 width=50 />
         <br /><strong>BcryptJS</strong>
     </td>
     <td align="center" height="5" width="60">
@@ -44,16 +45,21 @@ Packages Installed:
         <br /><strong>Morgan</strong>
     </td>
     <td align="center" height="5" width="200">
+        <img src="" height=50 width=50 />
         <br /><strong>ExpressJS Async Errors</strong>
     </td>
     <td align="center" height="5" width="200">
+        <img src="https://user-images.githubusercontent.com/91037796/188064573-ab878d34-af50-4f4b-b3d9-cac3da87e4f1.svg" height=50 width=50 />
         <br /><strong>React Icons</strong>
     </td>
     <td align="center" height="5" width="200">
+        <img src="https://user-images.githubusercontent.com/91037796/188064507-b024310e-0174-4af0-816c-ef1b7e6c5e7c.png" height=50 width=50 />
     <br /><strong>Moment.js</strong>
     </td>
     </tr>
 </table>
+
+
 
 
 </br>
