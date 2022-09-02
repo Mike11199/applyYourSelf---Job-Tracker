@@ -196,13 +196,15 @@ export default mongoose.model('User', userSchema)
 </br>
 <h2>MongoDB Implementation - Password Hashing</h2>
 </br>
-</br>
+
 
 -Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party.  This uses the blowfish cipher and salting to avoid saving the actual password in the datbase.
 
 </br>
 </br>
+
 ```js
+User.js
 
 // set up middleware for MongoDB for hashing the password
 userSchema.pre('save', async function(){
@@ -212,8 +214,6 @@ userSchema.pre('save', async function(){
     this.password = await bcrypt.hash(this.password, salt)
     //console.log(this)
 })
-
-
 ```
 
 </br>
