@@ -1429,12 +1429,116 @@ const editJob = async () => {
 </br>
 
 
-<img src="https://user-images.githubusercontent.com/91037796/188204564-af830e0b-d2db-4fad-9ca9-2f0e87de304f.png" width=80% height=80%>
+<img src="https://user-images.githubusercontent.com/91037796/188204564-af830e0b-d2db-4fad-9ca9-2f0e87de304f.png" width=100% height=100%>
 
 
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/188204488-99964b18-6829-4222-aef8-b2d68152868d.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/91037796/188204488-99964b18-6829-4222-aef8-b2d68152868d.png" width=35% height=35%>
 </br>
 
-- Used M
+- Created a file in the server (back-end) POPULATE.JS to be ran manually with the command 'node populate'.  This will parse the mock-data.json file also on the back-end and load its data into MongoDB with 80 fake jobs, for testing the STATS page.
+
+</br>
+
+```js
+populate.js
+
+import { readFile } from 'fs/promises'
+import dotenv from 'dotenv'                 //loads variables from .env file not uploaded to GitHub (need for MONGO_URL)
+import connectDB from './db/connect.js'     //MongoDB connection
+import Job from './models/Job.js'
+
+dotenv.config()
+
+const start = async () => {
+    try {
+        await connectDB(process.env.MONGO_URL)
+        await Job.deleteMany()  //remove all existing docs
+        const jsonProducts = JSON.parse(await readFile(new URL('./mock-data.json)', import.meta.url)))
+        await Job.create(jsonProducts)  //pass array into Job schema
+        console.log('Success!')
+        process.exit(0)
+
+    } catch (error) {
+        console.log(error)
+        process.exit(0)
+    }
+}
+
+start()
+```
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188217359-823623d4-071a-4843-a1ba-344725d942be.png" width=45% height=45%>
+
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188230774-77fb8109-873a-48f9-a2ea-9c47d7857455.png" width=60% height=60%>
+</br>
+
+
+
+
+</br>
+</br>
+<h2>STATS Page - MongoDB Aggregation Pipeline (Back End)</h2>
+</br>
+
+
+- Created an aggregation pipeline for MongoDB using the '/stats' API ROUTE with the showStats function.
+
+```js
+jobsController.js
+
+//aggregation pipeline for STATS page
+const showStats = async (req, res) => {
+    let stats = await Job.aggregate([ 
+        {$match: {createdBy:mongoose.Types.ObjectId( req.user.userId )} },
+        {$group: {_id:'$status', count:{$sum:1} } }  //https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/
+    ])
+
+    //iterate over array and pull out id and count.  return accumulator and count
+    stats = stats.reduce((acc, curr) =>{
+        const { _id: title,count } = curr
+        acc[title] = count
+        return acc
+    }, {} )
+
+
+    const defaultStats = {
+        pending: stats.pending || 0,
+        interview: stats.interview || 0,
+        declined: stats.declined || 0
+    }
+
+    let monthlyApplications = []
+
+
+    res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications })
+}
+```
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188230621-8f7a4222-1978-43f8-865d-ac70f08d387a.png" width=45% height=45%>
+</br>
+
+
+- Later modified showStats function to iterate over the stats object with the reduce function, redclaring the "stats" variable.
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188234373-229a1785-fdd1-4db7-9e9a-f3931825caa9.png" width=45% height=45%>
+</br>
+
+
+
+</br>
+</br>
+<h2>STATS Page - Front End</h2>
+</br>
+
+
+- Created
+
