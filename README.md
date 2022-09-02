@@ -1429,12 +1429,12 @@ const editJob = async () => {
 </br>
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/188204564-af830e0b-d2db-4fad-9ca9-2f0e87de304f.png" width=40% height=40%>
+<img src="https://user-images.githubusercontent.com/91037796/188204564-af830e0b-d2db-4fad-9ca9-2f0e87de304f.png" width=80% height=80%>
 
 
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/188204488-99964b18-6829-4222-aef8-b2d68152868d.png" width=40% height=40%>
+<img src="https://user-images.githubusercontent.com/91037796/188204488-99964b18-6829-4222-aef8-b2d68152868d.png" width=30% height=30%>
 </br>
 
 - Used M
