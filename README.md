@@ -1539,6 +1539,68 @@ const showStats = async (req, res) => {
 <h2>STATS Page - Front End</h2>
 </br>
 
+</br>
+- Similar process as before.  First set up an Axios request to server to retrieve data from the back end with the authFetch bearer token.  Runs action in the reducer to update state with values (not shown).
+</br>
+</br>
 
-- Created
+```js
+appContext.js
+
+const showStats = async () => {
+  dispatch({ type: SHOW_STATS_BEGIN })
+  try {
+    const { data } = await authFetch('/jobs/stats')
+    dispatch({
+      type: SHOW_STATS_SUCCESS,
+      payload: {
+        stats: data.defaultStats,
+        monthlyApplications: data.monthlyApplications,
+      },
+    })
+  } catch (error) {
+    logoutUser()
+  }
+  clearAlert()
+}
+
+```
+
+</br>
+
+
+</br>
+- Added to the STATS page the useEffect hook to grab variables regarding job stats from the state.  Added the "StatsContainer" component which maps over an array of the "statsItems" and returns "StatsItem" components, to display cards for each job application type.  End result is a page showing the stats as cards.  Uses styled components and CSS already set up from the Udemy tutorial; will likely update later.
+</br>
+</br>
+
+```js
+import { useEffect } from 'react'
+import { useAppContext } from '../../context/appContext'
+import { StatsContainer, Loading, ChartsContainer } from '../../components'
+
+const Stats = () => {
+  const { showStats, isLoading, monthlyApplications } = useAppContext()
+
+  useEffect(() => { showStats() }, [])  //empty dependency array - only refresh when component first rendered
+
+  if (isLoading) {
+    return <Loading center />           //show loading circle if loading
+  }
+  return (
+    <>
+      <StatsContainer />
+      {/* AND function allows cards to only display if monthly applications are not empty */}
+      {monthlyApplications.length > 0 && <ChartsContainer />} 
+    </>
+  )
+}
+
+export default Stats
+```
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188242206-e668e161-d905-482a-a399-a4c63c641292.png" width=60% height=60%>
+</br>
+
 
