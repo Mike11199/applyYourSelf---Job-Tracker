@@ -68,13 +68,13 @@ Packages Installed:
 </br>
 
 <img src="https://user-images.githubusercontent.com/91037796/188056785-a493fc6f-323c-40fd-a9eb-a9fb2eb2991c.png" width=40% height=40%>
-
+</br>
 
 
 
 
 -Used a REDUCER hook (type of function that takes the current state and an action as arguments, and return a new state result) and dispatch functions to enable ALERTS to show and clear after a brief period of time (user not inputting all values into the form, etc.).  
-
+</br>
 
 
 
@@ -92,8 +92,11 @@ const displayAlert = () => {
 
 ```
 
+</br>
 -The actions dispatched by the reducer will also update the state by returning the spread operator (...) on the state (...state), and in a comma separted list the other state values we want to add/change.  For example, the DISPLAY_ALERT action in the reducer will edit the showAlert state value to true in appContext, which will enable conditional rendering of alert divs.
 
+</br>
+</br>
 
 ```js
 reducer.js
@@ -121,12 +124,14 @@ const reducer = (state, action) => {    //hook that takes current state as first
 ```
 
 
-
+</br>
 </br>
 <h2>Routing and API Testing</h2>
 
--Used Postman to test APIs and express routes for user authentication and connecting to the MongoDB database:
+-Used Postman to test APIs and express routes for user authentication and connecting to the MongoDB database.
 </br>
+</br>
+
 <img src="https://user-images.githubusercontent.com/91037796/183325705-55763bc2-b43c-4a8e-979b-8e4235bf6c1e.png" width=100% height=100%>
 
 
@@ -134,14 +139,19 @@ const reducer = (state, action) => {    //hook that takes current state as first
 <h2>MongoDB Implementation</h2>
 
 -Created a user model with Mongoose schema for use with MongoDB.  Used a validator package from npm to validate the email.  Ensured the email is unique with the "unique: true" property in the userSchema, and used the error handler to display a message if the email field is not unique (already in the MongoDB database).
+</br>
+</br>
 
 <img src="https://user-images.githubusercontent.com/91037796/178848537-40aae12d-bdfa-48e5-9989-2e555298968b.png" width=50% height=50%>
 
 -Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party. Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
+</br>
 
 
 <img src="https://user-images.githubusercontent.com/91037796/183325614-c074d5f1-ce97-422f-a2ba-c98fb3eaa92b.png" width=70% height=70%>
+</br>
 <img src="https://user-images.githubusercontent.com/91037796/183319400-f7021d38-2803-4d15-8717-6fb85a86077e.png" width=50% height=50%>
+</br>
 
 
 -Implemented JSON Web Token (JWT) using npm package JSONWEBTOKEN for user authentication and to prevent unauthorized users from accessing pages.
@@ -152,6 +162,7 @@ userSchema.methods.createJWT = function () {
 }
 ```
 
+</br>
 </br>
 <h2>Connecting the Front and Back End</h2>
 
