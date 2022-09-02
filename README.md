@@ -1143,11 +1143,24 @@ const deleteJob = async (req, res) => {
 </br>
 
 
+</br>
+- Added deleteJob async function to send a delete request to the server through the '/api/vi' route, using the axios interceptors with the bearer token.  Then call  the getJobs() in the try statement to update the jobs displayed on the client side and refresh the page if the function did not return an error.
+</br>
+</br>
+
+
 ```js
-.js
+appContext.js
 
-placeholder
-
+const deleteJob = async (jobId) => {
+  dispatch({type: DELETE_JOB_BEGIN})
+  try {
+    await authFetch.delete(`/jobs/${jobId}`)
+    getJobs()
+  } catch (error) {
+    console.log(error.response)
+    logoutUser()
+  }
 }
 
 ```
