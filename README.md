@@ -136,7 +136,8 @@ const reducer = (state, action) => {    //hook that takes current state as first
 
 
 </br>
-<h2>MongoDB Implementation</h2>
+<h2>MongoDB Implementation - User Model</h2>
+</br>
 
 -Created a user model with Mongoose schema for use with MongoDB.  Used a validator package from npm to validate the email.  Ensured the email is unique with the "unique: true" property in the userSchema, and used the error handler to display a message if the email field is not unique (already in the MongoDB database).
 </br>
@@ -191,9 +192,16 @@ const userSchema = new mongoose.Schema({
 export default mongoose.model('User', userSchema)
 
 ```
+</br>
+</br>
+<h2>MongoDB Implementation - Password Hashing</h2>
+</br>
+</br>
 
 -Implemented password hashing in MongoDB with npm package BCRYPTJS to protect user data in the event the databse information was ever compromised by a malicious party.  This uses the blowfish cipher and salting to avoid saving the actual password in the datbase.
 
+</br>
+</br>
 ```js
 
 // set up middleware for MongoDB for hashing the password
@@ -208,16 +216,20 @@ userSchema.pre('save', async function(){
 
 ```
 
+</br>
 -Also used npm to install packages such as express-async-errors  to avoid numerous try/catch statements for controllers, and http-status-codes to prevent hard coding of status codes.  
 </br>
 
-
+</br>
 <img src="https://user-images.githubusercontent.com/91037796/183325614-c074d5f1-ce97-422f-a2ba-c98fb3eaa92b.png" width=70% height=70%>
 </br>
 
 
+</br>
+<h2>JSON Web Token (JWT)</h2>
+</br>
 
-
+</br>
 -Implemented JSON Web Token (JWT) using npm package JSONWEBTOKEN for user authentication and to prevent unauthorized users from accessing pages.
 
 ```js
