@@ -759,13 +759,12 @@ export default auth
 </br>
 </br>
 <h2>Update User Functionality</h2>
-</br>
 
 </br>
 -Added a function called <strong>updateUser</strong> in appContext.js on the FRONT END.  This is called by the save changes button on the dashboard profile page, and makes use of the auth route "router.route('/updateUser').patch(authenticateUser, updateUser)" to send an HTTP PATCH request to the Node.JS back end.   
 </br>
 </br>
-
+</br>
 
 ```js
   const updateUser = async (currentUser) => {
