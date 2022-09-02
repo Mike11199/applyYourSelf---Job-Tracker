@@ -631,7 +631,7 @@ const Navbar = () => {
 <h2>Authentication - Server Setup and Middleware</h2>
 </br>
 
-</br>
+
 -Restricted access to certain resources so that a user can view only their own data by adding an authentication mdidleware, that checks for the existence of a JSON web token created for the user.
 </br>
 </br>
