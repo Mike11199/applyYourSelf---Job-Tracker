@@ -57,8 +57,13 @@ Packages Installed:
     <br /><strong>Moment.js</strong>
     </td>
     </tr>
+    <tr>
+    <td align="center" height="5" width="200">
+        <img src="https://user-images.githubusercontent.com/91037796/188282358-dac0160c-662c-46f1-86fd-facbb876fcfe.png" height=50 width=50 />
+    <br/><strong>Recharts</strong>
+    </td>
+    </tr>
 </table>
-
 
 </br>
 
