@@ -45,7 +45,7 @@ Packages Installed:
         <br /><strong>Morgan</strong>
     </td>
     <td align="center" height="5" width="200">
-        <img src="https://user-images.githubusercontent.com/91037796/188065314-6edc712c-e1da-4465-8b7e-b52d4161b2d8.png" height=50 width=50 />
+        <img src="https://user-images.githubusercontent.com/91037796/188282481-b7db60a8-3f2d-47f3-9139-5a94eb3ac3f5.png" height=50 width=50 />
         <br /><strong>ExpressJS Async Errors</strong>
     </td>
     <td align="center" height="5" width="200">
@@ -64,6 +64,7 @@ Packages Installed:
     </td>
     </tr>
 </table>
+
 
 </br>
 
