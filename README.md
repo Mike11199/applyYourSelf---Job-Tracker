@@ -1744,9 +1744,16 @@ import {
 
 
 </br>
-- Modified the jobsController.js file.  Added to the "getAllJobs" function, which returns jobs for a specific user ID from MongoDB, the capability to filter/sort by certain values.
+- Modified the jobsController.js file.  Added to the "getAllJobs" function, which returns jobs for a specific user ID from MongoDB, the capability to filter/sort by certain values, by adding query strings to the URL parameters of the query objet, if certain conditions are met.
 </br>
 </br>
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188334642-d0fd27a0-46c0-45b0-955b-29a811c6f826.png" width=100% height=100%>
+</br>
+
+
 
 
 BEFORE:
