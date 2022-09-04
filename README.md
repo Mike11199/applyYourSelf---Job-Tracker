@@ -1751,6 +1751,15 @@ import {
 - Included $regex to provide regular expression capabilities for pattern match in the search function, when retrieving from MongoDB.  
 
 
+```js
+
+    if (search){
+        queryObject.position = { $regex: search, $options: 'i'}
+    }
+
+
+```
+
 </br>
 </br>
 
