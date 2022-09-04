@@ -1650,7 +1650,8 @@ jobsController.js
 
 
 
-<img src="https://user-images.githubusercontent.com/91037796/188245072-7133a99a-93c5-449d-8415-159c7d5caf53.png" width=100% height=100%>
+<img src="https://user-images.githubusercontent.com/91037796/188322680-9c37e175-fc75-4676-933e-e9e672474d92.png" width=50% height=50%>
+
 
 
 </br>
