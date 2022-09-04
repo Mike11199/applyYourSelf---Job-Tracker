@@ -1739,22 +1739,43 @@ import {
 
 </br>
 </br>
-<h2>Filter and Sort Functionality - Front End</h2>
+<h2>Filter and Sort Functionality - Back End</h2>
 </br>
 
 
 </br>
-- Added
+- Modified the jobsController.js file.  Added to the "getAllJobs" function, which returns jobs for a specific user ID from MongoDB, the capability to filter/sort by certain values.
 </br>
 </br>
 
+
+BEFORE:
 ```js
+jobsController.js
+
+const getAllJobs = async (req, res) => {
+
+    
+    const jobs = await Job.find({ createdBy: req.user.userId })
+    res
+        .status(StatusCodes.OK)
+        .json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
+
+}
 
 
 
   ```
+  
+  AFTER:
+```js
+jobsController.js
 
 
+
+
+
+  ```
 
 
 
