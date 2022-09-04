@@ -1658,5 +1658,38 @@ jobsController.js
 </br>
 </br>
 
-<img src="" width=100% height=100%>
 
+```js
+jobsController.js
+
+    //PIPELINE 2:  Retrieve jobs and group by month and year
+    let monthlyApplications = await Job.aggregate([
+        {$match: {createdBy:mongoose.Types.ObjectId( req.user.userId )} },
+        {$group: {
+            _id: {year: {$year:'$createdAt'}, month: {$month: '$createdAt'}},  
+            count: { $sum: 1}
+        },
+    },
+
+    { $sort: { '_id.year': -1, '_id.month': -1 }},  //-1 to sort by latest jobs and months first
+
+    ])
+    
+```
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188322585-85a3a0e1-b084-4e9e-a3da-e6b60d7d8707.png" width=100% height=100%>
+</br>
+
+
+
+</br>
+</br>
+<h2>Monthly Applications Functionality - Front End</h2>
+</br>
+
+
+</br>
+- Added 
+</br>
+</br>
