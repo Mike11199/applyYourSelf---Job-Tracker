@@ -1728,12 +1728,12 @@ import {
 
 
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/188325452-077a6d12-4527-4f85-8fc2-31c3c21119f8.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/91037796/188325452-077a6d12-4527-4f85-8fc2-31c3c21119f8.png" width=100% height=100%>
 </br>
 
 
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/188325464-fa7e2c2f-b242-48c9-b950-669b153c8384.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/91037796/188325464-fa7e2c2f-b242-48c9-b950-669b153c8384.png" width=100% height=100%>
 </br>
 
 
