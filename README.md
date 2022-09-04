@@ -1749,7 +1749,8 @@ import {
 </br>
 </br>
 - Included $regex to provide regular expression capabilities for pattern match in the search function, when retrieving from MongoDB.  
-
+</br>
+</br>
 
 ```js
 
@@ -1760,7 +1761,6 @@ import {
 
 ```
 
-</br>
 </br>
 
 
