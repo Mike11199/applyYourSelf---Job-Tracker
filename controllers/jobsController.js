@@ -3,7 +3,7 @@ import { StatusCodes } from 'http-status-codes'
 import { BadRequestError, UnAuthenticatedError, NotFoundError } from '../errors/index.js'
 import checkPermissions from '../utils/checkPermissions.js'
 import mongoose from 'mongoose'
-
+import moment from 'moment'
 
 // async because we are communicating with the server
 const createJob = async (req, res) => {
@@ -73,6 +73,9 @@ const deleteJob = async (req, res) => {
 
 //aggregation pipeline for STATS page
 const showStats = async (req, res) => {
+    
+    
+    //PIPELINE 1:  Retrieve jobs and group by status such as declined, interview, etc.
     let stats = await Job.aggregate([ 
         {$match: {createdBy:mongoose.Types.ObjectId( req.user.userId )} },
         {$group: {_id:'$status', count:{$sum:1} } }  //https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/
@@ -92,11 +95,37 @@ const showStats = async (req, res) => {
         declined: stats.declined || 0
     }
 
-    let monthlyApplications = []
+    //PIPELINE 2:  Retrieve jobs and group by month and year
+    let monthlyApplications = await Job.aggregate([
+        {$match: {createdBy:mongoose.Types.ObjectId( req.user.userId )} },
+        {$group: {
+            _id: {year: {$year:'$createdAt'}, month: {$month: '$createdAt'}},  
+            count: { $sum: 1}
+        },
+    },
+
+    { $sort: { '_id.year': -1, '_id.month': -1 }},  //-1 to sort by latest jobs and months first
+    { $limit: 6 },  //added to only display the last 6 months
+
+    ])
+
+
+    //iterate over monthly applications
+
+    monthlyApplications = monthlyApplications.map((item) => {
+
+        const {_id: {year, month}, count} = item
+        const date = moment().month(month -1).year(year).format('MMM Y')           //moment 0 to 11 but MongoDB is 1 to 12
+        return {date, count}
+    })
+    .reverse()
 
 
     res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications })
 }
+
+
+
 
 
 
