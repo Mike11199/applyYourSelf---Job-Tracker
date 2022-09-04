@@ -45,7 +45,7 @@ Packages Installed:
         <br /><strong>Morgan</strong>
     </td>
     <td align="center" height="5" width="200">
-        <img src="https://user-images.githubusercontent.com/91037796/188065314-6edc712c-e1da-4465-8b7e-b52d4161b2d8.png" height=50 width=50 />
+        <img src="https://user-images.githubusercontent.com/91037796/188282481-b7db60a8-3f2d-47f3-9139-5a94eb3ac3f5.png" height=50 width=50 />
         <br /><strong>ExpressJS Async Errors</strong>
     </td>
     <td align="center" height="5" width="200">
@@ -55,6 +55,12 @@ Packages Installed:
     <td align="center" height="5" width="200">
         <img src="https://user-images.githubusercontent.com/91037796/188064507-b024310e-0174-4af0-816c-ef1b7e6c5e7c.png" height=50 width=50 />
     <br /><strong>Moment.js</strong>
+    </td>
+    </tr>
+    <tr>
+    <td align="center" height="5" width="200">
+        <img src="https://user-images.githubusercontent.com/91037796/188282358-dac0160c-662c-46f1-86fd-facbb876fcfe.png" height=50 width=50 />
+    <br/><strong>Recharts</strong>
     </td>
     </tr>
 </table>
@@ -1604,3 +1610,87 @@ export default Stats
 </br>
 
 
+
+
+</br>
+</br>
+<h2>Monthly Applications Functionality - Back End</h2>
+</br>
+
+
+</br>
+- Added another aggregation pipeline to categorize jobs by year and month from the MongoDB database.  This will later be displayed in the monthly applications bar chart on the front-end.
+</br>
+</br>
+
+```js
+jobsController.js
+
+    //PIPELINE 2:  Retrieve jobs and group by month and year
+    let monthlyApplications = await Job.aggregate([
+        {$match: {createdBy:mongoose.Types.ObjectId( req.user.userId )} },
+        {$group: {
+            _id: {year: {$year:'$createdAt'}, month: {$month: '$createdAt'}},  
+            count: { $sum: 1}
+        },
+    },
+
+    { $sort: { '_id.year': -1, '_id.month': -1 }},  //-1 to sort by latest jobs and months first
+
+    ])
+    
+```
+
+
+
+</br>
+- Tested response in Postman to ensure server is retrieving the correct data.
+</br>
+</br>
+
+
+
+<img src="https://user-images.githubusercontent.com/91037796/188322680-9c37e175-fc75-4676-933e-e9e672474d92.png" width=50% height=50%>
+
+
+
+</br>
+- Used Moment.js to refactor data retrieved from the server into a more readable format for the front-end.
+</br>
+</br>
+
+
+```js
+jobsController.js
+
+    //PIPELINE 2:  Retrieve jobs and group by month and year
+    let monthlyApplications = await Job.aggregate([
+        {$match: {createdBy:mongoose.Types.ObjectId( req.user.userId )} },
+        {$group: {
+            _id: {year: {$year:'$createdAt'}, month: {$month: '$createdAt'}},  
+            count: { $sum: 1}
+        },
+    },
+
+    { $sort: { '_id.year': -1, '_id.month': -1 }},  //-1 to sort by latest jobs and months first
+
+    ])
+    
+```
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188322585-85a3a0e1-b084-4e9e-a3da-e6b60d7d8707.png" width=50% height=50%>
+</br>
+
+
+
+</br>
+</br>
+<h2>Monthly Applications Functionality - Front End</h2>
+</br>
+
+
+</br>
+- Added 
+</br>
+</br>
