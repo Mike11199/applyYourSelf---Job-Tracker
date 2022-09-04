@@ -1769,6 +1769,16 @@ import {
 </br>
 
 
+</br>
+</br>
+- Per Mongoose documentation, added sort capability.  
+</br>
+</br>
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188337646-7c774e52-0a7e-4ef6-97db-a56c34e4b35a.png" width=100% height=100%>
+</br>
+
 
 
 BEFORE:
