@@ -1750,7 +1750,7 @@ import {
 
 
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/188334642-d0fd27a0-46c0-45b0-955b-29a811c6f826.png" width=100% height=100%>
+<img src="https://user-images.githubusercontent.com/91037796/188334642-d0fd27a0-46c0-45b0-955b-29a811c6f826.png" width=50% height=50%>
 </br>
 
 
