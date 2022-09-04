@@ -1746,7 +1746,11 @@ import {
 </br>
 - Added to the "getAllJobs" function in the jobsController.js file, the capability to filter/sort by certain values, by adding query strings to the URL parameters of the query object.
 
-- Included $regex to give provide regular expression capabilities for pattern match in the search function, when retrieving from MongoDB.  
+</br>
+</br>
+- Included $regex to provide regular expression capabilities for pattern match in the search function, when retrieving from MongoDB.  
+
+
 </br>
 </br>
 
