@@ -1744,7 +1744,9 @@ import {
 
 
 </br>
-- Modified the jobsController.js file.  Added to the "getAllJobs" function, which returns jobs for a specific user ID from MongoDB, the capability to filter/sort by certain values, by adding query strings to the URL parameters of the query objet, if certain conditions are met.
+- Added to the "getAllJobs" function in the jobsController.js file, the capability to filter/sort by certain values, by adding query strings to the URL parameters of the query object.
+
+- Included $regex to give provide regular expression capabilities for pattern match in the search function, when retrieving from MongoDB.  
 </br>
 </br>
 
