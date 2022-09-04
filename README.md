@@ -1691,6 +1691,49 @@ jobsController.js
 
 
 </br>
-- Added 
+- Used the RECHARTS library to render a bar chart and area chart for the monthly applications on the STATS page.   
 </br>
 </br>
+
+```js
+import {
+    ResponsiveContainer,
+    AreaChart,
+    Area,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+  } from 'recharts'
+  
+  const AreaChartComponent = ({ data }) => {
+    return (
+      <ResponsiveContainer width='100%' height={300}>
+        <AreaChart data={data} margin={{ top: 50 }}>
+          <CartesianGrid strokeDasharray='3 3' />
+          <XAxis dataKey='date' />
+          <YAxis allowDecimals={false} />
+          <Tooltip />
+          <Area type='monotone' dataKey='count' stroke='#2cb1bc' fill='#bef8fd' />
+        </AreaChart>
+      </ResponsiveContainer>
+    )
+  }
+  
+  export default AreaChartComponent
+  ```
+
+
+
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188325452-077a6d12-4527-4f85-8fc2-31c3c21119f8.png" width=50% height=50%>
+</br>
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188325464-fa7e2c2f-b242-48c9-b950-669b153c8384.png" width=50% height=50%>
+</br>
+
+
