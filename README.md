@@ -2116,5 +2116,13 @@ router.route('/login').post(apiLimiter, login)
 
 
 </br>
+</br>
+- Deployed application to Heroku
+</br>
+</br>
+
+
+
+</br>
 <img src="" width=80% height=80%>
 </br>
