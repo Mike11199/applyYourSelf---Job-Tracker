@@ -2025,10 +2025,21 @@ const JobsContainer = () => {
 </br>
 <h2>Deploying the Application</h2>
 </br>
+
+</br>
+- Added a script in the package.json file on the server to be run with the command "npm run build-client" to build the front-end application for deployment to production.
 </br>
 
-- Added 
-</br>
+```js
+"scripts": {
+    "build-client": "cd client && npm run build",
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client \""
+  },
+```
+
+
 </br>
 
 
