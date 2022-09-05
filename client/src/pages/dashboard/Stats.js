@@ -5,7 +5,10 @@ import { StatsContainer, Loading, ChartsContainer } from '../../components'
 const Stats = () => {
   const { showStats, isLoading, monthlyApplications } = useAppContext()
 
-  useEffect(() => { showStats() }, [])  //empty dependency array - only refresh when component first rendered
+  useEffect(() => { 
+    showStats() 
+    // eslint-disable-next-line
+  }, [])  //empty dependency array - only refresh when component first rendered
 
   if (isLoading) {
     return <Loading center />           //show loading circle if loading

@@ -267,8 +267,8 @@ const getJobs = async () => {
       },
     }) 
   } catch (error) {
-    console.log(error.response)
-    // logoutUser()
+    //console.log(error.response)
+    logoutUser()
   }
   clearAlert()
 }

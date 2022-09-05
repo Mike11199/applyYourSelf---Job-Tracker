@@ -12,7 +12,7 @@ const PageBtnContainer = () => {
         return index +1
     })
 
-    console.log(pages)
+    //console.log(pages)
 
     const nextPage = () => {
         let newPage = page + 1
