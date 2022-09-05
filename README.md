@@ -1892,7 +1892,7 @@ const getAllJobs = async (req, res) => {
 </br>
 - Added to the dependency array of the JOBS CONTAINER the state values from the form, so that the fetch request will be resent whenever the form values change (might change this to a search button instead to reduce requests).
 </br>
-
+</br>
 
 ```js
 
