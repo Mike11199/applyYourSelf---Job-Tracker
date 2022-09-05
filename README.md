@@ -2027,7 +2027,9 @@ const JobsContainer = () => {
 </br>
 
 </br>
-- Added a script in the package.json file on the server to be run with the command "npm run build-client" to build the front-end application for deployment to production.
+- Added a script in the package.json file on the server to be run with the command "npm run build-client" to build the front-end application for deployment to production.  This adds the "build" folder to the client, which contains the application.
+</br>
+
 </br>
 
 ```js
