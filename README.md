@@ -1952,11 +1952,11 @@ jobsController.js
 </br>
 </br>
 
-- Added
+- Added a page button container that dynamically displays a number of page buttons depending on the length of jobs returned.  A state value keeps track of the active page with a variable and uses a dynamic class name to conditionally highlight the active page button.  Also added next/previous buttons that will dispatch a function to update this state value. 
 </br>
 </br>
 
-<img src="" width=80% height=80%>
+<img src="https://user-images.githubusercontent.com/91037796/188497940-52de4251-ef88-41c3-9d64-2284bcd6ab1a.png" width=80% height=80%>
 </br>
 
 </br>
