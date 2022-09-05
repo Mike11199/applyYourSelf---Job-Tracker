@@ -4,7 +4,7 @@ import Wrapper from '../assets/wrappers/PageBtnContainer'
 
 const PageBtnContainer = () => {
 
-    const { numOfPages, page } = useAppContext()
+    const { numOfPages, page, changePage } = useAppContext()
 
     //takes the number of pages and creates an array from that starting with 1
     //this is for the page # selection buttons
@@ -15,11 +15,21 @@ const PageBtnContainer = () => {
     console.log(pages)
 
     const nextPage = () => {
-        console.log("next Page")
+        let newPage = page + 1
+        //check if attempting to go to page over last page; if so go to 1st page
+        if (newPage > numOfPages) {
+            newPage = 1
+        }
+        changePage(newPage)
     }
 
     const prevPage = () => {
-        console.log("prev Page")
+        let newPage = page - 1
+        //check if attempting to go to page before 1st page; if so go to last page
+        if (newPage < 1) {
+            newPage = numOfPages
+        }
+        changePage(newPage)
     }
 
      return (
@@ -34,7 +44,7 @@ const PageBtnContainer = () => {
                 type="button" 
                 className={pageNumber === page? 'pageBtn active' : 'pageBtn'} 
                 key={pageNumber} 
-                onClick={()=>console.log('change page')} >
+                onClick={ ()=> changePage(pageNumber) } >
                     {pageNumber}
                 </button>
             })}
