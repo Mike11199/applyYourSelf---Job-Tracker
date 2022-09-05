@@ -1956,7 +1956,7 @@ jobsController.js
 </br>
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/188497940-52de4251-ef88-41c3-9d64-2284bcd6ab1a.png" width=80% height=80%>
+<img src="https://user-images.githubusercontent.com/91037796/188497940-52de4251-ef88-41c3-9d64-2284bcd6ab1a.png" width=60% height=60%>
 </br>
 
 </br>
