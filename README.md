@@ -1881,7 +1881,7 @@ const getAllJobs = async (req, res) => {
 </br>
 - Added search container component and functionality to update state values based on form input by the user.
 </br>
-
+</br>
 
 <img src="https://user-images.githubusercontent.com/91037796/188342551-023b1a53-ad95-4a1c-b5fe-a50a1b42d444.png" width=80% height=80%>
 </br>
