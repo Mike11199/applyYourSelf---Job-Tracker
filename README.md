@@ -1795,8 +1795,6 @@ import {
     if (sort === 'z-a'){
         result = result.sort('-position')
     }
-
-
 ```
 
 </br>
@@ -1818,9 +1816,6 @@ const getAllJobs = async (req, res) => {
         .json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
 
 }
-
-
-
   ```
   
   AFTER:
@@ -1876,9 +1871,6 @@ const getAllJobs = async (req, res) => {
     res.status(StatusCodes.OK).json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
 
 }
-
-
-
   ```
 
 
@@ -1895,4 +1887,12 @@ const getAllJobs = async (req, res) => {
 <img src="https://user-images.githubusercontent.com/91037796/188342551-023b1a53-ad95-4a1c-b5fe-a50a1b42d444.png" width=80% height=80%>
 </br>
 
+</br>
+- Created a new axios request to insert query strings to the URL in the request, so that data from the server can be porperly filtered/sorted/searched by the front-end.
+</br>
+
+
+```js
+
+```
 
