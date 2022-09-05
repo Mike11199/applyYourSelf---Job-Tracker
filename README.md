@@ -1955,6 +1955,12 @@ jobsController.js
 - Added a page button container that dynamically displays a number of page buttons depending on the length of jobs returned.  A state value keeps track of the active page with a variable and uses a dynamic class name to conditionally highlight the active page button.  Also added next/previous buttons that will dispatch a function to update this state value. 
 </br>
 
+</br>
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188500693-5e721426-670a-410e-9d20-0780b6d02c00.gif" width=60% height=60%>
+</br>
+
+
 
 </br>
 
@@ -1986,22 +1992,23 @@ PageBtnContainer.js
 
 </br>
 
+</br>
+- Modified the jobs container dependency array so that jobs displayed will re-render and the fetch request to the server will be remade if the page changes. 
+</br>
+</br>
 
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/188497940-52de4251-ef88-41c3-9d64-2284bcd6ab1a.png" width=60% height=60%>
-</br>
 
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/188499955-0fcd98b8-929e-4085-8b5b-f8f46bafc0ff.gif" width=80% height=80%>
 </br>
 
 
+</br>
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188500340-da900675-7bf7-40b9-8417-ca83b4744de9.gif" width=60% height=60%>
+</br>
 
 
-</br>
-- Modified the jobs container dependency array so that jobs displayed will re-render and the fetch request to the server will be remade if the page changes. 
-</br>
-</br>
 
 ```js
 const JobsContainer = () => {
@@ -2011,21 +2018,6 @@ const JobsContainer = () => {
   }, [search, searchStatus, searchType, sort, page])
 
 ```
-
-
-</br>
-- Modifi
-</br>
-</br>
-
-```js
-
-
-
-```
-</br>
-<img src="" width=80% height=80%>
-</br>
 
 
 
