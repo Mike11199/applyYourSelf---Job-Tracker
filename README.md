@@ -2027,7 +2027,7 @@ const JobsContainer = () => {
 </br>
 
 </br>
-- Added a script in the package.json file on the server to be run with the command "npm run build-client" to build the front-end application for deployment to production.  This adds the "build" folder to the client, which contains the application.
+- Added a script in the package.json file on the server to be run with the command "npm run build-client" to build the front-end application for deployment to production.  This adds the "build" folder to the client, which contains the application. 
 </br>
 
 </br>
@@ -2035,6 +2035,7 @@ const JobsContainer = () => {
 ```js
 "scripts": {
     "build-client": "cd client && npm run build",
+      "install-client": "cd client && npm install",
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client \""
@@ -2117,9 +2118,26 @@ router.route('/login').post(apiLimiter, login)
 
 </br>
 </br>
-- Deployed application to Heroku by creating an account and installing the Heroku CLI.
+- Deployed application to Heroku by creating an account and installing the Heroku CLI.  Addded "install-client" and "heroku-postbuild" scripts, to be run in that order, and a Procfile.  Finished by setting up heroku env variables and initializing a new git repository to push to heroku.
 </br>
 </br>
+
+```js
+package.json - server
+
+  "scripts": {
+    "build-client": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build-client",
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client \""
+  },
+
+  "engines": {
+    "node":"17.x"
+  }
+```
 
 
 
