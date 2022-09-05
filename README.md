@@ -2117,7 +2117,7 @@ router.route('/login').post(apiLimiter, login)
 
 </br>
 </br>
-- Deployed application to Heroku
+- Deployed application to Heroku by creating an account and installing the Heroku CLI.
 </br>
 </br>
 
