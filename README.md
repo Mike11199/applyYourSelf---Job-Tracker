@@ -1737,3 +1737,152 @@ import {
 </br>
 
 
+</br>
+</br>
+<h2>Filter/Search and Sort Functionality - Back End</h2>
+</br>
+
+
+</br>
+- Added to the "getAllJobs" function in the jobsController.js file, the capability to filter/sort by certain values, by adding query strings to the URL parameters of the query object.
+
+</br>
+</br>
+- Included $regex to provide regular expression capabilities for pattern match in the search function, when retrieving data from MongoDB.  
+</br>
+</br>
+
+```js
+
+    if (search){
+        queryObject.position = { $regex: search, $options: 'i'}
+    }
+
+
+```
+
+</br>
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188334642-d0fd27a0-46c0-45b0-955b-29a811c6f826.png" width=50% height=50%>
+</br>
+
+
+</br>
+</br>
+- Per Mongoose docs, added sort capability to the jobs returned by the function (ascending/descending by created date or by position name).
+</br>
+</br>
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188337646-7c774e52-0a7e-4ef6-97db-a56c34e4b35a.png" width=80% height=80%>
+</br>
+
+
+```js
+
+    //chain the SORT conditions here
+    if (sort === 'latest'){
+        result = result.sort('-createdAt')
+    }
+    if (sort === 'oldest'){
+        result = result.sort('createdAt')
+    }
+    if (sort === 'a-z'){
+        result = result.sort('position')
+    }
+    if (sort === 'z-a'){
+        result = result.sort('-position')
+    }
+
+
+```
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188339050-c35e2bf9-2171-4ca9-b8ee-4f398cf8317e.png" width=80% height=80%>
+</br>
+
+
+
+BEFORE:
+```js
+jobsController.js
+
+const getAllJobs = async (req, res) => {
+
+    
+    const jobs = await Job.find({ createdBy: req.user.userId })
+    res
+        .status(StatusCodes.OK)
+        .json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
+
+}
+
+
+
+  ```
+  
+  AFTER:
+```js
+jobsController.js
+
+const getAllJobs = async (req, res) => {
+
+    const {status, jobType, sort, search} = req.query
+
+    const queryObject = {
+        createdBy: req.user.userId
+    }
+
+
+    //Here we will add query strings to the URL parameters if certain conditions are met (if drop-down is not all)
+
+    if (status !== 'all'){
+        queryObject.status = status
+    }
+    if (jobType !=='all'){
+        queryObject.jobType = jobType
+    }
+    if (search){
+        queryObject.position = { $regex: search, $options: 'i'}
+    }
+
+
+    //no await here (added later)
+    let result = Job.find(queryObject)
+
+
+    //chain the SORT conditions here
+    if (sort === 'latest'){
+        result = result.sort('-createdAt')
+    }
+    if (sort === 'oldest'){
+        result = result.sort('createdAt')
+    }
+    if (sort === 'a-z'){
+        result = result.sort('position')
+    }
+    if (sort === 'z-a'){
+        result = result.sort('-position')
+    }
+
+
+
+
+    //now we add await
+    const jobs = await result
+
+    res.status(StatusCodes.OK).json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
+
+}
+
+
+
+  ```
+
+
+</br>
+</br>
+<h2>Filter/Search and Sort Functionality - Front End</h2>
+</br>
