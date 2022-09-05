@@ -147,6 +147,7 @@ const reducer = (state, action) => {    //hook that takes current state as first
     if(action.type === HANDLE_CHANGE){
         return { 
                     ...state,
+                    page: 1,
                     [action.payload.name]: action.payload.value
                 }
     }
