@@ -1907,3 +1907,101 @@ const JobsContainer = () => {
 </br>
 
 
+
+
+</br>
+</br>
+<h2>Pagination - Server (Back End)</h2>
+</br>
+</br>
+
+- Added
+</br>
+</br>
+
+<img src="" width=80% height=80%>
+</br>
+
+</br>
+- Created 
+</br>
+</br>
+- Modifi
+</br>
+</br>
+
+```js
+
+
+
+```
+</br>
+<img src="" width=80% height=80%>
+</br>
+
+
+
+
+
+
+</br>
+</br>
+<h2>Pagination - Front End</h2>
+</br>
+</br>
+
+- Added
+</br>
+</br>
+
+<img src="" width=80% height=80%>
+</br>
+
+</br>
+- Created 
+</br>
+</br>
+- Modifi
+</br>
+</br>
+
+```js
+
+
+
+```
+</br>
+<img src="" width=80% height=80%>
+</br>
+
+
+
+</br>
+</br>
+<h2>Deploying the Application</h2>
+</br>
+</br>
+
+- Added
+</br>
+</br>
+
+<img src="" width=80% height=80%>
+</br>
+
+</br>
+- Created 
+</br>
+</br>
+- Modifi
+</br>
+</br>
+
+```js
+
+
+
+```
+</br>
+<img src="" width=80% height=80%>
+</br>
