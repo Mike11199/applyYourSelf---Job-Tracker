@@ -1795,8 +1795,6 @@ import {
     if (sort === 'z-a'){
         result = result.sort('-position')
     }
-
-
 ```
 
 </br>
@@ -1818,9 +1816,6 @@ const getAllJobs = async (req, res) => {
         .json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
 
 }
-
-
-
   ```
   
   AFTER:
@@ -1876,13 +1871,39 @@ const getAllJobs = async (req, res) => {
     res.status(StatusCodes.OK).json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
 
 }
-
-
-
   ```
 
 
 </br>
 </br>
 <h2>Filter/Search and Sort Functionality - Front End</h2>
+
 </br>
+- Added search container component and functionality to update state values based on form input by the user.
+</br>
+</br>
+
+<img src="https://user-images.githubusercontent.com/91037796/188342551-023b1a53-ad95-4a1c-b5fe-a50a1b42d444.png" width=80% height=80%>
+</br>
+
+</br>
+- Created a new axios request to insert query strings to the URL in the request (string interpolation), so that data from the server can be porperly filtered/sorted/searched by the front-end.
+</br>
+</br>
+- Modified the useEffect hook dependency array in the JOBS CONTAINER to contain the state values from the search container form, so that the fetch request, getJobs(), will be resent whenever the form values change (might change this to a search button instead to reduce the number of requests).
+</br>
+</br>
+
+```js
+const JobsContainer = () => {
+  const { getJobs, jobs, isLoading, page, totalJobs, search, searchStatus, searchType, sort } = useAppContext()
+  useEffect(() => {
+    getJobs()
+  }, [search, searchStatus, searchType, sort])
+  ...
+```
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188350532-6f7d3d6d-4353-4fd8-8e35-adec91fcc192.png" width=80% height=80%>
+</br>
+
+
