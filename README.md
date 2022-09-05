@@ -1991,6 +1991,12 @@ PageBtnContainer.js
 <img src="https://user-images.githubusercontent.com/91037796/188497940-52de4251-ef88-41c3-9d64-2284bcd6ab1a.png" width=60% height=60%>
 </br>
 
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188499955-0fcd98b8-929e-4085-8b5b-f8f46bafc0ff.gif" width=80% height=80%>
+</br>
+
+
+
 
 </br>
 - Modified the jobs container dependency array so that jobs displayed will re-render and the fetch request to the server will be remade if the page changes. 
