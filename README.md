@@ -1748,7 +1748,7 @@ import {
 
 </br>
 </br>
-- Included $regex to provide regular expression capabilities for pattern match in the search function, when retrieving from MongoDB.  
+- Included $regex to provide regular expression capabilities for pattern match in the search function, when retrieving data from MongoDB.  
 </br>
 </br>
 
@@ -1771,12 +1771,36 @@ import {
 
 </br>
 </br>
-- Per Mongoose documentation, added sort capability.  
+- Per Mongoose docs, added sort capability to the jobs returned by the function (ascending/descending by created date or by position name).
 </br>
 </br>
 
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/188337646-7c774e52-0a7e-4ef6-97db-a56c34e4b35a.png" width=80% height=80%>
+</br>
+
+
+```js
+
+    //chain the SORT conditions here
+    if (sort === 'latest'){
+        result = result.sort('-createdAt')
+    }
+    if (sort === 'oldest'){
+        result = result.sort('createdAt')
+    }
+    if (sort === 'a-z'){
+        result = result.sort('position')
+    }
+    if (sort === 'z-a'){
+        result = result.sort('-position')
+    }
+
+
+```
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188339050-c35e2bf9-2171-4ca9-b8ee-4f398cf8317e.png" width=80% height=80%>
 </br>
 
 
