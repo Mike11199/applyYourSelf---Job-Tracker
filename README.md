@@ -2025,24 +2025,67 @@ const JobsContainer = () => {
 </br>
 <h2>Deploying the Application</h2>
 </br>
-</br>
-
-- Added 
-</br>
-</br>
-
 
 </br>
-- Created 
+- Added a script in the package.json file on the server to be run with the command "npm run build-client" to build the front-end application for deployment to production.  This adds the "build" folder to the client, which contains the application.
+</br>
+
+</br>
+
+```js
+"scripts": {
+    "build-client": "cd client && npm run build",
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client \""
+  },
+```
+
+
+</br>
+
+
+</br>
+- Modified the server.js file so that paths for importing now direct to the client/build folder.  Also modfied all GET routes that rae not for authentications or jobs to route to index.html  
 </br>
 </br>
-- Modifi
+
+
+```js
+Server.js 
+
+/**********ONLY FOR DEPLOYING THE APPLICATION**********/
+
+//these three imports for deploying to production
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import path from 'path'
+
+// only when ready to deploy
+const __dirname = dirname(fileURLToPath(import.meta.url))
+app.use(express.static(path.resolve(__dirname, './client/build')))
+
+
+//directs EVERY get route to the index.html after the auth and jobs route.  needs to be after app.use for other two so we try those first
+app.get('*', (req, res) => {
+res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
+})
+
+```
+
+
+
+</br>
+</br>
+- Added security npm packages to the application.  This includes packages such as "Helmet" (to secure Express apps by setting HTTP headers, "xss-clean" as node.js middleware to sanitize user input, "express-mongo-sanitize" to prevent MongoDB operator injection, and "express-rate-limit" middleware for Express.
 </br>
 </br>
 
 ```js
 
 ```
+
+
 </br>
 <img src="" width=80% height=80%>
 </br>
