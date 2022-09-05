@@ -2095,7 +2095,7 @@ app.use(mongoSanitize())
 
 </br>
 </br>
-- Added the express middleware package "express-rate-limit" to limit the number of requests allowed for a specific IP address in the authRoutes.js file.
+- Added the express middleware package "express-rate-limit" to limit the number of requests allowed for a specific IP address in the authRoutes.js file.  Added to the login and register routes.  Deviated from the tutorial by also adding this to the Server.js file so it impacts all routes, not just specific routes, but allowed for more requests for the server version.
 </br>
 </br>
 
@@ -2105,8 +2105,8 @@ authRoutes.js
 import rateLimiter from 'express-rate-limit'
 
 const apiLimiter = rateLimiter({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10,
+  windowMs: 15 * 60 * 1000,   // 15 minutes
+  max: 10,                    // max # of requests from that IP
   message: 'Too many requests from this IP, please try again after 15 minutes',
 })
 
