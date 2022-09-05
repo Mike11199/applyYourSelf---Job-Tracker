@@ -1915,32 +1915,34 @@ const JobsContainer = () => {
 </br>
 </br>
 
-- Added
+- Added to the jobs controller variables to add to the query URL parameters to skip a certain number of MongoDB documents and determine how many pages will be displayed for the numbers of jobs (this is updated when a user searches or filters for jobs).
 </br>
 </br>
 
-<img src="" width=80% height=80%>
-</br>
-
-</br>
-- Created 
-</br>
-</br>
-- Modifi
-</br>
-</br>
 
 ```js
+jobsController.js
+
+    //PAGINATION
+    const page = Number(req.query.page) || 1
+    const limit = Number(req.query.limit) || 10
+    const skip = (page -1) * limit
+
+    //skip will skip a # of docs starting w/ 1st: https://www.mongodb.com/docs/manual/reference/operator/aggregation/skip/
+    //limit will limit how many docs are returned by the query
+    result = result.skip(skip).limit(limit)   
 
 
+    //now we add await
+    const jobs = await result
 
+    const totalJobs = await Job.countDocuments(queryObject)     //number of docs
+    const numOfPages = Math.ceil(totalJobs / limit)             //return largest int
+
+    res.status(StatusCodes.OK).json({ jobs, totalJobs, numOfPages })
 ```
+
 </br>
-<img src="" width=80% height=80%>
-</br>
-
-
-
 
 
 
@@ -1982,12 +1984,10 @@ const JobsContainer = () => {
 </br>
 </br>
 
-- Added
+- Added 
 </br>
 </br>
 
-<img src="" width=80% height=80%>
-</br>
 
 </br>
 - Created 
@@ -1998,8 +1998,6 @@ const JobsContainer = () => {
 </br>
 
 ```js
-
-
 
 ```
 </br>
