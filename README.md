@@ -1827,19 +1827,62 @@ const getAllJobs = async (req, res) => {
 ```js
 jobsController.js
 
+const getAllJobs = async (req, res) => {
 
+    const {status, jobType, sort, search} = req.query
+
+    const queryObject = {
+        createdBy: req.user.userId
+    }
+
+
+    //Here we will add query strings to the URL parameters if certain conditions are met (if drop-down is not all)
+
+    if (status !== 'all'){
+        queryObject.status = status
+    }
+    if (jobType !=='all'){
+        queryObject.jobType = jobType
+    }
+    if (search){
+        queryObject.position = { $regex: search, $options: 'i'}
+    }
+
+
+    //no await here (added later)
+    let result = Job.find(queryObject)
+
+
+    //chain the SORT conditions here
+    if (sort === 'latest'){
+        result = result.sort('-createdAt')
+    }
+    if (sort === 'oldest'){
+        result = result.sort('createdAt')
+    }
+    if (sort === 'a-z'){
+        result = result.sort('position')
+    }
+    if (sort === 'z-a'){
+        result = result.sort('-position')
+    }
+
+
+
+
+    //now we add await
+    const jobs = await result
+
+    res.status(StatusCodes.OK).json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
+
+}
 
 
 
   ```
 
 
-
 </br>
-<img src="" width=100% height=100%>
 </br>
-
-
-</br>
-<img src="" width=100% height=100%>
+<h2>Filter and Sort Functionality - Front End</h2>
 </br>
