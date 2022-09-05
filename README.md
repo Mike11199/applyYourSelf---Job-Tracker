@@ -2075,7 +2075,7 @@ res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
 
 </br>
 </br>
-- Added security npm packages to the application on Server.js.  This includes packages such as "Helmet" (to secure Express apps by setting HTTP headers, "xss-clean" as node.js middleware to sanitize user input, "express-mongo-sanitize" to prevent MongoDB operator injection.
+- Added security npm packages to the application on Server.js.  This includes packages such as "Helmet" to secure Express apps by setting HTTP headers, "xss-clean" as node.js middleware to sanitize user input, and "express-mongo-sanitize" to prevent MongoDB operator injection.
 </br>
 </br>
 
@@ -2095,7 +2095,7 @@ app.use(mongoSanitize())
 
 </br>
 </br>
-- Added the package "express-mongo-sanitize" to limit the number of requests allowed for a specific IP address in the authRoutes.js file.
+- Added the express middleware package "express-rate-limit" to limit the number of requests allowed for a specific IP address in the authRoutes.js file.
 </br>
 </br>
 
