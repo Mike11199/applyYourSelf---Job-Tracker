@@ -57,13 +57,23 @@ const getAllJobs = async (req, res) => {
         result = result.sort('-position')
     }
 
+    //PAGINATION
+    const page = Number(req.query.page) || 1
+    const limit = Number(req.query.limit) || 10
+    const skip = (page -1) * limit
 
+    //skip will skip a # of docs starting w/ 1st: https://www.mongodb.com/docs/manual/reference/operator/aggregation/skip/
+    //limit will limit how many docs are returned by the query
+    result = result.skip(skip).limit(limit)   
 
 
     //now we add await
     const jobs = await result
 
-    res.status(StatusCodes.OK).json({ jobs, totalJobs: jobs.length, numOfPages: 1 })
+    const totalJobs = await Job.countDocuments(queryObject)     //number of docs
+    const numOfPages = Math.ceil(totalJobs / limit)             //return largest int
+
+    res.status(StatusCodes.OK).json({ jobs, totalJobs, numOfPages })
 
 }
 
