@@ -1913,8 +1913,8 @@ const JobsContainer = () => {
 </br>
 <h2>Pagination - Server (Back End)</h2>
 </br>
-</br>
 
+</br>
 - Added to the jobs controller variables to add to the query URL parameters to skip a certain number of MongoDB documents and determine how many pages will be displayed for the numbers of jobs (this is updated when a user searches or filters for jobs).
 </br>
 </br>
