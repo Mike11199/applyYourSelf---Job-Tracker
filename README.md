@@ -1895,6 +1895,11 @@ const getAllJobs = async (req, res) => {
 </br>
 
 ```js
-
+const JobsContainer = () => {
+  const { getJobs, jobs, isLoading, page, totalJobs, search, searchStatus, searchType, sort } = useAppContext()
+  useEffect(() => {
+    getJobs()
+  }, [search, searchStatus, searchType, sort])
+  ...
 ```
 
