@@ -1,8 +1,12 @@
 import cors from 'cors'
 import express from 'express'
+
 const app = express()
+
 import dotenv from 'dotenv'
 dotenv.config()
+
+
 import 'express-async-errors'
 import morgan from 'morgan'
 
@@ -12,6 +16,19 @@ import connectDB from './db/connect.js'
 
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
+import rateLimiter from 'express-rate-limit'
+
+const apiLimiter = rateLimiter({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 1000,                // more than in authRoutes for fetch requests when filtering
+    message: 'Too many requests from this IP, please try again after 15 minutes',
+  })
+
+app.use(limiter)
+
+import helmet from 'helmet'
+import xss from 'xss-clean'
+import mongoSanitize from 'express-mongo-sanitize'
 
 //these three imports for deploying to production
 import { dirname } from 'path'
@@ -48,6 +65,12 @@ if(process.env.NODE_ENV !== 'production'){
  // parses incoming JSON requests and puts the parsed data in req.
 app.use(express.json()) 
 
+/**********ONLY FOR DEPLOYING THE APPLICATION**********/
+app.use(helmet())
+app.use(xss())
+app.use(mongoSanitize())
+/**********ONLY FOR DEPLOYING THE APPLICATION**********/
+
 app.get('/', (req,res) => {    
     res.json({msg: 'Welcome!'})
 })
@@ -75,14 +98,6 @@ app.use(notfoundMiddleware)
 app.use(errorHandlerMiddleware)
 
 const port = process.env.PORT || 5000
-
-
-// app.listen(port, ()=>{
-   
-//     // callback function
-//     console.log(`Server is listening on port ${port}...`)
-
-// })
 
 
 //set up asynchronous function to connect to mongoose

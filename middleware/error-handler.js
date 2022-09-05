@@ -2,8 +2,8 @@ import { StatusCodes } from 'http-status-codes'
 
 const errorHandlerMiddleware = (err, req, res, next) => {
     
-    // using built in JavaScript error constructor
-    console.log(err)
+    // using built in JavaScript error constructor.  remove when deploying to production
+    //console.log(err)
 
 
     const defaultError = {
