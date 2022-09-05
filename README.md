@@ -1902,4 +1902,8 @@ const JobsContainer = () => {
   }, [search, searchStatus, searchType, sort])
   ...
 ```
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188350532-6f7d3d6d-4353-4fd8-8e35-adec91fcc192.png" width=80% height=80%>
+</br>
+
 
