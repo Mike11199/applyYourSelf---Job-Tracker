@@ -11,6 +11,21 @@ import connectDB from './db/connect.js'
 
 
 
+/**********ONLY FOR DEPLOYING THE APPLICATION**********/
+
+//these three imports for deploying to production
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import path from 'path'
+
+// only when ready to deploy
+const __dirname = dirname(fileURLToPath(import.meta.url))
+app.use(express.static(path.resolve(__dirname, './client/build')))
+
+/**********ONLY FOR DEPLOYING THE APPLICATION**********/
+
+
+
 // routers
 import authRouter from './routes/authRoutes.js'
 import jobsRouter from './routes/jobsRoutes.js'
@@ -44,6 +59,17 @@ app.get('/api/v1', (req,res) => {
 
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/jobs', authenticateUser, jobsRouter)
+
+
+/**********ONLY FOR DEPLOYING THE APPLICATION**********/
+
+//directs EVERY get route to the index.html after the auth and jobs route.  needs to be after app.use for other two so we try those first
+app.get('*', (req, res) => {
+res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
+})
+
+/**********ONLY FOR DEPLOYING THE APPLICATION**********/
+
 
 app.use(notfoundMiddleware)
 app.use(errorHandlerMiddleware)
