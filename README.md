@@ -1739,7 +1739,7 @@ import {
 
 </br>
 </br>
-<h2>Filter and Sort Functionality - Back End</h2>
+<h2>Filter/Search and Sort Functionality - Back End</h2>
 </br>
 
 
@@ -1884,5 +1884,5 @@ const getAllJobs = async (req, res) => {
 
 </br>
 </br>
-<h2>Filter and Sort Functionality - Front End</h2>
+<h2>Filter/Search and Sort Functionality - Front End</h2>
 </br>
