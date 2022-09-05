@@ -1955,9 +1955,12 @@ jobsController.js
 - Added a page button container that dynamically displays a number of page buttons depending on the length of jobs returned.  A state value keeps track of the active page with a variable and uses a dynamic class name to conditionally highlight the active page button.  Also added next/previous buttons that will dispatch a function to update this state value. 
 </br>
 
+
 </br>
+
 ```js
 PageBtnContainer.js
+
         <Wrapper>
         <button className='prev-btn' onClick={prevPage}>
         <HiChevronDoubleLeft />
@@ -1980,6 +1983,7 @@ PageBtnContainer.js
         </button>
         </Wrapper>
 ```
+
 </br>
 
 
