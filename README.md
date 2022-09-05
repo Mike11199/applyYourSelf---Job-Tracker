@@ -2046,7 +2046,8 @@ const JobsContainer = () => {
 
 
 </br>
-- Modified the server.js file so that paths for importing now direct to the client/build folder.  Also modfied all GET routes that rae not for authentications or jobs to route to index.html  
+- Modified the server.js file so that paths for importing now direct to the client/build folder.  Also modfied all GET routes that are not for authentications or jobs to route to index.html  
+</br>
 </br>
 </br>
 
@@ -2070,19 +2071,47 @@ app.use(express.static(path.resolve(__dirname, './client/build')))
 app.get('*', (req, res) => {
 res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
 })
-
 ```
 
-
-
 </br>
 </br>
-- Added security npm packages to the application.  This includes packages such as "Helmet" (to secure Express apps by setting HTTP headers, "xss-clean" as node.js middleware to sanitize user input, "express-mongo-sanitize" to prevent MongoDB operator injection, and "express-rate-limit" middleware for Express.
+- Added security npm packages to the application on Server.js.  This includes packages such as "Helmet" to secure Express apps by setting HTTP headers, "xss-clean" as node.js middleware to sanitize user input, and "express-mongo-sanitize" to prevent MongoDB operator injection.
 </br>
 </br>
 
 ```js
+Server.js
 
+/**********ONLY FOR DEPLOYING THE APPLICATION**********/
+import helmet from 'helmet'
+import xss from 'xss-clean'
+import mongoSanitize from 'express-mongo-sanitize'
+
+app.use(helmet())
+app.use(xss())
+app.use(mongoSanitize())
+
+```
+
+</br>
+</br>
+- Added the express middleware package "express-rate-limit" to limit the number of requests allowed for a specific IP address in the authRoutes.js file.
+</br>
+</br>
+
+```js
+authRoutes.js
+
+import rateLimiter from 'express-rate-limit'
+
+const apiLimiter = rateLimiter({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 10,
+  message: 'Too many requests from this IP, please try again after 15 minutes',
+})
+
+router.route('/register').post(apiLimiter, register)
+router.route('/login').post(apiLimiter, login)
 ```
 
 
