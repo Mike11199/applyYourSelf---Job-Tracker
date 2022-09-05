@@ -1890,7 +1890,7 @@ const getAllJobs = async (req, res) => {
 - Created a new axios request to insert query strings to the URL in the request (string interpolation), so that data from the server can be porperly filtered/sorted/searched by the front-end.
 </br>
 </br>
-- Added to the dependency array of the JOBS CONTAINER the state values from the form, so that the fetch request will be resent whenever the form values change (might change this to a search button instead to reduce requests).
+- Added to the dependency array of the JOBS CONTAINER the state values from the form, so that the fetch request, getJobs(), will be resent whenever the form values change (might change this to a search button instead to reduce requests).
 </br>
 </br>
 
