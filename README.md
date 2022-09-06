@@ -22,6 +22,8 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 -<s>Replace logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.</s>
 <br>
+-Add password verification link so that only the actual owner of the entered email address can register.
+<br>
 -Add password reset functionality.
 <br>
 -Add CAPTCHA for registration.
