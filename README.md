@@ -1,12 +1,17 @@
 # applyYourSelf-Job-Tracker
 
 </br>
-******IN PROGRESS******
+https://applyyourself-tracker-prod.herokuapp.com/landing
 </br>
 </br>
 Full stack MERN Project I created following a Udemy tutorial. Credit MERN Stack Course 2022 - MongoDB, Express, React and NodeJS
 by John Smilga.  After completing this project and gaining a high-level view of the code design, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.
 
+
+
+<h2>Screenshots/ GIFs</h2>
+
+<img src="https://user-images.githubusercontent.com/91037796/188551643-a6ac0bb7-d116-487d-acbb-8e869ca30f2a.gif" width=100% height=100%>
 
 </br>
 </br>
