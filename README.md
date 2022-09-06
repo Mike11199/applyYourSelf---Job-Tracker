@@ -1,11 +1,16 @@
 # applyYourSelf-Job-Tracker
 
-</br>
-https://applyyourself-tracker-prod.herokuapp.com/landing
-</br>
-</br>
-Full stack MERN project not affiliated with a university course.  Development is ongoing to further my learning of JavaScript and a full stack application.  I intend to add different pages, functionality, custom CSS, and other tweaks in the future.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.  This project was first developed by following the Udemy course: MERN Stack Course 2022 - MongoDB, Express, React and NodeJS by John Smilga.  
 
+</br>
+Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
+</br>
+</br>
+
+
+<h2>Description</h2>
+
+-Full stack MERN project not affiliated with any university course.  Development is ongoing to further my learning of JavaScript and a full stack application.  I intend to add different pages, functionality, custom CSS, and other tweaks in the future.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.  This project was first developed by following the Udemy course: MERN Stack Course 2022 - MongoDB, Express, React and NodeJS by John Smilga.  
+</br>
 
 <h2>Screenshots/ GIFs</h2>
 
@@ -16,9 +21,13 @@ Full stack MERN project not affiliated with a university course.  Development is
 <h2>To-Do</h2>
 
 -<s>Replace logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.</s>
+<br>
 -Add password reset functionality.
+<br>
 -Add CAPTCHA for registration.
+<br>
 -Add more job fields (this will impact database/server/front-end).
+<br>
 -Add calendar functionality for interviews, possibly with a google calendar API.
 
 
@@ -2153,8 +2162,6 @@ package.json - server
   }
 ```
 
-
-
 </br>
-<img src="" width=80% height=80%>
+<img src="https://user-images.githubusercontent.com/91037796/188554548-d773fc59-9048-4902-b1a7-accd9420387c.png" width=80% height=80%>
 </br>
