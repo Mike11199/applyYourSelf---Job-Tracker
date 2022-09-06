@@ -2167,3 +2167,17 @@ package.json - server
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/188554548-d773fc59-9048-4902-b1a7-accd9420387c.png" width=80% height=80%>
 </br>
+
+
+<h2>Extra Features - Change Jobs Display View</h2>
+
+</br>
+- Added button and front-end capability to change the jobs display view.
+</br>
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188710336-3118166d-a54e-4a54-85cb-2af523398983.gif" width=80% height=80%>
+</br>
+
+
+
