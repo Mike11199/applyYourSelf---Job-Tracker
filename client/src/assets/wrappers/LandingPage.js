@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.main`
+
+  .logo {
+      padding-top: 100px;
+      
+      display: flex;
+      align-items: left;
+      width: 400px;    
+    }
   nav {
     width: var(--fluid-width);
     max-width: var(--max-width);
@@ -16,7 +24,9 @@ const Wrapper = styled.main`
     margin-top: -3rem;
   }
   h1 {
-    font-weight: 700;
+    padding-top: 00px;
+    font-weight: 200;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
     span {
       color: var(--primary-500);
     }
@@ -34,6 +44,7 @@ const Wrapper = styled.main`
     }
     .main-img {
       display: block;
+      padding-top: 300px;
     }
   }
 `

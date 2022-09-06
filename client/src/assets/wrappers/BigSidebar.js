@@ -5,6 +5,14 @@ const Wrapper = styled.aside`
   @media (min-width: 992px) {
     display: block;
     box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
+
+    .logo {
+      display: block;
+      align-items: left;
+      margin: 0px;
+      padding: 0px;
+      width: 250px;    
+    }
     .sidebar-container {
       background: var(--white);
       min-height: 100vh;
@@ -24,7 +32,7 @@ const Wrapper = styled.aside`
       height: 6rem;
       display: flex;
       align-items: center;
-      padding-left: 2.5rem;
+      
     }
     .nav-links {
       padding-top: 2rem;

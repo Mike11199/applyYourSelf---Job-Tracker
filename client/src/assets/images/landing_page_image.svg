@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="672px" height="604px" viewBox="0 0 672 604" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Cost Tracker / Tempo Data</title>
+    <defs>
+        <rect id="path-1" x="80" y="40" width="512" height="384" rx="12"></rect>
+        <filter x="-33.2%" y="-26.0%" width="166.4%" height="196.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="100" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="40" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="40" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="16" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="20" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter4"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter4" result="shadowBlurOuter4"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0352941176 0" type="matrix" in="shadowBlurOuter4" result="shadowMatrixOuter4"></feColorMatrix>
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter5"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter5" result="shadowBlurOuter5"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.02 0" type="matrix" in="shadowBlurOuter5" result="shadowMatrixOuter5"></feColorMatrix>
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter6"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter6" result="shadowBlurOuter6"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter6" result="shadowMatrixOuter6"></feColorMatrix>
+            <feOffset dx="0" dy="-2" in="SourceAlpha" result="shadowOffsetOuter7"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter7" result="shadowBlurOuter7"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter7" result="shadowMatrixOuter7"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter4"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter5"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter6"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter7"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#000000" stop-opacity="0.04" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-4" x="0" y="0" width="104" height="46.8" rx="2.6"></rect>
+        <filter x="-31.2%" y="-58.8%" width="162.5%" height="238.9%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.160784314 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0784313725 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-6" x="0" y="0" width="124" height="55.8" rx="3.1"></rect>
+        <filter x="-31.5%" y="-59.1%" width="162.9%" height="239.8%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.160784314 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0784313725 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-8" x="0" y="0" width="104" height="46.8" rx="2.6"></rect>
+        <filter x="-31.2%" y="-58.8%" width="162.5%" height="238.9%" filterUnits="objectBoundingBox" id="filter-9">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.160784314 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0784313725 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-34.3%" y="-34.5%" width="168.7%" height="168.9%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="0" dy="24" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.11 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <circle id="path-11" cx="84" cy="84" r="84"></circle>
+        <rect id="path-13" x="0" y="0" width="1536" height="1152" rx="36"></rect>
+        <filter x="-11.1%" y="-8.7%" width="122.1%" height="132.1%" filterUnits="objectBoundingBox" id="filter-14">
+            <feOffset dx="0" dy="100" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="40" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="40" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="16" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="20" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter4"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter4" result="shadowBlurOuter4"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0352941176 0" type="matrix" in="shadowBlurOuter4" result="shadowMatrixOuter4"></feColorMatrix>
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter5"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter5" result="shadowBlurOuter5"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.02 0" type="matrix" in="shadowBlurOuter5" result="shadowMatrixOuter5"></feColorMatrix>
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter6"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter6" result="shadowBlurOuter6"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter6" result="shadowMatrixOuter6"></feColorMatrix>
+            <feOffset dx="0" dy="-2" in="SourceAlpha" result="shadowOffsetOuter7"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter7" result="shadowBlurOuter7"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter7" result="shadowMatrixOuter7"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter4"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter5"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter6"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter7"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-15" x="0" y="0" width="312" height="140.4" rx="7.8"></rect>
+        <filter x="-31.2%" y="-58.8%" width="162.5%" height="238.9%" filterUnits="objectBoundingBox" id="filter-16">
+            <feOffset dx="0" dy="15" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="30" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.160784314 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="9" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0784313725 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-17" x="0" y="0" width="372" height="167.4" rx="9.3"></rect>
+        <filter x="-31.5%" y="-59.1%" width="162.9%" height="239.8%" filterUnits="objectBoundingBox" id="filter-18">
+            <feOffset dx="0" dy="18" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="36" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.160784314 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="9" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0784313725 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-19" x="0" y="0" width="240" height="108" rx="6"></rect>
+        <filter x="-30.6%" y="-56.9%" width="161.2%" height="236.1%" filterUnits="objectBoundingBox" id="filter-20">
+            <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="22.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.160784314 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0784313725 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+        <circle id="path-21" cx="84" cy="84" r="84"></circle>
+        <filter x="-7.1%" y="-7.1%" width="114.3%" height="114.3%" filterUnits="objectBoundingBox" id="filter-22">
+            <feGaussianBlur stdDeviation="12" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.160465116   0 0 0 0 0.3  0 0 0 0.16 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-23" x="0" y="0" width="152" height="68.4" rx="3.8"></rect>
+        <filter x="-19.7%" y="-26.3%" width="139.5%" height="187.7%" filterUnits="objectBoundingBox" id="filter-24">
+            <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.160784314 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.02 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="-2" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter4"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter4" result="shadowBlurOuter4"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter4" result="shadowMatrixOuter4"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter4"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Cost-Tracker" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cost-Tracker-/-Tempo-Data">
+            <g id="Window">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <rect id="Chart-Area" fill="#EEF3F8" x="149" y="128" width="408" height="220" rx="8"></rect>
+            <g id="Chart" transform="translate(173.000000, 176.000000)">
+                <g id="Group-4" transform="translate(0.000000, 126.000000)" stroke="#BCD8E0">
+                    <rect id="Rectangle" x="334.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="308.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="282.295082" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="256.721311" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="231.147541" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="205.57377" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="180" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="154.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="128.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="103.278689" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="77.704918" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="51.147541" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="25.5737705" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="1.77635684e-14" y="0" width="25.5737705" height="21"></rect>
+                </g>
+                <g id="Group-3" transform="translate(0.000000, 105.000000)" stroke="#BCD8E0">
+                    <rect id="Rectangle" x="334.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="308.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="282.295082" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="256.721311" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="231.147541" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="205.57377" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="180" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="154.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="128.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="103.278689" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="77.704918" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="51.147541" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="25.5737705" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="1.77635684e-14" y="0" width="25.5737705" height="21"></rect>
+                </g>
+                <g id="Group-2" transform="translate(0.000000, 84.000000)" stroke="#BCD8E0">
+                    <rect id="Rectangle" x="334.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="308.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="282.295082" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="256.721311" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="231.147541" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="205.57377" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="180" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="154.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="128.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="103.278689" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="77.704918" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="51.147541" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="25.5737705" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="1.77635684e-14" y="0" width="25.5737705" height="21"></rect>
+                </g>
+                <g id="Group" transform="translate(0.000000, 63.000000)" stroke="#BCD8E0">
+                    <rect id="Rectangle" x="334.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="308.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="282.295082" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="256.721311" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="231.147541" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="205.57377" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="180" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="154.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="128.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="103.278689" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="77.704918" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="51.147541" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="25.5737705" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="1.77635684e-14" y="0" width="25.5737705" height="21"></rect>
+                </g>
+                <g id="Group" transform="translate(0.000000, 42.000000)" stroke="#BCD8E0">
+                    <rect id="Rectangle" x="334.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="308.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="282.295082" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="256.721311" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="231.147541" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="205.57377" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="180" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="154.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="128.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="103.278689" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="77.704918" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="51.147541" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="25.5737705" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="1.77635684e-14" y="0" width="25.5737705" height="21"></rect>
+                </g>
+                <g id="Group" transform="translate(0.000000, 21.000000)" stroke="#BCD8E0">
+                    <rect id="Rectangle" x="334.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="308.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="282.295082" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="256.721311" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="231.147541" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="205.57377" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="180" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="154.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="128.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="103.278689" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="77.704918" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="51.147541" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="25.5737705" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="1.77635684e-14" y="0" width="25.5737705" height="21"></rect>
+                </g>
+                <g id="Group" stroke="#BCD8E0">
+                    <rect id="Rectangle" x="334.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="308.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="282.295082" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="256.721311" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="231.147541" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="205.57377" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="180" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="154.42623" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="128.852459" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="103.278689" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="77.704918" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="51.147541" y="0" width="26.557377" height="21"></rect>
+                    <rect id="Rectangle" x="25.5737705" y="0" width="25.5737705" height="21"></rect>
+                    <rect id="Rectangle" x="1.77635684e-14" y="0" width="25.5737705" height="21"></rect>
+                </g>
+                <path d="M360,15.0240964 C347.937831,22.7995934 339.486747,28.1068647 334.645783,30.9458231 C324.73494,36.7583538 316.599036,38.7370469 310.996145,40.0993043 C310.05253,40.3288885 309.180723,40.5410469 308.384578,40.7510271 C305.676145,41.4646112 297.198554,41.1775221 290.255422,40.941839 C287.298313,40.8416409 284.619759,40.7510271 282.783133,40.7510271 L257.182169,40.7510271 C249.409639,40.7510271 240.118554,42.1315815 234.905542,42.9065914 C233.07759,43.1779974 231.750843,43.3753439 231.167711,43.4123736 C223.690602,43.8846112 215.889639,45.1863142 206.392289,46.9606904 C201.925301,47.7953835 197.73253,50.5922152 193.641928,53.3210865 C189.035181,56.3941162 184.558072,59.3804528 179.965301,59.3804528 C175.50506,59.3804528 170.795663,60.7888885 166.221687,62.1563736 C161.903133,63.4480568 157.70506,64.7031459 153.950843,64.7031459 C150.203855,64.7031459 146.952289,64.6077399 143.933012,64.5188687 C138.498313,64.3589875 133.815904,64.2213241 128.34988,64.7031459 C126.338795,64.8804528 124.299759,65.0176805 122.176867,65.160136 C116.412048,65.5474231 110.02988,65.9760964 101.92241,67.3644924 C98.6853012,67.9190667 95.2221687,70.0049281 91.4448193,72.2798588 C87.020241,74.9446904 82.1643373,77.8691657 76.7339759,78.8972845 C72.2968675,79.7376409 66.8342169,83.3042548 61.2525301,86.9484132 C57.8549398,89.1662746 54.4139759,91.4133241 51.133012,93.0914231 C49.1233735,94.1191063 47.3654458,95.1768489 45.6839036,96.1888489 C40.1086747,99.5428687 35.3752289,102.390671 25.1186988,101.962869 C16.2186988,101.591265 8.16751807,103.365641 2.84217094e-14,107.285562 L2.84217094e-14,147.024096 L360,147.024096 L360,15.0240964 Z" id="Path" fill="#00BEE9" opacity="0.88"></path>
+                <path d="M359.638554,147.024096 L334.403855,147.024096 L309.220241,147.024096 L283.337831,147.024096 L257.771084,147.024096 L232.356627,147.024096 L206.613494,147.024096 L180.865542,147.024096 L155.387952,147.024096 L128.843373,147.024096 L110.777349,147.024096 L102.22988,147.024096 L76.5749398,147.024096 L51.0655422,147.024096 L25.2229398,147.024096 L0.361445783,147.024096 L0.361445783,111.779241 C8.0893012,108.138223 16.3591807,106.392656 25.1767229,106.542539 C31.9569157,106.6578 36.6555663,105.239171 40.5748916,103.830183 C41.116241,103.635598 41.6409157,103.442328 42.1526747,103.25344 C45.3628434,102.069715 48.0639518,101.073563 51.179759,101.176553 C55.8578313,101.330818 60.9407229,99.8240996 65.499759,98.2625992 C66.393253,97.9566977 67.2645783,97.6494814 68.1098795,97.3510301 C69.4346988,96.883851 70.6954217,96.4390228 71.8780723,96.0573032 C73.8159036,95.4319142 75.4886747,94.9949746 76.8125301,94.9156505 C79.2298795,94.7714648 81.5566265,93.9234426 83.7942169,92.7449766 C86.0313253,91.5660723 88.2014458,90.0440148 90.3016867,88.5329137 C90.5455422,88.357612 90.7879518,88.1827485 91.0298795,88.0083232 C92.8795181,86.6734004 94.6737349,85.378797 96.4342169,84.3453931 C98.4260241,83.1761304 100.335422,82.3666746 102.184578,82.2062735 C111.41494,81.4064593 119.937349,80.701308 128.852048,80.5019022 C132.348434,80.4234547 135.892048,79.6104928 139.508434,78.780439 C140.187952,78.6244205 140.870361,78.4679636 141.555181,78.3154511 C145.904578,77.3477854 150.397108,76.5387679 155.188916,77.0278597 C155.666024,77.076506 156.347952,77.0431986 157.161928,76.9590538 C157.983133,76.8740325 158.965301,76.7342293 160.055422,76.5584893 C161.923373,76.2574085 164.123373,75.8489555 166.394699,75.4273547 C166.77253,75.3567958 167.152771,75.2862368 167.533494,75.2161161 C170.205301,74.7213269 172.917108,74.2296055 175.270843,73.8868906 C177.636145,73.5419844 179.599518,73.3544115 180.793735,73.4512657 C185.150361,73.804937 189.295904,71.7166549 193.336386,69.6239902 C193.442892,69.5692084 193.548916,69.5139884 193.65494,69.4592066 C197.634217,67.3967815 201.523855,65.3808113 205.594217,65.4036006 C212.039518,65.4399757 219.143133,65.1108466 225.733012,64.8053833 C228.051566,64.698011 230.306506,64.5937065 232.446747,64.5091234 C236.914699,64.3325068 241.052048,64.4372496 245.034217,64.5376099 L245.326747,64.5450602 C249.394217,64.6476117 253.30747,64.7392069 257.22506,64.5086851 C262.035181,64.226011 278.845783,63.6150844 283.211084,63.6150844 C286.336867,63.6150844 288.440964,63.0146759 290.886747,62.316975 C291.446265,62.1574504 292.023614,61.9926667 292.635181,61.8287596 C295.921446,60.9487448 300.296386,60.0590884 308.395663,60.0376139 C308.564337,60.0371757 308.782651,59.9942267 309.017831,59.9341859 C309.262651,59.8719538 309.559518,59.7821116 309.899277,59.6699185 C310.579759,59.445094 311.452048,59.1251683 312.460723,58.7412575 C313.653494,58.2867877 315.046265,57.7389697 316.548916,57.1477645 C317.585542,56.740188 318.674217,56.3120134 319.78506,55.8798946 C322.510361,54.8197573 325.377349,53.7333247 327.969157,52.8555011 C330.567711,51.9750481 332.864096,51.313284 334.458313,51.0906507 C337.316627,50.6918393 340.892048,49.3556016 345.172048,47.1121775 C349.312289,44.94238 354.13494,41.911851 359.638554,38.0240964 L359.638554,38.0635393 L359.638554,38.4189636 L359.638554,38.7739496 L359.638554,39.1280592 L359.638554,39.4821687 L359.638554,39.8354017 L359.638554,40.1877583 L359.638554,40.5401148 L359.638554,40.8915948 L359.638554,41.2426366 L359.638554,41.5932401 L359.638554,41.9429671 L359.638554,42.2922558 L359.638554,42.6411063 L359.638554,42.9895185 L359.638554,43.3370542 L359.638554,43.6841517 L359.638554,44.0308109 L359.638554,44.3770319 L359.638554,44.7223763 L359.638554,45.0672825 L359.638554,45.4117505 L359.638554,45.7553419 L359.638554,46.0984951 L359.638554,46.44121 L359.638554,46.7834867 L359.638554,47.1253251 L359.638554,47.466287 L359.638554,47.8068107 L359.638554,48.1464578 L359.638554,48.486105 L359.638554,48.8248756 L359.638554,49.163208 L359.638554,49.5006638 L359.638554,49.8376815 L359.638554,50.1742608 L359.638554,50.5104019 L359.638554,50.8461048 L359.638554,51.1809311 L359.638554,51.5153192 L359.638554,51.8492691 L359.638554,52.1823424 L359.638554,52.5149775 L359.638554,52.8471743 L359.638554,53.1789329 L359.638554,53.5098149 L359.638554,53.8402587 L359.638554,54.1702643 L359.638554,54.4998316 L359.638554,54.8285224 L359.638554,55.1567749 L359.638554,55.4845892 L359.638554,55.8119652 L359.638554,56.1384647 L359.638554,56.464526 L359.638554,56.790149 L359.638554,57.1148955 L359.638554,57.4392037 L359.638554,57.7630737 L359.638554,58.0865054 L359.638554,58.4090606 L359.638554,58.7311776 L359.638554,59.0528563 L359.638554,59.3740968 L359.638554,59.6944607 L359.638554,60.0143864 L359.638554,60.3338739 L359.638554,60.6529231 L359.638554,60.9710958 L359.638554,61.2888302 L359.638554,61.6061263 L359.638554,61.922546 L359.638554,62.2385274 L359.638554,62.5540706 L359.638554,62.8691755 L359.638554,63.1834039 L359.638554,63.497194 L359.638554,63.8105459 L359.638554,64.1234595 L359.638554,64.4354966 L359.638554,64.7470955 L359.638554,65.0582561 L359.638554,65.3689785 L359.638554,65.6788243 L359.638554,65.9882319 L359.638554,66.2972012 L359.638554,66.6052941 L359.638554,66.9133869 L359.638554,67.2206032 L359.638554,67.526943 L359.638554,67.8332828 L359.638554,68.1387461 L359.638554,68.4437712 L359.638554,68.7479197 L359.638554,69.0520683 L359.638554,69.3553403 L359.638554,69.6581741 L359.638554,69.9601313 L359.638554,70.2620886 L359.638554,70.5631694 L359.638554,70.8633736 L359.638554,71.1635779 L359.638554,71.4629056 L359.638554,71.7617951 L359.638554,72.0602463 L359.638554,72.3578211 L359.638554,72.6549575 L359.638554,72.9516558 L359.638554,73.2479157 L359.638554,73.5432992 L359.638554,73.8386826 L359.638554,74.1327513 L359.638554,74.42682 L359.638554,74.7200122 L359.638554,75.0127661 L359.638554,75.3050818 L359.638554,75.5969592 L359.638554,75.8879601 L359.638554,76.1785228 L359.638554,76.4686472 L359.638554,76.757895 L359.638554,77.0467047 L359.638554,77.3350761 L359.638554,77.6230092 L359.638554,77.9100658 L359.638554,78.1966842 L359.638554,78.4828643 L359.638554,78.7686061 L359.638554,79.0534715 L359.638554,79.3378986 L359.638554,79.6218874 L359.638554,79.905438 L359.638554,80.1881121 L359.638554,80.4703479 L359.638554,80.7521455 L359.638554,81.0330665 L359.638554,81.3135493 L359.638554,81.5935939 L359.638554,81.8732002 L359.638554,82.15193 L359.638554,82.4306597 L359.638554,82.7080748 L359.638554,82.9854898 L359.638554,83.2620283 L359.638554,83.5385668 L359.638554,83.8137906 L359.638554,84.0890143 L359.638554,84.3633616 L359.638554,84.6372706 L359.638554,84.9107413 L359.638554,85.1833355 L359.638554,85.4559297 L359.638554,85.7276475 L359.638554,85.9984887 L359.638554,86.2693299 L359.638554,86.5392946 L359.638554,86.808821 L359.638554,87.0779092 L359.638554,87.3461209 L359.638554,87.6138943 L359.638554,87.8812295 L359.638554,88.1476881 L359.638554,88.4141468 L359.638554,88.679729 L359.638554,88.9448729 L359.638554,89.2091403 L359.638554,89.4729694 L359.638554,89.7363603 L359.638554,89.9993129 L359.638554,90.261389 L359.638554,90.5234651 L359.638554,90.7846647 L359.638554,91.0449879 L359.638554,91.305311 L359.638554,91.5647575 L359.638554,91.8237659 L359.638554,92.0818977 L359.638554,92.3395913 L359.638554,92.5968466 L359.638554,92.8536637 L359.638554,93.1100425 L359.638554,93.3655448 L359.638554,93.6206088 L359.638554,93.8752346 L359.638554,94.1289839 L359.638554,94.382295 L359.638554,94.6351677 L359.638554,94.8876023 L359.638554,95.1391603 L359.638554,95.3907183 L359.638554,95.6409615 L359.638554,95.8912048 L359.638554,96.1405715 L359.638554,96.3895 L359.638554,96.6379903 L359.638554,96.8860422 L359.638554,97.1332177 L359.638554,97.3799549 L359.638554,97.6262539 L359.638554,97.8716763 L359.638554,98.1166605 L359.638554,98.3612065 L359.638554,98.6053142 L359.638554,98.8489836 L359.638554,99.0917765 L359.638554,99.3341312 L359.638554,99.5756094 L359.638554,99.8170875 L359.638554,100.057689 L359.638554,100.297414 L359.638554,100.537139 L359.638554,100.775988 L359.638554,101.014398 L359.638554,101.252371 L359.638554,101.489905 L359.638554,101.726562 L359.638554,101.962781 L359.638554,102.198124 L359.638554,102.433466 L359.638554,102.667932 L359.638554,102.90196 L359.638554,103.13555 L359.638554,103.368263 L359.638554,103.600538 L359.638554,103.832374 L359.638554,104.063334 L359.638554,104.294294 L359.638554,104.524378 L359.638554,104.754023 L359.638554,104.982792 L359.638554,105.211122 L359.638554,105.439015 L359.638554,105.666469 L359.638554,105.893046 L359.638554,106.119624 L359.638554,106.345325 L359.638554,106.570149 L359.638554,106.794974 L359.638554,107.018922 L359.638554,107.242432 L359.638554,107.465065 L359.638554,107.68726 L359.638554,107.909455 L359.638554,108.130335 L359.638554,108.351215 L359.638554,108.571219 L359.638554,108.790784 L359.638554,109.009911 L359.638554,109.228162 L359.638554,109.445975 L359.638554,109.663349 L359.638554,109.880285 L359.638554,110.096344 L359.638554,110.312403 L359.638554,110.527148 L359.638554,110.741893 L359.638554,110.955761 L359.638554,111.169191 L359.638554,111.382182 L359.638554,111.594736 L359.638554,111.806413 L359.638554,112.017651 L359.638554,112.228452 L359.638554,112.438375 L359.638554,112.648299 L359.638554,112.856908 L359.638554,113.065517 L359.638554,113.273688 L359.638554,113.480983 L359.638554,113.687839 L359.638554,113.893818 L359.638554,114.099798 L359.638554,114.304901 L359.638554,114.509127 L359.638554,114.713354 L359.638554,114.916704 L359.638554,115.119616 L359.638554,115.322089 L359.638554,115.524125 L359.638554,115.725283 L359.638554,115.926004 L359.638554,116.125848 L359.638554,116.325692 L359.638554,116.524659 L359.638554,116.723189 L359.638554,116.921279 L359.638554,117.118494 L359.638554,117.31527 L359.638554,117.511608 L359.638554,117.70707 L359.638554,117.902531 L359.638554,118.097116 L359.638554,118.291263 L359.638554,118.484533 L359.638554,118.677365 L359.638554,118.869758 L359.638554,119.061714 L359.638554,119.252793 L359.638554,119.443872 L359.638554,119.634074 L359.638554,119.8234 L359.638554,120.012726 L359.638554,120.201175 L359.638554,120.389186 L359.638554,120.576321 L359.638554,120.763017 L359.638554,120.949276 L359.638554,121.135095 L359.638554,121.320477 L359.638554,121.504982 L359.638554,121.689049 L359.638554,121.872677 L359.638554,122.05543 L359.638554,122.237743 L359.638554,122.419619 L359.638554,122.601056 L359.638554,122.781617 L359.638554,122.962178 L359.638554,123.141424 L359.638554,123.32067 L359.638554,123.499039 L359.638554,123.676971 L359.638554,123.854464 L359.638554,124.031519 L359.638554,124.207697 L359.638554,124.383437 L359.638554,124.558739 L359.638554,124.733164 L359.638554,124.907151 L359.638554,125.0807 L359.638554,125.25381 L359.638554,125.426482 L359.638554,125.598278 L359.638554,125.769635 L359.638554,125.940116 L359.638554,126.110159 L359.638554,126.280202 L359.638554,126.44893 L359.638554,126.617658 L359.638554,126.785509 L359.638554,126.952922 L359.638554,127.119897 L359.638554,127.286434 L359.638554,127.452094 L359.638554,127.617316 L359.638554,127.781661 L359.638554,127.946007 L359.638554,128.109476 L359.638554,128.272506 L359.638554,128.435099 L359.638554,128.596814 L359.638554,128.758092 L359.638554,128.918931 L359.638554,129.078894 L359.638554,129.238857 L359.638554,129.397943 L359.638554,129.556592 L359.638554,129.714363 L359.638554,129.871696 L359.638554,130.028592 L359.638554,130.185048 L359.638554,130.340629 L359.638554,130.496209 L359.638554,130.650474 L359.638554,130.80474 L359.638554,130.958129 L359.638554,131.111518 L359.638554,131.263592 L359.638554,131.415667 L359.638554,131.566864 L359.638554,131.717624 L359.638554,131.867945 L359.638554,132.017828 L359.638554,132.166835 L359.638554,132.315403 L359.638554,132.463533 L359.638554,132.610786 L359.638554,132.757602 L359.638554,132.903978 L359.638554,133.049917 L359.638554,133.194979 L359.638554,133.339603 L359.638554,133.483789 L359.638554,133.627536 L359.638554,133.770407 L359.638554,133.91284 L359.638554,134.054835 L359.638554,134.196391 L359.638554,134.33707 L359.638554,134.477312 L359.638554,134.617115 L359.638554,134.756042 L359.638554,134.89453 L359.638554,135.03258 L359.638554,135.170192 L359.638554,135.306927 L359.638554,135.443663 L359.638554,135.579083 L359.638554,135.714504 L359.638554,135.849048 L359.638554,135.983154 L359.638554,136.116821 L359.638554,136.250051 L359.638554,136.382404 L359.638554,136.514318 L359.638554,136.645794 L359.638554,136.776394 L359.638554,136.906994 L359.638554,137.036717 L359.638554,137.165564 L359.638554,137.294411 L359.638554,137.422381 L359.638554,137.549913 L359.638554,137.676569 L359.638554,137.803224 L359.638554,137.929003 L359.638554,138.054344 L359.638554,138.178808 L359.638554,138.303272 L359.638554,138.42686 L359.638554,138.549571 L359.638554,138.672283 L359.638554,138.794117 L359.638554,138.915514 L359.638554,139.036472 L359.638554,139.156554 L359.638554,139.276197 L359.638554,139.395402 L359.638554,139.514169 L359.638554,139.63206 L359.638554,139.749512 L359.638554,139.866526 L359.638554,139.983102 L359.638554,140.098801 L359.638554,140.214062 L359.638554,140.328884 L359.638554,140.443269 L359.638554,140.556776 L359.638554,140.669846 L359.638554,140.782477 L359.638554,140.894232 L359.638554,141.005549 L359.638554,141.116427 L359.638554,141.226867 L359.638554,141.336431 L359.638554,141.445556 L359.638554,141.554243 L359.638554,141.662492 L359.638554,141.769865 L359.638554,141.876799 L359.638554,141.983295 L359.638554,142.089352 L359.638554,142.194533 L359.638554,142.299276 L359.638554,142.40358 L359.638554,142.507008 L359.638554,142.609998 L359.638554,142.71255 L359.638554,142.814663 L359.638554,142.9159 L359.638554,143.016698 L359.638554,143.117059 L359.638554,143.216981 L359.638554,143.316026 L359.638554,143.414633 L359.638554,143.512802 L359.638554,143.610533 L359.638554,143.707387 L359.638554,143.803803 L359.638554,143.899781 L359.638554,143.994882 L359.638554,144.089545 L359.638554,144.18377 L359.638554,144.277556 L359.638554,144.370904 L359.638554,144.463376 L359.638554,144.555409 L359.638554,144.646566 L359.638554,144.737723 L359.638554,144.828004 L359.638554,144.917846 L359.638554,145.006811 L359.638554,145.095339 L359.638554,145.183428 L359.638554,145.271079 L359.638554,145.358291 L359.638554,145.444628 L359.638554,145.530525 L359.638554,145.615985 L359.638554,145.700568 L359.638554,145.784713 L359.638554,145.86842 L359.638554,145.951688 L359.638554,146.03408 L359.638554,146.116033 L359.638554,146.197549 L359.638554,146.278626 L359.638554,146.358826 L359.638554,146.438589 L359.638554,146.517913 L359.638554,146.59636 L359.638554,146.674808 L359.638554,146.752379 L359.638554,146.829073 L359.638554,146.905768 L359.638554,146.981586 L359.638554,147.024096 Z" id="Path" fill="#0093C9" opacity="0.88"></path>
+            </g>
+            <g id="Header-Bar" transform="translate(112.000000, 40.000000)">
+                <path d="M0,0 L468,0 C474.627417,-1.21743675e-15 480,5.372583 480,12 L480,40 L480,40 L0,40 L0,0 Z" fill="#FFFFFF"></path>
+                <rect id="Header-Bar-Divider" fill="#DDE8F1" x="8" y="39" width="464" height="1"></rect>
+                <g id="User-Avatar" transform="translate(11.000000, 8.000000)">
+                    <circle id="Badge" fill="#0073A9" cx="12" cy="12" r="12"></circle>
+                    <g id="Cost-Tracker" transform="translate(6.000000, 7.500000)">
+                        <polygon id="Folder" fill="#6AD5FB" points="5.48775309e-14 0 4.62857143 0 5.65714286 1.54285714 11.3142857 1.54285714 11.3142857 9.25714286 0 9.25714286"></polygon>
+                        <rect id="bar-1" fill="#0073A9" x="3.08571429" y="5.65714286" width="1.02857143" height="2.05714286" rx="0.257142857"></rect>
+                        <rect id="bar-1" fill="#0073A9" x="5.14285714" y="4.62857143" width="1.02857143" height="3.08571429" rx="0.257142857"></rect>
+                        <rect id="bar-1" fill="#0073A9" x="7.2" y="3.6" width="1.02857143" height="4.11428571" rx="0.257142857"></rect>
+                    </g>
+                </g>
+            </g>
+            <g id="Tool-Bar" transform="translate(112.000000, 80.000000)">
+                <rect id="Shadow" fill="url(#linearGradient-3)" x="0" y="24" width="480" height="4"></rect>
+                <rect id="Toolbar" fill="#FFFFFF" x="0" y="0" width="480" height="24"></rect>
+            </g>
+            <g id="Sidebar" transform="translate(80.000000, 40.000000)">
+                <path d="M12,0 L32,0 L32,0 L32,384 L12,384 C5.372583,384 8.11624501e-16,378.627417 0,372 L0,12 C-8.11624501e-16,5.372583 5.372583,1.21743675e-15 12,0 Z" id="Sidebar-Background" fill="#F5F8FA"></path>
+                <rect id="Sidebar-Divider" fill="#DDE8F1" x="32" y="0" width="1" height="384"></rect>
+                <g id="Tempo-Logo-Dark" transform="translate(6.000000, 10.000000)">
+                    <g id="Logo-Flattened" transform="translate(0.153846, 0.000000)">
+                        <g id="Circle">
+                            <path d="M19.6923077,9.84089077 C19.6923077,15.2816781 15.2874068,19.6923077 9.85368625,19.6923077 C9.7171121,19.6923077 9.5811879,19.6895213 9.44596726,19.6840022 L8.5,18.0430584 C8.94052291,18.1154023 9.3927168,18.1530238 9.85368625,18.1530238 C14.438388,18.1530238 18.1550231,14.4315551 18.1550231,9.84089077 C18.1550231,9.14279129 18.0690755,8.46479204 17.9071978,7.81692338 L18.9326687,6.03846154 C19.4219864,7.20845772 19.6923077,8.49306473 19.6923077,9.84089077 Z" id="Path" fill="#F89B46"></path>
+                            <path d="M1.53817306,9.84268004 C1.53817306,13.6786449 4.14110445,16.9069682 7.67791321,17.8594346 L8.69230769,19.6153846 C3.79825674,19.0452372 0,14.8873009 0,9.84268004 C0,7.92202475 0.550587201,6.12990137 1.50261191,4.61538462 L3.39102798,4.61538462 C2.23242739,6.04258533 1.53817306,7.86159754 1.53817306,9.84268004 Z" id="Path" fill="#00C3F2"></path>
+                            <path d="M9.84641467,0 C13.6699385,0 16.9844314,2.17382004 18.6153846,5.34996966 L17.6602658,7 C16.5033659,3.81231953 13.4415831,1.53449283 9.84641467,1.53449283 C7.53804683,1.53449283 5.44957271,2.47355041 3.94403052,3.98956033 L1.92307692,3.98957504 C3.71637199,1.56940111 6.5976445,0 9.84641467,0 Z" id="Path" fill="#00B47E"></path>
+                        </g>
+                        <path d="M8.46802863,13.6473221 L5.19898227,10.3891779 C5.13880078,10.3291971 5.13880078,10.231949 5.19898227,10.1719683 L6.72453723,8.65150096 C6.78471872,8.59152018 6.88229218,8.59152018 6.94247366,8.65150096 L8.57699684,10.2805731 L12.8267571,6.04498558 C12.8869386,5.98500481 12.9845121,5.98500481 13.0446935,6.04498558 L14.5702485,7.56545289 C14.63043,7.62543367 14.63043,7.72268173 14.5702485,7.7826625 L8.68596505,13.6473221 C8.62578357,13.7073029 8.52821011,13.7073029 8.46802863,13.6473221 Z" id="Checkmark" fill="#004976"></path>
+                    </g>
+                </g>
+            </g>
+            <line x1="438.5" y1="176" x2="438.5" y2="321" id="Line" stroke="#004976" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,4"></line>
+            <rect id="Location" fill="#BCD8E0" x="216" y="150" width="72" height="4" rx="2"></rect>
+            <rect id="Location" fill="#BCD8E0" x="331" y="150" width="72" height="4" rx="2"></rect>
+            <rect id="Location" fill="#BCD8E0" x="446" y="150" width="72" height="4" rx="2"></rect>
+            <circle id="Oval" fill="#B572D2" fill-rule="nonzero" cx="196" cy="152" r="7"></circle>
+            <circle id="Oval" fill="#00B2F5" cx="311" cy="152" r="7"></circle>
+            <circle id="Oval" fill="#E9636F" cx="426" cy="152" r="7"></circle>
+            <g id="Worklog-Card" transform="translate(154.000000, 117.000000)">
+                <g id="Card">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                </g>
+                <rect id="Duration" fill="#A7C7D1" x="65" y="35.1" width="31.2" height="2.6" rx="1.3"></rect>
+                <g id="Worklog-Icon" transform="translate(7.800000, 31.200000)">
+                    <rect id="Rectangle" fill="#00B47E" x="0" y="0" width="10.4" height="10.4" rx="1.3"></rect>
+                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" points="2.6 5.85 3.9 7.15 7.8 3.25"></polyline>
+                </g>
+                <rect id="Description" fill="#DDE8F1" x="7.8" y="23.4" width="78" height="2.6" rx="1.3"></rect>
+                <rect id="Summary" fill="#A7C7D1" x="7.8" y="15.6" width="78" height="2.6" rx="1.3"></rect>
+                <rect id="Summary" fill="#A7C7D1" x="7.8" y="7.8" width="88.4" height="2.6" rx="1.3"></rect>
+            </g>
+            <g id="Worklog-Card" transform="translate(229.000000, 154.000000)">
+                <g id="Card">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-6"></use>
+                </g>
+                <rect id="Duration" fill="#A7C7D1" x="77.5" y="41.85" width="37.2" height="3.1" rx="1.55"></rect>
+                <g id="Worklog-Icon" transform="translate(9.300000, 37.200000)">
+                    <rect id="Rectangle" fill="#00B47E" x="0" y="0" width="12.4" height="12.4" rx="1.55"></rect>
+                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" points="3.1 6.975 4.65 8.525 9.3 3.875"></polyline>
+                </g>
+                <rect id="Description" fill="#DDE8F1" x="9.3" y="27.9" width="93" height="3.1" rx="1.55"></rect>
+                <rect id="Summary" fill="#A7C7D1" x="9.3" y="18.6" width="93" height="3.1" rx="1.55"></rect>
+                <rect id="Summary" fill="#A7C7D1" x="9.3" y="9.3" width="105.4" height="3.1" rx="1.55"></rect>
+            </g>
+            <g id="Worklog-Card" transform="translate(374.000000, 153.000000)">
+                <g id="Card">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-9)" xlink:href="#path-8"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-8"></use>
+                </g>
+                <rect id="Duration" fill="#A7C7D1" x="65" y="35.1" width="31.2" height="2.6" rx="1.3"></rect>
+                <g id="Worklog-Icon" transform="translate(7.800000, 31.200000)">
+                    <rect id="Rectangle" fill="#00B47E" x="0" y="0" width="10.4" height="10.4" rx="1.3"></rect>
+                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" points="2.6 5.85 3.9 7.15 7.8 3.25"></polyline>
+                </g>
+                <rect id="Description" fill="#DDE8F1" x="7.8" y="23.4" width="78" height="2.6" rx="1.3"></rect>
+                <rect id="Summary" fill="#A7C7D1" x="7.8" y="15.6" width="78" height="2.6" rx="1.3"></rect>
+                <rect id="Summary" fill="#A7C7D1" x="7.8" y="7.8" width="88.4" height="2.6" rx="1.3"></rect>
+            </g>
+            <g id="Group-9" filter="url(#filter-10)" transform="translate(147.000000, 94.000000)">
+                <g id="Group-8">
+                    <mask id="mask-12" fill="white">
+                        <use xlink:href="#path-11"></use>
+                    </mask>
+                    <use id="Mask" fill="#00D8F6" xlink:href="#path-11"></use>
+                    <g mask="url(#mask-12)">
+                        <g transform="translate(-425.000000, -408.000000)">
+                            <g id="Window" fill="none">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-14)" xlink:href="#path-13"></use>
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-13"></use>
+                            </g>
+                            <rect id="Chart-Area" fill="#EEF3F8" fill-rule="evenodd" x="207" y="264" width="1224" height="660" rx="24"></rect>
+                            <g id="Chart" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(279.000000, 408.000000)">
+                                <g id="Group-4" transform="translate(0.000000, 378.000000)" stroke="#BCD8E0" stroke-width="3">
+                                    <rect id="Rectangle" x="616.721311" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="540" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="463.278689" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="386.557377" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="309.836066" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="233.114754" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="153.442623" y="0" width="79.6721311" height="63"></rect>
+                                    <rect id="Rectangle" x="76.7213115" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="5.32907052e-14" y="0" width="76.7213115" height="63"></rect>
+                                </g>
+                                <g id="Group-3" transform="translate(0.000000, 315.000000)" stroke="#BCD8E0" stroke-width="3">
+                                    <rect id="Rectangle" x="616.721311" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="540" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="463.278689" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="386.557377" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="309.836066" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="233.114754" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="153.442623" y="0" width="79.6721311" height="63"></rect>
+                                    <rect id="Rectangle" x="76.7213115" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="5.32907052e-14" y="0" width="76.7213115" height="63"></rect>
+                                </g>
+                                <g id="Group-2" transform="translate(0.000000, 252.000000)" stroke="#BCD8E0" stroke-width="3">
+                                    <rect id="Rectangle" x="616.721311" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="540" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="463.278689" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="386.557377" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="309.836066" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="233.114754" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="153.442623" y="0" width="79.6721311" height="63"></rect>
+                                    <rect id="Rectangle" x="76.7213115" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="5.32907052e-14" y="0" width="76.7213115" height="63"></rect>
+                                </g>
+                                <g id="Group" transform="translate(0.000000, 189.000000)" stroke="#BCD8E0" stroke-width="3">
+                                    <rect id="Rectangle" x="616.721311" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="540" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="463.278689" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="386.557377" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="309.836066" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="233.114754" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="153.442623" y="0" width="79.6721311" height="63"></rect>
+                                    <rect id="Rectangle" x="76.7213115" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="5.32907052e-14" y="0" width="76.7213115" height="63"></rect>
+                                </g>
+                                <g id="Group" transform="translate(0.000000, 126.000000)" stroke="#BCD8E0" stroke-width="3">
+                                    <rect id="Rectangle" x="616.721311" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="540" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="463.278689" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="386.557377" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="309.836066" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="233.114754" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="153.442623" y="0" width="79.6721311" height="63"></rect>
+                                    <rect id="Rectangle" x="76.7213115" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="5.32907052e-14" y="0" width="76.7213115" height="63"></rect>
+                                </g>
+                                <g id="Group" transform="translate(0.000000, 63.000000)" stroke="#BCD8E0" stroke-width="3">
+                                    <rect id="Rectangle" x="616.721311" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="540" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="463.278689" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="386.557377" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="309.836066" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="233.114754" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="153.442623" y="0" width="79.6721311" height="63"></rect>
+                                    <rect id="Rectangle" x="76.7213115" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="5.32907052e-14" y="0" width="76.7213115" height="63"></rect>
+                                </g>
+                                <g id="Group" stroke="#BCD8E0" stroke-width="3">
+                                    <rect id="Rectangle" x="616.721311" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="540" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="463.278689" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="386.557377" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="309.836066" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="233.114754" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="153.442623" y="0" width="79.6721311" height="63"></rect>
+                                    <rect id="Rectangle" x="76.7213115" y="0" width="76.7213115" height="63"></rect>
+                                    <rect id="Rectangle" x="5.32907052e-14" y="0" width="76.7213115" height="63"></rect>
+                                </g>
+                                <path d="M1080,45.0722892 C1043.81349,68.3987802 1018.46024,84.3205941 1003.93735,92.8374694 C974.204819,110.275061 949.797108,116.211141 932.988434,120.297913 C930.15759,120.986665 927.542169,121.623141 925.153735,122.253081 C917.028434,124.393834 891.595663,123.532566 870.766265,122.825517 C861.89494,122.524923 853.859277,122.253081 848.349398,122.253081 L771.546506,122.253081 C748.228916,122.253081 720.355663,126.394745 704.716627,128.719774 C699.232771,129.533992 695.25253,130.126032 693.503133,130.237121 C671.071807,131.653834 647.668916,135.558943 619.176867,140.882071 C605.775904,143.386151 593.19759,151.776646 580.925783,159.963259 C567.105542,169.182349 553.674217,178.141358 539.895904,178.141358 C526.515181,178.141358 512.386988,182.366665 498.66506,186.469121 C485.709398,190.34417 473.115181,194.109438 461.85253,194.109438 C450.611566,194.109438 440.856867,193.82322 431.799036,193.556606 C415.49494,193.076962 401.447711,192.663972 385.049639,194.109438 C379.016386,194.641358 372.899277,195.053042 366.530602,195.480408 C349.236145,196.642269 330.089639,197.928289 305.767229,202.093477 C296.055904,203.7572 285.666506,210.014784 274.334458,216.839576 C261.060723,224.834071 246.493012,233.607497 230.201928,236.691854 C216.890602,239.212923 200.502651,249.912764 183.75759,260.84524 C173.564819,267.498824 163.241928,274.239972 153.399036,279.274269 C147.37012,282.357319 142.096337,285.530547 137.051711,288.566547 C120.326024,298.628606 106.125687,307.172012 75.3560964,305.888606 C48.6560964,304.773794 24.5025542,310.096923 8.52651283e-14,321.856685 L8.52651283e-14,441.072289 L1080,441.072289 L1080,45.0722892 Z" id="Path" fill="#00BEE9" opacity="0.88"></path>
+                                <path d="M1078.91566,441.072289 L1003.21157,441.072289 L927.660723,441.072289 L850.013494,441.072289 L773.313253,441.072289 L697.06988,441.072289 L619.840482,441.072289 L542.596627,441.072289 L466.163855,441.072289 L386.53012,441.072289 L332.332048,441.072289 L306.689639,441.072289 L229.724819,441.072289 L153.196627,441.072289 L75.6688193,441.072289 L1.08433735,441.072289 L1.08433735,335.337723 C24.2679036,324.41467 49.0775422,319.177969 75.5301687,319.627618 C95.870747,319.9734 109.966699,315.717512 121.724675,311.490549 C123.348723,310.906794 124.922747,310.326983 126.458024,309.76032 C136.08853,306.209145 144.191855,303.220689 153.539277,303.529658 C167.573494,303.992454 182.822169,299.472299 196.499277,294.787798 C199.179759,293.870093 201.793735,292.948444 204.329639,292.05309 C208.304096,290.651553 212.086265,289.317068 215.634217,288.17191 C221.447711,286.295743 226.466024,284.984924 230.43759,284.746952 C237.689639,284.314395 244.66988,281.770328 251.382651,278.23493 C258.093976,274.698217 264.604337,270.132045 270.90506,265.598741 C271.636627,265.072836 272.363855,264.548245 273.089639,264.02497 C278.638554,260.020201 284.021205,256.136391 289.302651,253.036179 C295.278072,249.528391 301.006265,247.100024 306.553735,246.618821 C334.244819,244.219378 359.812048,242.103924 386.556145,241.505707 C397.045301,241.270364 407.676145,238.831478 418.525301,236.341317 C420.563855,235.873261 422.611084,235.403891 424.665542,234.946353 C437.713735,232.043356 451.191325,229.616304 465.566747,231.083579 C466.998072,231.229518 469.043855,231.129596 471.485783,230.877161 C473.949398,230.622097 476.895904,230.202688 480.166265,229.675468 C485.77012,228.772226 492.37012,227.546866 499.184096,226.282064 C500.31759,226.070387 501.458313,225.858711 502.600482,225.648348 C510.615904,224.163981 518.751325,222.688817 525.81253,221.660672 C532.908434,220.625953 538.798554,220.063235 542.381205,220.353797 C555.451084,221.414811 567.887711,215.149965 580.009157,208.871971 C580.328675,208.707625 580.646747,208.541965 580.964819,208.37762 C592.902651,202.190344 604.571566,196.142434 616.782651,196.210802 C636.118554,196.319927 657.429398,195.33254 677.199036,194.41615 C684.154699,194.094033 690.919518,193.781119 697.340241,193.52737 C710.744096,192.997521 723.156145,193.311749 735.102651,193.61283 L735.980241,193.635181 C748.182651,193.942835 759.92241,194.217621 771.675181,193.526055 C786.105542,192.678033 836.537349,190.845253 849.633253,190.845253 C859.010602,190.845253 865.322892,189.044028 872.660241,186.950925 C874.338795,186.472351 876.070843,185.978 877.905542,185.486279 C887.764337,182.846234 900.889157,180.177265 925.186988,180.112842 C925.693012,180.111527 926.347952,179.98268 927.053494,179.802558 C927.787952,179.615861 928.678554,179.346335 929.697831,179.009755 C931.739277,178.335282 934.356145,177.375505 937.382169,176.223772 C940.960482,174.860363 945.138795,173.216909 949.646747,171.443294 C952.756627,170.220564 956.022651,168.93604 959.355181,167.639684 C967.531084,164.459272 976.132048,161.199974 983.90747,158.566503 C991.703133,155.925144 998.592289,153.939852 1003.37494,153.271952 C1011.94988,152.075518 1022.67614,148.066805 1035.51614,141.336532 C1047.93687,134.82714 1062.40482,125.735553 1078.91566,114.072289 L1078.91566,114.190618 L1078.91566,115.256891 L1078.91566,116.321849 L1078.91566,117.384178 L1078.91566,118.446506 L1078.91566,119.506205 L1078.91566,120.563275 L1078.91566,121.620344 L1078.91566,122.674784 L1078.91566,123.72791 L1078.91566,124.77972 L1078.91566,125.828901 L1078.91566,126.876767 L1078.91566,127.923319 L1078.91566,128.968556 L1078.91566,130.011163 L1078.91566,131.052455 L1078.91566,132.092433 L1078.91566,133.131096 L1078.91566,134.167129 L1078.91566,135.201848 L1078.91566,136.235251 L1078.91566,137.266026 L1078.91566,138.295485 L1078.91566,139.32363 L1078.91566,140.35046 L1078.91566,141.375975 L1078.91566,142.398861 L1078.91566,143.420432 L1078.91566,144.439373 L1078.91566,145.458315 L1078.91566,146.474627 L1078.91566,147.489624 L1078.91566,148.501992 L1078.91566,149.513044 L1078.91566,150.522782 L1078.91566,151.531206 L1078.91566,152.538314 L1078.91566,153.542793 L1078.91566,154.545958 L1078.91566,155.547807 L1078.91566,156.547027 L1078.91566,157.544932 L1078.91566,158.541523 L1078.91566,159.536799 L1078.91566,160.529445 L1078.91566,161.520776 L1078.91566,162.510793 L1078.91566,163.499495 L1078.91566,164.485567 L1078.91566,165.470325 L1078.91566,166.453767 L1078.91566,167.435896 L1078.91566,168.415394 L1078.91566,169.393578 L1078.91566,170.370447 L1078.91566,171.344686 L1078.91566,172.317611 L1078.91566,173.289221 L1078.91566,174.259516 L1078.91566,175.227182 L1078.91566,176.193533 L1078.91566,177.158569 L1078.91566,178.12229 L1078.91566,179.083382 L1078.91566,180.043159 L1078.91566,181.001622 L1078.91566,181.958769 L1078.91566,182.913287 L1078.91566,183.866491 L1078.91566,184.818379 L1078.91566,185.767638 L1078.91566,186.715582 L1078.91566,187.662212 L1078.91566,188.607526 L1078.91566,189.550212 L1078.91566,190.491582 L1078.91566,191.431638 L1078.91566,192.370379 L1078.91566,193.30649 L1078.91566,194.241286 L1078.91566,195.174768 L1078.91566,196.106935 L1078.91566,197.036473 L1078.91566,197.964696 L1078.91566,198.891604 L1078.91566,199.815882 L1078.91566,200.740161 L1078.91566,201.66181 L1078.91566,202.580829 L1078.91566,203.499849 L1078.91566,204.416238 L1078.91566,205.331314 L1078.91566,206.243759 L1078.91566,207.156205 L1078.91566,208.066021 L1078.91566,208.974522 L1078.91566,209.880394 L1078.91566,210.786266 L1078.91566,211.689508 L1078.91566,212.590121 L1078.91566,213.490734 L1078.91566,214.388717 L1078.91566,215.285385 L1078.91566,216.180739 L1078.91566,217.073463 L1078.91566,217.964873 L1078.91566,218.854967 L1078.91566,219.743747 L1078.91566,220.629897 L1078.91566,221.516048 L1078.91566,222.398254 L1078.91566,223.28046 L1078.91566,224.160037 L1078.91566,225.038298 L1078.91566,225.915245 L1078.91566,226.790878 L1078.91566,227.66388 L1078.91566,228.535568 L1078.91566,229.405941 L1078.91566,230.273685 L1078.91566,231.140114 L1078.91566,232.005228 L1078.91566,232.869028 L1078.91566,233.730197 L1078.91566,234.590053 L1078.91566,235.448593 L1078.91566,236.305818 L1078.91566,237.160414 L1078.91566,238.013696 L1078.91566,238.865662 L1078.91566,239.716314 L1078.91566,240.564336 L1078.91566,241.411044 L1078.91566,242.256436 L1078.91566,243.0992 L1078.91566,243.940648 L1078.91566,244.780782 L1078.91566,245.619601 L1078.91566,246.45579 L1078.91566,247.291979 L1078.91566,248.124224 L1078.91566,248.956469 L1078.91566,249.786085 L1078.91566,250.6157 L1078.91566,251.441372 L1078.91566,252.267043 L1078.91566,253.090085 L1078.91566,253.911812 L1078.91566,254.732224 L1078.91566,255.550007 L1078.91566,256.367789 L1078.91566,257.182942 L1078.91566,257.995466 L1078.91566,258.80799 L1078.91566,259.617884 L1078.91566,260.426463 L1078.91566,261.233728 L1078.91566,262.038363 L1078.91566,262.841683 L1078.91566,263.643688 L1078.91566,264.443064 L1078.91566,265.24244 L1078.91566,266.039187 L1078.91566,266.834619 L1078.91566,267.627421 L1078.91566,268.418908 L1078.91566,269.209081 L1078.91566,269.997939 L1078.91566,270.784167 L1078.91566,271.570395 L1078.91566,272.353994 L1078.91566,273.134964 L1078.91566,273.915933 L1078.91566,274.694273 L1078.91566,275.471298 L1078.91566,276.245693 L1078.91566,277.018774 L1078.91566,277.79054 L1078.91566,278.560991 L1078.91566,279.330127 L1078.91566,280.096634 L1078.91566,280.861827 L1078.91566,281.625704 L1078.91566,282.386952 L1078.91566,283.146885 L1078.91566,283.905503 L1078.91566,284.662807 L1078.91566,285.417481 L1078.91566,286.172155 L1078.91566,286.922885 L1078.91566,287.673614 L1078.91566,288.421715 L1078.91566,289.1685 L1078.91566,289.913971 L1078.91566,290.658127 L1078.91566,291.399653 L1078.91566,292.139865 L1078.91566,292.878762 L1078.91566,293.615029 L1078.91566,294.349982 L1078.91566,295.083619 L1078.91566,295.815943 L1078.91566,296.546951 L1078.91566,297.27533 L1078.91566,298.002394 L1078.91566,298.726828 L1078.91566,299.451263 L1078.91566,300.173068 L1078.91566,300.892243 L1078.91566,301.611418 L1078.91566,302.327964 L1078.91566,303.043195 L1078.91566,303.757112 L1078.91566,304.469714 L1078.91566,305.179686 L1078.91566,305.888343 L1078.91566,306.594371 L1078.91566,307.300399 L1078.91566,308.003797 L1078.91566,308.70588 L1078.91566,309.406649 L1078.91566,310.104788 L1078.91566,310.801613 L1078.91566,311.497122 L1078.91566,312.190003 L1078.91566,312.882883 L1078.91566,313.573133 L1078.91566,314.262069 L1078.91566,314.948376 L1078.91566,315.633367 L1078.91566,316.317044 L1078.91566,316.999406 L1078.91566,317.679139 L1078.91566,318.358871 L1078.91566,319.035974 L1078.91566,319.710448 L1078.91566,320.384921 L1078.91566,321.056765 L1078.91566,321.727295 L1078.91566,322.395194 L1078.91566,323.061779 L1078.91566,323.728364 L1078.91566,324.391005 L1078.91566,325.053645 L1078.91566,325.713656 L1078.91566,326.372353 L1078.91566,327.029734 L1078.91566,327.684486 L1078.91566,328.337924 L1078.91566,328.990046 L1078.91566,329.640854 L1078.91566,330.289032 L1078.91566,330.93721 L1078.91566,331.581444 L1078.91566,332.225678 L1078.91566,332.867283 L1078.91566,333.507572 L1078.91566,334.146547 L1078.91566,334.784207 L1078.91566,335.419238 L1078.91566,336.052954 L1078.91566,336.685355 L1078.91566,337.315126 L1078.91566,337.944898 L1078.91566,338.570725 L1078.91566,339.196552 L1078.91566,339.821065 L1078.91566,340.442948 L1078.91566,341.063516 L1078.91566,341.681455 L1078.91566,342.299393 L1078.91566,342.914703 L1078.91566,343.527382 L1078.91566,344.140062 L1078.91566,344.750112 L1078.91566,345.358847 L1078.91566,345.966268 L1078.91566,346.572374 L1078.91566,347.17585 L1078.91566,347.778011 L1078.91566,348.377543 L1078.91566,348.977075 L1078.91566,349.573978 L1078.91566,350.169566 L1078.91566,350.763838 L1078.91566,351.355482 L1078.91566,351.945811 L1078.91566,352.534824 L1078.91566,353.121209 L1078.91566,353.707593 L1078.91566,354.291348 L1078.91566,354.873788 L1078.91566,355.453599 L1078.91566,356.032094 L1078.91566,356.609275 L1078.91566,357.185142 L1078.91566,357.758378 L1078.91566,358.331615 L1078.91566,358.902222 L1078.91566,359.4702 L1078.91566,360.038178 L1078.91566,360.603526 L1078.91566,361.167559 L1078.91566,361.728963 L1078.91566,362.289052 L1078.91566,362.847827 L1078.91566,363.405286 L1078.91566,363.961431 L1078.91566,364.514946 L1078.91566,365.067147 L1078.91566,365.618032 L1078.91566,366.166289 L1078.91566,366.71323 L1078.91566,367.258857 L1078.91566,367.803169 L1078.91566,368.344851 L1078.91566,368.886534 L1078.91566,369.424272 L1078.91566,369.96201 L1078.91566,370.497118 L1078.91566,371.030912 L1078.91566,371.563391 L1078.91566,372.094556 L1078.91566,372.62309 L1078.91566,373.15031 L1078.91566,373.676216 L1078.91566,374.199491 L1078.91566,374.721452 L1078.91566,375.242099 L1078.91566,375.76143 L1078.91566,376.279447 L1078.91566,376.794834 L1078.91566,377.308906 L1078.91566,377.820349 L1078.91566,378.330477 L1078.91566,378.840605 L1078.91566,379.346789 L1078.91566,379.852973 L1078.91566,380.356527 L1078.91566,380.858767 L1078.91566,381.359692 L1078.91566,381.859302 L1078.91566,382.356282 L1078.91566,382.851948 L1078.91566,383.344984 L1078.91566,383.83802 L1078.91566,384.328427 L1078.91566,384.817519 L1078.91566,385.305296 L1078.91566,385.790443 L1078.91566,386.274276 L1078.91566,386.756794 L1078.91566,387.236683 L1078.91566,387.716571 L1078.91566,388.19383 L1078.91566,388.669775 L1078.91566,389.143089 L1078.91566,389.615089 L1078.91566,390.085775 L1078.91566,390.555145 L1078.91566,391.021886 L1078.91566,391.488627 L1078.91566,391.951423 L1078.91566,392.41422 L1078.91566,392.874387 L1078.91566,393.334554 L1078.91566,393.790777 L1078.91566,394.247 L1078.91566,394.700593 L1078.91566,395.152872 L1078.91566,395.603835 L1078.91566,396.053484 L1078.91566,396.500504 L1078.91566,396.946209 L1078.91566,397.390599 L1078.91566,397.832359 L1078.91566,398.272805 L1078.91566,398.711935 L1078.91566,399.149752 L1078.91566,399.584938 L1078.91566,400.01881 L1078.91566,400.451367 L1078.91566,400.882609 L1078.91566,401.311222 L1078.91566,401.73852 L1078.91566,402.164504 L1078.91566,402.589172 L1078.91566,403.011211 L1078.91566,403.431935 L1078.91566,403.851345 L1078.91566,404.268125 L1078.91566,404.68359 L1078.91566,405.09774 L1078.91566,405.510576 L1078.91566,405.920782 L1078.91566,406.330988 L1078.91566,406.73725 L1078.91566,407.143512 L1078.91566,407.547144 L1078.91566,407.949461 L1078.91566,408.350464 L1078.91566,408.750152 L1078.91566,409.147211 L1078.91566,409.542954 L1078.91566,409.937383 L1078.91566,410.329183 L1078.91566,410.720982 L1078.91566,411.110152 L1078.91566,411.496692 L1078.91566,411.883233 L1078.91566,412.267143 L1078.91566,412.64974 L1078.91566,413.029706 L1078.91566,413.409673 L1078.91566,413.78701 L1078.91566,414.163032 L1078.91566,414.536425 L1078.91566,414.909817 L1078.91566,415.280581 L1078.91566,415.648714 L1078.91566,416.016848 L1078.91566,416.382352 L1078.91566,416.746542 L1078.91566,417.109416 L1078.91566,417.469661 L1078.91566,417.828592 L1078.91566,418.186207 L1078.91566,418.542508 L1078.91566,418.896179 L1078.91566,419.248536 L1078.91566,419.599578 L1078.91566,419.949305 L1078.91566,420.296402 L1078.91566,420.642185 L1078.91566,420.986653 L1078.91566,421.329806 L1078.91566,421.670329 L1078.91566,422.009538 L1078.91566,422.347432 L1078.91566,422.682697 L1078.91566,423.016647 L1078.91566,423.349282 L1078.91566,423.680602 L1078.91566,424.009293 L1078.91566,424.336669 L1078.91566,424.66273 L1078.91566,424.987477 L1078.91566,425.309594 L1078.91566,425.630396 L1078.91566,425.949884 L1078.91566,426.268056 L1078.91566,426.583599 L1078.91566,426.897828 L1078.91566,427.210741 L1078.91566,427.521025 L1078.91566,427.829995 L1078.91566,428.137649 L1078.91566,428.443989 L1078.91566,428.747699 L1078.91566,429.050095 L1078.91566,429.351176 L1078.91566,429.650942 L1078.91566,429.948078 L1078.91566,430.2439 L1078.91566,430.538407 L1078.91566,430.831599 L1078.91566,431.122162 L1078.91566,431.41141 L1078.91566,431.699343 L1078.91566,431.984646 L1078.91566,432.268635 L1078.91566,432.551309 L1078.91566,432.832669 L1078.91566,433.112713 L1078.91566,433.390128 L1078.91566,433.666228 L1078.91566,433.939699 L1078.91566,434.21317 L1078.91566,434.484011 L1078.91566,434.753537 L1078.91566,435.020434 L1078.91566,435.286017 L1078.91566,435.550284 L1078.91566,435.813237 L1078.91566,436.074874 L1078.91566,436.333883 L1078.91566,436.591576 L1078.91566,436.847955 L1078.91566,437.101704 L1078.91566,437.354139 L1078.91566,437.605259 L1078.91566,437.855064 L1078.91566,438.102239 L1078.91566,438.3481 L1078.91566,438.592646 L1078.91566,438.835877 L1078.91566,439.076479 L1078.91566,439.315766 L1078.91566,439.553738 L1078.91566,439.78908 L1078.91566,440.024423 L1078.91566,440.257136 L1078.91566,440.48722 L1078.91566,440.717303 L1078.91566,440.944757 L1078.91566,441.072289 Z" id="Path" fill="#0093C9" opacity="0.88"></path>
+                            </g>
+                            <rect id="Location" fill="#BCD8E0" fill-rule="evenodd" x="408" y="330" width="216" height="12" rx="6"></rect>
+                            <circle id="Oval" fill="#B572D2" fill-rule="nonzero" cx="348" cy="336" r="21"></circle>
+                            <g id="Worklog-Card" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(222.000000, 231.000000)">
+                                <g id="Card">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-16)" xlink:href="#path-15"></use>
+                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-15"></use>
+                                </g>
+                                <rect id="Duration" fill="#A7C7D1" x="195" y="105.3" width="93.6" height="7.8" rx="3.9"></rect>
+                            </g>
+                            <g id="Worklog-Card" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(447.000000, 342.000000)">
+                                <g id="Card">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-18)" xlink:href="#path-17"></use>
+                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-17"></use>
+                                </g>
+                                <rect id="Duration" fill="#A7C7D1" x="232.5" y="125.55" width="111.6" height="9.3" rx="4.65"></rect>
+                                <g id="Worklog-Icon" transform="translate(27.900000, 111.600000)">
+                                    <rect id="Rectangle" fill="#00B47E" x="0" y="0" width="37.2" height="37.2" rx="4.65"></rect>
+                                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="4.65" stroke-linecap="round" stroke-linejoin="round" points="9.3 20.925 13.95 25.575 27.9 11.625"></polyline>
+                                </g>
+                                <rect id="Description" fill="#DDE8F1" x="27.9" y="83.7" width="279" height="9.3" rx="4.65"></rect>
+                                <rect id="Summary" fill="#A7C7D1" x="27.9" y="55.8" width="279" height="9.3" rx="4.65"></rect>
+                                <rect id="Summary" fill="#A7C7D1" x="27.9" y="27.9" width="316.2" height="9.3" rx="4.65"></rect>
+                            </g>
+                            <rect id="Location" fill="#BCD8E0" fill-rule="evenodd" x="753" y="330" width="216" height="12" rx="6"></rect>
+                            <circle id="Oval" fill="#00B2F5" fill-rule="evenodd" cx="693" cy="336" r="21"></circle>
+                            <g id="Worklog-Card" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(918.000000, 354.000000)">
+                                <g id="Card">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-20)" xlink:href="#path-19"></use>
+                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-19"></use>
+                                </g>
+                                <g id="Worklog-Icon" transform="translate(18.000000, 72.000000)">
+                                    <rect id="Rectangle" fill="#00B47E" x="0" y="0" width="24" height="24" rx="3"></rect>
+                                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="6 13.5 9 16.5 18 7.5"></polyline>
+                                </g>
+                                <rect id="Description" fill="#DDE8F1" x="18" y="54" width="180" height="6" rx="3"></rect>
+                                <rect id="Summary" fill="#A7C7D1" x="18" y="36" width="180" height="6" rx="3"></rect>
+                                <rect id="Summary" fill="#A7C7D1" x="18" y="18" width="204" height="6" rx="3"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-5" transform="translate(198.551299, 197.551299) rotate(-45.000000) translate(-198.551299, -197.551299) translate(182.551299, 115.551299)">
+                    <rect id="Rectangle" fill="#A7C7D1" x="8" y="0" width="16" height="56"></rect>
+                    <rect id="Rectangle" fill="#6F99A3" x="0" y="28" width="32" height="136" rx="16"></rect>
+                </g>
+                <g id="Oval">
+                    <use fill-opacity="0.32" fill="#00D8F6" fill-rule="evenodd" xlink:href="#path-21"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-22)" xlink:href="#path-21"></use>
+                    <circle stroke="#A7C7D1" stroke-width="8" stroke-linejoin="square" cx="84" cy="84" r="80"></circle>
+                </g>
+                <path d="M84,16 C99.8296543,16 114.39599,21.4089097 125.951633,30.4793549 C118.702191,28.217982 110.993333,27 103,27 C60.4740743,27 26,61.4740743 26,104 C26,110.617782 26.834853,117.040574 28.4049852,123.168802 C20.5909064,112.095006 16,98.583635 16,84 C16,46.444637 46.444637,16 84,16 Z" id="Combined-Shape" fill-opacity="0.58" fill="#FFFFFF"></path>
+            </g>
+            <g id="Worklog-Card" transform="translate(281.000000, 64.000000)">
+                <g id="Card">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-24)" xlink:href="#path-23"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-23"></use>
+                </g>
+                <rect id="Duration" fill="#A7C7D1" x="95" y="51.3" width="45.6" height="3.8" rx="1.9"></rect>
+                <g id="Worklog-Icon" transform="translate(11.400000, 45.600000)">
+                    <rect id="Rectangle" fill="#00B47E" x="0" y="0" width="15.2" height="15.2" rx="1.9"></rect>
+                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" points="3.8 8.55 5.7 10.45 11.4 4.75"></polyline>
+                </g>
+                <rect id="Description" fill="#DDE8F1" x="11.4" y="34.2" width="114" height="3.8" rx="1.9"></rect>
+                <rect id="Summary" fill="#A7C7D1" x="11.4" y="22.8" width="114" height="3.8" rx="1.9"></rect>
+                <rect id="Summary" fill="#A7C7D1" x="11.4" y="11.4" width="129.2" height="3.8" rx="1.9"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

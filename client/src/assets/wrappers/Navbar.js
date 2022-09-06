@@ -8,8 +8,8 @@ const Wrapper = styled.nav`
   box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.1);
   .logo {
     display: flex;
-    align-items: center;
-    width: 100px;
+    align-items: left;
+    width: 250px;    
   }
   .nav-center {
     display: flex;
@@ -75,6 +75,7 @@ const Wrapper = styled.nav`
     }
     .logo {
       display: none;
+      width: 250px;
     }
     .logo-text {
       display: block;

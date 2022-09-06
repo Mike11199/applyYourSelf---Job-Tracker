@@ -16,28 +16,28 @@ import connectDB from './db/connect.js'
 
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
-import rateLimiter from 'express-rate-limit'
+// import rateLimiter from 'express-rate-limit'
 
-const apiLimiter = rateLimiter({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 1000,                // more than in authRoutes for fetch requests when filtering
-    message: 'Too many requests from this IP, please try again after 15 minutes',
-  })
+// const apiLimiter = rateLimiter({
+//     windowMs: 15 * 60 * 1000, // 15 minutes
+//     max: 1000,                // more than in authRoutes for fetch requests when filtering
+//     message: 'Too many requests from this IP, please try again after 15 minutes',
+//   })
 
-app.use(limiter)
+// app.use(apiLimiter)
 
-import helmet from 'helmet'
-import xss from 'xss-clean'
-import mongoSanitize from 'express-mongo-sanitize'
+// import helmet from 'helmet'
+// import xss from 'xss-clean'
+// import mongoSanitize from 'express-mongo-sanitize'
 
-//these three imports for deploying to production
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
-import path from 'path'
+// //these three imports for deploying to production
+// import { dirname } from 'path'
+// import { fileURLToPath } from 'url'
+// import path from 'path'
 
-// only when ready to deploy
-const __dirname = dirname(fileURLToPath(import.meta.url))
-app.use(express.static(path.resolve(__dirname, './client/build')))
+// // only when ready to deploy
+// const __dirname = dirname(fileURLToPath(import.meta.url))
+// app.use(express.static(path.resolve(__dirname, './client/build')))
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 
@@ -66,9 +66,9 @@ if(process.env.NODE_ENV !== 'production'){
 app.use(express.json()) 
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
-app.use(helmet())
-app.use(xss())
-app.use(mongoSanitize())
+// app.use(helmet())
+// app.use(xss())
+// app.use(mongoSanitize())
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 
 app.get('/', (req,res) => {    
@@ -87,9 +87,9 @@ app.use('/api/v1/jobs', authenticateUser, jobsRouter)
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 
 //directs EVERY get route to the index.html after the auth and jobs route.  needs to be after app.use for other two so we try those first
-app.get('*', (req, res) => {
-res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
-})
+// app.get('*', (req, res) => {
+// res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
+// })
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 
