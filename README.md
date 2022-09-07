@@ -1,21 +1,41 @@
 # applyYourSelf-Job-Tracker
 
+
 </br>
-https://applyyourself-tracker-prod.herokuapp.com/landing
+Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
 </br>
 </br>
-Full stack MERN Project I created following a Udemy tutorial. Credit MERN Stack Course 2022 - MongoDB, Express, React and NodeJS
-by John Smilga.  After completing this project and gaining a high-level view of the code design, I intend to add different pages, functionality, custom CSS, and other tweaks to make this project my own.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.
 
 
+<h2>Description</h2>
+
+-Full stack MERN project not affiliated with any university course.  Development is ongoing to further my learning of JavaScript and a full stack application.  I intend to add different pages, functionality, custom CSS, and other tweaks in the future.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.  This project was first developed by following the Udemy course: MERN Stack Course 2022 - MongoDB, Express, React and NodeJS by John Smilga.  
+</br>
 
 <h2>Screenshots/ GIFs</h2>
 
 <img src="https://user-images.githubusercontent.com/91037796/188551643-a6ac0bb7-d116-487d-acbb-8e869ca30f2a.gif" width=100% height=100%>
 
 </br>
+
+<h2>To-Do</h2>
+
+-<s>Replace logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.</s>
+<br>
+-Add password verification link so that only the actual owner of the entered email address can register.
+<br>
+-Add password reset functionality.
+<br>
+-Add CAPTCHA for registration.
+<br>
+-Add more job fields (this will impact database/server/front-end).
+<br>
+-Add calendar functionality for interviews, possibly with a google calendar API.
+
+
 </br>
-Packages Installed:
+</br>
+<h2>Packages Installed</h2>
 </br></br>
 <table>
     <tr>
@@ -2144,8 +2164,20 @@ package.json - server
   }
 ```
 
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188554548-d773fc59-9048-4902-b1a7-accd9420387c.png" width=80% height=80%>
+</br>
 
 
+<h2>Extra Features - Change Jobs Display View</h2>
+
 </br>
-<img src="" width=80% height=80%>
+- Added button and front-end capability to change the jobs display view.
 </br>
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188710336-3118166d-a54e-4a54-85cb-2af523398983.gif" width=80% height=80%>
+</br>
+
+
+
