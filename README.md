@@ -34,7 +34,6 @@ Password:   &emsp; password
 </br>
 -Error handler, alert, authentication middleware.  
 </br>
-</br>
 -Protected routes with bearer tokens that are persisted in local storage.
 </br>
 -Multiple APIs set up on the server, requests made to server by front-end with axios to ultimately query MongoDB data.
