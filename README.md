@@ -26,6 +26,23 @@ Password:   &emsp; password
 
 </br>
 
+<h2>Project Summary</h2>
+
+
+</br>
+-User registration and login with email and password (hashed in MongoDB with bcrypt.js).
+</br>
+-Error handler, alert, authentication middleware.  
+</br>
+</br>
+-Protected routes with bearer tokens that are persisted in local storage.
+</br>
+-Multiple APIs set up on the server, requests made to server by front-end with axios to ultimately query MongoDB data.
+</br>
+
+
+</br>
+
 <h2>To-Do</h2>
 
 -<s>Replace logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.</s>
