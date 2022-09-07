@@ -2181,7 +2181,7 @@ package.json - server
 </br>
 
 
-<h2>Extra Features - Change Jobs Display View</h2>
+<h2>Completed To-Dos (Extra Features Added)</h2>
 
 </br>
 - Added button and front-end capability to change the jobs display view.
