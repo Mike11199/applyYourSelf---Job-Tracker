@@ -40,4 +40,6 @@ export const CLEAR_FILTERS = 'CLEAR_FILTERS'
 
 export const CHANGE_PAGE = 'CHANGE_PAGE'
 
+export const CHANGE_JOBS_VIEW = 'CHANGE_JOBS_VIEW'
+
 

@@ -33,6 +33,7 @@ import {
   SHOW_STATS_SUCCESS,
   CLEAR_FILTERS,
   CHANGE_PAGE,
+  CHANGE_JOBS_VIEW,
 } from "./actions"
 import { get } from 'mongoose'
 
@@ -71,9 +72,13 @@ export const initialState = {
   searchStatus:'all',
   searchType:'all',
   sort:'latest',
-  sortOptions:['latest', 'oldest', 'a-z', 'z-a']
+  sortOptions:['latest', 'oldest', 'a-z', 'z-a'],
+
+  jobsCardsView: true,
 
 }
+
+
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
@@ -263,7 +268,7 @@ const getJobs = async () => {
       payload: {
         jobs,
         totalJobs,
-        numOfPages
+        numOfPages,         
       },
     }) 
   } catch (error) {
@@ -345,6 +350,11 @@ const changePage = (page) => {
 }
 
 
+const changeJobView = () =>{
+  dispatch({type: CHANGE_JOBS_VIEW})
+}
+
+
   return (
     <AppContext.Provider value={{
       ...state,
@@ -364,6 +374,7 @@ const changePage = (page) => {
       showStats,
       clearFilters,
       changePage,
+      changeJobView,
     }}>
       {children}
     </AppContext.Provider>

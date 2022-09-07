@@ -16,10 +16,10 @@ const Landing = () => {
                 job <span>tracking</span> app
             </h1>
             <p>
-            "When things may start to seem overwhelming, it pays to be organized."
+            When things may start to seem overwhelming, it pays to be organized.
             </p>
             <p>
-            "Track all of your job applications in one place with this simple web application."
+            Track all of your job applications in one place with this simple web application.
             </p>
             <Link to='/register' className='btn btn-hero'>
                 Login/Register

@@ -28,6 +28,7 @@ import {
     SHOW_STATS_SUCCESS,
     CLEAR_FILTERS,
     CHANGE_PAGE,
+    CHANGE_JOBS_VIEW,
 } from "./actions"
 
 import { initialState } from "./appContext"
@@ -277,10 +278,14 @@ const reducer = (state, action) => {    //hook that takes current state as first
       if (action.type === CHANGE_PAGE) {
         return {
             ...state,
-            page: action.payload.page
+            page: action.payload.page,
         }
-
-
+     }
+       if (action.type === CHANGE_JOBS_VIEW) {
+        return {
+            ...state,   
+            jobsCardsView: !state.jobsCardsView,         
+            }
       }
 
 

@@ -7,14 +7,21 @@ const Wrapper = styled.article`
   grid-template-rows: 1fr auto;
   box-shadow: var(--shadow-2);
 
+  h6 {
+    font-size: 20px;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    margin: 0px;
+    }
+
   header {
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--grey-100);
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr ;
     align-items: center;
     h5 {
       letter-spacing: 0;
+      
     }
   }
   .main-icon {
@@ -35,7 +42,8 @@ const Wrapper = styled.article`
   }
   .info {
     h5 {
-      margin-bottom: 0.25rem;
+      margin-bottom: 0rem;
+      border-width: 0px;
     }
     p {
       margin: 0;
@@ -57,10 +65,13 @@ const Wrapper = styled.article`
     background: #ffeeee;
   }
   .content {
-    padding: 1rem 1.5rem;
+    padding: 0rem 1.5rem;
+    border-bottom: 1px solid black;
+
   }
   .content-center {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr;
     row-gap: 0.5rem;
     @media (min-width: 576px) {
@@ -70,8 +81,9 @@ const Wrapper = styled.article`
       grid-template-columns: 1fr;
     }
     @media (min-width: 1120px) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 2fr 1fr 2fr 1fr 1fr 1fr 1fr;
     }
+
   }
 
   .status {
@@ -84,6 +96,7 @@ const Wrapper = styled.article`
   }
   footer {
     margin-top: 1rem;
+
   }
   .edit-btn,
   .delete-btn {
@@ -94,7 +107,7 @@ const Wrapper = styled.article`
   .edit-btn {
     color: var(--green-dark);
     background: var(--green-light);
-    margin-right: 0.5rem;
+    margin-right: 0rem;
   }
   .delete-btn {
     color: var(--red-dark);
