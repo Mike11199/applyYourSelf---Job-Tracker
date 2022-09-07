@@ -30,6 +30,10 @@ Password:   &emsp; password
 
 -<s>Replace logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.</s>
 <br>
+-<s>Change color scheme from tutorial.</s>
+<br>
+-<s>Add a 'list view' functionality on the "All Jobs" page to display a compact list, as opposed to job cards.</s>
+<br>
 -Add password verification link so that only the actual owner of the entered email address can register.
 <br>
 -Add password reset functionality.
