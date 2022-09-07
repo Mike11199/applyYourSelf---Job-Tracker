@@ -5,6 +5,14 @@
 Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
 </br>
 </br>
+</br>
+<strong>Login with Prepoulated Sample Jobs:  </strong>
+</br>
+</br>
+Email:   &emsp; &emsp; &nbsp;  test@gmail.com
+</br>
+Password:   &emsp; password
+</br>
 
 
 <h2>Description</h2>
