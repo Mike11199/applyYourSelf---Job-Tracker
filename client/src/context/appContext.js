@@ -47,7 +47,7 @@ export const initialState = {
   alertText: '',
   alertType: '',
   user:user ? JSON.parse(user) : null,         //ternary operator:  fancy single-line if/else statement
-  token:null,
+  token: token,
   userLocation: userLocation || '',
   showSidebar: false,
  
