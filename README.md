@@ -13,14 +13,18 @@ Email:   &emsp; &emsp; &nbsp;  test@gmail.com
 </br>
 Password:   &emsp; password
 </br>
-
+</br>
 
 <h2>Description</h2>
+</br>
 
--Full stack MERN project not affiliated with any university course.  Development is ongoing to further my learning of JavaScript and a full stack application.  I intend to add different pages, functionality, custom CSS, and other tweaks in the future.  I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.  This project was first developed by following the Udemy course: MERN Stack Course 2022 - MongoDB, Express, React and NodeJS by John Smilga.  
+-Full stack MERN project not affiliated with any university course.  Development is ongoing to further my learning of JavaScript and a full stack application.  I intend to add different pages, functionality, custom CSS, and other tweaks in the future.  
+</br></br>
+-I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.  This project was first developed by following the Udemy course: MERN Stack Course 2022 - MongoDB, Express, React and NodeJS by John Smilga.  
 </br>
 
 <h2>Screenshots/ GIFs</h2>
+</br>
 
 <img src="https://user-images.githubusercontent.com/91037796/188551643-a6ac0bb7-d116-487d-acbb-8e869ca30f2a.gif" width=100% height=100%>
 
@@ -42,7 +46,8 @@ Password:   &emsp; password
 
 </br>
 
-<h2>To-Do</h2>
+<h2>To-Dos</h2>
+</br>
 
 -<s>Replace logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.</s>
 <br>
