@@ -30,9 +30,6 @@ const Wrapper = styled.article`
     color: var(--white);
     margin-right: 2rem;
   }
-  .main-icon_list {
-    display: none;
-  }
   .info {
     h5 {
       margin-bottom: 0.25rem;

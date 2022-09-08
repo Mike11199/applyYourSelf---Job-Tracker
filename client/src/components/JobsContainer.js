@@ -12,6 +12,7 @@ const JobsContainer = () => {
 const { getJobs, jobs, isLoading, page, totalJobs, search, searchStatus, searchType, sort, numOfPages, changeJobView, jobsCardsView } = useAppContext()
   useEffect(() => {
     getJobs()
+    
     // eslint-disable-next-line
   }, [search, searchStatus, searchType, sort, jobsCardsView, page])
 

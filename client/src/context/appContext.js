@@ -36,6 +36,7 @@ import {
   CHANGE_JOBS_VIEW,
 } from "./actions"
 import { get } from 'mongoose'
+import { IoCompassSharp } from 'react-icons/io5'
 
 const token = localStorage.getItem('token')
 const user = localStorage.getItem('user')
@@ -250,9 +251,16 @@ const createJob = async () => {
 
 const getJobs = async () => {
   
-  const { page, search, searchStatus, searchType, sort } = state
+  const { page, search, searchStatus, searchType, sort, jobsCardsView } = state
+
+
 
   let url = `/jobs?page=${page}&status=${searchStatus}&jobType=${searchType}&sort=${sort}`
+
+  if (jobsCardsView) {
+    url = url + `&limit=${15}`
+  }
+
 
   if (search) {
     url = url + `&search=${search}`

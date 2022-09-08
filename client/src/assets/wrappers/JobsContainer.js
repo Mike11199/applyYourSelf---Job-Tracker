@@ -7,12 +7,6 @@ const Wrapper = styled.section`
   }
   & > h5 {
     font-weight: 700;
-    
-  }
-  .jobs-card {
-    display: block;
-    grid-template-columns: 1fr;
-    /* row-gap: 2rem; */
   }
   .jobs {
     display: grid;
@@ -23,7 +17,7 @@ const Wrapper = styled.section`
     .jobs {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      /* gap: 1rem; */
+      gap: 1rem;
     }
   }
 `
