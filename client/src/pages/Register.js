@@ -6,6 +6,7 @@ import { useAppContext } from '../context/appContext'
 import { useNavigate } from 'react-router-dom'
 
 
+
 // create the object here
 const initialState = {
     name:'',
@@ -66,6 +67,7 @@ useEffect(()=>{
 return (
 
     <Wrapper className='full-page'>
+       
         <form className='form' onSubmit={onSubmit}>
             <Logo />
             {/*? is the conditional (ternary) operator */}

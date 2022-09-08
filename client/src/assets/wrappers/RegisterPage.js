@@ -1,4 +1,11 @@
-import styled from 'styled-components'
+
+
+import styled, { keyframes } from 'styled-components'
+import { fadeIn } from 'react-animations'
+
+const fadeInAnimation = keyframes`${fadeIn}`;
+
+
 
 const Wrapper = styled.section`
   display: grid;
@@ -12,7 +19,10 @@ const Wrapper = styled.section`
   .form {
     max-width: 400px;
     border-top: 5px solid var(--primary-500);
+    animation-iteration-count: 2;
+    animation: 2s, 2s ${fadeInAnimation};
   }
+
 
   h3 {
     text-align: center;

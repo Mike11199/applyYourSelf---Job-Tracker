@@ -1,6 +1,16 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { slideInLeft } from 'react-animations'
+
+const slideInLeftAnimation = keyframes`${slideInLeft}`;
+
 
 const Wrapper = styled.main`
+
+  .btn-hero {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.25rem;
+    animation: 1s, 1s ${slideInLeftAnimation};
+  }
 
   .logo {
       padding-top: 100px;
@@ -8,6 +18,7 @@ const Wrapper = styled.main`
       display: flex;
       align-items: left;
       width: 400px;    
+      
     }
   nav {
     width: var(--fluid-width);
@@ -22,6 +33,7 @@ const Wrapper = styled.main`
     display: grid;
     align-items: center;
     margin-top: -3rem;
+    
   }
   h1 {
     padding-top: 00px;

@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.2.1",
     "concurrently": "^7.3.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
@@ -42,10 +43,12 @@
     "mongoose": "^6.3.6",
     "morgan": "^1.10.0",
     "package": "^1.0.1",
+    "react-animations": "^1.0.0",
+    "react-bootstrap": "^2.5.0",
     "validator": "^13.7.0",
     "xss-clean": "^0.1.1"
   },
   "engines": {
-    "node":"17.x"
+    "node": "17.x"
   }
 }

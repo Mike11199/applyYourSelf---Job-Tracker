@@ -3,6 +3,7 @@ import Wrapper from '../assets/wrappers/LandingPage'
 import { Logo } from '../components'
 import { Link } from 'react-router-dom'
 
+
 const Landing = () => {
   return (
   <Wrapper>
@@ -16,7 +17,7 @@ const Landing = () => {
                 job <span>tracking</span> app
             </h1>
             <p>
-            When things may start to seem overwhelming, it pays to be organized.
+            During your job search, it pays to be organized.
             </p>
             <p>
             Track all of your job applications in one place with this simple web application.
@@ -24,8 +25,12 @@ const Landing = () => {
             <Link to='/register' className='btn btn-hero'>
                 Login/Register
             </Link>
+          
         </div>
+      
         <img src={main} alt="job hunt" className='img main-img' />
+        
+
     </div>
   </Wrapper>
   )
