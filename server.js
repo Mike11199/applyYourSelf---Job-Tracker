@@ -87,9 +87,9 @@ app.use('/api/v1/jobs', authenticateUser, jobsRouter)
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 
 //directs EVERY get route to the index.html after the auth and jobs route.  needs to be after app.use for other two so we try those first
-// app.get('*', (req, res) => {
-// res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
-// })
+app.get('*', (req, res) => {
+res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
+})
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 

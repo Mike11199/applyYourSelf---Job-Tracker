@@ -49,6 +49,35 @@ const Wrapper = styled.article`
     background: #e0e8f9;
     color: #647acb;
   }
+  .coding_assessment {
+    background: #FBCEB1;
+    color: #F28C28;
+  }
+  .accepted {
+    background: #e0e8f9;
+    color: #647acb;
+  }
+  .phone_interview {
+    background: #e0e8f9;
+    color: #647acb;
+  }
+  .behavioral_interview {
+    background: #e0e8f9;
+    color: #647acb;
+  }
+  .rejected {
+    color: #d66a6a;
+    background: #ffeeee;
+  }
+  .no_response {
+    background: #e0e8f9;
+    color: #647acb;
+  }
+
+
+
+
+
   .declined {
     color: #d66a6a;
     background: #ffeeee;
@@ -76,7 +105,7 @@ const Wrapper = styled.article`
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
     text-align: center;
-    width: 100px;
+    width: 180px;
     height: 30px;
   }
   footer {

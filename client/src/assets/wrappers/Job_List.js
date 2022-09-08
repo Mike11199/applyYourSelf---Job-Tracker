@@ -64,24 +64,69 @@ const Wrapper = styled.article`
     color: #d66a6a;
     background: #ffeeee;
   }
+  .coding_assessment {
+    background: #FBCEB1;
+    color: #F28C28;
+  }
+  .accepted {
+    background: #e0e8f9;
+    color: #647acb;
+  }
+  .phone_interview {
+    background: #e0e8f9;
+    color: #647acb;
+  }
+  .behavioral_interview {
+    background: #e0e8f9;
+    color: #647acb;
+  }
+  .rejected {
+    color: #d66a6a;
+    background: #ffeeee;
+  }
+  .no_response {
+    background: #e0e8f9;
+    color: #647acb;
+  }
+
+
+
+
+
+
+
+
+
+
   .content {
     padding: 0rem 1.5rem;
     border-bottom: 1px solid black;
 
   }
+
+
+
+
+
+
+
+
+
+  
   .content-center {
     display: grid;
     align-items: center;
+    
     grid-template-columns: 1fr;
     row-gap: 0.5rem;
     @media (min-width: 576px) {
       grid-template-columns: 1fr 1fr;
     }
     @media (min-width: 992px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 2fr 2fr 2fr 2fr 1fr 2fr 1fr 1fr;
     }
     @media (min-width: 1120px) {
-      grid-template-columns: 2fr 2fr 1fr 2fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 2.2fr 2fr 2fr 2fr 1.5fr 2.5fr 1fr 1fr;
     }
 
   }
@@ -91,7 +136,7 @@ const Wrapper = styled.article`
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
     text-align: center;
-    width: 100px;
+    width: 180px;
     height: 30px;
   }
   footer {

@@ -59,7 +59,7 @@ export const initialState = {
   jobLocation: userLocation || '',
   jobTypeOptions: ['full-time', 'part-time','remote', 'internship'],
   jobType: 'full-time',
-  statusOptions:['interview', 'declined','pending'],
+  statusOptions:['interview', 'declined','pending','accepted','coding assessment', 'phone interview', 'behavioral interview', 'rejected', 'no response', 'hybrid'],
   status:'pending',
 
   jobs: [],

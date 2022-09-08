@@ -16,6 +16,11 @@ const Job = ({
 }) => {
   const { setEditJob, deleteJob, jobsCardsView } = useAppContext()
  
+  
+  let newStatus = status.replace(' ','_')  
+  
+
+
   let date = moment(createdAt)
   date = date.format('MMM Do, YYYY')
   return (
@@ -32,7 +37,7 @@ const Job = ({
           <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
           <JobInfo icon={<FaCalendarAlt />} text={date} />
           <JobInfo icon={<FaBriefcase />} text={jobType} />
-          <div className={`status ${status}`}>{status}</div>
+          <div className={`status ${newStatus}`}>{status}</div>
         </div>
         <footer>
           <div className='actions'>
