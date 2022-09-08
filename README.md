@@ -2139,8 +2139,3 @@ package.json - server
   }
 ```
 
-
-
-</br>
-<img src="" width=80% height=80%>
-</br>
