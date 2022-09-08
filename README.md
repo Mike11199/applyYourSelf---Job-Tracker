@@ -70,6 +70,23 @@ Password:   &emsp; password
 
 </br>
 </br>
+
+<h2>Completed To-Dos (Extra Features Added)</h2>
+
+</br>
+- Added button and front-end capability to change the jobs display view.
+</br>
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188710336-3118166d-a54e-4a54-85cb-2af523398983.gif" width=80% height=80%>
+</br>
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/188791849-0b3a3e04-d2ef-4e5d-8f92-54c3f3d28079.png" width=80% height=80%>
+</br>
+
+
 <h2>Packages Installed</h2>
 </br></br>
 <table>
@@ -2204,19 +2221,5 @@ package.json - server
 </br>
 
 
-<h2>Completed To-Dos (Extra Features Added)</h2>
-
-</br>
-- Added button and front-end capability to change the jobs display view.
-</br>
-
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/188710336-3118166d-a54e-4a54-85cb-2af523398983.gif" width=80% height=80%>
-</br>
-
-
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/188791849-0b3a3e04-d2ef-4e5d-8f92-54c3f3d28079.png" width=80% height=80%>
-</br>
 
 
