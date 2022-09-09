@@ -17,7 +17,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <h2>Screenshots/ GIFs</h2>
 </br>
 
-</br>
+
 -Mock data used for this demonstration.
 </br>
 </br>
