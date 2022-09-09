@@ -16,12 +16,15 @@ const AddJob = () => {
     jobType,
     jobTypeOptions,  //array
     status,
+    status_no_underscore,
     statusOptions,   //array
     handleChange,
     clearValues,
     createJob,
     editJob,
   } = useAppContext()
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -30,6 +33,8 @@ const AddJob = () => {
       displayAlert()
       return
     }
+    
+ 
     if(isEditing) {
       editJob()
       return
@@ -42,6 +47,25 @@ const AddJob = () => {
     const value = e.target.value
     handleChange({ name, value })
   }
+
+  const handleJobInput2 = (e) => {
+    const name = e.target.name
+    const value = e.target.value
+
+    const value2 = e.target.value.replace(' ', '_')
+
+    handleChange({ name: 'status_no_underscore', value })
+    handleChange({ name, value: value2 })
+
+  }
+
+
+
+  const statusOptionsRenamed =(statusOptions) => {    
+    const statusOptionsNew = statusOptions.map( item => item.replace('_', ' '))
+    return statusOptionsNew
+  }
+
 
   return (
     <Wrapper>
@@ -74,9 +98,9 @@ const AddJob = () => {
           {/* job status */}
           <FormRowSelect
             name='status'
-            value={status}
-            handleChange={handleJobInput}
-            list={statusOptions}
+            value={status_no_underscore}
+            handleChange={handleJobInput2}
+            list={statusOptionsRenamed(statusOptions)}
           />
           {/* job type */}
           <FormRowSelect

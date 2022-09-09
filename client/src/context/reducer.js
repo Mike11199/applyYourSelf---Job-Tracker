@@ -162,6 +162,7 @@ const reducer = (state, action) => {    //hook that takes current state as first
         jobLocation: state.userLocation,
         jobType: 'full-time',
         status:'pending',
+        status_no_underscore:'pending'
     }
 
         return { 

@@ -57,9 +57,9 @@ export const initialState = {
   position: '',
   company: '',
   jobLocation: userLocation || '',
-  jobTypeOptions: ['full-time', 'part-time','remote', 'internship'],
+  jobTypeOptions: ['full-time', 'part-time','remote', 'internship', 'hybrid'],
   jobType: 'full-time',
-  statusOptions:['interview', 'declined','pending','accepted','coding assessment', 'phone interview', 'behavioral interview', 'rejected', 'no response', 'hybrid'],
+  statusOptions:['technical_interview', 'declined','pending','accepted','coding_assessment', 'phone_interview', 'behavioral_interview', 'rejected/archived'],
   status:'pending',
 
   jobs: [],
@@ -76,6 +76,7 @@ export const initialState = {
   sortOptions:['latest', 'oldest', 'a-z', 'z-a'],
 
   jobsCardsView: true,
+  status_no_underscore:'pending',
 
 }
 

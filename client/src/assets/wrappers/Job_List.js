@@ -80,11 +80,15 @@ const Wrapper = styled.article`
     background: #e0e8f9;
     color: #647acb;
   }
-  .rejected {
+  .rejected_archived {
     color: #d66a6a;
     background: #ffeeee;
   }
   .no_response {
+    background: #e0e8f9;
+    color: #647acb;
+  }
+  .technical_interview {
     background: #e0e8f9;
     color: #647acb;
   }

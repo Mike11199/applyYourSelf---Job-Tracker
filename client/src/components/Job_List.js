@@ -16,8 +16,8 @@ const Job = ({
 }) => {
   const { setEditJob, deleteJob, jobsCardsView } = useAppContext()
  
-  let newStatus = status.replace(' ','_')  
-
+  let newStatus = status.replace('_',' ')  
+  let newStatusCSS = status.replace('/','_')  
 
   let date = moment(createdAt)
   date = date.format('MMM Do, YYYY')
@@ -35,7 +35,7 @@ const Job = ({
           <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
           <JobInfo icon={<FaCalendarAlt />} text={date} />
           <JobInfo icon={<FaBriefcase />} text={jobType} />
-          <div className={`status ${newStatus}`}>{status}</div>
+          <div className={`status ${newStatusCSS}`}>{newStatus}</div>
           <div className='actions'>
             <Link
               to='/add-job'

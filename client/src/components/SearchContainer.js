@@ -23,10 +23,20 @@ const SearchContainer = () => {
     handleChange({ name: e.target.name, value: e.target.value })
   }
 
+  const handleSearch2 = (e) => {
+    if (isLoading) return
+    handleChange({ name: e.target.name, value: e.target.value.replace(' ', '_') })
+  }
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
     clearFilters()
+  }
+
+  const statusOptionsRenamed =(statusOptions) => {    
+    const statusOptionsNew = statusOptions.map( item => item.replace('_', ' '))
+    return statusOptionsNew
   }
 
 
@@ -47,9 +57,9 @@ const SearchContainer = () => {
           <FormRowSelect
             labelText='status'
             name='searchStatus'
-            value={searchStatus}
-            handleChange={handleSearch}
-            list={['all', ...statusOptions]}
+            value={searchStatus.replace('_', ' ')}
+            handleChange={handleSearch2}
+            list={['all', ...statusOptionsRenamed(statusOptions)]}
           />
           {/* search by type */}
           <FormRowSelect

@@ -138,12 +138,22 @@ const showStats = async (req, res) => {
         return acc
     }, {} )
 
+    console.log(stats)
+
 
     const defaultStats = {
         pending: stats.pending || 0,
-        interview: stats.interview || 0,
-        declined: stats.declined || 0
+        technical_interview: stats.technical_interview || 0,
+        declined: stats.declined || 0,
+        phone_interview: stats.phone_interview || 0,
+        coding_assessment: stats.coding_assessment || 0,
+        behavioral_interview: stats.behavioral_interview || 0,
+        phone_interview: stats.phone_interview || 0,
+        accepted: stats.accepted || 0,
+        rejected_archived: stats['rejected/archived'] || 0,
     }
+
+    console.log(defaultStats)
 
     //PIPELINE 2:  Retrieve jobs and group by month and year
     let monthlyApplications = await Job.aggregate([
