@@ -4,8 +4,6 @@
 </br>
 Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
 </br>
-</br>
-</br>
 
 
 <h2>Description</h2>
@@ -20,8 +18,10 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 
 
-
-<img src="https://user-images.githubusercontent.com/91037796/189246342-5c7bde12-96b1-431a-90fe-45b27ecc3cf1.gif" width=100% height=100%>
+-Mock data used for this demonstration.
+</br>
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/189267509-1f62bfde-a879-44aa-af1b-999e84f757da.gif" width=100% height=100%>
 
 
 </br>
@@ -52,6 +52,8 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <br>
 -<s>Add animations.</s>
 <br>
+-<s>Add 5 more status codes.  Changed stats page, job model, appcontext, wrappers, stats functions.  Took 5+ hours.  Numerous difficulties wiith statuses that have spaces, versus no spaces allowed in MongoDB job model and CSS.  Caused issues with enumerated drop-downs.</s>
+<br>
 -Add password verification link so that only the actual owner of the entered email address can register.
 <br>
 -Add password reset functionality.
@@ -80,6 +82,22 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/188791849-0b3a3e04-d2ef-4e5d-8f92-54c3f3d28079.png" width=80% height=80%>
 </br>
+
+</br>
+- Added more job status codes for interview types, acceptions, rejections, etc. Edited Job, Job_List, and StatsContainer components, appcontext, reducer, addjob dashboard, jobcontroller, and job model.  Took 5 hours to resolve bugs that arose.
+</br>
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/189266719-8deed00c-915e-4cd0-8607-f9148ca1b4f0.png" width=80% height=80%>
+</br>
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/189267718-28348a9b-0062-4b8b-bdd4-ff60a90bb272.png" width=30% height=30%>
+</br>
+
+
 
 
 <h2>Packages Installed</h2>
