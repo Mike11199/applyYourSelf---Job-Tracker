@@ -98,6 +98,16 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 
 
+</br>
+- Working on adding google auth 2.0.  Added buttons and request, have to set up tokens and back end later.
+</br>
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/189303737-5593b02d-2b28-45f8-b7c6-f7c839c4621b.png" width=40% height=40%>
+</br>
+
+
 
 
 <h2>Packages Installed</h2>
