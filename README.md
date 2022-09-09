@@ -4,8 +4,6 @@
 </br>
 Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
 </br>
-</br>
-</br>
 
 
 <h2>Description</h2>
@@ -19,7 +17,10 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <h2>Screenshots/ GIFs</h2>
 </br>
 
-
+</br>
+-Mock data used for this demonstration.
+</br>
+</br>
 <img src="https://user-images.githubusercontent.com/91037796/189267509-1f62bfde-a879-44aa-af1b-999e84f757da.gif" width=100% height=100%>
 
 
