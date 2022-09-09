@@ -10,6 +10,7 @@ import JobsContainer from "./JobsContainer"
 import ChartsContainer from "./ChartsContainer"
 import StatsContainer from "./StatsContainer"
 import Loading from "./Loading"
+import MyCustomButton from "./MyCustomButton"
 
 
-export { Logo, FormRow, Alert, Navbar, BigSidebar, SmallSidebar, FormRowSelect, SearchContainer, JobsContainer, ChartsContainer, StatsContainer, Loading }
+export { Logo, FormRow, Alert, Navbar, BigSidebar, SmallSidebar, FormRowSelect, SearchContainer, JobsContainer, ChartsContainer, StatsContainer, Loading, MyCustomButton }

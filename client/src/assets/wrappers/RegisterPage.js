@@ -42,5 +42,6 @@ const Wrapper = styled.section`
     cursor: pointer;
     letter-spacing: var(--letterSpacing);
   }
+
 `
 export default Wrapper

@@ -1,9 +1,14 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import {Logo, FormRow, Alert} from '../components'
+import {Logo, FormRow, Alert, MyCustomButton} from '../components'
 import Wrapper from '../assets/wrappers/RegisterPage'
 import { useAppContext } from '../context/appContext'
 import { useNavigate } from 'react-router-dom'
+import { GoogleLoginButton, FacebookLoginButton  } from 'react-social-login-buttons'
+// import { GoogleLogin, GoogleLogout  } from 'react-google-login'
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google' //https://www.npmjs.com/package/@react-oauth/google
+
 
 
 
@@ -14,6 +19,11 @@ const initialState = {
     password:'',
     isMember: true,
 }
+
+const responseGoogle = (response) => {
+    console.log(response);
+  }
+
 
 
 const Register = () => {
@@ -107,6 +117,7 @@ return (
             Submit
         </button>
         <p>
+        <br></br>
         {values.isMember? 'Not a member yet?':'Already a member?'}
             <button type ="button" onClick={toggleMember}
             className="member-btn">
@@ -114,7 +125,32 @@ return (
             </button>
 
         </p>
+
+        <br></br>
+        {/* <GoogleLoginButton onClick={() => alert("Hello")} /> */}
+        <FacebookLoginButton onClick={() => console.log("Still in Development!")} style={{width:"100%", margin:"0px"}}/>
+        <br></br>
+        <GoogleOAuthProvider clientId="421793135719-tbnlgi65j46cc3oo2j74eot1ou5tg06n.apps.googleusercontent.com">
+
+        {/* <GoogleLogin
+            
+            buttonText="Login"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
+            className='googleButton'      
+        />
+        <br></br> */}
+        <MyCustomButton />
+            
+
+
+
+        </GoogleOAuthProvider>
+        
+
         </form>
+        
     </Wrapper>
     )
 }

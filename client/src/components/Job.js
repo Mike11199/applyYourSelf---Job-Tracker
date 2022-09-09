@@ -5,6 +5,7 @@ import { useAppContext } from '../context/appContext'
 import Wrapper from '../assets/wrappers/Job'
 import JobInfo from './JobInfo'
 
+
 const Job = ({
   _id,
   position,
@@ -58,6 +59,7 @@ const Job = ({
           </div>
         </footer>
       </div>
+      
     </Wrapper>
   )
 }

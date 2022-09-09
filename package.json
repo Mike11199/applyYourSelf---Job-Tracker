@@ -42,7 +42,6 @@
     "mongoose": "^6.3.6",
     "morgan": "^1.10.0",
     "package": "^1.0.1",
-    "react-animations": "^1.0.0",
     "validator": "^13.7.0",
     "xss-clean": "^0.1.1"
   },
