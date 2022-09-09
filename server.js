@@ -66,7 +66,15 @@ if(process.env.NODE_ENV !== 'production'){
 app.use(express.json()) 
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
-// app.use(helmet())
+// app.use(helmet({  //https://stackoverflow.com/questions/72675642/because-it-violates-the-following-content-security-policy-directive-script-src
+//     contentSecurityPolicy: {
+//       useDefaults: true, 
+//       directives: { 
+//         'script-src': ["'self'", "https://accounts.google.com/gsi/client"]  
+//       }
+//     }
+//   })
+//   );
 // app.use(xss())
 // app.use(mongoSanitize())
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/

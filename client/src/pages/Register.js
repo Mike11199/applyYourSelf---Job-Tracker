@@ -4,10 +4,9 @@ import {Logo, FormRow, Alert, MyCustomButton} from '../components'
 import Wrapper from '../assets/wrappers/RegisterPage'
 import { useAppContext } from '../context/appContext'
 import { useNavigate } from 'react-router-dom'
-import { GoogleLoginButton, FacebookLoginButton  } from 'react-social-login-buttons'
+import {  FacebookLoginButton  } from 'react-social-login-buttons'
 // import { GoogleLogin, GoogleLogout  } from 'react-google-login'
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import { GoogleLogin } from '@react-oauth/google' //https://www.npmjs.com/package/@react-oauth/google
 
 
 
