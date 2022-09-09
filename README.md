@@ -19,10 +19,12 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <h2>Screenshots/ GIFs</h2>
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/188551643-a6ac0bb7-d116-487d-acbb-8e869ca30f2a.gif" width=100% height=100%>
+
+
+<img src="https://user-images.githubusercontent.com/91037796/189246342-5c7bde12-96b1-431a-90fe-45b27ecc3cf1.gif" width=100% height=100%>
+
 
 </br>
-
 <h2>Project Summary</h2>
 
 
