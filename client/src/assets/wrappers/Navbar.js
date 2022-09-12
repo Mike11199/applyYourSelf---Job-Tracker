@@ -44,6 +44,7 @@ const Wrapper = styled.nav`
     display: flex;
     margin: 0px;
     padding: 0px;
+
     align-items: center;
     justify-content: center;
   }
@@ -233,7 +234,7 @@ const Wrapper = styled.nav`
     display: flex;    
     margin-right: auto;
     margin-left: auto;
-    padding-right: 160px;
+    padding-left: 320px;
     align-items: center;
     justify-content: center;
 
