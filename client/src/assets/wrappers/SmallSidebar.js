@@ -74,7 +74,7 @@ const Wrapper = styled.aside`
   }
 
   .logo{
-    width: 350px;
+    width: 250px;
   }
 
 `

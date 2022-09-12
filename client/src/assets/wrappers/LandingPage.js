@@ -27,7 +27,7 @@ const Wrapper = styled.main`
     width: var(--fluid-width);
     max-width: var(--max-width);
     margin-left: auto;
-    padding-left:40px;
+    
     height: var(--nav-height);
     display: flex;
     align-items: center;
@@ -62,6 +62,7 @@ const Wrapper = styled.main`
     width: var(--fluid-width);
     max-width: var(--max-width);
     margin-left: auto;
+    padding-left:40px;
     margin-right: 37%;
     height: var(--nav-height);
     display: flex;
