@@ -18,14 +18,16 @@ const Wrapper = styled.main`
   .logo {
       padding-top: 100px;      
       display: flex;
-      align-items: left;
-      width: 400px;    
-      
+      align-items: center;
+      align-self: center;
+      width: 300px;    
+
     }
   nav {
     width: var(--fluid-width);
     max-width: var(--max-width);
-    margin: 0 auto;
+    margin-left: auto;
+    padding-left:40px;
     height: var(--nav-height);
     display: flex;
     align-items: center;
@@ -55,6 +57,17 @@ const Wrapper = styled.main`
   }
 
   @media (min-width: 992px) {
+   
+    nav {
+    width: var(--fluid-width);
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: 37%;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+   
     .page {
       grid-template-columns: 1fr 1fr;
       column-gap: 3rem;
@@ -66,7 +79,7 @@ const Wrapper = styled.main`
     .logo {
        
       display: flex;
-      align-items: left;
+
       width: 400px;    
 
     }
