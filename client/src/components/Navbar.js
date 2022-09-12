@@ -6,18 +6,18 @@ import { useState } from "react"
 
 const Navbar = () => {
   const [showLogout, setShowLogout] = useState(false)              //square brackets is computed property name
-  const {toggleSidebar, logoutUser, user} = useAppContext()                         
+  const {toggleSidebar, logoutUser, user, showSidebar} = useAppContext()                         
   return (
     <Wrapper>
       <div className='nav-center'>
         <button type='button' className='toggle-btn' onClick={toggleSidebar}>
           <FaAlignLeft />
         </button>
-        <div>
+        <div className ='logo-container'>
           <Logo />
           <h3 className='logo-text'>dashboard</h3>
         </div>
-        <div className='btn-container'>
+        <div className={showSidebar ?'btn-container-toggle':'btn-container'  }>
           <button
             type='button'
             className='btn'

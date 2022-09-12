@@ -10,11 +10,13 @@ const Wrapper = styled.main`
     font-size: 1.25rem;
     padding: 0.5rem 1.25rem;
     animation: 1s, 1s ${slideInLeftAnimation};
-  }
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    }
 
   .logo {
-      padding-top: 100px;
-      
+      padding-top: 100px;      
       display: flex;
       align-items: left;
       width: 400px;    
@@ -36,7 +38,7 @@ const Wrapper = styled.main`
     
   }
   h1 {
-    padding-top: 00px;
+    padding-top: 150px;   
     font-weight: 200;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
     span {
@@ -47,8 +49,11 @@ const Wrapper = styled.main`
     color: var(--grey-600);
   }
   .main-img {
-    display: none;
+    padding-top: 40px;
+    margin-top: 10px;
+    display: block;
   }
+
   @media (min-width: 992px) {
     .page {
       grid-template-columns: 1fr 1fr;
@@ -58,6 +63,34 @@ const Wrapper = styled.main`
       display: block;
       padding-top: 300px;
     }
+    .logo {
+       
+      display: flex;
+      align-items: left;
+      width: 400px;    
+
+    }
+
+    .btn-hero {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.25rem;
+    animation: 1s, 1s ${slideInLeftAnimation};
+    align-self: center;
+    justify-content: left;
+    width: 200px;
+    display: block;
+    }
+
+    h1 {
+    padding-top: 20px;
+    font-weight: 200;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    span {
+      color: var(--primary-500);
+    }
+  }
+
+
   }
 `
 export default Wrapper
