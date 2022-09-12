@@ -39,7 +39,7 @@ const MyCustomButton = () => {
 
                                         }}/>
                                         
-                        Sign in with Google &nbsp; &nbsp;     🚀
+                        Sign in with Google &nbsp; &nbsp;     
                 </button>          
                 </Wrapper>  
             )
