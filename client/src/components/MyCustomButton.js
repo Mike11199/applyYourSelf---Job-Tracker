@@ -10,38 +10,40 @@ const MyCustomButton = () => {
       })
 
     return (    
-                <Wrapper>
+
                 <button 
                         className="googleButton2"
                         type="button" 
-                        id="googleButton2"
-                        style={{width: '100%', 
-                                backgroundColor:"black", 
-                                color: 'white', 
-                                height:"55px", 
-                                display:'flex', 
-                                alignSelf:"center", 
-                                alignItems:"center",
-                                border: "0px solid black",
+                        // id="googleButton2"
+                        // style={{width: '100%', 
+                        //         backgroundColor:"black", 
+                        //         color: 'white', 
+                        //         height:"55px", 
+                        //         display:'flex', 
+                        //         alignSelf:"center", 
+                        //         alignItems:"center",
+                        //         border: "0px solid black",
                                 
-                            }} 
-                        onClick={() => login()}>
+                        //     }} 
+                        onClick={() => login()}
+                        >
                             
                             <img className="googleLogo" 
                                  width="50px" 
                                  height="50px" 
                                  src={googleLogo} 
                                  alt="applyYourSelf"  
-                                 style={{
-                                        display: 'flex', 
-                                        marginRight:"30px",
-                                        marginLeft:"10px",
+                                //  style={{
+                                //         display: 'flex', 
+                                //         marginRight:"30px",
+                                //         marginLeft:"10px",
 
-                                        }}/>
-                                        
-                        Sign in with Google &nbsp; &nbsp;     
+                                //         }}
+                                />
+                        <div>Sign in with Google &nbsp; &nbsp;     </div>                
+                        
                 </button>          
-                </Wrapper>  
+
             )
 
     }

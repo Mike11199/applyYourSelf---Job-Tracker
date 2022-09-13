@@ -219,10 +219,7 @@ ul {
   box-shadow: var(--shadow-4);
 }
 
-.googleButton:hover {
-  box-shadow: var(--shadow-4);
 
-}
 
 .form-label {
   display: block;

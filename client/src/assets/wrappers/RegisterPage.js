@@ -16,6 +16,46 @@ const Wrapper = styled.section`
    padding: 0;
 }
 
+.googleButton2 {
+  background: #000000;
+  flex-direction: row;
+  color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.googleButton2:hover {
+  box-shadow: var(--shadow-4);
+  background:#171717;
+  
+}
+
+.googleButton2:active {
+    /* width: 99%;
+    height: 99%;
+    margin-right: auto;s
+    margin-left: auto; */
+    transform: scale(.98, 0.98);
+    
+}
+
+.googleLogo {
+display: flex;
+height: 40px;
+width: 40px;
+
+}
+
+.googleText {
+  display:flex;
+  
+}
+
   .logo {
   display: block;
   align-items: center;
@@ -88,6 +128,28 @@ const Wrapper = styled.section`
     cursor: pointer;
     letter-spacing: var(--letterSpacing);
   }
+
+
+
+
   }
+
+  @media (max-width: 360px) { 
+
+    .googleButton2 {
+    background: black;
+    flex-direction: row;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  
+}
+
+  }
+
 `
 export default Wrapper
