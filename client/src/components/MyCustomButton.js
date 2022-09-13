@@ -40,7 +40,7 @@ const MyCustomButton = () => {
 
                                 //         }}
                                 />
-                        <div>Sign in with Google &nbsp; &nbsp;     </div>                
+                        <div className='googleText'>Sign in with Google &nbsp; &nbsp;     </div>                
                         
                 </button>          
 

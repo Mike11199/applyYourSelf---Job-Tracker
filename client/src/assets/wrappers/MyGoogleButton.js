@@ -19,7 +19,7 @@ const Wrapper = styled.section`
     border:'0px';
   }
   .googleButton2:hover {    
-    box-shadow: var(--shadow-1);
+    background-color: blue;
   }
 }
 
