@@ -31,7 +31,7 @@ const Wrapper = styled.section`
 
 .googleButton2:hover {
   box-shadow: var(--shadow-4);
-  background:#171717;
+  
   
 }
 
