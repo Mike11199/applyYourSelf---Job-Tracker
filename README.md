@@ -112,7 +112,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 
 </br>
-- Attemtping to edit Mongoose schema to hae past job status history, so that eventually a SANKEY chart can be added to the application.
+- Attemtping to edit the job Mongoose schema to have a past job status history array, so that eventually a SANKEY chart can be added to the application.  As some jobs will lead to more interviews and an acceptance, and some will not, which will be reflected on the chart.
 </br>
 </br>
 
