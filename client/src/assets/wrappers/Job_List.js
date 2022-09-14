@@ -138,13 +138,16 @@ const Wrapper = styled.article`
       font-size: 8px;
       align-items: center;
       margin: 0px;
-      padding: 0px 10px 0px 10px ;
+      padding-left: 5px;
+      
+      
     }
     .content {
     padding: 0px 0px 0px 0px ;
     border-bottom: 1px solid black;
     margin: 0px;
     width: 100%;
+    height: 50px;
   
   }
     .status {
