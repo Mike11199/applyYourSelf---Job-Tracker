@@ -42,9 +42,12 @@ const Wrapper = styled.main`
   h1 {
     padding-top: 150px;   
     font-weight: 200;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    
     span {
-      color: var(--primary-500);
+      
+   
     }
   }
   p {
@@ -97,6 +100,7 @@ const Wrapper = styled.main`
 
     h1 {
     padding-top: 20px;
+    font-size: 55px;
     font-weight: 200;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
     span {

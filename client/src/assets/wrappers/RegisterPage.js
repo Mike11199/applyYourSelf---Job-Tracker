@@ -74,6 +74,7 @@ width: 40px;
   }
 
 
+
   h3 {
     text-align: center;
   }
@@ -112,6 +113,7 @@ width: 40px;
 
   h3 {
     text-align: center;
+    
   }
   p {
     margin: 0;

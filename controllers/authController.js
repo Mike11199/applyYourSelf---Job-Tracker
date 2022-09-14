@@ -1,7 +1,7 @@
 import User from '../models/User.js'
 import { StatusCodes } from 'http-status-codes'
 import { BadRequestError, UnAuthenticatedError } from '../errors/index.js'
-
+import jwt from 'jsonwebtoken'
 
 
 const register = async (req, res) => {
@@ -95,4 +95,33 @@ const updateUser = async (req, res) => {
     
 }
 
-export { register, login, updateUser }
+const googleLogIn = async (req, res) =>{
+
+    const googleToken = req.body.token
+
+
+    const decoded = jwt.decode(googleToken)
+    
+    console.log('Decoded token info:')
+    console.log(decoded)
+
+    const email = decoded.email
+
+    const user = await User.findOne({ email }).select('+password') 
+    
+    //check if User exists in the database
+    if(!user){
+        throw new UnAuthenticatedError('Invalid Credentials')
+    } 
+    console.log(user)
+
+
+    //create JSON web token to keep user logged in even if page refreshes
+    const token = user.createJWT()
+    user.password = undefined   //to not show password in response
+    res.status(StatusCodes.OK).json({user,token, location: user.location})
+
+
+}
+
+export { register, login, updateUser, googleLogIn }

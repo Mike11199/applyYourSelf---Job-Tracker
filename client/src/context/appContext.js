@@ -191,6 +191,40 @@ const registerUser = async (currentUser) => {
     clearAlert()
   }
 
+  const googleLogin = async (token2) => {
+    
+
+    const token_request = {token: token2}
+
+    try {
+      const {data} = await axios.post('/api/v1/auth/Google_login', token_request)  //post request going to our backend
+      
+      console.log("Sent token to back end.")
+
+      const {user,token,location} = data   //destructure the big response object returned from axios
+      
+      console.log("the response from the back end")
+      console.log(data)
+      
+      dispatch({
+        type: LOGIN_USER_SUCCESS,
+        payload: {user, token, location},
+      })
+  
+      addUserToLocalStorage({user,token,location})  //for page refresh
+
+
+    } catch (error) {
+      
+      console.log("error")
+      dispatch({
+        type:LOGIN_USER_ERROR,
+        payload: {msg: error.response.data.msg },
+       })
+    }
+    clearAlert()
+  }
+
   const toggleSidebar = () => {
     dispatch({ type: TOGGLE_SIDEBAR})
   }
@@ -384,6 +418,7 @@ const changeJobView = () =>{
       clearFilters,
       changePage,
       changeJobView,
+      googleLogin
     }}>
       {children}
     </AppContext.Provider>

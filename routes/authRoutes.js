@@ -10,11 +10,12 @@ const apiLimiter = rateLimiter({
 
 const router = express.Router()
 
-import { register, login, updateUser } from '../controllers/authController.js'
+import { register, login, updateUser, googleLogIn } from '../controllers/authController.js'
 import authenticateUser from '../middleware/auth.js'
 
 router.route('/register').post(apiLimiter, register)
 router.route('/login').post(apiLimiter, login)
+router.route('/Google_login').post(apiLimiter, googleLogIn)
 router.route('/updateUser').patch(authenticateUser, updateUser)
 
 export default router

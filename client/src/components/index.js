@@ -11,6 +11,6 @@ import ChartsContainer from "./ChartsContainer"
 import StatsContainer from "./StatsContainer"
 import Loading from "./Loading"
 import MyCustomButton from "./MyCustomButton"
+import MyGoogleLogInButton  from "./GoogleLogIn"
 
-
-export { Logo, FormRow, Alert, Navbar, BigSidebar, SmallSidebar, FormRowSelect, SearchContainer, JobsContainer, ChartsContainer, StatsContainer, Loading, MyCustomButton }
+export { Logo, FormRow, Alert, Navbar, BigSidebar, SmallSidebar, FormRowSelect, SearchContainer, JobsContainer, ChartsContainer, StatsContainer, Loading, MyCustomButton, MyGoogleLogInButton }

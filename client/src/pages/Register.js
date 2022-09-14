@@ -1,12 +1,10 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import {Logo, FormRow, Alert, MyCustomButton} from '../components'
+import {Logo, FormRow, Alert, MyGoogleLogInButton} from '../components'
 import Wrapper from '../assets/wrappers/RegisterPage'
 import { useAppContext } from '../context/appContext'
 import { useNavigate } from 'react-router-dom'
 import {  FacebookLoginButton  } from 'react-social-login-buttons'
-// import { GoogleLogin, GoogleLogout  } from 'react-google-login'
-import { GoogleOAuthProvider } from '@react-oauth/google';
 
 
 
@@ -32,7 +30,7 @@ const Register = () => {
     //these values are grabbed from the app context
     //Context provides a way to pass data through the component tree without having to pass props down manually at every level.
     //It in effect creates "global" variables for a tree of react components - Source:  https://reactjs.org/docs/context.html
-    const {user, isLoading, showAlert, displayAlert, registerUser, loginUser} = useAppContext()  
+    const {user, isLoading, showAlert, displayAlert, registerUser, loginUser, googleLogin} = useAppContext()  
  
 
 // ... is the spread operator
@@ -129,24 +127,11 @@ return (
         {/* <GoogleLoginButton onClick={() => alert("Hello")} /> */}
         <FacebookLoginButton onClick={() => console.log("Still in Development!")} style={{width:"100%", margin:"0px"}}/>
         <br></br>
-        <GoogleOAuthProvider clientId="421793135719-tbnlgi65j46cc3oo2j74eot1ou5tg06n.apps.googleusercontent.com">
-
-        {/* <GoogleLogin
-            
-            buttonText="Login"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
-            cookiePolicy={'single_host_origin'}
-            className='googleButton'      
-        />
-        <br></br> */}
-        <MyCustomButton />
-            
-
-
-
-        </GoogleOAuthProvider>
         
+        
+        
+        <MyGoogleLogInButton />
+
 
         </form>
         
