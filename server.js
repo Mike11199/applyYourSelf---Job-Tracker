@@ -67,7 +67,7 @@ app.use(express.json())
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 // app.use(helmet({
-//     contentSecurityPolicy: {
+//     contentSecurityPolicy: {     //TURN OFF HELMET FOR NOW WILL CAUSE ERRORS IF ALREADY SIGNED IN WITH GOOGLE AUTH
 //       directives: {
 //         'script-src': [     //https://stackoverflow.com/questions/72675642/because-it-violates-the-following-content-security-policy-directive-script-src
 //           'google',         //have to add this or google auth will get a violate content security policy directive error
@@ -75,6 +75,7 @@ app.use(express.json())
 //           '*.google.com',
 //           '*.googleapis.com',
 //           "'unsafe-inline'",
+//           "https://applyyourself-tracker-prod.herokuapp.com*"
 //         ],
 //       },
 //     },
