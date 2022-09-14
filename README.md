@@ -111,6 +111,13 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 
 
+</br>
+- Attemtping to edit Mongoose schema to hae past job status history, so that eventually a SANKEY chart can be added to the application.
+</br>
+</br>
+
+<img src="https://user-images.githubusercontent.com/91037796/190278598-0b3bec93-f589-4590-8df8-b1b6085db5c5.png" width=60% height=60%>
+</br>
 
 
 <h2>Packages Installed</h2>
