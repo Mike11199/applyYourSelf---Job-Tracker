@@ -66,17 +66,23 @@ if(process.env.NODE_ENV !== 'production'){
 app.use(express.json()) 
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
-// app.use(helmet({  //https://stackoverflow.com/questions/72675642/because-it-violates-the-following-content-security-policy-directive-script-src
+// app.use(helmet({
 //     contentSecurityPolicy: {
-//       useDefaults: true, 
-//       directives: { 
-//         'script-src': ["'self'", "https://accounts.google.com/gsi/client"]  
-//       }
-//     }
+//       directives: {
+//         'script-src': [     //https://stackoverflow.com/questions/72675642/because-it-violates-the-following-content-security-policy-directive-script-src
+//           'google',         //have to add this or google auth will get a violate content security policy directive error
+//           '*.google',
+//           '*.google.com',
+//           '*.googleapis.com',
+//           "'unsafe-inline'",
+//         ],
+//       },
+//     },
 //   })
-//   );
-// app.use(xss())
-// app.use(mongoSanitize())
+//   )
+//   app.use(xss())
+//   app.use(mongoSanitize())
+
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 
 app.get('/', (req,res) => {    
