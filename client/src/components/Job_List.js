@@ -19,6 +19,15 @@ const Job = ({
   let newStatus = status.replace('_',' ')  
   let newStatusCSS = status.replace('/','_')  
 
+  let newJobType = '' 
+
+  if (jobType == "rejected/archived"){
+     newJobType = 'rejected/ archived'
+  }
+  else{
+    newJobType = jobType
+  }
+
   let date = moment(createdAt)
   date = date.format('MMM Do, YYYY')
   return (
@@ -34,7 +43,9 @@ const Job = ({
           <p>{company}</p>
           <JobInfo icon={<FaLocationArrow className='arrowImage'/>} text={jobLocation} />
           <JobInfo icon={<FaCalendarAlt className='calendarImage'/>} text={date} />
-          <JobInfo icon={<FaBriefcase className='briefcaseImage'/>} text={jobType} />
+          
+
+          <JobInfo icon={<FaBriefcase className='briefcaseImage'/>} text={newJobType}  />
           <div className={`status ${newStatusCSS}`}>{newStatus}</div>
           <div className='actions'>
             <Link

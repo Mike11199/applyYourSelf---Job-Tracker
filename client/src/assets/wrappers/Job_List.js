@@ -138,14 +138,14 @@ const Wrapper = styled.article`
       font-size: 8px;
       align-items: center;
       margin: 0px;
-      padding: 0px;
+      padding: 0px 10px 0px 10px ;
     }
     .content {
-
+    padding: 0px 0px 0px 0px ;
     border-bottom: 1px solid black;
     margin: 0px;
     width: 100%;
-    padding: 0px;
+  
   }
     .status {
     font-size: 8px;
@@ -175,20 +175,24 @@ const Wrapper = styled.article`
 
     grid-template-columns: 1fr;
     row-gap: 0.5rem;
-    column-gap: 7px;
+    column-gap: 2px;
     
-    @media (max-width: 440px) {
-      grid-template-columns:  3.5fr 3fr 2fr 2fr 4fr 4fr 2fr 2fr  ;
 
-      overflow-wrap: break-word;
+    @media (max-width: 440px) {
+      /* grid-template-columns:  3.5fr 3fr 2fr 2fr 3fr 4fr 2.5fr 2fr  ; */
+      grid-template-columns:  40px 35px 40px 35px 35px 50px 35px 35px ;
+      font-size: 5px;
+      overflow-wrap: anywhere;
       width: 100%;
-      height: 35px;
-      margin: 0px;
+      
+      
       font-size: 6px;
 
       .small_delete {
         display: visible;
       }
+
+
 
     h6 {
       font-size: 8px;
@@ -203,61 +207,100 @@ const Wrapper = styled.article`
     }
 
   .pending {
-    width: 80%;
+    width: 42px;
     font-size: 6px;
-    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+        
   }
   .interview {
-    width: 80%;
-    font-size: 6px;
+   width: 42px;
+   font-size: 6px;
+   display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .declined {
-    width: 80%;
+   width: 42px;
     font-size: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .coding_assessment {
-    width: 80%;
+   width: 42px;
     font-size: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .accepted {
-    width: 80%;
+   width: 42px;
     font-size: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .phone_interview {
-    width: 80%;
+   width: 42px;
     font-size: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .behavioral_interview {
-    width: 80%;
+   width: 42px;
     font-size: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .rejected_archived {
-    width: 80%;
+   width: 42px;
     font-size: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .no_response {
-    width: 80%;
+   width: 42px;
     font-size: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .technical_interview {
-    width: 80%;
+    width: 40px;
     font-size: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .edit-btn {
     
-    width: 20px;
+    vertical-align: middle;
+    width: 25px;
     padding: 0px;
     height: 20px;
-    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .delete-btn {
-    padding-top: 10px;
-    width: 20px;
+    
+    width: 25px;    
     height: 20px;
+    text-align: center;
+    font-size: 7px;
+    font-weight: 600;
+    justify-content: center;
+    flex-direction: column;
     
   }
   .rejected_archived {
-    width: 80%;
+    width: 42px;
 
   }
 
