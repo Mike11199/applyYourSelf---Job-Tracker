@@ -21,14 +21,12 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 -Mock data used for this demonstration.
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/189267509-1f62bfde-a879-44aa-af1b-999e84f757da.gif" width=100% height=100%>
-
+<img src="https://user-images.githubusercontent.com/91037796/190099234-91c9608f-796e-4a86-a4b9-4fe6ff1b1d7e.gif" width=100% height=100%>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/190097493-695fbe86-101c-420a-9834-053e8d4c6789.gif" width=100% height=100%>
-
-
 </br>
 <h2>Project Summary</h2>
+
+
 
 
 </br>
@@ -104,7 +102,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 
 </br>
-- Added Google Auth 2.0 @react-oauth/google.  Added buttons and front-end set up.  Added a new API route to log the user in.  Sent google credential token on succesful log in and decoded using JWT on the back end.  If the user's email already exists, they are logged in.  Still need to add capability for registering wtih google later.
+- Added Google Auth 2.0 @react-oauth/google.  Added buttons and front-end set up.  Added a new API route to log the user in.  Sent google credential token on succesful log in and decoded using JWT on the back end.  If the user's email already exists, they are logged in.  Still need to add capability for registering with google later.
 </br>
 
 
