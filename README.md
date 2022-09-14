@@ -45,17 +45,6 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <h2>To-Dos</h2>
 </br>
 
--<s>Replace logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.</s>
-<br>
--<s>Change color scheme from tutorial.</s>
-<br>
--<s>Add a 'list view' functionality on the "All Jobs" page to display a compact list, as opposed to job cards.</s>
-<br>
--<s>Add animations.</s>
-<br>
--<s>Add 5 more status codes.  Changed stats page, job model, appcontext, wrappers, stats functions.  Took 5+ hours.  Numerous difficulties wiith statuses that have spaces, versus no spaces allowed in MongoDB job model and CSS.  Caused issues with enumerated drop-downs.</s>
-<br>
--<s>Add google OAuth2.0 by decoding JWT response from google with user info from credential and modifying login function, controllers, APIs, etc.</s>
 
 -Add password verification link so that only the actual owner of the entered email address can register.
 <br>
@@ -73,8 +62,20 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 <h2>Completed To-Dos (Extra Features Added)</h2>
 
+
+-Replaced logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.
+<br>
+-Changed color scheme from tutorial.
+<br>
+-Added a 'list view' functionality on the "All Jobs" page to display a compact list, as opposed to job cards.
+<br>
+-Added animations.
+<br>
+-Added 5 more status codes.  Changed stats page, job model, appcontext, wrappers, stats functions.  Took 5+ hours.  Numerous difficulties with statuses that have spaces, versus no spaces allowed in MongoDB job model and CSS.  Caused issues with enumerated drop-downs.
+<br>
+-Added google OAuth2.0 by decoding JWT response from google with user info from credential and modifying login function, controllers, APIs.
 </br>
-- Added button and front-end capability to change the jobs display view.
+-Added button and front-end capability to change the jobs display view.
 </br>
 
 </br>
