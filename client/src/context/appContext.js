@@ -199,12 +199,12 @@ const registerUser = async (currentUser) => {
     try {
       const {data} = await axios.post('/api/v1/auth/Google_login', token_request)  //post request going to our backend
       
-      console.log("Sent token to back end.")
+      // console.log("Sent token to back end.")
 
       const {user,token,location} = data   //destructure the big response object returned from axios
       
-      console.log("the response from the back end")
-      console.log(data)
+      // console.log("the response from the back end")
+      // console.log(data)
       
       dispatch({
         type: LOGIN_USER_SUCCESS,
@@ -216,10 +216,10 @@ const registerUser = async (currentUser) => {
 
     } catch (error) {
       
-      console.log("error")
+      // console.log("error")
       dispatch({
         type:LOGIN_USER_ERROR,
-        payload: {msg: error.response.data.msg },
+        payload: {msg: "Error!  Please register manually first." },
        })
     }
     clearAlert()
