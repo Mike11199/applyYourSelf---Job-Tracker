@@ -7,6 +7,13 @@ const Wrapper = styled.article`
   grid-template-rows: 1fr auto;
   box-shadow: var(--shadow-2);
 
+  @media (min-width: 445px) {
+
+  .small_delete {
+        display: none;
+      }
+    }
+
   h6 {
     font-size: 20px;
     font-family: var(--headingFont);
@@ -109,10 +116,55 @@ const Wrapper = styled.article`
   }
 
 
+  .big_delete {
+    display: visible;
+  }
 
 
 
+  @media (max-width: 441px) {
+    
+    .big_delete {
+      display: none;
+    }
 
+    .small_delete {
+      display: visible;
+    }
+
+    
+    .content-center {
+      width: 100%;
+      font-size: 8px;
+      align-items: center;
+      margin: 0px;
+      padding: 0px;
+    }
+    .content {
+
+    border-bottom: 1px solid black;
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+  }
+    .status {
+    font-size: 8px;
+
+   }
+   .arrowImage
+   {
+    display: none;
+   }
+   .calendarImage
+   {
+    display: none;
+   }
+   .briefcaseImage
+   {
+    display: none;
+   }
+
+  }
 
 
 
@@ -120,14 +172,102 @@ const Wrapper = styled.article`
   .content-center {
     display: grid;
     align-items: center;
-    
+
     grid-template-columns: 1fr;
     row-gap: 0.5rem;
-    @media (min-width: 576px) {
-      grid-template-columns: 1fr 1fr;
+    column-gap: 7px;
+    
+    @media (max-width: 440px) {
+      grid-template-columns:  3.5fr 3fr 2fr 2fr 4fr 4fr 2fr 2fr  ;
+
+      overflow-wrap: break-word;
+      width: 100%;
+      height: 35px;
+      margin: 0px;
+      font-size: 6px;
+
+      .small_delete {
+        display: visible;
+      }
+
+    h6 {
+      font-size: 8px;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    margin: 0px;
+    }
+    
+    p {
+      font-size: 8px;
+      margin: 0px;
+    }
+
+  .pending {
+    width: 80%;
+    font-size: 6px;
+    padding-top: 10px;
+  }
+  .interview {
+    width: 80%;
+    font-size: 6px;
+  }
+  .declined {
+    width: 80%;
+    font-size: 6px;
+  }
+  .coding_assessment {
+    width: 80%;
+    font-size: 6px;
+  }
+  .accepted {
+    width: 80%;
+    font-size: 6px;
+  }
+  .phone_interview {
+    width: 80%;
+    font-size: 6px;
+  }
+  .behavioral_interview {
+    width: 80%;
+    font-size: 6px;
+  }
+  .rejected_archived {
+    width: 80%;
+    font-size: 6px;
+  }
+  .no_response {
+    width: 80%;
+    font-size: 6px;
+  }
+  .technical_interview {
+    width: 80%;
+    font-size: 6px;
+  }
+  .edit-btn {
+    
+    width: 20px;
+    padding: 0px;
+    height: 20px;
+    
+  }
+  .delete-btn {
+    padding-top: 10px;
+    width: 20px;
+    height: 20px;
+    
+  }
+  .rejected_archived {
+    width: 80%;
+
+  }
+
+
+
     }
     @media (min-width: 992px) {
       grid-template-columns: 2fr 2fr 2fr 2fr 1fr 2fr 1fr 1fr;
+      
+
     }
     @media (min-width: 1120px) {
       grid-template-columns: 2.2fr 2fr 2fr 2fr 1.5fr 2.5fr 1fr 1fr;

@@ -32,9 +32,9 @@ const Job = ({
         <div className='content-center'>
         <h6>{position}</h6>
           <p>{company}</p>
-          <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
-          <JobInfo icon={<FaCalendarAlt />} text={date} />
-          <JobInfo icon={<FaBriefcase />} text={jobType} />
+          <JobInfo icon={<FaLocationArrow className='arrowImage'/>} text={jobLocation} />
+          <JobInfo icon={<FaCalendarAlt className='calendarImage'/>} text={date} />
+          <JobInfo icon={<FaBriefcase className='briefcaseImage'/>} text={jobType} />
           <div className={`status ${newStatusCSS}`}>{newStatus}</div>
           <div className='actions'>
             <Link
@@ -51,7 +51,12 @@ const Job = ({
               className='btn delete-btn'
               onClick={() => deleteJob(_id)}
             >
+              <div className="big_delete">
               Delete
+              </div>
+              <div className="small_delete">
+              X
+              </div>
             </button>
           </div>
         </div>
