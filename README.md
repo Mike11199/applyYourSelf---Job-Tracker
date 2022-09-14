@@ -23,6 +23,9 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/189267509-1f62bfde-a879-44aa-af1b-999e84f757da.gif" width=100% height=100%>
 
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/190097493-695fbe86-101c-420a-9834-053e8d4c6789.gif" width=100% height=100%>
+
 
 </br>
 <h2>Project Summary</h2>
@@ -54,6 +57,8 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <br>
 -<s>Add 5 more status codes.  Changed stats page, job model, appcontext, wrappers, stats functions.  Took 5+ hours.  Numerous difficulties wiith statuses that have spaces, versus no spaces allowed in MongoDB job model and CSS.  Caused issues with enumerated drop-downs.</s>
 <br>
+-<s>Add google OAuth2.0 by decoding JWT response from google with user info from credential and modifying login function, controllers, APIs, etc.</s>
+
 -Add password verification link so that only the actual owner of the entered email address can register.
 <br>
 -Add password reset functionality.
@@ -99,12 +104,12 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 
 </br>
-- Working on adding google auth 2.0.  Added buttons and request, have to set up tokens and back end later.
+- Added Google Auth 2.0 @react-oauth/google.  Added buttons and front-end set up.  Added a new API route to log the user in.  Sent google credential token on succesful log in and decoded using JWT on the back end.  If the user's email already exists, they are logged in.  Still need to add capability for registering wtih google later.
 </br>
 
 
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/189303737-5593b02d-2b28-45f8-b7c6-f7c839c4621b.png" width=40% height=40%>
+<img src="https://user-images.githubusercontent.com/91037796/190097493-695fbe86-101c-420a-9834-053e8d4c6789.gif" width=100% height=100%>
 </br>
 
 
