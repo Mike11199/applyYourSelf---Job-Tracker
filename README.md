@@ -34,7 +34,6 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 -Error handler, alert, authentication middleware.  
 </br>
-</br>
 -React animations, styled components, and react bootstrap added for styling.
 </br>
 -Protected routes with bearer tokens that are persisted in local storage.
