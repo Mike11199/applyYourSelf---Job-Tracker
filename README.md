@@ -34,6 +34,9 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 -Error handler, alert, authentication middleware.  
 </br>
+</br>
+-React animations, styled components, and react bootstrap added for styling.
+</br>
 -Protected routes with bearer tokens that are persisted in local storage.
 </br>
 -Multiple APIs set up on the server, requests made to server by front-end with axios to ultimately query MongoDB data.
