@@ -38,6 +38,9 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 -Multiple APIs set up on the server, requests made to server by front-end with axios to ultimately query MongoDB data.
 </br>
+</br>
+-Added OAuth 2.0 linking app to Google's API.  Created API to send credentials to back-end where google's JWT from can be decoded to grab user information.  If the user's email exists in the database, they are logged in with the normal bearer JWT token.  
+</br>
 
 
 </br>
