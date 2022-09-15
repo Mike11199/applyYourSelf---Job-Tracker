@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { useAppContext } from '../context/appContext'
 import Wrapper from '../assets/wrappers/Job'
 import JobInfo from './JobInfo'
+import { useState } from 'react'
+import {CButton, CCollapse, CCard,CCardBody } from '@coreui/react'
 
 
 const Job = ({
@@ -16,7 +18,11 @@ const Job = ({
   status,
 }) => {
   const { setEditJob, deleteJob, jobsCardsView } = useAppContext()
- 
+
+
+  
+
+
   
   let newStatus = status.replace('_',' ')  
   let newStatusCSS = status.replace('/','_')  
@@ -56,10 +62,12 @@ const Job = ({
             >
               Delete
             </button>
+            
           </div>
         </footer>
       </div>
       
+
     </Wrapper>
   )
 }

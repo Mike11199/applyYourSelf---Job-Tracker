@@ -7,7 +7,30 @@ const Wrapper = styled.article`
   grid-template-rows: 1fr auto;
   box-shadow: var(--shadow-2);
 
+
+
+
+
+  .expand-btn {
+    
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 90px;    
+    height: 30px;
+    display: flex;
+
+    justify-content: center;
+    flex-direction: row;
+    align-self: center;
+    text-align: center;
+
+    
+  }
+
+
+
   @media (min-width: 445px) {
+
 
   .small_delete {
         display: none;
@@ -53,9 +76,12 @@ const Wrapper = styled.article`
       border-width: 0px;
     }
     p {
-      margin: 0;
+      
+      
       text-transform: capitalize;
       color: var(--grey-400);
+      
+
       letter-spacing: var(--letterSpacing);
     }
   }
@@ -133,6 +159,11 @@ const Wrapper = styled.article`
     }
 
     
+  .job_notes {
+      font-size: 8px;
+      
+    }
+    
     .content-center {
       width: 100%;
       font-size: 8px;
@@ -147,7 +178,7 @@ const Wrapper = styled.article`
     border-bottom: 1px solid black;
     margin: 0px;
     width: 100%;
-    height: 50px;
+    
   
   }
     .status {
@@ -183,30 +214,50 @@ const Wrapper = styled.article`
 
     @media (max-width: 440px) {
       /* grid-template-columns:  3.5fr 3fr 2fr 2fr 3fr 4fr 2.5fr 2fr  ; */
-      grid-template-columns:  40px 35px 40px 35px 35px 50px 35px 35px ;
-      font-size: 5px;
+      grid-template-columns: 35px 35px 38px 35px 35px 45px 25px 25px 35px ;
+      
       overflow-wrap: anywhere;
       width: 100%;
-      
+
       
       font-size: 6px;
 
+
+
       .small_delete {
         display: visible;
+        align-self: center;
+        
+        padding: 0px;
+
       }
 
+      .expand-btn {
+      margin-left: 0px;
+      margin-right: 0px;
+
+      margin: 0px;
+      width: 31px;    
+      height: 20px;
+        
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      overflow-wrap: normal;
+      text-align: center;
+  }
 
 
     h6 {
-      font-size: 8px;
+    font-size: 8px;
     font-family: var(--headingFont);
     font-weight: 400;
     margin: 0px;
     }
     
     p {
-      font-size: 8px;
-      margin: 0px;
+    font-size: 8px;
+    margin: 0px;
     }
 
   .pending {
@@ -221,8 +272,8 @@ const Wrapper = styled.article`
    width: 42px;
    font-size: 6px;
    display: flex;
-    justify-content: center;
-    flex-direction: column;
+   justify-content: center;
+   flex-direction: column;
   }
   .declined {
    width: 42px;
@@ -283,9 +334,10 @@ const Wrapper = styled.article`
   .edit-btn {
     
     vertical-align: middle;
-    width: 25px;
+    width: 20px;
     padding: 0px;
     height: 20px;
+    font-size: 6px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -293,15 +345,20 @@ const Wrapper = styled.article`
   }
   .delete-btn {
     
-    width: 25px;    
+    width: 20px;    
     height: 20px;
     text-align: center;
     font-size: 7px;
     font-weight: 600;
     justify-content: center;
-    flex-direction: column;
-    
+    display: flex;
+    flex-direction: row;
+    overflow-wrap: normal;
+  
   }
+
+
+
   .rejected_archived {
     width: 42px;
 
@@ -312,11 +369,22 @@ const Wrapper = styled.article`
     }
     @media (min-width: 992px) {
       grid-template-columns: 2fr 2fr 2fr 2fr 1fr 2fr 1fr 1fr;
-      
+
+      p{
+      margin: 0px;  
+        padding: 0px;
+        padding-top: 8px;
+        margin-bottom: 4px;
+      }     
+
+      .job_notes {
+          font-size: 12px;      
+        }
 
     }
+
     @media (min-width: 1120px) {
-      grid-template-columns: 2.2fr 2fr 2fr 2fr 1.5fr 2.5fr 1fr 1fr;
+      grid-template-columns: 2.2fr 2fr 2fr 2fr 1.5fr 2.5fr 1fr 1fr 1fr;
     }
 
   }
@@ -351,6 +419,7 @@ const Wrapper = styled.article`
   &:hover .actions {
     visibility: visible;
   }
+
 `
 
 export default Wrapper
