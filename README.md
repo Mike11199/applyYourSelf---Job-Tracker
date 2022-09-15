@@ -75,7 +75,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <br>
 -Added google OAuth2.0 by decoding JWT response from google with user info from credential and modifying login function, controllers, APIs.
 </br>
--Added button and front-end capability to change the jobs display view.
+-Used react Bootstrap to add a button to the jobs list view on mobile and desktop to display job notes (notes in progress).
 </br>
 
 </br>
