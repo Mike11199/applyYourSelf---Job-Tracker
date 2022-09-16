@@ -17,6 +17,7 @@ const Job = ({
   jobType,
   createdAt,
   status,
+  jobHistory,
 }) => {
   const { setEditJob, deleteJob, jobsCardsView } = useAppContext()
   // const [visible, setVisible] = useState(false)
@@ -106,21 +107,31 @@ const Job = ({
 
       <Collapse in={open}>
         <div id="example-collapse-text" className='test_collapse'>
-        <div className='job_notes'>
-          Job Status
-        </div>
-        <div className='job_notes'>
-          Job Notes
-        </div>
-        <div className='job_notes'>
-          New Status
-        </div>
-        <div className='job_notes'>
-          New Note
-        </div>
-        <div className='job_notes'>
-         Save Note
-        </div>
+
+
+
+
+
+
+          {jobHistory.map((pastJob, index) => {
+
+                return      (
+                <>
+                <div className='job_notes'>
+                  Status: {pastJob.pastStatus}
+                </div>
+                <div className='job_notes'>
+                  Notes: {pastJob.pastNotes}
+                </div>
+                <br></br>
+                </>
+                )
+                })}
+
+
+
+
+        
         </div>
 
       </Collapse>

@@ -17,6 +17,15 @@ const Wrapper = styled.section`
     max-width: 100%;
     width: 100%;
   }
+  .delete-btn {
+    margin-top: 40px;
+    background-color: red;
+    color: white;
+    height: 30px;
+    border:0px;
+    border-radius: 21px;
+  }
+  
   .form-row {
     margin-bottom: 0;
   }
@@ -24,6 +33,15 @@ const Wrapper = styled.section`
     display: grid;
     row-gap: 0.5rem;
   }
+
+  .form_center_2
+  {
+    display: grid;
+    row-gap: 0.5rem;
+    column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .form-center button {
     align-self: end;
     height: 35px;
@@ -58,6 +76,9 @@ const Wrapper = styled.section`
   @media (min-width: 1120px) {
     .form-center {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+    .form_center_2 {
+      grid-template-columns: 1fr 1fr .5fr;
     }
     .form-center button {
       margin-top: 0;

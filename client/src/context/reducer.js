@@ -29,6 +29,8 @@ import {
     CLEAR_FILTERS,
     CHANGE_PAGE,
     CHANGE_JOBS_VIEW,
+    HANDLE_CHANGE_ARRAY,
+    REFRESH_STATE
 } from "./actions"
 
 import { initialState } from "./appContext"
@@ -152,6 +154,15 @@ const reducer = (state, action) => {    //hook that takes current state as first
                     [action.payload.name]: action.payload.value
                 }
     }
+    if(action.type === HANDLE_CHANGE_ARRAY){
+
+
+        return { 
+                    ...state,
+                    page: 1,
+                    jobHistory: action.payload.value,
+                }
+    }
     if(action.type === CLEAR_VALUES){
 
     const initialState = {
@@ -162,7 +173,8 @@ const reducer = (state, action) => {    //hook that takes current state as first
         jobLocation: state.userLocation,
         jobType: 'full-time',
         status:'pending',
-        status_no_underscore:'pending'
+        status_no_underscore:'pending',
+        jobHistory: [],
     }
 
         return { 
@@ -173,6 +185,10 @@ const reducer = (state, action) => {    //hook that takes current state as first
 
     if(action.type === CREATE_JOB_BEGIN) {
         return {...state, isLoading: true}
+    }
+    
+    if(action.type === REFRESH_STATE) {
+        return {...state}
     }
 
     if(action.type === CREATE_JOB_SUCCESS){
@@ -209,7 +225,7 @@ const reducer = (state, action) => {    //hook that takes current state as first
     if(action.type === SET_EDIT_JOB){    
         
         const job = state.jobs.find((job) => job._id === action.payload.id)
-        const { _id, position, company, jobLocation, jobType, status} = job
+        const { _id, position, company, jobLocation, jobType, status, jobHistory} = job
         return { 
             ...state,
             isEditing: true,
@@ -219,6 +235,7 @@ const reducer = (state, action) => {    //hook that takes current state as first
             jobLocation,
             jobType,
             status,
+            jobHistory,
          }         
     }
     if(action.type === DELETE_JOB_BEGIN){

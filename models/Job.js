@@ -31,7 +31,7 @@ const JobSchema = new mongoose.Schema({
         ref:'User',
         required:[true,'Please provide user']
     },     
-    notes: {
+    jobNotes: {
         type: String, 
         default: '',
         required: false,
@@ -39,34 +39,13 @@ const JobSchema = new mongoose.Schema({
 
     jobHistory:
       [{
-        company: {
-            type: String,             
-            maxlength: 50,
-            required: false,
-        },
-        position: {
-            type: String,             
-            maxlength: 100,
-            required: false,
-        },
-        status: {
+        pastStatus: {
             type: String, 
             enum: ['technical_interview', 'declined','pending','accepted','coding_assessment', 'phone_interview', 'behavioral_interview',  'rejected/archived', ''],
             default: '',
             required: false,
         },
-        jobType: {
-            type: String, 
-            enum: ['full-time', 'part-time','remote', 'internship', 'hybrid',''],
-            default: '',
-            required: false,
-        },
-        jobLocation: {
-            type: String, 
-            default: '',     
-            required: false,       
-        },    
-        notes: {
+        pastNotes: {
             type: String, 
             default: '',
             required: false,

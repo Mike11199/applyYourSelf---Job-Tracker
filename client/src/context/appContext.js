@@ -18,6 +18,7 @@ import {
   UPDATE_USER_SUCCESS,
   UPDATE_USER_ERROR,
   HANDLE_CHANGE,
+  HANDLE_CHANGE_ARRAY,
   CLEAR_VALUES,
   CREATE_JOB_BEGIN,
   CREATE_JOB_SUCCESS,
@@ -34,6 +35,7 @@ import {
   CLEAR_FILTERS,
   CHANGE_PAGE,
   CHANGE_JOBS_VIEW,
+  REFRESH_STATE
 } from "./actions"
 import { get } from 'mongoose'
 import { IoCompassSharp } from 'react-icons/io5'
@@ -77,6 +79,7 @@ export const initialState = {
 
   jobsCardsView: true,
   status_no_underscore:'pending',
+  jobHistory: [],
 
 }
 
@@ -263,8 +266,18 @@ const registerUser = async (currentUser) => {
     dispatch({type: HANDLE_CHANGE, payload:{name,value}})
   }
 
+  const handleChangeArray = (name,value) =>{
+    console.log(value)
+    dispatch({type: HANDLE_CHANGE_ARRAY, payload:{name,value}})
+  }
+
+
   const clearValues = () =>{
     dispatch({type: CLEAR_VALUES })
+  }
+
+  const refreshState = () =>{
+    dispatch({type: REFRESH_STATE })
   }
 
 
@@ -272,8 +285,8 @@ const createJob = async () => {
 
   dispatch({ type: CREATE_JOB_BEGIN })
   try {
-    const { position, company, jobLocation, jobType, status } = state
-    await authFetch.post('/jobs', {position, company, jobLocation, jobType, status })
+    const { position, company, jobLocation, jobType, status, jobHistory } = state
+    await authFetch.post('/jobs', {position, company, jobLocation, jobType, status, jobHistory })
     dispatch({ type: CREATE_JOB_SUCCESS })
     dispatch({ type: CLEAR_VALUES })
 
@@ -330,7 +343,7 @@ const setEditJob = (id) => {
 const editJob = async () => {
   dispatch({ type: EDIT_JOB_BEGIN })
   try {
-    const { position, company, jobLocation, jobType, status } = state
+    const { position, company, jobLocation, jobType, status, jobHistory } = state
 
     await authFetch.patch(`/jobs/${state.editJobId}`, {
       company,
@@ -338,6 +351,7 @@ const editJob = async () => {
       jobLocation,
       jobType,
       status,
+      jobHistory,
     })
     dispatch({ type: EDIT_JOB_SUCCESS })
     dispatch({ type: CLEAR_VALUES })
@@ -418,7 +432,9 @@ const changeJobView = () =>{
       clearFilters,
       changePage,
       changeJobView,
-      googleLogin
+      googleLogin,
+      handleChangeArray,
+      refreshState
     }}>
       {children}
     </AppContext.Provider>
