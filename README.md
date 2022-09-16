@@ -32,13 +32,18 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 -User registration and login with email and password (hashed in MongoDB with bcrypt.js).
 </br>
+</br>
 -Error handler, alert, authentication middleware.  
+</br>
 </br>
 -React animations, styled components, and react bootstrap added for styling.
 </br>
+</br>
 -Protected routes with bearer tokens that are persisted in local storage.
 </br>
+</br>
 -Multiple APIs set up on the server, requests made to server by front-end with axios to ultimately query MongoDB data.
+</br>
 </br>
 -Added OAuth 2.0 linking app to Google's API.  Created API to send credentials to back-end where google's JWT from can be decoded to grab user information.  If the user's email exists in the database, they are logged in with the normal bearer JWT token.  
 </br>
@@ -52,12 +57,16 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 -Add password verification link so that only the actual owner of the entered email address can register.
 <br>
+</br>
 -Add password reset functionality.
 <br>
+</br>
 -Add CAPTCHA for registration.
 <br>
+</br>
 -Add more job fields (this will impact database/server/front-end).
 <br>
+</br>
 -Add calendar functionality for interviews, possibly with a google calendar API.
 
 
@@ -69,15 +78,21 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 -Replaced logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.
 <br>
+</br>
 -Changed color scheme from tutorial.
 <br>
+</br>
 -Added a 'list view' functionality on the "All Jobs" page to display a compact list, as opposed to job cards.
 <br>
+</br>
 -Added animations.
 <br>
+</br>
 -Added 5 more status codes.  Changed stats page, job model, appcontext, wrappers, stats functions.  Took 5+ hours.  Numerous difficulties with statuses that have spaces, versus no spaces allowed in MongoDB job model and CSS.  Caused issues with enumerated drop-downs.
 <br>
+</br>
 -Added google OAuth2.0 by decoding JWT response from google with user info from credential and modifying login function, controllers, APIs.
+</br>
 </br>
 -Used react Bootstrap to add a button to the jobs list view on mobile and desktop to display job notes (notes in progress).
 </br>
