@@ -86,12 +86,6 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <br>
 </br>
 -Added animations.
-<br>
-</br>
--Added 5 more status codes.  Changed stats page, job model, appcontext, wrappers, stats functions.  Took 5+ hours.  Numerous difficulties with statuses that have spaces, versus no spaces allowed in MongoDB job model and CSS.  Caused issues with enumerated drop-downs.
-<br>
-</br>
--Added google OAuth2.0 by decoding JWT response from google with user info from credential and modifying login function, controllers, APIs.
 </br>
 </br>
 -Used react Bootstrap to add a button to the jobs list view on mobile and desktop to display job notes (notes in progress).
@@ -132,11 +126,19 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 
 </br>
-- Attemtping to edit the job Mongoose schema to have a past job status history array, so that eventually a SANKEY chart can be added to the application.  As some jobs will lead to more interviews and an acceptance, and some will not, which will be reflected on the chart.
+- Changed job model, and numerous edits to the application to allow for past job statuses and notes to be added to a job.  Added a jobHistory state array that will hold this.  Mapped array to drop downs in all jobs view and the edit job screen, so that past statuses can be edited, deleted, and displayed.  Goal is to add a SANKEY chart to the application.  As some jobs will lead to more interviews and an acceptance, and some will not, which will be reflected on the chart. Took 8+ hours to implement.
 </br>
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/190278598-0b3bec93-f589-4590-8df8-b1b6085db5c5.png" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/91037796/190551774-257acec7-5caf-4b75-af5f-1de53c3d0023.png" width=60% height=60%>
+</br>
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/190552096-be920d3b-aeda-457e-b3b1-fcd710363595.png" width=60% height=60%>
+</br>
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/190552149-7a3aa452-391d-4aeb-b3f8-05b1eb631688.png" width=60% height=60%>
 </br>
 
 
