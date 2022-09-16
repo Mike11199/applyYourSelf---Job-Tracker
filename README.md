@@ -101,7 +101,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 
 </br>
-- Added more job status codes for interview types, acceptions, rejections, etc. Edited Job, Job_List, and StatsContainer components, appcontext, reducer, addjob dashboard, jobcontroller, and job model.  Took 5 hours to resolve bugs that arose.
+- Added more job status codes for interview types, acceptions, rejections, etc. Edited Job, Job_List, and StatsContainer components, appcontext, reducer, addjob dashboard, jobcontroller, and job model.  Took 5 hours to implement.
 </br>
 
 
