@@ -103,6 +103,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 - Added more job status codes for interview types, acceptions, rejections, etc. Edited Job, Job_List, and StatsContainer components, appcontext, reducer, addjob dashboard, jobcontroller, and job model.  Took 5 hours to implement.
 </br>
+</br>
 
 
 </br>
@@ -114,9 +115,10 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <img src="https://user-images.githubusercontent.com/91037796/189267718-28348a9b-0062-4b8b-bdd4-ff60a90bb272.png" width=30% height=30%>
 </br>
 
-</br>
+
 </br>
 - Added Google Auth 2.0 @react-oauth/google.  Added buttons and front-end set up.  Added a new API route to log the user in.  Sent google credential token on succesful log in and decoded using JWT on the back end.  If the user's email already exists, they are logged in.  Still need to add capability for registering with google later.
+</br>
 </br>
 
 
@@ -124,7 +126,6 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <img src="https://user-images.githubusercontent.com/91037796/190097493-695fbe86-101c-420a-9834-053e8d4c6789.gif" width=100% height=100%>
 </br>
 
-</br>
 </br>
 - Changed job model, and numerous edits to the application to allow for past job statuses and notes to be added to a job.  Added a jobHistory state array that will hold this.  Mapped array to drop downs in all jobs view and the edit job screen, so that past statuses can be edited, deleted, and displayed.  Goal is to add a SANKEY chart to the application.  As some jobs will lead to more interviews and an acceptance, and some will not, which will be reflected on the chart. Took 8+ hours to implement.
 </br>
