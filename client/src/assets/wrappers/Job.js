@@ -133,19 +133,7 @@ const Wrapper = styled.article`
   &:hover .actions {
     visibility: visible;
   }  
-  .add-btn {
-    
-    width: 20px;    
-    height: 20px;
-    text-align: center;
-    font-size: 7px;
-    font-weight: 600;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    overflow-wrap: normal;
-  
-  }
+
 
 `
 
