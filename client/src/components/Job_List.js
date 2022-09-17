@@ -91,7 +91,7 @@ const Job = ({
 
             </CCollapse> */}
                  <button
-        className='btn expand-btn'
+        className={jobHistory.length>1?'btn expand-btn':'btn expand-btn2'}
         onClick={() => setOpen(!open)}
         aria-controls="example-collapse-text"
         aria-expanded={open}

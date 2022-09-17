@@ -8,19 +8,6 @@ const Wrapper = styled.article`
   box-shadow: var(--shadow-2);
 
 
-  .add-btn {
-    
-    width: 20px;    
-    height: 20px;
-    text-align: center;
-    font-size: 7px;
-    font-weight: 600;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    overflow-wrap: normal;
-  
-  }
 
 
   .expand-btn {
@@ -30,6 +17,22 @@ const Wrapper = styled.article`
     width: 90px;    
     height: 30px;
     display: flex;
+
+    justify-content: center;
+    flex-direction: row;
+    align-self: center;
+    text-align: center;
+
+    
+  }
+  .expand-btn2 {
+    
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 90px;    
+    height: 30px;
+    display: flex;
+    background-color: gray;
 
     justify-content: center;
     flex-direction: row;
