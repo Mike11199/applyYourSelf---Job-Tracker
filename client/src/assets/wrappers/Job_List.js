@@ -8,7 +8,19 @@ const Wrapper = styled.article`
   box-shadow: var(--shadow-2);
 
 
-
+  .add-btn {
+    
+    width: 20px;    
+    height: 20px;
+    text-align: center;
+    font-size: 7px;
+    font-weight: 600;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    overflow-wrap: normal;
+  
+  }
 
 
   .expand-btn {
@@ -359,6 +371,7 @@ const Wrapper = styled.article`
 
 
 
+
   .rejected_archived {
     width: 42px;
 
@@ -388,6 +401,7 @@ const Wrapper = styled.article`
     }
 
   }
+
 
   .status {
     border-radius: var(--borderRadius);

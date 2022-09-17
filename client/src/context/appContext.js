@@ -267,7 +267,7 @@ const registerUser = async (currentUser) => {
   }
 
   const handleChangeArray = (name,value) =>{
-    console.log(value)
+    // console.log(value)
     dispatch({type: HANDLE_CHANGE_ARRAY, payload:{name,value}})
   }
 

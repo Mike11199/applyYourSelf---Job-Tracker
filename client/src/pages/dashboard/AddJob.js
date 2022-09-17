@@ -98,21 +98,31 @@ const AddJob = () => {
 
   }
 
-  const handleJobInputArray3 = (id) => {
+  const deleteIndexFromArray = (id) => {
 
-    const index = parseInt(id)
-    // console.log(index)
+    const index = parseInt(id)    
     let jobHistory2 = [...jobHistory]
-    jobHistory2.splice(index,1)
-    // const name = `jobHistory[${index}][${name2}]`
+    jobHistory2.splice(index,1)    
     const name = `jobHistory`
 
     handleChangeArray(name, jobHistory2)
 
   }
 
+  
 
+  const addIndexToArray = (id) => {
 
+    const index = parseInt(id)    
+    
+    let newEntry = {pastStatus: 'pending', pastNotes: ''}   
+    let lastArray= jobHistory.length
+    let jobHistory2 = [...jobHistory.slice(0,index+1), newEntry, ...jobHistory.slice(index+1)  ] 
+    const name = `jobHistory`
+
+    handleChangeArray(name, jobHistory2)
+
+  }
 
 
   const statusOptionsRenamed =(statusOptions) => {    
@@ -192,7 +202,7 @@ const AddJob = () => {
 
         </form>
 
-        <h3>{isEditing ? 'Add Job History' : 'Edit Job History'}</h3>
+        <h3>{isEditing ? 'Edit Job History' : 'Add Job History'}</h3>
   
 
           {/* //https://ordinarycoders.com/blog/article/javascript-react-map-method */}
@@ -200,13 +210,17 @@ const AddJob = () => {
               className='btn btn-block clear-btn'
               style={{width: "30%", backgroundColor:"black"}}
               onClick={(e) => {
-                jobHistory.push({pastStatus: 'pending', pastNotes: ''})
+                let newEntry = {pastStatus: 'pending', pastNotes: ''}               
+                jobHistory.unshift(newEntry)
                 refreshState()
               }}
             >
               Add New Line
             </button>
+            
+            
           <div className='form_center_2' >
+            
 
 
           {jobHistory.map((pastJob, index) => {
@@ -233,7 +247,8 @@ const AddJob = () => {
             handleChange={handleJobInputArray}
           />
           
-          <button className="delete-btn" id={`${index}`} onClick={() => handleJobInputArray3(`${index}`)}  >Delete</button>
+          <button className="delete-btn" id={`${index}`} onClick={() => deleteIndexFromArray(`${index}`)}  >-</button>
+          <button className="add-btn" id={`${index}`} onClick={() => addIndexToArray(`${index}`)}  >+</button>
           </>
 
 

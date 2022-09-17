@@ -26,6 +26,16 @@ const Wrapper = styled.section`
     border-radius: 21px;
   }
   
+  .add-btn {
+    
+    margin-top: 40px;
+    background-color: green;
+    color: white;
+    height: 30px;
+    border:0px;
+    border-radius: 21px;
+  
+  }
   .form-row {
     margin-bottom: 0;
   }
@@ -78,7 +88,7 @@ const Wrapper = styled.section`
       grid-template-columns: 1fr 1fr 1fr;
     }
     .form_center_2 {
-      grid-template-columns: 1fr 1fr .5fr;
+      grid-template-columns: 1fr 1fr .05fr .05fr;
     }
     .form-center button {
       margin-top: 0;
