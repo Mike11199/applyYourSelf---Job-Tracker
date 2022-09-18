@@ -24,7 +24,11 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <img src="https://user-images.githubusercontent.com/91037796/190927275-2cf7871e-1610-475e-837f-7710fca167fb.gif" width=100% height=100%>
 </br>
 </br>
+<img src="https://user-images.githubusercontent.com/91037796/190930347-d767e864-e6a2-415b-ba91-ed02e82f5e54.gif" width=100% height=100%>
+</br>
+</br>
 <h2>Project Summary</h2>
+
 
 
 
