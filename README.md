@@ -21,11 +21,10 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 -Mock data used for this demonstration.
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/190099234-91c9608f-796e-4a86-a4b9-4fe6ff1b1d7e.gif" width=100% height=100%>
+<img src="https://user-images.githubusercontent.com/91037796/190927275-2cf7871e-1610-475e-837f-7710fca167fb.gif" width=100% height=100%>
 </br>
 </br>
 <h2>Project Summary</h2>
-
 
 
 
