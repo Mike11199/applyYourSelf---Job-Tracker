@@ -76,13 +76,13 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <h2>Completed To-Dos (Extra Features Added)</h2>
 
 <br>
--Added complicated logic to the jobsController to aggregate jobs by their target and source (pipeline #3 from MongoDB), if a list of past job statuses is added to a job, to generate a Sankey chart, which is mostly functional.  However, new source:target combinations where the job target and source were backwards earlier in the chart, for example pending to job interview, then job interview to pending, are causing the chart to crash.  This means that certain combinations of past job statuses for a job will bug the chart for all of a user's jobs.  Will need to refactor code and possibly use a different Saneky chart package to fix this.  Same job statuses to the same status are also causing crashes, for example, technical interview to technical interview for a 2nd round.  Fixed this by adding a space character for these combinations.
+-Added complicated logic to the jobsController to aggregate jobs by their target and source (pipeline #3 from MongoDB), if a list of past job statuses is added to a job, to generate a Sankey chart, which is mostly functional.  However, new source:target combinations where the job target and source were backwards earlier in the chart, for example pending to job interview, then job interview to pending, are causing the chart to crash.  
+<br>
+<br>
+-This means that certain combinations of past job statuses for a job will crash the chart for all of a user's jobs.  Refactored code to reduce all interview types to "interview" for this chart, and added a warning that possible combinations can crash the chart.  This will prevent most of the issues, and only backwards combinations involving assessments have to be now considered.
 <br>
 
 
-</br>
-<img src="https://user-images.githubusercontent.com/91037796/190887887-ac8b7392-68ad-4979-a946-4b637273b41a.png" width=100% height=100%>
-</br>
 
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/190926815-4dedd42e-832b-4939-b778-25e0d8460ec5.png" width=100% height=100%>
