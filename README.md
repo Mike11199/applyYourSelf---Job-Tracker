@@ -75,6 +75,16 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 <h2>Completed To-Dos (Extra Features Added)</h2>
 
+<br>
+-Added complicated logic to the jobsController to aggregate jobs by their target and source, if a list of past job statuses is added to a job, to generate a Sankey chart.  However, new source:target combinations where the job target and source were backwards earlier in the chart, for example pending to job interview, then job interview to pending, are causing the chart to crash.  Also other errors are existing.  Will need to refactor code and possibly use a different Saneky chart package.
+<br>
+
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/190887887-ac8b7392-68ad-4979-a946-4b637273b41a.png" width=80% height=80%>
+</br>
+
+
 
 -Replaced logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.
 <br>
