@@ -2,6 +2,7 @@ import Sankey, {
   Tooltip,
   Link,
   Node,
+  
 } from 'devextreme-react/sankey';
 import { useAppContext } from '../context/appContext';
 
@@ -18,26 +19,44 @@ const data1 = [
   { source: 'Behavioral Interviews', target: 'Technical Interviews', weight: 2 },
   { source: 'Coding Assessments', target: 'Technical Interviews', weight: 1 },
   { source: 'Technical Interviews', target: 'Accepted', weight: 1 },
+  { source: 'Pending', target: 'Technical Interviews', weight: 13 },
+  { source: 'Pending', target: 'Technical Interviews', weight: 2},
 ];
 
+const data2 = [
 
+  { source: 'pending', target: 'coding_assessment', weight: 1 },
+  { source: 'pending', target: 'coding_assessment', weight: 1 },
+  { source: 'pending', target: 'coding_assessment', weight: 1 },
+  { source: 'pending', target: 'behavioral_interview', weight: 1 },
+  { source: 'pending', target: 'phone_interview', weight: 1 },
+  { source: 'pending', target: 'rejected/archived', weight: 1 },
+  { source: 'pending', target: 'technical_interview', weight: 1 },
+  { source: 'pending', target: 'rejected/archived', weight: 1 },
+  { source: 'pending', target: 'technical_interview', weight: 1 },
+  { source: 'behavioral_interview', target: 'technical_interview', weight: 1 },
+  
+  
+  
+]
 
 
 function SankeyJobs() {
 
-  const { stats } = useAppContext()
+  const { stats, MasterData_Sankey_Final } = useAppContext()
   console.log(stats)
-
+  console.log(MasterData_Sankey_Final)
 
 
 
 
   return (
     <Sankey id="sankey"
-      dataSource={data1}
+      dataSource={MasterData_Sankey_Final}
       sourceField="source"
       targetField="target"
-      weightField="weight"
+      weightField="weight"  
+      
       // title="Commodity Turnover in 2017"
     >
       <Tooltip
@@ -45,13 +64,15 @@ function SankeyJobs() {
         customizeLinkTooltip={customizeLinkTooltip}
       >
       </Tooltip>
+ 
 
       <Link
         colorMode="gradient">
       </Link>
       <Node
-        width={8}
-        padding={30}>
+        width={15}        
+        padding={250}>
+        
       </Node>
 
     </Sankey>

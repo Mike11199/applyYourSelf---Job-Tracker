@@ -282,6 +282,7 @@ const reducer = (state, action) => {    //hook that takes current state as first
           isLoading: false,
           stats: action.payload.stats,
           monthlyApplications: action.payload.monthlyApplications,
+          MasterData_Sankey_Final: action.payload.MasterData_Sankey_Final
         }
       }
       if (action.type === CLEAR_FILTERS) {

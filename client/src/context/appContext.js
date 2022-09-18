@@ -80,6 +80,7 @@ export const initialState = {
   jobsCardsView: true,
   status_no_underscore:'pending',
   jobHistory: [],
+  MasterData_Sankey_Final: [],
 
 }
 
@@ -389,6 +390,7 @@ const showStats = async () => {
       payload: {
         stats: data.defaultStats,
         monthlyApplications: data.monthlyApplications,
+        MasterData_Sankey_Final: data.MasterData_Sankey_Final,
       },
     })
   } catch (error) {

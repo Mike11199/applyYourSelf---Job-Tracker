@@ -131,6 +131,8 @@ const showStats = async (req, res) => {
         {$group: {_id:'$status', count:{$sum:1} } }  //https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/
     ])
 
+    // console.log(stats)
+
     //iterate over array and pull out id and count.  return accumulator and count
     stats = stats.reduce((acc, curr) =>{
         const { _id: title,count } = curr
@@ -153,7 +155,7 @@ const showStats = async (req, res) => {
         rejected_archived: stats['rejected/archived'] || 0,
     }
 
-    console.log(defaultStats)
+    // console.log(defaultStats)
 
     //PIPELINE 2:  Retrieve jobs and group by month and year
     let monthlyApplications = await Job.aggregate([
@@ -165,7 +167,7 @@ const showStats = async (req, res) => {
     },
 
     { $sort: { '_id.year': -1, '_id.month': -1 }},  //-1 to sort by latest jobs and months first
-    { $limit: 6 },  //added to only display the last 6 months
+    // { $limit: 6 },  //added to only display the last 6 months
 
     ])
 
@@ -181,7 +183,189 @@ const showStats = async (req, res) => {
     .reverse()
 
 
-    res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications })
+
+        //PIPELINE 3:  Retrieve jobs by iterating over each JobHistory array of notes/statuses
+        let statsJobHistory = await Job.aggregate([ 
+            {$match: {createdBy:mongoose.Types.ObjectId( req.user.userId )} },
+            // {$unwind: '$jobHistory'} ,                                                      
+        ])
+
+        // console.log(statsJobHistory)
+
+        // console.log(`Pipeline 3 stats are\n\n: `)
+        // console.log(statsJobHistory)
+        // console.log(statsJobHistory[0].jobHistory.pastStatus)
+
+    let statusDict = {}
+    
+    
+    const pastStatuses = statsJobHistory.map((item, index) => {
+
+        const {status } = item
+        const {_id, jobHistory} = item
+        let pastStatusList = []
+     
+
+        if (jobHistory !== undefined){
+        const pastStatus = jobHistory.map((item, index) => {
+            // console.log(item)
+            pastStatusList.push(item.pastStatus)
+        })
+            }
+        // statusDict[_id] = [status]
+        return {_id, index, status, pastStatusList}
+    })
+
+    // console.log(statusDict)
+    // console.log(pastStatuses)
+
+
+    const pastStatuses2 = pastStatuses.map((item, index) => {
+
+        const {_id, status, pastStatusList} = item
+        
+        if (pastStatusList.length > 0){
+            statusDict[_id] = [status, ...pastStatusList]
+        }
+        else
+        {
+            statusDict[_id] = [status]
+        }
+
+        return {_id, index, pastStatusList}
+    })
+    // console.log(statusDict)
+
+
+    let statsTypesAll = await Job.aggregate([ 
+        {$group: {_id:'$status'} }  //https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/
+    ])
+    
+    let statsTypesAllList = []
+
+    const statsTypesAllTest = statsTypesAll.map((item, index) => {
+        // console.log(item)
+        
+        statsTypesAllList.push(item._id)
+        
+    })
+    // console.log(statsTypesAllList)
+
+    let statsMasterDict_Sankey = []
+
+    for (const property in statusDict)
+    {
+        
+        let subList = statusDict[property]
+
+        if (subList.length <2) {
+            statsMasterDict_Sankey.push(subList)
+        }
+        else{
+
+        for (var i=0; i<subList.length; i++) {
+
+            if (subList[i+1] !== undefined ){
+                statsMasterDict_Sankey.push([subList[i+1], subList[i]])
+            }
+
+
+        }
+            }
+
+    }
+    // console.log(statsMasterDict_Sankey)
+
+
+    const MasterData_Sankey_Final = []
+  
+    for (const item in statsMasterDict_Sankey)
+    {
+        let list = statsMasterDict_Sankey[item]        
+        // console.log(list)        
+        if (list.length > 1 )
+        {
+
+            if (list[0] === list[1]){
+                const space = " "
+                const listItem = {source: list[0].replace('_', ' '), target: list[1].replace('_', ' ').concat(space), weight: 1}
+                MasterData_Sankey_Final.push(listItem)
+            }
+            if (list[0] === list[1]) {
+
+            }
+            else{
+                const listItem = {source: list[0].replace('_', ' '), target: list[1].replace('_', ' '), weight: 1}
+                MasterData_Sankey_Final.push(listItem)
+            }
+
+
+
+        }
+        if (list.length <= 1 )
+        {
+            if (list[0] == "pending"){
+                const space = " "
+                const listItem = {source: "applied", target: list[0].replace('_', ' '), weight: 1}
+                MasterData_Sankey_Final.push(listItem)
+            }
+            else {
+
+                const listItem = {source: "applied", target: list[0].replace('_', ' '), weight: 1}
+                MasterData_Sankey_Final.push(listItem)
+            }
+
+        }
+
+    }
+    console.log(MasterData_Sankey_Final)
+
+   
+    let error_list =[]
+
+    for (var t=0; t<MasterData_Sankey_Final.length; t++)  {
+
+    
+       const {source, target} = MasterData_Sankey_Final[t]
+       
+       console.log({source, target},)
+
+       for (var g=t; g<MasterData_Sankey_Final.length; g++) 
+       {
+
+        
+        let source_2 = MasterData_Sankey_Final[g].source
+        let target_2 = MasterData_Sankey_Final[g].target
+        console.log({source_2, target_2},)
+
+        // the sankey chart crashes if you have an element going forward then backwards
+        // for example, pending to job interview works
+        // if later job interview to pending, then chart is going backwards, and crash
+        // if (source == target_2 && target == target_2)
+        // {
+        //     console.log('error items')
+        //     console.log({source, target, source_2, target_2})
+        //     error_list.push(MasterData_Sankey_Final[g])
+        //     MasterData_Sankey_Final.splice(g,1)
+        // }
+
+
+
+       }
+
+
+    }
+
+    console.log('Error list items that would have caused the chart to crash!')
+    console.log(error_list)
+
+
+
+
+
+
+
+    res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications, MasterData_Sankey_Final })
 }
 
 
