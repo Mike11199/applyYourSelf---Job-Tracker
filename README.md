@@ -81,8 +81,13 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/190887887-ac8b7392-68ad-4979-a946-4b637273b41a.png" width=80% height=80%>
+<img src="https://user-images.githubusercontent.com/91037796/190887887-ac8b7392-68ad-4979-a946-4b637273b41a.png" width=100% height=100%>
 </br>
+
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/190926815-4dedd42e-832b-4939-b778-25e0d8460ec5.png" width=100% height=100%>
+</br>
+
 
 
 
