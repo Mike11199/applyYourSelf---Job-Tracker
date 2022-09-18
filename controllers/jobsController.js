@@ -237,6 +237,7 @@ const showStats = async (req, res) => {
     // console.log(statusDict)
 
 
+
     let statsTypesAll = await Job.aggregate([ 
         {$group: {_id:'$status'} }  //https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/
     ])
@@ -250,6 +251,55 @@ const showStats = async (req, res) => {
         
     })
     // console.log(statsTypesAllList)
+
+
+    console.log(statusDict)
+    for (const property in statusDict)
+    {
+        
+        let subList = statusDict[property]
+
+        if (subList.length >2) {
+            
+            console.log('sort here')
+            console.log(subList)
+
+            for (var i=0; i<subList.length; i++)
+            {
+                let item = subList[i].replace('behavioral_', ' ').replace('technical_', ' ').replace('phone_', ' ')
+                let count = 2
+
+                for (var j=i+1; j<subList.length; j++)
+                {
+                    
+                    let item2 = subList[j].replace('behavioral_', ' ').replace('technical_', ' ').replace('phone_', ' ') 
+                    let string_under = "_"
+
+                        if (item == item2 ){                            
+                        
+                            item = item.concat(string_under)
+                            subList[i] = item.concat(count)
+                            count = count +1                            
+                        }
+                        else if (item.slice(0, -1) == item2){                            
+                        
+                            
+                            subList[i] = item.concat(count)
+                            count = count +1                            
+                        }
+                    
+                    
+                }
+
+            }
+
+
+        }
+ 
+    }
+  
+
+
 
     let statsMasterDict_Sankey = []
 
@@ -265,7 +315,21 @@ const showStats = async (req, res) => {
 
         for (var i=0; i<subList.length; i++) {
 
+
             if (subList[i+1] !== undefined ){
+
+                // if (subList[i+1] == subList[i] ){
+
+                //     console.log([subList[i+1], subList[i]])
+                //     let lengthString = subList[i+1].length
+                //     console.log(subList[i+1][lengthString-2])
+
+                // }
+
+
+
+
+
                 statsMasterDict_Sankey.push([subList[i+1], subList[i]])
             }
 
@@ -274,7 +338,7 @@ const showStats = async (req, res) => {
             }
 
     }
-    // console.log(statsMasterDict_Sankey)
+    console.log(statsMasterDict_Sankey)
 
 
     const MasterData_Sankey_Final = []
@@ -286,39 +350,38 @@ const showStats = async (req, res) => {
         if (list.length > 1 )
         {
 
-            if (list[0] === list[1]){
-                const space = " "
-                const listItem = {source: list[0].replace('_', ' '), target: list[1].replace('_', ' ').concat(space), weight: 1}
+            if (list[0] == "pending"){
+                list[0] = "applied"
+            }
+            if (list[0].split("_")[1] == list[1].split("_")[1] ){
+                list[1] = list[1].concat(" 2")
+            }
+
+
+                const listItem = {source: list[0].replace('behavioral_', ' ').replace('technical_', ' ').replace('phone_', ' ').replace('_', ' ').replace('_', ' '), target: list[1].replace('behavioral_', ' ').replace('technical_', ' ').replace('phone_', ' ').replace('_', ' ').replace('_', ' '), weight: 1}
                 MasterData_Sankey_Final.push(listItem)
             }
-            if (list[0] === list[1]) {
-
-            }
-            else{
-                const listItem = {source: list[0].replace('_', ' '), target: list[1].replace('_', ' '), weight: 1}
-                MasterData_Sankey_Final.push(listItem)
-            }
 
 
 
-        }
+        
         if (list.length <= 1 )
         {
             if (list[0] == "pending"){
                 const space = " "
-                const listItem = {source: "applied", target: list[0].replace('_', ' '), weight: 1}
+                const listItem = {source: "applied", target: list[0].replace('_', ' ').replace('_', ' '), weight: 1}
                 MasterData_Sankey_Final.push(listItem)
             }
             else {
 
-                const listItem = {source: "applied", target: list[0].replace('_', ' '), weight: 1}
+                const listItem = {source: "applied", target: list[0].replace('behavioral_', ' ').replace('technical_', ' ').replace('phone_', ' ').replace('_', ' ').replace('_', ' '), weight: 1}
                 MasterData_Sankey_Final.push(listItem)
             }
 
         }
 
     }
-    console.log(MasterData_Sankey_Final)
+    // console.log(MasterData_Sankey_Final)
 
    
     let error_list =[]
@@ -328,7 +391,7 @@ const showStats = async (req, res) => {
     
        const {source, target} = MasterData_Sankey_Final[t]
        
-       console.log({source, target},)
+    //    console.log({source, target},)
 
        for (var g=t; g<MasterData_Sankey_Final.length; g++) 
        {
@@ -336,7 +399,7 @@ const showStats = async (req, res) => {
         
         let source_2 = MasterData_Sankey_Final[g].source
         let target_2 = MasterData_Sankey_Final[g].target
-        console.log({source_2, target_2},)
+        // console.log({source_2, target_2},)
 
         // the sankey chart crashes if you have an element going forward then backwards
         // for example, pending to job interview works
@@ -356,8 +419,8 @@ const showStats = async (req, res) => {
 
     }
 
-    console.log('Error list items that would have caused the chart to crash!')
-    console.log(error_list)
+    // console.log('Error list items that would have caused the chart to crash!')
+    // console.log(error_list)
 
 
 
