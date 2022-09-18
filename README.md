@@ -147,12 +147,13 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 </br>
 
-<img src="https://user-images.githubusercontent.com/91037796/190551774-257acec7-5caf-4b75-af5f-1de53c3d0023.png" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/91037796/190551774-257acec7-5caf-4b75-af5f-1de53c3d0023.png" width=80% height=80%>
 </br>
 
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/190552096-be920d3b-aeda-457e-b3b1-fcd710363595.png" width=80% height=80%>
+<img src="https://user-images.githubusercontent.com/91037796/190930419-87c320c5-e74d-4fe2-b683-6c17a88c9a56.png" width=80% height=80%>
 </br>
+
 
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/190552149-7a3aa452-391d-4aeb-b3f8-05b1eb631688.png" width=80% height=80%>
