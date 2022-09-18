@@ -54,7 +54,7 @@ function SankeyJobs() {
   return (
     <>
     <h4 style={{textAlign:"center", marginTop:"150px", marginBottom:"40px"}}>Sankey Chart - Application Outcomes</h4>    
-    <p style={{display:"flex", marginBottom:"50px"}}>Warning!  This chart will crash if circular references are added.  For example, do not add assessments after interviews to a particular job's history if other jobs have assessments before interviews. This will cause a circular error.</p>
+    <p style={{display:"flex", marginBottom:"50px"}}>**Warning!  This chart will crash if circular references are added.  For example, do not add assessments after interviews to a particular job's history if other jobs have assessments before interviews. This will cause a circular error.</p>
         
     <Sankey id="sankey"
       dataSource={MasterData_Sankey_Final}

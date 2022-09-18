@@ -12,7 +12,7 @@ const {monthlyApplications: data} = useAppContext()
 
   return (
     <Wrapper>
-      <h4>Monthly Applications</h4>
+      <h4 style={{marginTop:"100px"}}>Monthly Applications</h4>
       <button type='button' onClick={()=>setBarChart(!barChart)}>
         {barChart ? 'Area Chart' : 'Bar Chart' }
       </button>

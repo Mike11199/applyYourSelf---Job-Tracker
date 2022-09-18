@@ -162,7 +162,7 @@ const AddJob = () => {
           {/* job status */}
           <FormRowSelect
             name='status'
-            value={status_no_underscore}
+            value={status.replace('_',' ')}
             handleChange={handleJobInput2}
             list={statusOptionsRenamed(statusOptions)}
           />

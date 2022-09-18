@@ -17,8 +17,9 @@ const Stats = () => {
   
   return (
     <>
-    <h4 style={{textAlign:"center"}}>Active Statuses (Not Including Job History)</h4>
+    
       <StatsContainer />
+      {monthlyApplications.length > 0 && <div style={{display:"flex",textAlign:"right", fontSize:"12px"}}>**Does not include past statuses in notes </div>} 
       {/* AND function allows cards to only display if monthly applications are not empty */}
       {monthlyApplications.length > 0 && <ChartsContainer />} 
 
