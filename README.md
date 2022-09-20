@@ -4,7 +4,7 @@
 </br>
 Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
 </br>
-
+</br>
 
 <h2>Description</h2>
 </br>
@@ -14,14 +14,25 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 -I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.  This project was first developed by following the Udemy course: MERN Stack Course 2022 - MongoDB, Express, React and NodeJS by John Smilga.  I have since added numerous features to it.  
 </br>
 
-<h2>Screenshots/ GIFs</h2>
+</br>
+<h2>Screenshots/ GIFs - Mock Data</h2>
 </br>
 
 
--Mock data used for this demonstration.
+-Desktop View
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/91037796/190930347-d767e864-e6a2-415b-ba91-ed02e82f5e54.gif" width=100% height=100%>
+<img src="https://user-images.githubusercontent.com/91037796/191149006-f697a618-e98a-47bc-94bd-48a31bdc9595.gif" width=100% height=100%>
+</br>
+</br>
+-Mobile View
+</br>
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/191149013-285fde41-574a-4f34-8321-2c0a2058b00b.gif" width=30% height=60%>
+
+
+
+</br>
 </br>
 </br>
 <h2>Project Summary</h2>
@@ -50,7 +61,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 
 </br>
-
+</br>
 <h2>To-Dos</h2>
 </br>
 
@@ -159,7 +170,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <img src="https://user-images.githubusercontent.com/91037796/190552149-7a3aa452-391d-4aeb-b3f8-05b1eb631688.png" width=80% height=80%>
 </br>
 
-
+</br>
 <h2>Packages Installed</h2>
 </br></br>
 <table>
@@ -217,7 +228,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 
 </br>
-
+</br>
 <h2>Project Implementations</h2>
 
 -Used NPM to install the NORMALIZE.CSS package.  This allows for normalized CSS to provide cross browser consistency, prevent name collisions, and allow stylizing of entire react components using wrappers.  Is a fancier way of * { } to add a global for CSS elements.  
