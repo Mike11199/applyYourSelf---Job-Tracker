@@ -262,6 +262,22 @@ const Wrapper = styled.article`
       text-align: center;
   }
 
+  .expand-btn2 {
+    
+      margin-left: 0px;
+      margin-right: 0px;
+
+      margin: 0px;
+      width: 31px;    
+      height: 20px;
+        
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      overflow-wrap: normal;
+      text-align: center;
+    
+  }
 
     h6 {
     font-size: 8px;
@@ -381,6 +397,10 @@ const Wrapper = styled.article`
   }
 
 
+
+
+
+  
 
     }
     @media (min-width: 992px) {

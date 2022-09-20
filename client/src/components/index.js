@@ -13,5 +13,23 @@ import Loading from "./Loading"
 import MyCustomButton from "./MyCustomButton"
 import MyGoogleLogInButton  from "./GoogleLogIn"
 import SankeyJobs from "./SanKeyJobs"
+import TextArea from "./TextArea"
 
-export { Logo, FormRow, Alert, Navbar, BigSidebar, SmallSidebar, FormRowSelect, SearchContainer, JobsContainer, ChartsContainer, StatsContainer, Loading, MyCustomButton, MyGoogleLogInButton, SankeyJobs }
+export {
+        Logo,
+        FormRow,
+        Alert,
+        Navbar,
+        BigSidebar,
+        SmallSidebar,
+        FormRowSelect,
+        SearchContainer,
+        JobsContainer,
+        ChartsContainer,
+        StatsContainer,
+        Loading,
+        MyCustomButton,
+        MyGoogleLogInButton,
+        SankeyJobs,
+        TextArea,
+    }

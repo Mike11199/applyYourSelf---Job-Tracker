@@ -26,7 +26,7 @@ const Stats = () => {
 
       
       {monthlyApplications.length > 0 && <SankeyJobs/>} 
-        
+      
       
       <br></br>
       <br></br>

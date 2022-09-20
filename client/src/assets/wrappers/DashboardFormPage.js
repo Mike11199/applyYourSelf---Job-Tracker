@@ -89,10 +89,70 @@ const Wrapper = styled.section`
     }
     .form_center_2 {
       grid-template-columns: 1fr 1fr .05fr .05fr;
+
+
+      .form-input{
+      height: 100px;
+    }
+    .form-select{
+      height: 100px;
+    }
     }
     .form-center button {
       margin-top: 0;
     }
+  }
+  @media (max-width: 1120px) {
+    .form-center {
+      grid-template-columns: 1fr;
+      font-size: 11px;
+    }
+    .form_center_2 {
+      margin-top: 40px;
+      grid-template-columns:  2fr  ;
+      font-size: 10px;
+
+      .form-input{
+
+        height: 100px;
+      }
+
+    }
+    .form-center button {
+      margin-top: 0;
+    }
+    .submit-btn{
+      
+      font-size: 8px;
+      
+      text-align: center;
+      justify-content: center;
+      
+    }
+    .clear-btn{
+      
+      font-size: 8px;
+   
+      text-align: center;
+      justify-content: center;
+      
+    }
+    .delete-btn{
+      
+      margin: 0px;
+      
+      padding: 0px;
+      
+    }
+    .add-btn{
+      margin: 0px;
+      margin-bottom: 30px;
+      
+    }
+
+
+
+
   }
 `
 

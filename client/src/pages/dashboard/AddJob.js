@@ -1,4 +1,4 @@
-import { FormRow, FormRowSelect, Alert } from '../../components'
+import { FormRow, FormRowSelect, Alert, TextArea } from '../../components'
 import { useAppContext } from '../../context/appContext'
 import Wrapper from '../../assets/wrappers/DashboardFormPage'
 
@@ -238,9 +238,9 @@ const AddJob = () => {
             handleChange={handleJobInputArray2}
             list={statusOptionsRenamed(statusOptions)}
           />
-          <FormRow
+          <TextArea
             key={`${pastJob._id}_pastNotes_${index}`}
-            type='text'
+            type='textarea'
             labelText='Notes'
             name={`pastNotes_${index}`}
             value={pastJob.pastNotes}
