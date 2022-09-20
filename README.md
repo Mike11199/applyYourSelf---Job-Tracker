@@ -92,7 +92,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 <br>
 -This means that certain combinations of past job statuses for a job will crash the chart for all of a user's jobs.  Refactored code to reduce all interview types to "interview" for this chart, and added a warning that possible combinations can crash the chart.  This will prevent most of the issues, and only backwards combinations involving assessments have to be now considered.
 <br>
-
+<br>
 
 
 </br>
