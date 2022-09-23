@@ -117,13 +117,22 @@ const Job = ({
 
                 return      (
                 <>
-                <div className='job_notes'>
-                  Status: {pastJob.pastStatus}
+                
+                <div className='content-center-job-notes'>
+                  <div className='job_notes'  style={{fontWeight: 900}}>
+                    Job Status:
+                  </div>
+
+                  <div className="job_notes_detail" >{pastJob.pastStatus.replace('_', " ")}</div>
+                    
+                  
+                  <div className='job_notes'  style={{fontWeight: 900}}>
+                    Notes:
+                    </div>
+                    <div className="job_notes_detail"> {pastJob.pastNotes}</div>
+                  
+                  <br></br>
                 </div>
-                <div className='job_notes'>
-                  Notes: {pastJob.pastNotes}
-                </div>
-                <br></br>
                 </>
                 )
                 })}

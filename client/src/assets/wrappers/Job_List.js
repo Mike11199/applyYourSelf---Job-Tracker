@@ -23,8 +23,10 @@ const Wrapper = styled.article`
     align-self: center;
     text-align: center;
 
-    
   }
+
+
+
   .expand-btn2 {
     
     margin-top: 5px;
@@ -43,9 +45,39 @@ const Wrapper = styled.article`
   }
 
 
+  .test_collapse {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
+.content-center-job-notes{
+  display: grid;
+  grid-template-columns: 1fr 5fr ;
+  row-gap: 10px;
+  overflow-wrap: anywhere;
+}
+
 
   @media (min-width: 445px) {
 
+
+.test_collapse {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: whitesmoke;
+}
+
+.content-center-job-notes{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 7fr;
+  overflow-wrap: anywhere;
+}
 
   .small_delete {
         display: none;
@@ -176,6 +208,12 @@ const Wrapper = styled.article`
     
   .job_notes {
       font-size: 8px;
+      font-weight: 900;
+      
+    }
+
+    .job_notes_detail {
+      font-size: 8px;
       
     }
     
@@ -184,13 +222,13 @@ const Wrapper = styled.article`
       font-size: 8px;
       align-items: center;
       margin: 0px;
-      padding-left: 5px;
+      
       
       
     }
     .content {
     padding: 0px 0px 0px 0px ;
-    border-bottom: 1px solid black;
+    
     margin: 0px;
     width: 100%;
     
@@ -236,9 +274,9 @@ const Wrapper = styled.article`
 
       
       font-size: 6px;
+    
 
-
-
+      
       .small_delete {
         display: visible;
         align-self: center;
@@ -280,6 +318,7 @@ const Wrapper = styled.article`
   }
 
     h6 {
+    padding-left: 5px;
     font-size: 8px;
     font-family: var(--headingFont);
     font-weight: 400;
@@ -287,7 +326,8 @@ const Wrapper = styled.article`
     }
     
     p {
-    font-size: 8px;
+    padding-left: 5px;
+    font-size: 7px;
     margin: 0px;
     }
 
@@ -413,9 +453,17 @@ const Wrapper = styled.article`
         margin-bottom: 4px;
       }     
 
+      *{
+      #example-collapse-text{
       .job_notes {
+          font-size: 16px;   
+          font-weight: 900; 
+
+        }
+        .job_notes_detail {
           font-size: 12px;      
         }
+      }}
 
     }
 
