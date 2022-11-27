@@ -11,7 +11,7 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 
 -Full stack MERN project not affiliated with any university course.  Development is ongoing to further my learning of JavaScript and a full stack application.  I intend to add different pages, functionality, custom CSS, and other tweaks in the future.  
 </br>
--I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.  This project was first developed by following the Udemy course: MERN Stack Course 2022 - MongoDB, Express, React and NodeJS by John Smilga.  I have since added numerous features to it.  
+-I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.  This project was first developed by following the skeleton code from the Udemy course: MERN Stack Course 2022 - MongoDB, Express, React and NodeJS by John Smilga.  I have since added numerous features to it.  
 </br>
 
 </br>
