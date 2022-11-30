@@ -10,7 +10,6 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 
 -Full stack MERN project not affiliated with any university course.  Development is ongoing to further my learning of the MERN stack.  This project was branched off an 80+ hour UDEMY course, and I have since added new components, pages, login functionality, CSS, and other extensive updates to it.  
-</br>
 
 </br>
 <h2>Screenshots/ GIFs - Mock Data</h2>
