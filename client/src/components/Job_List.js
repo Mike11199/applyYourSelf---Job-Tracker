@@ -118,7 +118,7 @@ const Job = ({
                 return      (
                 <>
                 
-                <div className='content-center-job-notes'>
+                <div className='content-center-job-notes' >
                   <div className='job_notes'  style={{fontWeight: 900}}>
                     Job Status:
                   </div>
