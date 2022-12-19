@@ -6,13 +6,17 @@ Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.h
 </br>
 </br>
 
-<h2>Description</h2>
+<h2>Project Summary</h2>
 </br>
 
--Full stack MERN project not affiliated with any university course.  Development is ongoing to further my learning of JavaScript and a full stack application.  I intend to add different pages, functionality, custom CSS, and other tweaks in the future.  
-</br>
--I then intend to reuse parts of this work in other future MERN projects, where I can recycle some of the error-handling, middleware, and user authentication code sections.  This project was first developed by following the Udemy course: MERN Stack Course 2022 - MongoDB, Express, React and NodeJS by John Smilga.  I have since added numerous features to it.  
-</br>
+- Full-stack MERN web application that allows multiple users to track their job application history on one convenient website
+from anywhere. 
+
+- Allows jobs to be searched, sorted by date, name, and categorized by application status with full CRUD
+functionality on the front-end (React.js). 
+
+- A dashboard presents statistical data visually (Bar chart; Sankey chart), showing
+which jobs led to subsequent interviews and monthly application count. Detailed notes can also be added to each job’s history.
 
 </br>
 <h2>Screenshots/ GIFs - Mock Data</h2>
