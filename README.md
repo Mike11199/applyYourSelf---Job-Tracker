@@ -106,11 +106,14 @@ which jobs led to subsequent interviews and monthly application count. Detailed 
 
 
 
--Replaced logo from the Udemy tutorial with a personal one, modifying CSS wrappers and react components as necessary.
-<br>
+-Added dark mode by adding a state variable to track a "darkMode" state.  Replaced logos with a light/dark version. Modified components as needed.
 </br>
--Changed color scheme from tutorial.
-<br>
+
+<img src="https://user-images.githubusercontent.com/91037796/208845743-104bf3a6-3f62-4a2c-aac2-8f8a7b6f8b9b.png" width=100% height=100%>
+
+
+
+
 </br>
 -Added a 'list view' functionality on the "All Jobs" page to display a compact list, as opposed to job cards.
 <br>
