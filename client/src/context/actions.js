@@ -43,6 +43,7 @@ export const CHANGE_PAGE = 'CHANGE_PAGE'
 
 export const CHANGE_JOBS_VIEW = 'CHANGE_JOBS_VIEW'
 export const REFRESH_STATE = 'REFRESH_STATE'
+export const TOGGLE_DARK_MODE ='TOGGLE_DARK_MODE'
 
 
 

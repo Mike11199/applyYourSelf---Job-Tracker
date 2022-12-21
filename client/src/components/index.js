@@ -1,4 +1,5 @@
 import Logo from "../components/Logo"
+import LogoCopy from "../components/Logo"
 import FormRow from "./FormRow"
 import Alert from "./Alert"
 import Navbar from "./Navbar"
@@ -32,4 +33,5 @@ export {
         MyGoogleLogInButton,
         SankeyJobs,
         TextArea,
+        LogoCopy,
     }

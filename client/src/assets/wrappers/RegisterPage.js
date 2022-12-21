@@ -16,6 +16,7 @@ const Wrapper = styled.section`
    padding: 0;
 }
 
+
 .googleButton2 {
   background: #000000;
   flex-direction: row;
@@ -110,7 +111,8 @@ width: 40px;
     animation: 2s, 2s ${fadeInAnimation};
   }
 
-
+  
+  
   h3 {
     text-align: center;
     

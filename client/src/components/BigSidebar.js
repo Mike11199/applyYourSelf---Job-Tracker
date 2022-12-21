@@ -1,20 +1,28 @@
 import { useAppContext } from '../context/appContext'
 import NavLinks from './NavLinks'
-import Logo from '../components/Logo'
+import LogoCopy from '../components/LogoCopy'
 import Wrapper from '../assets/wrappers/BigSidebar'
 
 const BigSidebar = () => {
-  const { showSidebar} = useAppContext()
+  const { showSidebar, darkMode} = useAppContext()
+
+
+const getSideBarStatus = () => {
+  if (showSidebar && darkMode) return 'sidebar-container dark-sidebar'
+  else if (showSidebar &&! darkMode) return 'sidebar-container show-sidebar'
+  else if (!showSidebar) return 'sidebar-container'
+}
+
   return (
     <Wrapper>
       <div
         className={
-          showSidebar ? 'sidebar-container ' : 'sidebar-container show-sidebar'
+          getSideBarStatus()
         }
       >
         <div className='content'>
           <header>
-            <Logo />
+            <LogoCopy />
           </header>
           <NavLinks />
         </div>

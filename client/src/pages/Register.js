@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import {Logo, FormRow, Alert, MyGoogleLogInButton} from '../components'
+import {LogoCopy, FormRow, Alert, MyGoogleLogInButton} from '../components'
 import Wrapper from '../assets/wrappers/RegisterPage'
 import { useAppContext } from '../context/appContext'
 import { useNavigate } from 'react-router-dom'
 import {  FacebookLoginButton  } from 'react-social-login-buttons'
-
 
 
 
@@ -76,7 +75,7 @@ return (
     <Wrapper className='full-page'>
        
         <form className='form' onSubmit={onSubmit}>
-            <Logo />
+            <LogoCopy />
             {/*? is the conditional (ternary) operator */}
             <h3>{values.isMember ? 'Login':'Register'}</h3>
             {showAlert && <Alert />}

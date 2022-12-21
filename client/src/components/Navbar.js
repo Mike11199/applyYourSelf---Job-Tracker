@@ -6,10 +6,11 @@ import { useState } from "react"
 
 const Navbar = () => {
   const [showLogout, setShowLogout] = useState(false)              //square brackets is computed property name
-  const {toggleSidebar, logoutUser, user, showSidebar} = useAppContext()                         
+  const {toggleSidebar, logoutUser, user, showSidebar, darkMode, toggleDarkMode} = useAppContext()                         
   return (
     <Wrapper>
-      <div className='nav-center'>
+      <div className={darkMode ? 'wrapper-nav-dark' : 'wrapper-nav-light'}>
+      <div className={darkMode ? 'nav-center-dark' : 'nav-center'}>
         <button type='button' className='toggle-btn' onClick={toggleSidebar}>
           <FaAlignLeft />
         </button>
@@ -17,7 +18,11 @@ const Navbar = () => {
           <Logo />
           <h3 className='logo-text'>dashboard</h3>
         </div>
+
         <div className={showSidebar ?'btn-container-toggle':'btn-container'  }>
+        <button type='button' className={darkMode ? 'btn_light' : 'btn_dark'} onClick={toggleDarkMode}>
+              {darkMode ? 'Light Mode' : 'Dark Mode'}
+        </button>
           <button
             type='button'
             className='btn'
@@ -33,6 +38,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </Wrapper>
   )

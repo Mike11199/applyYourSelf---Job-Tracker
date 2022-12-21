@@ -30,7 +30,8 @@ import {
     CHANGE_PAGE,
     CHANGE_JOBS_VIEW,
     HANDLE_CHANGE_ARRAY,
-    REFRESH_STATE
+    REFRESH_STATE,
+    TOGGLE_DARK_MODE
 } from "./actions"
 
 import { initialState } from "./appContext"
@@ -306,6 +307,13 @@ const reducer = (state, action) => {    //hook that takes current state as first
             jobsCardsView: !state.jobsCardsView,         
             }
       }
+      if (action.type === TOGGLE_DARK_MODE) {
+        return {
+            ...state,   
+            darkMode: !state.darkMode,         
+            }
+      }
+
 
 
     throw new Error (`no such action : ${action.type}`)

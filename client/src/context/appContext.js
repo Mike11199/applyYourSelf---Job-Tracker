@@ -35,7 +35,8 @@ import {
   CLEAR_FILTERS,
   CHANGE_PAGE,
   CHANGE_JOBS_VIEW,
-  REFRESH_STATE
+  REFRESH_STATE,
+  TOGGLE_DARK_MODE
 } from "./actions"
 import { get } from 'mongoose'
 import { IoCompassSharp } from 'react-icons/io5'
@@ -52,7 +53,7 @@ export const initialState = {
   user:user ? JSON.parse(user) : null,         //ternary operator:  fancy single-line if/else statement
   token: token,
   userLocation: userLocation || '',
-  showSidebar: false,
+  showSidebar: true,
  
   isEditing: false,
   editJobId: '',
@@ -81,7 +82,7 @@ export const initialState = {
   status_no_underscore:'pending',
   jobHistory: [],
   MasterData_Sankey_Final: [],
-
+  darkMode: false,
 }
 
 
@@ -236,6 +237,10 @@ const registerUser = async (currentUser) => {
   const logoutUser = () => {
     dispatch({ type: LOGOUT_USER})
     removeUserFromLocalStorage()
+  }
+
+  const toggleDarkMode = () => {
+    dispatch({ type: TOGGLE_DARK_MODE})    
   }
 
   const updateUser = async (currentUser) => {
@@ -436,7 +441,8 @@ const changeJobView = () =>{
       changeJobView,
       googleLogin,
       handleChangeArray,
-      refreshState
+      refreshState,
+      toggleDarkMode
     }}>
       {children}
     </AppContext.Provider>

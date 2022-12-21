@@ -2,12 +2,18 @@ import styled from 'styled-components'
 
 const Wrapper = styled.nav`
   
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.1);
   
+  
+  
+  .wrapper-nav-dark
+  {
+    background-color: black;
+  }
+  .wrapper-nav-light
+  {
+    background-color: white;
+  }
+
   .logo {
     display: flex;
     align-items: center;
@@ -16,17 +22,24 @@ const Wrapper = styled.nav`
   }
   .nav-center {
     display: block;
-    width: 90vw;
     align-items: center;
     justify-content: space-between;
   }
-  .toggle-btn {
-    
+
+  .nav-center-dark {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+
+
+  .toggle-btn {    
     background: transparent;
     border-color: transparent;
     margin-left: auto;
-    margin-right: auto;
-    
+    margin-right: auto;    
     font-size: 1.75rem;
     color: var(--primary-500);
     cursor: pointer;
@@ -37,7 +50,7 @@ const Wrapper = styled.nav`
     align-items: center;
     align-self: center;
   }
-  background: var(--white);
+  
  
 
   .logo-container {
@@ -53,8 +66,6 @@ const Wrapper = styled.nav`
 
   .btn-container {
     display: flex;
-
-
     align-items: center;
     justify-content: center;
     margin-left: auto;
@@ -63,13 +74,10 @@ const Wrapper = styled.nav`
   }
   .btn-container-toggle {
     display: flex;
-
-
     align-items: center;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-
   }
 
   
@@ -82,6 +90,54 @@ const Wrapper = styled.nav`
     gap: 0 0.5rem;
     position: relative;
     box-shadow: var(--shadow-2);
+  }
+
+  .btn_light {  
+    border-radius: 5px; 
+    height:35px;      
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    position: relative;
+    box-shadow: var(--shadow-2);
+    color: black;
+    top: 20px;
+    background-color: white;
+  }
+  .btn_light:focus {
+    border-width: 0px;
+    border-color: white;
+    outline: none;
+  }
+  .btn_dark:focus {
+    border-width: 0px;
+    border-color: black;
+    outline: none;
+  }
+  .btn_light:active {
+    border-width: 0px;
+    border-color: white;
+    outline: none;
+  }
+  .btn_light:active  {
+    border-width: 0px;
+    border-color: black;
+    outline: none;
+  }
+
+  .btn_dark {    
+    border-radius: 5px;
+    height:35px;      
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    position: relative;
+    box-shadow: var(--shadow-2);
+    color: white;
+    top: 20px;
+    background-color: black;
   }
 
   .dropdown {
@@ -129,30 +185,33 @@ const Wrapper = styled.nav`
     
     top: 0;
     height: var(--nav-height);
-
-  .nav-center {
     
+    
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background: var(--white);
+  }
 
+  .nav-center-dark {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    background-color: black;
+    color: white;    
   }
 
   .btn-container {
-
     position: relative;
     top: 0px;    
-
     margin-right: 8%;
     justify-content: center;
   }
 
   .btn-container-toggle {
-
     position: relative;
-    top: 0px;    
-    margin-right: 0%;
+    top: 0px;        
     margin-bottom: 2%;
     justify-content: center;
 }
@@ -160,22 +219,16 @@ const Wrapper = styled.nav`
   .toggle-btn {
     position: relative;   //delete to center
     margin: 0px;
-    
-
     display: flex;
     background: transparent;
     border-color: transparent;
     font-size: 1.75rem;
     color: var(--primary-500);
     cursor: pointer;
-
-   
-    
   }
 
 
-  .dropdown {
-     
+  .dropdown {     
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -189,6 +242,7 @@ const Wrapper = styled.nav`
     align-items: center;
     align-self: center;
   }
+
   .show-dropdown {
     margin-top: 50px;
     margin-right: 20%;
@@ -197,11 +251,7 @@ const Wrapper = styled.nav`
     height: 50px;
     visibility: visible;
     position: absolute
-
-
   }
-
-
 
   .dropdown-btn {
     position: absolute;    
@@ -218,16 +268,13 @@ const Wrapper = styled.nav`
 
     .logo {
       display: none;
-      width: 250px;
-      
+      width: 250px;      
     }
-    .logo-text {
-      
+
+    .logo-text {      
       display: flex;
       align-content: center;
       align-self: center;
-      
-  
     }
 
     .logo-container {
@@ -237,11 +284,9 @@ const Wrapper = styled.nav`
     padding-left: 320px;
     align-items: center;
     justify-content: center;
-
     }
 
     .btn {    
-
     display: flex;
     top: 20px;    
     align-items: center;
@@ -251,19 +296,13 @@ const Wrapper = styled.nav`
     box-shadow: var(--shadow-2);
 
   }
+  
 
   .btn-container {
-
-    
     position: relative;
     display: flex;
-
-
     margin-bottom: 2%;
-
-
   }
-
 
   }
 `
