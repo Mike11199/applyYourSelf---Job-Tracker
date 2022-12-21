@@ -1,7 +1,7 @@
 import Wrapper from "../assets/wrappers/Navbar"
 import { FaAlignLeft, FaUserCircle, FaCaretDown } from 'react-icons/fa'
 import { useAppContext } from "../context/appContext"
-import Logo from './Logo'
+import LogoCopy from './LogoCopy'
 import { useState } from "react"
 
 const Navbar = () => {
@@ -9,33 +9,34 @@ const Navbar = () => {
   const {toggleSidebar, logoutUser, user, showSidebar, darkMode, toggleDarkMode} = useAppContext()                         
   return (
     <Wrapper>
-      <div className={darkMode ? 'wrapper-nav-dark' : 'wrapper-nav-light'}>
+      <div className='wrapper'>
       <div className={darkMode ? 'nav-center-dark' : 'nav-center'}>
         <button type='button' className='toggle-btn' onClick={toggleSidebar}>
           <FaAlignLeft />
         </button>
         <div className ='logo-container'>
-          <Logo />
+          <LogoCopy />
           <h3 className='logo-text'>dashboard</h3>
         </div>
-
         <div className={showSidebar ?'btn-container-toggle':'btn-container'  }>
-        <button type='button' className={darkMode ? 'btn_light' : 'btn_dark'} onClick={toggleDarkMode}>
-              {darkMode ? 'Light Mode' : 'Dark Mode'}
-        </button>
-          <button
-            type='button'
-            className='btn'
-            onClick={() => setShowLogout(!showLogout)}
-          >
-            <FaUserCircle />
-            {user?.name}
-            <FaCaretDown />
+          <button type='button' className={darkMode ? 'btn_light' : 'btn_dark'} onClick={toggleDarkMode}>
+                {darkMode ? 'Light Mode' : 'Dark Mode'}
           </button>
-          <div className={showLogout ? 'dropdown show-dropdown' : 'dropdown'}>
-            <button type='button' className='dropdown-btn' onClick={logoutUser}>
-              logout
+          <div>
+            <button
+              type='button'
+              className='btn'
+              onClick={() => setShowLogout(!showLogout)}
+            >
+              <FaUserCircle />
+              {user?.name}
+              <FaCaretDown />
             </button>
+            <div className={showLogout ? 'dropdown show-dropdown' : 'dropdown'}>
+              <button type='button' className='dropdown-btn' onClick={logoutUser}>
+                logout
+              </button>
+            </div>
           </div>
         </div>
       </div>

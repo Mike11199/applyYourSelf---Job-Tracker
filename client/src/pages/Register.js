@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import {LogoCopy, FormRow, Alert, MyGoogleLogInButton} from '../components'
+import {Logo, FormRow, Alert, MyGoogleLogInButton} from '../components'
 import Wrapper from '../assets/wrappers/RegisterPage'
 import { useAppContext } from '../context/appContext'
 import { useNavigate } from 'react-router-dom'
@@ -75,7 +75,7 @@ return (
     <Wrapper className='full-page'>
        
         <form className='form' onSubmit={onSubmit}>
-            <LogoCopy />
+            <Logo />
             {/*? is the conditional (ternary) operator */}
             <h3>{values.isMember ? 'Login':'Register'}</h3>
             {showAlert && <Alert />}

@@ -4,6 +4,11 @@ const Wrapper = styled.aside`
   @media (min-width: 992px) {
     display: none;
   }
+
+  a:focus {
+    color: red;
+  }
+
   .sidebar-container {
     position: fixed;
     inset: 0;
@@ -21,6 +26,17 @@ const Wrapper = styled.aside`
   }
   .content {
     background: var(--white);
+    width: var(--fluid-width);
+    height: 95vh;
+    border-radius: var(--borderRadius);
+    padding: 4rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .dark-content {
+    background: black;
     width: var(--fluid-width);
     height: 95vh;
     border-radius: var(--borderRadius);
@@ -76,6 +92,12 @@ const Wrapper = styled.aside`
   .logo{
     width: 250px;
   }
+  .nav-link.active {
+      color: var(--grey-900);
+    }
+    .nav-link-dark.active {
+      color: lightblue;
+    }
 
 `
 export default Wrapper

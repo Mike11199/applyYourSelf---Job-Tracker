@@ -11,7 +11,8 @@ const Wrapper = styled.aside`
       align-items: left;
       margin: 0px;
       padding: 0px;
-      width: 250px;    
+      width: 220px;    
+      margin-left: 10px;
     }
     .sidebar-container {  
       min-height: 100vh;
@@ -27,6 +28,7 @@ const Wrapper = styled.aside`
     .show-sidebar {
       margin-left: 0;
       background-color: white;
+      border-right: 1px solid black;
     }
 
     .dark-sidebar {
