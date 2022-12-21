@@ -33,8 +33,12 @@ which jobs led to subsequent interviews and monthly application count. Detailed 
 </br>
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/191149013-285fde41-574a-4f34-8321-2c0a2058b00b.gif" width=30% height=60%>
-
-
+</br>
+</br>
+-Dark Mode (NEW)
+</br>
+</br>
+<img src="https://user-images.githubusercontent.com/91037796/208978624-3021b41b-627d-48f5-afa0-f2ef7d795024.gif" width=100% height=100%>
 
 </br>
 </br>
