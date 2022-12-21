@@ -101,14 +101,26 @@ const Wrapper = styled.nav`
     visibility: hidden;
     border-radius: var(--borderRadius);   
     position: fixed;
-    top: 50px;
+    
   }
-
-  .dropdown-btn {
+  .dropdown-btn { 
+    background: transparent;
+    border-color: transparent;
+    color: var(--primary-500);
+    letter-spacing: var(--letterSpacing);
+    text-transform: capitalize;
+    cursor: pointer; 
     width: 125px;    
-    height: 45px;        
-
+    height: 45px;    
   }
+
+  .show-dropdown {    
+    visibility: visible;            
+    margin-top: 30px;        
+    display: block;
+  }
+
+
 
   .logo-text {
     display: none;
