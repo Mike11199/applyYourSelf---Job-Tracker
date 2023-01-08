@@ -5,6 +5,9 @@
 Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
 </br>
 </br>
+Create an account with any email/password combination (real or fake) to bypass the login page and see the app in action.
+
+</br>
 
 <h2>Project Summary</h2>
 </br>
