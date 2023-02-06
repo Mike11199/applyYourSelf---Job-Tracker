@@ -58,7 +58,7 @@ which jobs led to subsequent interviews and monthly application count. Detailed 
 -Error handler, alert, authentication middleware.  
 </br>
 </br>
--React animations, styled components, and react bootstrap added for styling.
+-React animations, styled components, and mobile-responseive pages to adapt to different sized devices.
 </br>
 </br>
 -Protected routes with bearer tokens that are persisted in local storage.
