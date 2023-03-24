@@ -2,10 +2,10 @@
 
 
 </br>
-Deployed Website: &nbsp; &nbsp; &nbsp;       https://www.applyyourself-job-tracker.com
+Deployed Website: &nbsp; &nbsp; &nbsp; &nbsp;      https://www.applyyourself-job-tracker.com
 </br>
 </br>
-Alternate Link: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
+Alternate Link: &nbsp; &nbsp; &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp;   https://applyyourself-tracker-prod.herokuapp.com
 
 </br>
 </br>
@@ -189,6 +189,23 @@ which jobs led to subsequent interviews and monthly application count. Detailed 
 </br>
 <img src="https://user-images.githubusercontent.com/91037796/190552149-7a3aa452-391d-4aeb-b3f8-05b1eb631688.png" width=80% height=80%>
 </br>
+
+
+<h2>Completed To-Do - Added Cloudflare/GoDaddy Custom Domain</h2>
+
+- Added Cloudflare nameservers to GoDaddy to allow CloudFlare to control DNS. Allow for website analytics and DDOS attack prevention.
+- Set SSL/TLS Encryption mode to Full (Strict).  Was getting too many redirects error before.
+- Under SSL/TLS set always use HTTPS, enabled automatic HTTPS rewrites.
+
+
+![image](https://user-images.githubusercontent.com/91037796/227592712-903dd8bc-59c7-41b9-a0d8-cabf7836ad77.png)
+
+![image](https://user-images.githubusercontent.com/91037796/227593230-a4cf526d-05b6-4e79-8f1c-b923ddcd2a7e.png)
+
+![image](https://user-images.githubusercontent.com/91037796/227593473-edfe6050-7afc-4c36-9954-55bb38ff4c55.png)
+
+
+
 
 </br>
 <h2>Packages Installed</h2>
