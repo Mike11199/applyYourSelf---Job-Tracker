@@ -16,28 +16,28 @@ import connectDB from './db/connect.js'
 
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
-// import rateLimiter from 'express-rate-limit'
+import rateLimiter from 'express-rate-limit'
 
-// const apiLimiter = rateLimiter({
-//     windowMs: 15 * 60 * 1000, // 15 minutes
-//     max: 1000,                // more than in authRoutes for fetch requests when filtering
-//     message: 'Too many requests from this IP, please try again after 15 minutes',
-//   })
+const apiLimiter = rateLimiter({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 1000,                // more than in authRoutes for fetch requests when filtering
+    message: 'Too many requests from this IP, please try again after 15 minutes',
+  })
 
-// app.use(apiLimiter)
+app.use(apiLimiter)
 
-// import helmet from 'helmet'
-// import xss from 'xss-clean'
-// import mongoSanitize from 'express-mongo-sanitize'
+import helmet from 'helmet'
+import xss from 'xss-clean'
+import mongoSanitize from 'express-mongo-sanitize'
 
-// //these three imports for deploying to production
-// import { dirname } from 'path'
-// import { fileURLToPath } from 'url'
-// import path from 'path'
+//these three imports for deploying to production
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import path from 'path'
 
-// // only when ready to deploy
-// const __dirname = dirname(fileURLToPath(import.meta.url))
-// app.use(express.static(path.resolve(__dirname, './client/build')))
+// only when ready to deploy
+const __dirname = dirname(fileURLToPath(import.meta.url))
+app.use(express.static(path.resolve(__dirname, './client/build')))
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 
@@ -81,8 +81,8 @@ app.use(express.json())
 //     },
 //   })
 //   )
-//   app.use(xss())
-//   app.use(mongoSanitize())
+  app.use(xss())
+  app.use(mongoSanitize())
 
 /**********ONLY FOR DEPLOYING THE APPLICATION**********/
 
