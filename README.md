@@ -2,8 +2,10 @@
 
 
 </br>
-Deployed Website: &nbsp; &nbsp; &nbsp;      applyyourself-job-tracker.com
-Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
+Deployed Website: &nbsp; &nbsp; &nbsp;       https://www.applyyourself-job-tracker.com
+</br>
+</br>
+Alternate Link: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
 
 </br>
 </br>
