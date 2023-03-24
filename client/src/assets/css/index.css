@@ -175,6 +175,9 @@ ul {
 .btn-block {
   width: 100%;
 }
+.btn-block2 {
+  width: 100%;
+}
 /* .btn-hero {
   font-size: 1.25rem;
   padding: 0.5rem 1.25rem;
@@ -245,6 +248,9 @@ ul {
 .form-input,
 .form-select,
 .btn-block {
+  height: 35px;
+}
+.btn-block2 {
   height: 35px;
 }
 .form-row {

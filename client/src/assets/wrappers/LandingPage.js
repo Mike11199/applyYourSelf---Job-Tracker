@@ -9,7 +9,7 @@ const Wrapper = styled.main`
   .btn-hero {
     font-size: 1.25rem;
     padding: 0.5rem 1.25rem;
-    animation: 1s, 1s ${slideInLeftAnimation};
+    /* animation: 1s, 1s ${slideInLeftAnimation}; */
     align-self: center;
     justify-content: center;
     display: flex;
@@ -91,7 +91,7 @@ const Wrapper = styled.main`
     .btn-hero {
     font-size: 1.25rem;
     padding: 0.5rem 1.25rem;
-    animation: 1s, 1s ${slideInLeftAnimation};
+    /* animation: 1s, 1s ${slideInLeftAnimation}; */
     align-self: center;
     justify-content: left;
     width: 200px;

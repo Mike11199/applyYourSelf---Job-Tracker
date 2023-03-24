@@ -37,6 +37,10 @@ const toggleMember = ()=>{
     setValues({...values,isMember:!values.isMember})
 }  
 
+const logInDemoUser = ()=>{
+    setValues({...values,isMember: true, email: 'test3@gmail.com', password: 'test3@gmail.com', name: 'tester' })
+}  
+
 //this updates the object with states when a user is typing into the input form
 const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value})
@@ -109,8 +113,12 @@ return (
             
         {/* If isLoading, disable the Submit button */}
         <button type="submit" className='btn btn-block'
-        disabled={isLoading}>
+        disabled={isLoading} >
             Submit
+        </button>
+        <button type="submit" className='btn btn-block2'
+        disabled={isLoading} onClick={logInDemoUser}>
+            Demo Login
         </button>
         <p>
         <br></br>
