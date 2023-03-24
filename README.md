@@ -2,14 +2,16 @@
 
 
 </br>
-Deployed Website: &nbsp; &nbsp; &nbsp; &nbsp;      https://www.applyyourself-job-tracker.com
-</br>
-</br>
-Alternate Link: &nbsp; &nbsp; &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp;   https://applyyourself-tracker-prod.herokuapp.com
 
+- <strong>Deployed Website (Cloudflare/GoDaddy/Heroku):  </strong>  
+  - https://www.applyyourself-job-tracker.com
 </br>
-</br>
-Create an account with any email/password combination (real or fake) to bypass the login page and see the app in action.
+
+
+
+- <strong>Alternate Link(Heroku):  </strong>
+  - https://applyyourself-tracker-prod.herokuapp.com
+
 
 </br>
 
