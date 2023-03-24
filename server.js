@@ -4,8 +4,9 @@ import secure from 'ssl-express-www';
 
 const app = express()
 
- // Redirecting HTTP to HTTPS. It forces SSL (HTTPS) when HTTP is required using Express (Nodejs) and remove www and trailing slash on your domain. 
- // https://www.npmjs.com/package/ssl-express-www
+// https://help.heroku.com/J2R1S4T8/can-heroku-force-an-application-to-use-ssl-tls
+// Redirecting HTTP to HTTPS. It forces SSL (HTTPS) when HTTP is required using Express (Nodejs) and remove www and trailing slash on your domain. 
+// https://www.npmjs.com/package/ssl-express-www
 
 app.use(secure); 
 
