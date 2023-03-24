@@ -5,6 +5,9 @@
 Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
 </br>
 </br>
+Create an account with any email/password combination (real or fake) to bypass the login page and see the app in action.
+
+</br>
 
 <h2>Project Summary</h2>
 </br>
@@ -55,7 +58,7 @@ which jobs led to subsequent interviews and monthly application count. Detailed 
 -Error handler, alert, authentication middleware.  
 </br>
 </br>
--React animations, styled components, and react bootstrap added for styling.
+-React animations, styled components, and mobile-responseive pages to adapt to different sized devices.
 </br>
 </br>
 -Protected routes with bearer tokens that are persisted in local storage.
