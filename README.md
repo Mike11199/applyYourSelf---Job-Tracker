@@ -2,7 +2,9 @@
 
 
 </br>
+Deployed Website: &nbsp; &nbsp; &nbsp;      applyyourself-job-tracker.com
 Deployed Website: &nbsp; &nbsp; &nbsp;      https://applyyourself-tracker-prod.herokuapp.com/landing
+
 </br>
 </br>
 Create an account with any email/password combination (real or fake) to bypass the login page and see the app in action.
@@ -68,6 +70,8 @@ which jobs led to subsequent interviews and monthly application count. Detailed 
 </br>
 </br>
 -Added OAuth 2.0 linking app to Google's API.  Created API to send credentials to back-end where google's JWT from can be decoded to grab user information.  If the user's email exists in the database, they are logged in with the normal bearer JWT token.  
+</br>
+-Added a custom domain name using GoDaddy, CNAME DNS forwarding. 
 </br>
 
 
